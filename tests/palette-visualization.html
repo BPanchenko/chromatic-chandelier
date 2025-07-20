@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width" name="viewport">
+	<title>Protosite Color Palette</title>
+
+	<style>
+		header {
+			margin: 0 1em;
+			font-family: system-ui;
+			color: var(--clr-gray, dimgray);
+
+			border-bottom: 0.05rem dotted currentColor;
+
+			h1,
+			h2,
+			h3 {
+				margin: unset;
+			}
+
+			h1:has(+ h3),
+			h1+h3 {
+				display: inline-block;
+			}
+		}
+
+		details {
+			font-family: sans-serif;
+			color: gray;
+
+			summary {
+				font-style: italic;
+				cursor: pointer;
+				user-select: none;
+			}
+
+			p {
+				font-size: large;
+			}
+
+			&:open {
+				color: initial;
+			}
+		}
+
+		details,
+		svg {
+			margin: 2em 3em;
+		}
+
+		svg:has(+ details) {
+			margin-block-end: 1em;
+		}
+
+		svg+details {
+			margin-block-start: unset;
+		}
+
+		svg :is(circle, ellipse, path, polygon, polyline, rect, text, textPath, tspan):not([fill]) {
+			fill: transparent;
+		}
+
+		pattern :is(circle, ellipse, path, polygon, polyline, rect, text, textPath, tspan):not([fill]) {
+			fill: context-fill;
+			stroke: context-stroke;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>&#10063;</h1>
+		<h3>Visualization of Color Palette Features</h3>
+	</header>
+
+	<main>
+		<svg data-test-id="image-grayscale" width="400" height="304" viewBox="0 0 400 304"
+			xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="grayscale-gradient"></linearGradient>
+				<pattern id="grayscale-series" viewBox="0,0,80,16" width="100%" height="100%"></pattern>
+				<pattern id="chequered-in-general-colors" viewBox="0,0,16,16" width="16" height="16"
+					patternUnits="userSpaceOnUse">
+					<rect x="0" y="0" width="8" height="8" style="fill: var(--clr-black)"></rect>
+					<rect x="8" y="0" width="8" height="8" style="fill: var(--clr-white)"></rect>
+					<rect x="0" y="8" width="8" height="8"></rect>
+					<rect x="8" y="8" width="8" height="8" style="fill: var(--clr-gray)"></rect>
+				</pattern>
+			</defs>
+			<g>
+				<rect x="8" y="8" width="384" height="288" stroke="url(#chequered-in-general-colors)" stroke-width="16">
+				</rect>
+				<rect x="16" y="16" width="368" height="112" fill="url(#grayscale-gradient)"></rect>
+				<rect x="16" y="128" width="368" height="112" fill="url(#grayscale-series)"></rect>
+			</g>
+			<g>
+				<rect x="16" y="16" width="40" height="272" style="fill: var(--clr-white)"></rect>
+				<rect x="344" y="16" width="40" height="272" style="fill: var(--clr-black)"></rect>
+				<rect x="16" y="16" width="368" height="40" style="fill: var(--clr-gray)"></rect>
+			</g>
+		</svg>
+		<details>
+			<summary>
+				Light Diffuser Functionality
+			</summary>
+			<p>
+				The Light Diffuser is an abstract palette module that defines the color gray and generates its shades.
+			</p>
+		</details>
+	</main>
+
+	<script type="module">
+		import Palette from '../source/index.ts'
+		const palette = new Palette('protosite-palette')
+
+		/**
+		 * Define monochrome colors via register CSS properties
+		 */
+		{
+			const { black, gray, white } = palette
+
+			window.CSS.registerProperty({
+				name: "--clr-black",
+				syntax: "<color>",
+				inherits: false,
+				initialValue: getCSSColorFromPinS(black),
+			})
+			window.CSS.registerProperty({
+				name: "--clr-gray",
+				syntax: "<color>",
+				inherits: false,
+				initialValue: getCSSColorFromPinS(gray),
+			})
+			window.CSS.registerProperty({
+				name: "--clr-white",
+				syntax: "<color>",
+				inherits: false,
+				initialValue: getCSSColorFromPinS(white),
+			})
+		}
+	</script>
+
+	<script>
+		function getCSSColorFromPinS(point) {
+			const c1 = point.space.CSYS[0].toParameter(point[0])
+			const c2 = point.space.CSYS[1].toParameter(point[1])
+			const c3 = point.space.CSYS[2].toParameter(point[2])
+			return point.space.toCSSColor([c1, c2, c3])
+		}
+	</script>
+</body>
+
+</html>
