@@ -1,128 +1,171 @@
-var Q=Object.defineProperty;var t=(e,r)=>Q(e,"name",{value:r,configurable:!0});var ee=Object.defineProperty,E=t((e,r)=>ee(e,"name",{value:r,
-configurable:!0}),"n"),te=E(e=>e!==null&&typeof e=="object"&&
-Array.isArray(e)===!1,"isObject"),re=E(e=>te(e)&&"ident"in e&&
-"short"in e&&"domain"in e,"isSpaceDimension");function n(e,r,o){
-let a=Iterator.from(o===void 0?[e,r]:[e,r,o]),m=o===void 0?2:
-3;for(let c of a.take(m))if(re(c)===!1)throw new TypeError("\
-Passed wrong space dimension: "+JSON.stringify(c,void 0,2));
-let p=a.take(m).filter(c=>c.tgeom==="azimuth"||c.tgeom==="re\
-ference-ray").toArray().length===2?m===3?"cilinder":"circle":
-m===3?"cube":"plane",v=Object.create(null,{0:{enumerable:!0,
-value:e},1:{enumerable:!0,value:r},length:{enumerable:!0,value:m},
-tgeom:{enumerable:!0,value:p},entries:{value:E(function*(){yield[
+var ue=Object.defineProperty;var t=(e,o)=>ue(e,"name",{value:o,configurable:!0});var pe=Object.defineProperty,E=t((e,o)=>pe(e,"name",{value:o,
+configurable:!0}),"n"),fe=E(e=>e!==null&&typeof e=="object"&&
+Array.isArray(e)===!1,"isObject"),de=E(e=>fe(e)&&"ident"in e&&
+"short"in e&&"domain"in e,"isSpaceDimension");function s(e,o,r){
+let a=Iterator.from(r===void 0?[e,o]:[e,o,r]),n=r===void 0?2:
+3;for(let p of a.take(n))if(de(p)===!1)throw new TypeError("\
+Passed wrong space dimension: "+JSON.stringify(p,void 0,2));
+let c=a.take(n).filter(p=>p.tgeom==="azimuth"||p.tgeom==="re\
+ference-ray").toArray().length===2?n===3?"cilinder":"circle":
+n===3?"cube":"plane",u=Object.create(null,{0:{enumerable:!0,
+value:e},1:{enumerable:!0,value:o},length:{enumerable:!0,value:n},
+tgeom:{enumerable:!0,value:c},entries:{value:E(function*(){yield[
 0,this[0]],yield[1,this[1]],this.length===3&&(yield[2,this[2]])},
 "value")},toArray:{value:E(function(){return Array.of(...this)},
 "value")},[Symbol.iterator]:{value:E(function*(){yield this[0],
 yield this[1],this.length===3&&(yield this[2])},"value")}});
-return m===3&&Object.defineProperty(v,2,{enumerable:!0,value:o}),
-c=>c===void 0?v:Object.defineProperties(v,c)}t(n,"P");E(n,"c\
-reateCoordinateSystem");var oe=Object.defineProperty,l=t((e,r)=>oe(e,"name",{value:r,
-configurable:!0}),"n"),U=l(e=>typeof e=="number","isNumber"),
-ie=l(e=>e!==null&&typeof e=="object"&&Array.isArray(e)===!1,
-"isObject"),ae=l((e,r)=>Object.create(null,{0:{enumerable:!0,
-value:e},1:{enumerable:!0,value:r},length:{value:2},[Symbol.
-iterator]:{value:l(function*(){yield this[0],yield this[1]},
-"value")}}),"createDataView"),D=l(e=>ie(e)&&Symbol.iterator in
-e&&"min"in e&&U(e.min)&&"max"in e&&U(e.max)&&"span"in e&&U(e.
-span)&&e.span>0,"isRange");function i(e=1,r){let o=ae(r===void 0?
-0:e,r===void 0?e:r),[a,m]=o,p=Math.sqrt(m**2+a**2),v=a+p/2;return Object.
-defineProperties(o,{from:{enumerable:!0,value:a},to:{enumerable:!0,
-value:m},span:{enumerable:!0,value:p},avg:{enumerable:!0,value:v},
-allot:{value:Z},clamp:{value:W},clone:{value:q},test:{value:l(
-c=>a<=c&&c<=m,"value")},toString:{value:l(()=>String.raw`{x ∈ R; ${a} ⋜ x ⋜ ${m}}`,
-"value")}})}t(i,"h");l(i,"createRange");function Z(e){return this.
-test(e)?e:e>this.from?(e-this.to)%this.span+this.from:this.to-
-(this.from-e)%this.span}t(Z,"S");l(Z,"allocateOuterValue");function W(e){
+return n===3&&Object.defineProperty(u,2,{enumerable:!0,value:r}),
+p=>p===void 0?u:Object.defineProperties(u,p)}t(s,"O");E(s,"c\
+reateCoordinateSystem");var he=Object.defineProperty,y=t((e,o)=>he(e,"name",{value:o,
+configurable:!0}),"n"),H=y(e=>typeof e=="number","isNumber"),
+be=y(e=>e!==null&&typeof e=="object"&&Array.isArray(e)===!1,
+"isObject"),k=y(e=>be(e)&&Symbol.iterator in e&&"minimum"in e&&
+H(e.minimum)&&"maximum"in e&&H(e.maximum)&&"value"in e&&H(e.
+value)&&e.value>0,"isRange");function i(...e){let o=e.length===
+1?Array.of(0,e[0]):Array.of(Math.min(...e),Math.max(...e)),[
+r,a]=o,n=a-r,c=r+n/2;return Object.create(null,{from:{value:r},
+to:{value:a},minimum:{enumerable:!0,value:r},maximum:{enumerable:!0,
+value:a},avg:{enumerable:!0,value:c},value:{enumerable:!0,value:n},
+allot:{value:ne},clamp:{value:se},test:{value:y(u=>r<=u&&u<=
+a,"value")},toString:{value:y(()=>String.raw`{x ∈ R; ${r} ⋜ x ⋜ ${a}}`,
+"value")},[Symbol.iterator]:{value:y(function*(){yield this.
+from,yield this.to},"value")},length:{value:2}})}t(i,"v");y(
+i,"createRange");function ne(e){return this.test(e)?e:e>this.
+from?(e-this.to)%this.value+this.from:this.to-(this.from-e)%
+this.value}t(ne,"p");y(ne,"allocateOuterValue");function se(e){
 return this.test(e)?e:Math.max(Math.min(e,this.to),this.from)}
-t(W,"g");l(W,"restrictOuterValue");function q(){return i(...this)}
-t(q,"f");l(q,"makeDuplicate");var Y=Object.freeze([0,360]),z=Object.freeze([-Math.PI,Math.
-PI]),y=Object.freeze([0,100]),ue=Object.freeze([-128,127]),j=Object.
-freeze([0,255]),he=Object.freeze([0,65535]),h=Object.freeze(
-[0,1]),be=Object.freeze([-1,1]);var R=Object.freeze({bytes:8,domain:i(...z),ident:"angle",input:t(
-e=>R.domain.allot(+e*Math.PI/180),"input"),output:t(e=>e*180/
-Math.PI,"output"),short:"phi",tcoord:"polar",tgeom:"azimuth"});var g=Object.freeze({$coord:R,bytes:4,description:"Hue angle\
+t(se,"h");y(se,"restrictOuterValue");var I=Object.freeze([0,360]),M=Object.freeze([-Math.PI,Math.
+PI]),f=Object.freeze([0,100]),Ee=Object.freeze([-125,125]),A=Object.
+freeze([0,255]),Ae=Object.freeze([0,65535]),j=Object.freeze(
+[0,1]),_=Object.freeze([-1,1]);var ge=Object.defineProperty,v=t((e,o)=>ge(e,"name",{value:o,
+configurable:!0}),"r");function K(...e){let o=e.length===1?Array.
+of(0,e[0]):Array.of(Math.min(...e),Math.max(...e)),[r,a]=o,n=a-
+r,c=r+n/2;return Object.create(null,{from:{value:r},to:{value:a},
+minimum:{enumerable:!0,value:r},maximum:{enumerable:!0,value:a},
+avg:{enumerable:!0,value:c},value:{enumerable:!0,value:n},allot:{
+value:me},clamp:{value:le},test:{value:v(u=>r<=u&&u<=a,"valu\
+e")},toString:{value:v(()=>String.raw`{x ∈ R; ${r} ⋜ x ⋜ ${a}}`,
+"value")},[Symbol.iterator]:{value:v(function*(){yield this.
+from,yield this.to},"value")},length:{value:2}})}t(K,"l");v(
+K,"createRange");function me(e){return this.test(e)?e:e>this.
+from?(e-this.to)%this.value+this.from:this.to-(this.from-e)%
+this.value}t(me,"f");v(me,"allocateOuterValue");function le(e){
+return this.test(e)?e:Math.max(Math.min(e,this.to),this.from)}
+t(le,"S");v(le,"restrictOuterValue");function X(e=[0,100],o=[
+0,1]){let[r,a]=o,[n,c]=e,[u,p]=[a-r,c-n];function U(l){return typeof l==
+"string"&&(l=parseFloat(l)),Y.domain.test(l)===!1&&(l=l>a?(l-
+a)%u+r:a-(r-l)%u),p*(l-r)/u+n}t(U,"p"),v(U,"invert");function Y(l){
+return typeof l=="string"&&(l=parseFloat(l)),Y.range.test(l)===
+!1&&(l=l>c?(l-c)%p+n:c-(n-l)%p),u*(l-n)/p+r}return t(Y,"c"),
+v(Y,"calculator"),Object.defineProperties(Y,{domain:{enumerable:!0,
+value:K(r,a)},range:{enumerable:!0,value:K(n,c)},invert:{enumerable:!0,
+value:U}})}t(X,"A");v(X,"initScale");var Z=X(I,M),L=Object.freeze({bytes:8,domain:Z.domain,ident:"\
+angle",input:t(e=>Z.domain.allot((typeof e=="string"?parseFloat(
+e):e)*Math.PI/180),"input"),output:t(e=>Z.range.allot(e*180/
+Math.PI),"output"),short:"phi",tcoord:"polar",tgeom:"azimuth"});var P=Object.freeze({$coord:L,bytes:4,description:"Hue angle\
  is a numerical representation of a color's hue, typically m\
-easured as an angle in a color space.",domain:i(...Y),ident:"\
-hue",input:t(e=>{let[r,o]=ne(e),a=o==="grad"?180/200:o==="ra\
-d"?180/Math.PI:o==="turn"?360:1;return g.domain.allot(r*a)},
+easured as an angle in a color space.",domain:i(...I),ident:"\
+hue",input:t(e=>{let[o,r]=Se(e),a=r==="grad"?180/200:r==="ra\
+d"?180/Math.PI:r==="turn"?360:1;return P.domain.allot(o*a)},
 "input"),output:t(e=>Number.isNaN(e)?Number.NaN:Math.abs(e)<
-.01?0:e,"output"),short:"h"});function ne(e){let r=NaN,o="deg";if(typeof e=="number")r=e;else{
-let v=String.raw`deg|grad|rad|turn`,c=new RegExp(`^(-?[d.]+)\
-(${v})?$`,"i");if(c.test(e)){let X=c.exec(e)?.slice(1)??["0",
-"deg"];r=parseFloat(X[0]),o=X[1]}else if(e==="none")r=NaN;else
+.01?0:parseFloat(e.toPrecision(5)),"output"),short:"h"});function Se(e){let o=NaN,r="deg";if(typeof e=="number")o=e;else{
+let u=String.raw`deg|grad|rad|turn`,p=new RegExp(`^(-?[d.]+)\
+(${u})?$`,"i");if(p.test(e)){let U=p.exec(e)?.slice(1)??["0",
+"deg"];o=parseFloat(U[0]),r=U[1]}else if(e==="none")o=NaN;else
 throw new TypeError("Expected a valid <angle> string")}let[a,
-m]=o==="grad"?[0,400]:o==="deg"?Y:o==="rad"?z:h,p=i(a,m);return p.
-test(r)===!1&&(r=p.allot(r)),[r,o]}t(ne,"parseCSSAngle");var s=t((e,r)=>{let o=0;if(e==="none"||!e)return o;if(typeof e==
-"number")o=e;else if(o=parseFloat(e),e.charAt(-1)==="%"&&(o/=
-100,D(r))){let a=Math.sign(o);o*=a<0?r.from:r.to}return D(r)&&
-(r.span<=2**8&&(o=Math.sign(o)*Math.round(Math.abs(o))),o=r.
-clamp(o)),o},"parseCSSParameter");var b=Object.freeze({bytes:8,domain:i(...h),ident:"applicate",
-short:"Z",tcoord:"cartesian-coordinate-axis",tgeom:"directed\
--line"});var f=Object.freeze({$coord:b,bytes:4,description:"Lightness\
+n]=r==="grad"?[0,400]:r==="deg"?I:r==="rad"?M:j,c=i(a,n);return c.
+test(o)===!1&&(o=c.allot(o)),[o,r]}t(Se,"parseCSSAngle");var m=t((e,o)=>{if(e==="none"||!e)return 0;let r=typeof e=="\
+string"?parseFloat(e):e;return typeof e=="string"&&e.charAt(
+-1)==="%"&&(r/=100,k(o)&&(o.from===0&&o.to===255?r=Math.round(
+r*o.to):r*=Math.sign(r)<0?o.from:o.to)),k(o)&&o.test(r)===!1&&
+(r=o.clamp(r)),r},"parseCSSParameter");var d=Object.freeze({bytes:8,domain:i(...j),ident:"applicate",
+short:"z",tcoord:"cartesian-coordinate-axis",tgeom:"directed\
+-line"});var h=Object.freeze({$coord:d,bytes:4,description:"Lightness\
  is a visual perception of the luminance of an object. In so\
 me color ordering systems Lightness is referenced as value.",
-domain:i(...y),ident:"lightness",input:t(e=>s(e,f.domain)/100,
-"input"),output:t(e=>e*100,"output"),short:"L"});var S=Object.freeze({bytes:8,domain:i(...h),ident:"radius",short:"\
-rho",tcoord:"polar",tgeom:"reference-ray"});var w=Object.freeze({$coord:S,bytes:4,description:"Chroma: t\
+domain:i(...f),ident:"lightness",input:t(e=>m(e,h.domain)/100,
+"input"),output:t(e=>e*100,"output"),short:"L"});var b=Object.freeze({bytes:8,domain:i(...j),ident:"radius",short:"\
+rho",tcoord:"polar",tgeom:"reference-ray"});var W=Object.freeze({$coord:b,bytes:4,description:"Chroma: t\
 he quality of a color's purity, intensity or saturation.",domain:i(
-...y),ident:"saturation",input:t(e=>s(e,w.domain),"input"),short:"\
-S"});var Ve=n(S,R)({adapt:{enumerable:!0,value:I}});function I(e=0,r=NaN){let o=e*Math.cos(r),a=e*Math.sin(r);return[
-o,a]}t(I,"calcCartesianCoordinates");var P=n(S,R,b)({adapt:{value:se}});function se(e){let[r,o,a]=e,[m,p]=I(r,o);return[m,p,a]}t(se,
-"calcCubeCoordinates");var d=Float64Array.of(.9504559270516716,1,1.0890577507598784);
-Object.freeze(d.buffer);var ut={CAM:n(g,w,f)(),CSYS:P,ident:"hsl",whitepoint:d};var B=Object.freeze({$coord:b,bytes:8,description:"Blackness\
+...f),ident:"saturation",input:t(e=>m(e,W.domain),"input"),short:"\
+S"});var ct=s(b,L)({adapt:{enumerable:!0,value:q}});function q(e=0,o=NaN){let r=e*Math.cos(o),a=e*Math.sin(o);return[
+r,a]}t(q,"calcCartesianCoordinates");var R=s(b,L,d)({adapt:{value:Ce}});function Ce(e){let[o,r,a]=e,[n,c]=q(o,r);return[n,c,a]}t(Ce,
+"calcCubeCoordinates");var g=Float64Array.of(.9504559270516716,1,1.0890577507598784);
+Object.freeze(g.buffer);var At={CAM:s(P,W,h)(),CSYS:R,ident:"hsl",whitepoint:g};var V=Object.freeze({$coord:d,bytes:8,description:"Blackness\
  is the property or quality of being black in colour.",domain:i(
-...y),ident:"blackness",input:t(e=>s(e,B.domain),"input"),short:"\
-B"});var _=Object.freeze({$coord:S,bytes:4,description:"Whiteness\
+...f),ident:"blackness",input:t(e=>m(e,V.domain),"input"),short:"\
+B"});var J=Object.freeze({$coord:b,bytes:4,description:"Whiteness\
  is determined by how much light a surface reflects across t\
-he visible spectrum.",domain:i(...y),ident:"whiteness",input:t(
-e=>s(e,_.domain),"input"),short:"W"});var Dt={description:"HWB (Hue, Whiteness, Blackness) is a cy\
+he visible spectrum.",domain:i(...f),ident:"whiteness",input:t(
+e=>m(e,J.domain),"input"),short:"W"});var Xt={description:"HWB (Hue, Whiteness, Blackness) is a cy\
 lindrical-coordinate representation of points in an RGB colo\
-r model, similar to HSL and HSV.",CAM:n(g,_,B)(),CSYS:P,ident:"\
-hwb",whitepoint:d};var O=Object.freeze({bytes:8,domain:i(...h),ident:"abscissa",
-short:"X",tcoord:"cartesian-coordinate-axis",tgeom:"directed\
--line"});var T=Object.freeze({$coord:O,bytes:2,description:"Component\
+r model, similar to HSL and HSV.",CAM:s(P,J,V)(),CSYS:R,ident:"\
+hwb",whitepoint:g};var x=Object.freeze({bytes:8,domain:i(..._),ident:"abscissa",
+short:"x",tcoord:"cartesian-coordinate-axis",tgeom:"directed\
+-line"});var G=Object.freeze({$coord:x,bytes:2,description:"Component\
  defines how green (moving towards -125) or red (moving towa\
 rds +125) the color is.",domain:i(-125,125),ident:"green-red",
-input:t(e=>s(e,T.domain)/125,"input"),output:t(e=>e*125,"out\
-put"),short:"a"}),M=Object.freeze({...T,bytes:8,domain:i(-.4,
-.4),input:t(e=>s(e,M.domain)/.4,"input"),output:t(e=>e*.4,"o\
-utput")});var x=Object.freeze({bytes:8,domain:i(...h),ident:"ordinate",
-short:"Y",tcoord:"cartesian-coordinate-axis",tgeom:"directed\
--line"});var L=Object.freeze({$coord:x,bytes:2,description:"Component\
+input:t(e=>m(e,G.domain)/125,"input"),output:t(e=>parseFloat(
+(e*125).toPrecision(5)),"output"),short:"a"}),Q=Object.freeze(
+{...G,bytes:8,domain:i(-.4,.4),input:t(e=>m(e,Q.domain)/.4,"\
+input"),output:t(e=>e*.4,"output")});var O=Object.freeze({bytes:8,domain:i(..._),ident:"ordinate",
+short:"y",tcoord:"cartesian-coordinate-axis",tgeom:"directed\
+-line"});var F=Object.freeze({$coord:O,bytes:2,description:"Component\
  defines how blue (moving towards -125) or yellow (moving to\
 wards +125) the color is.",domain:i(-125,125),ident:"blue-ye\
-llow",input:t(e=>s(e,L.domain)/125,"input"),output:t(e=>e*125,
-"output"),short:"b"}),G=Object.freeze({...L,bytes:8,domain:i(
--.4,.4),input:t(e=>s(e,G.domain)/.4,"input"),output:t(e=>e*.4,
-"output")});var tr=n(O,x)({adapt:{value:F}});function F(e,r){let o=0,a=NaN;return(e!==0||r!==0)&&(o=Math.
-sqrt(e**2+r**2),e!==0&&!r||r!==0&&!e?a=r/Math.abs(r)*(Math.PI/
-2):a=Math.atan(r/e)),[o,a]}t(F,"calcPolarCoordinates");var C=n(O,x,b)({adapt:{value:me}});function me(e){let[r,o,a]=e,[m,p]=F(r,o);return[m,p,a]}t(me,
-"calcCylindricalCoordinates");var u=Float64Array.of(.9642956764295677,1,.8251046025104602);
-Object.freeze(u.buffer);var Cr=Object.freeze({CAM:n(f,T,L)(),CSYS:C,description:"CIE\
+llow",input:t(e=>m(e,F.domain)/125,"input"),output:t(e=>parseFloat(
+(e*125).toPrecision(5)),"output"),short:"b"}),ee=Object.freeze(
+{...F,bytes:8,domain:i(-.4,.4),input:t(e=>m(e,ee.domain)/.4,
+"input"),output:t(e=>e*.4,"output")});var ho=s(x,O)({adapt:{value:te}});function te(e,o){let r=0,a=NaN;return(e!==0||o!==0)&&(r=Math.
+sqrt(e**2+o**2),e!==0&&!o||o!==0&&!e?a=o/Math.abs(o)*(Math.PI/
+2):a=Math.atan(o/e)),[r,a]}t(te,"calcPolarCoordinates");var C=s(x,O,d)({adapt:{value:ye}});function ye(e){let[o,r,a]=e,[n,c]=te(o,r);return[n,c,a]}t(ye,
+"calcCylindricalCoordinates");var S=Float64Array.of(.9642956764295677,1,.8251046025104602);
+Object.freeze(S.buffer);var To=Object.freeze({CAM:s(h,G,F)(),CSYS:C,description:"CIE\
  1976 L*a*b* or CIELAB. Cylindrical with the lightness value\
- as the vertical axis of rotation.",ident:"lab",whitepoint:u});var $=Object.freeze({$coord:S,bytes:2,description:"Chroma: t\
-he quality of a color's purity, intensity or saturation.",domain:i(
-0,150),ident:"chroma",short:"C"}),V=Object.freeze({...$,domain:i(
-0,.4)});var Nr={CAM:n(f,$,g)(),CSYS:P,description:"CIE-based LCh col\
+ as the vertical axis of rotation.",ident:"lab",whitepoint:S});var $=Object.freeze({$coord:b,ident:"chroma",short:"C",domain:i(
+0,150),input:t(e=>e==="none"||!e?0:typeof e=="string"&&e.charAt(
+-1)==="%"?parseFloat(e)/100:(typeof e=="string"?parseFloat(e):
+e)/$.domain.maximum,"input"),output:t(e=>parseFloat((e*$.domain.
+maximum).toPrecision(5)),"output"),bytes:2,description:"Chro\
+ma: the quality of a color's purity, intensity or saturation\
+."}),oe=Object.freeze({$coord:b,ident:"chroma",short:"c",domain:i(
+0,.4),input:t(e=>e==="none"||!e?0:typeof e=="string"&&e.charAt(
+-1)==="%"?oe.domain.maximum*parseFloat(e)/100:typeof e=="str\
+ing"?parseFloat(e):e,"input"),output:t(e=>e,"output"),bytes:4,
+description:"Chroma: the quality of a color's purity, intens\
+ity or saturation."});var Ho={CAM:s(h,$,P)(),CSYS:R,description:"CIE-based LCh col\
 or spaces are transformations of the two chroma values (ab o\
-r uv) into the polar coordinate.",ident:"lch",whitepoint:u};var Ir=Object.freeze({CAM:n(f,M,G)(),CSYS:C,ident:"oklab",whitepoint:u});var kr={CAM:n(f,V,g)(),CSYS:P,ident:"oklch",whitepoint:u};var H=Object.freeze({$coord:b,bytes:1,domain:i(...j),ident:"\
-blue",input:t(e=>s(e,H.domain),"input"),short:"B",description:"\
-Blue light intensity."});var k=Object.freeze({$coord:x,bytes:1,domain:i(...j),ident:"\
-green",input:t(e=>s(e,k.domain),"input"),short:"G",description:"\
-Green light intensity."});var K=Object.freeze({$coord:O,bytes:1,domain:i(...j),ident:"\
-red",input:t(e=>s(e,K.domain),"input"),short:"R",description:"\
-Red light intensity."});var Co=Object.freeze({CAM:n(K,k,H)(),CSYS:C,ident:"rgb",whitepoint:d});var A=C,N=d,Oo=Object.freeze({ident:"srgb",CSYS:A,whitepoint:N,
-copyright:"Copyright 2007 International Color Consortium",description:"\
-sRGB v4 ICC preference perceptual intent beta"}),xo=Object.freeze(
-{ident:"srgb-linear",CSYS:A,whitepoint:N}),vo=Object.freeze(
-{ident:"a98-rgb",description:"Adobe\xAE 1998 RGB",CSYS:A,whitepoint:N}),
-Ro=Object.freeze({ident:"display-p3",description:"Display P3",
-copyright:"Copyright Apple Inc., 2022",CSYS:A,whitepoint:N}),
-Eo=Object.freeze({ident:"prophoto-rgb",description:"ProPhoto\
- RGB",CSYS:A,whitepoint:N}),jo=Object.freeze({ident:"rec2020",
-description:"Rec. 2020 or BT.2020",CSYS:A,whitepoint:N});var J=C,Lo=Object.freeze({ident:"xyz-d65",alias:"xyz",description:"\
-XYZ D65 or simply XYZ",CSYS:J,whitepoint:d}),Uo=Object.freeze(
-{ident:"xyz-d50",CSYS:J,whitepoint:u});export{vo as A98RGBSpace,Ro as DisplayP3Space,ut as HSL,Dt as HWB,
-Cr as LABModel,Nr as LCh,Ir as OKLAB,kr as OKLCh,Eo as ProphotoRGBSpace,
-Co as RGBModel,jo as Rec2020Space,Uo as XYZD50,Uo as XYZD50Space,
-Lo as XYZD65,Lo as XYZD65Space,xo as sRGBLinearSpace,Oo as sRGBSpace};
+r uv) into the polar coordinate.",ident:"lch",whitepoint:S};var Jo=Object.freeze({CAM:s(h,Q,ee)(),CSYS:C,ident:"oklab",whitepoint:S});var nr={CAM:s(h,oe,P)(),CSYS:R,ident:"oklch",whitepoint:S};var re=Object.freeze({$coord:d,bytes:4,domain:i(...f),ident:"\
+blue",input:t(e=>e==="none"||!e?0:typeof e=="string"?parseFloat(
+e):e,"input"),output:t(e=>e*re.domain.maximum,"output"),short:"\
+b",description:"Blue Light Intensity"}),B=Object.freeze({$coord:d,
+bytes:1,domain:i(...A),ident:"blue",input:t(e=>m(e,B.domain),
+"input"),output:t(e=>B.domain.clamp(Math.round(e*B.domain.maximum)),
+"output"),short:"B",description:"Blue Light Intensity"});var ie=Object.freeze({$coord:O,bytes:4,domain:i(...f),ident:"\
+green",input:t(e=>e==="none"||!e?0:typeof e=="string"?parseFloat(
+e):e,"input"),output:t(e=>e*ie.domain.maximum,"output"),short:"\
+g",description:"Green Light Intensity"}),D=Object.freeze({$coord:O,
+bytes:1,domain:i(...A),ident:"green",input:t(e=>m(e,D.domain),
+"input"),output:t(e=>D.domain.clamp(Math.round(e*D.domain.maximum)),
+"output"),short:"G",description:"Green Light Intensity"});var ae=Object.freeze({$coord:x,bytes:4,domain:i(...f),ident:"\
+green",input:t(e=>e==="none"||!e?0:typeof e=="string"?parseFloat(
+e):e,"input"),output:t(e=>e*ae.domain.maximum,"output"),short:"\
+r",description:"Red Light Intensity"}),w=Object.freeze({$coord:x,
+bytes:1,domain:i(...A),ident:"red",input:t(e=>m(e,w.domain),
+"input"),output:t(e=>w.domain.clamp(Math.round(e*w.domain.maximum)),
+"output"),short:"R",description:"Red Light Intensity"});var Tr=Object.freeze({CAM:s(w,D,B)(),CSYS:C,ident:"rgb",whitepoint:g});var N=s(ae,ie,re)(),z=C,T=g,_r=Object.freeze({ident:"srgb",CAM:N,
+CSYS:z,whitepoint:T,copyright:"Copyright 2007 International \
+Color Consortium",description:"sRGB v4 ICC preference percep\
+tual intent beta"}),Gr=Object.freeze({ident:"srgb-linear",CAM:N,
+CSYS:z,whitepoint:T}),Fr=Object.freeze({ident:"a98-rgb",CAM:N,
+CSYS:z,whitepoint:T,description:"Adobe\xAE 1998 RGB"}),$r=Object.
+freeze({ident:"display-p3",CAM:N,CSYS:z,whitepoint:T,copyright:"\
+Copyright Apple Inc., 2022",description:"Display P3"}),Hr=Object.
+freeze({ident:"prophoto-rgb",CAM:N,CSYS:z,whitepoint:T,description:"\
+ProPhoto RGB"}),kr=Object.freeze({ident:"rec2020",CAM:N,CSYS:z,
+whitepoint:T,description:"Rec. 2020 or BT.2020"});var ce=C,qr=Object.freeze({ident:"xyz-d65",alias:"xyz",description:"\
+XYZ D65 or simply XYZ",CSYS:ce,whitepoint:g}),Vr=Object.freeze(
+{ident:"xyz-d50",CSYS:ce,whitepoint:S});export{Fr as A98RGBSpace,$r as DisplayP3Space,At as HSL,Xt as HWB,
+To as LABModel,Ho as LCh,Jo as OKLAB,nr as OKLCh,Hr as ProphotoRGBSpace,
+Tr as RGBModel,kr as Rec2020Space,Vr as XYZD50,Vr as XYZD50Space,
+qr as XYZD65,qr as XYZD65Space,Gr as sRGBLinearSpace,_r as sRGBSpace};
