@@ -68,7 +68,7 @@ from(t),"get")},magnitude:{enumerable:!0,get:o(()=>_(Math.hypot(
 2,0),"get")}});return Object.defineProperties(a,{clone:{value:o(
 ()=>k(t[0],t[1],t[2]),"value")},angle:{value:z},cross:{value:F},
 distance:{value:X},dot:{value:Y},each:{value:q},equals:{value:$},
-multiply:{value:B},normalize:{value:L},randomly:{value:Z},strictEquals:{
+multiply:{value:L},normalize:{value:B},randomly:{value:Z},strictEquals:{
 value:G},update:{value:o(function(n,s,m){let l=Array.isArray(
 n)?n.slice(3):Array.of(n,s,m);return t.set(this.head.map((c,u)=>l[u]??
 c).toArray()),this},"value")},zeroize:{value:H}}),Object.defineProperties(
@@ -96,12 +96,12 @@ return Math.abs(i-n)<=r*Math.max(1,Math.abs(i),Math.abs(n))&&
 Math.abs(t-s)<=r*Math.max(1,Math.abs(t),Math.abs(s))&&Math.abs(
 a-m)<=r*Math.max(1,Math.abs(a),Math.abs(m))}o($,"equals");function G(e){
 let[r,i,t]=this.head,[a,n,s]=e;return r===a&&i===n&&t===s}o(
-G,"strictEquals");function B(e){let[r,i,t]=this.head;if(V(e)||
+G,"strictEquals");function L(e){let[r,i,t]=this.head;if(V(e)||
 j(e)){let[a,n,s,m=0,l=0,c=0,u=0,h=0,b=0]=e;return this.update(
 r*a+i*m+t*u,r*n+i*l+t*h,r*s+i*c+t*b)}else throw new TypeError(
-"Unsupported Multiplicator: "+e)}o(B,"multiply");function L(){
+"Unsupported Multiplicator: "+e)}o(L,"multiply");function B(){
 let e=1/this.magnitude;return this.each((r,i,t)=>t[i]=r*e)}o(
-L,"normalize");function Z(e=1){let r=Math.random()*2*Math.PI,
+B,"normalize");function Z(e=1){let r=Math.random()*2*Math.PI,
 i=Math.random()*2-1,t=Math.sqrt(1-Math.pow(i,2))*e;return this.
 update(Math.cos(r)*t,Math.sin(r)*t,i*e)}o(Z,"randomly");function H(){
 return this.update(0,0,0)}o(H,"zeroize");function we(e=[0,100],r=[0,1]){let[i,t]=r,[a,n]=e,[s,m]=[t-i,
