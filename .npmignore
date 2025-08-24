@@ -1,0 +1,6 @@
+.github/
+tests/
+types/
+@types/
+
+playwright.config.ts
