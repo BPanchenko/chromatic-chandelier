@@ -10,15 +10,29 @@ if(1<=r)return 1;let t=r,s=0,n=0;for(let c=0;8>c;c+=1){if(s=
 this.sampleCurveX(t)-r,Math.abs(s)<1e-6)return t;if(n=this.sampleCurveDerivativeX(
 t),Math.abs(n)<1e-6)break;t-=s/n}let a=0,l=1;for(t=r;a<l;){if(s=
 this.sampleCurveX(t),Math.abs(s-r)<1e-6)return t;r>s?a=t:l=t,
-t=a+(l-a)/2}return t}};var g=o(e=>typeof e=="number","isNumber"),D=o(e=>typeof e=="\
-string","isString"),S=o(e=>d(e)&&Symbol.iterator in e&&typeof e[Symbol.
-iterator]=="function","isIterableObject"),d=o(e=>e!==null&&typeof e==
-"object"&&Array.isArray(e)===!1,"isObject");var E=o(e=>D(e)&&T.has(e),"isSpaceID"),A=o(e=>d(e)&&"ident"in
-e&&E(e.ident)&&"CSYS"in e&&d(e.CSYS)&&"length"in e.CSYS&&e.CSYS.
-length===3,"isColorSpace");var T=new Set(["a98-rgb","display-p3","hsl","hwb","lab","lch",
+t=a+(l-a)/2}return t}};var D=o(e=>g(e)&&Symbol.iterator in e&&"minimum"in e&&d(e.minimum)&&
+"maximum"in e&&d(e.maximum)&&"value"in e&&d(e.value)&&e.value>
+0,"isRange");function p(...e){let r=e.length===1?Array.of(0,e[0]):Array.of(
+Math.min(...e),Math.max(...e)),[i,t]=r,s=t-i,n=i+s/2;return Object.
+create(null,{from:{value:i},to:{value:t},minimum:{enumerable:!0,
+value:i},maximum:{enumerable:!0,value:t},avg:{enumerable:!0,
+value:n},value:{enumerable:!0,value:s},allot:{value:E},clamp:{
+value:T},test:{value:o(a=>i<=a&&a<=t,"value")},toString:{value:o(
+()=>String.raw`{x ∈ R; ${i} ⋜ x ⋜ ${t}}`,"value")},[Symbol.
+iterator]:{value:o(function*(){yield this.from,yield this.to},
+"value")},length:{value:2}})}o(p,"createRange");function E(e){
+return this.test(e)?e:e>this.from?(e-this.to)%this.value+this.
+from:this.to-(this.from-e)%this.value}o(E,"allocateOuterValu\
+e");function T(e){return this.test(e)?e:Math.max(Math.min(e,
+this.to),this.from)}o(T,"restrictOuterValue");var d=o(e=>typeof e=="number","isNumber"),O=o(e=>typeof e=="\
+string","isString"),S=o(e=>g(e)&&Symbol.iterator in e&&typeof e[Symbol.
+iterator]=="function","isIterableObject"),g=o(e=>e!==null&&typeof e==
+"object"&&Array.isArray(e)===!1,"isObject");var j=o(e=>O(e)&&k.has(e),"isSpaceID"),A=o(e=>g(e)&&"ident"in
+e&&j(e.ident)&&"CSYS"in e&&g(e.CSYS)&&"length"in e.CSYS&&e.CSYS.
+length===3,"isColorSpace");var k=new Set(["a98-rgb","display-p3","hsl","hwb","lab","lch",
 "oklab","oklch","prophoto-rgb","rec2020","rec2100-pq","rec21\
 00-hlg","rec2100-linear","srgb-linear","srgb","rgb","xyz","x\
-yz-d50","xyz-d65"]);var w=o(e=>d(e)&&Symbol.iterator in e&&typeof e[Symbol.iterator]==
+yz-d50","xyz-d65"]);var w=o(e=>g(e)&&Symbol.iterator in e&&typeof e[Symbol.iterator]==
 "function"&&"length"in e&&typeof e.length=="number"&&e.length>=
 9,"isMatrix");function x(...e){let r=Math.max(e.length,9),i=new ArrayBuffer(
 r*8),t=new Float64Array(i,0,r),s=Object.create(null,{[Symbol.
@@ -41,25 +55,11 @@ m-u*b;return this.update(M/n,(-y*l+c*f)/n,(h*l-c*u)/n,I/n,(y*
 a-c*b)/n,(-h*a+c*m)/n,P/n,(-f*a+l*b)/n,(u*a-l*m)/n)},"value")},
 update:{value:o(function(){return t.set(Iterator.from(arguments).
 map(n=>typeof n=="number"?n:0).toArray()),this},"value")}}),
-s.update(...e)}o(x,"createMatrix");var O=o(e=>d(e)&&Symbol.iterator in e&&"minimum"in e&&g(e.minimum)&&
-"maximum"in e&&g(e.maximum)&&"value"in e&&g(e.value)&&e.value>
-0,"isRange");function p(...e){let r=e.length===1?Array.of(0,e[0]):Array.of(
-Math.min(...e),Math.max(...e)),[i,t]=r,s=t-i,n=i+s/2;return Object.
-create(null,{from:{value:i},to:{value:t},minimum:{enumerable:!0,
-value:i},maximum:{enumerable:!0,value:t},avg:{enumerable:!0,
-value:n},value:{enumerable:!0,value:s},allot:{value:j},clamp:{
-value:k},test:{value:o(a=>i<=a&&a<=t,"value")},toString:{value:o(
-()=>String.raw`{x ∈ R; ${i} ⋜ x ⋜ ${t}}`,"value")},[Symbol.
-iterator]:{value:o(function*(){yield this.from,yield this.to},
-"value")},length:{value:2}})}o(p,"createRange");function j(e){
-return this.test(e)?e:e>this.from?(e-this.to)%this.value+this.
-from:this.to-(this.from-e)%this.value}o(j,"allocateOuterValu\
-e");function k(e){return this.test(e)?e:Math.max(Math.min(e,
-this.to),this.from)}o(k,"restrictOuterValue");var R=o(e=>S(e)&&"space"in e&&A(e.space)&&"length"in e&&e.length===
+s.update(...e)}o(x,"createMatrix");var R=o(e=>S(e)&&"space"in e&&A(e.space)&&"length"in e&&e.length===
 3&&Iterator.from(e).every(r=>typeof r=="number"),"isPointInS\
 pace");var ce=1e-6,V=o((e,r=6)=>{let i=10**r;return Math.sign(e)*Math.
 round((Math.abs(e)+Number.EPSILON)*i)/i},"round");var N=o(e=>S(e)&&"length"in e&&e.length===3&&Iterator.from(e).
-every(r=>typeof r=="number")&&"magnitude"in e&&g(e.magnitude)&&
+every(r=>typeof r=="number")&&"magnitude"in e&&d(e.magnitude)&&
 "base"in e&&S(e.base)&&"head"in e&&S(e.head),"isVector");function z(e,r=0,i=0){let t=R(e)?new Float64Array(e.buffer):
 Float64Array.of(e,r,i),s=Object.create(null,{base:{get:o(()=>Iterator.
 from([0,0,0]),"get")},head:{enumerable:!0,get:o(()=>Iterator.
@@ -123,4 +123,4 @@ le");var Ae=x(1,0,0,0,1,0,0,0,1),we=x(0,1,0,0,0,1,0,0,0),Re=x(0,0,
 Ae as IDENTITY_MATRIX,Oe as INT8_RANGE,Re as LOWER_SHIFT_MATRIX,
 Te as PERCENT_RANGE,Ee as RADIAN_RANGE,je as UNIT_RANGE,we as UPPER_SHIFT_MATRIX,
 x as createMatrix,p as createRange,z as createVector,xe as initScale,
-w as isMatrix,O as isRange,N as isVector,V as round};
+w as isMatrix,D as isRange,N as isVector,V as round};

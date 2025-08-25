@@ -82,7 +82,20 @@ export const XYZD50Space: Space;
  * Целевое пространство **OKLab**.\
  * Эталонный белый **D65** выставлен для обоих пространств — _калибровка не выполняется_.
  */
+export const a98_rgb_into_display_p3: PointReflector;
+export const a98_rgb_into_hsl: PointReflector;
+export const a98_rgb_into_hwb: PointReflector;
+export const a98_rgb_into_lch: PointReflector;
 export const a98_rgb_into_oklab: PointReflector;
+export const a98_rgb_into_oklch: PointReflector;
+export const a98_rgb_into_prophoto_rgb: PointReflector;
+export const a98_rgb_into_rec2020: PointReflector;
+export const a98_rgb_into_rgb: PointReflector;
+export const a98_rgb_into_srgb_linear: PointReflector;
+export const a98_rgb_into_srgb: PointReflector;
+export const a98_rgb_into_xyz_d50: PointReflector;
+export const a98_rgb_into_xyz_d65: PointReflector;
+export const a98_rgb_into_xyz: PointReflector;
 
 /**
  * Определяет местоположения новой точки путём выполнения афинных преобразований над компонентами аддитивной модели
@@ -102,7 +115,91 @@ export const a98_rgb_into_lab: PointReflector;
  * Целевое пространство **CIE Lab**.\
  * Эталонный белый **D50** выставлен для обоих пространств — _калибровка не выполняется_.
  */
+export const prophoto_rgb_into_a98_rgb: PointReflector;
+export const prophoto_rgb_into_display_p3: PointReflector;
+export const prophoto_rgb_into_hsl: PointReflector;
+export const prophoto_rgb_into_hwb: PointReflector;
 export const prophoto_rgb_into_lab: PointReflector;
+export const prophoto_rgb_into_lch: PointReflector;
+export const prophoto_rgb_into_oklab: PointReflector;
+export const prophoto_rgb_into_oklch: PointReflector;
+export const prophoto_rgb_into_rec2020: PointReflector;
+export const prophoto_rgb_into_rgb: PointReflector;
+export const prophoto_rgb_into_srgb_linear: PointReflector;
+export const prophoto_rgb_into_srgb: PointReflector;
+export const prophoto_rgb_into_xyz_d50: PointReflector;
+export const prophoto_rgb_into_xyz_d65: PointReflector;
+export const prophoto_rgb_into_xyz: PointReflector;
+
+export const lab_into_a98_rgb: PointReflector;
+export const lab_into_display_p3: PointReflector;
+export const lab_into_hsl: PointReflector;
+export const lab_into_hwb: PointReflector;
+export const lab_into_lch: PointReflector;
+export const lab_into_oklab: PointReflector;
+export const lab_into_oklch: PointReflector;
+export const lab_into_prophoto_rgb: PointReflector;
+export const lab_into_rec2020: PointReflector;
+export const lab_into_rgb: PointReflector;
+export const lab_into_srgb_linear: PointReflector;
+export const lab_into_srgb: PointReflector;
+export const lab_into_xyz_d50: PointReflector;
+export const lab_into_xyz_d65: PointReflector;
+export const lab_into_xyz: PointReflector;
+
+/**
+ * Возвращает точку в пространстве **CIE Lab**, которая является проекцией координат пространства **CIE LCH**.\
+ * Выполняется приведение полярных координат цилиндрической модели **LCh** к декартовых прямоугольным **Lab**,
+ * величина светлотности копируется без изменений.
+ */
+export const display_p3_into_a98_rgb: PointReflector;
+export const display_p3_into_hsl: PointReflector;
+export const display_p3_into_hwb: PointReflector;
+export const display_p3_into_lab: PointReflector;
+export const display_p3_into_lch: PointReflector;
+export const display_p3_into_oklab: PointReflector;
+export const display_p3_into_oklch: PointReflector;
+export const display_p3_into_prophoto_rgb: PointReflector;
+export const display_p3_into_rec2020: PointReflector;
+export const display_p3_into_rgb: PointReflector;
+export const display_p3_into_srgb_linear: PointReflector;
+export const display_p3_into_xyz_d50: PointReflector;
+export const display_p3_into_xyz_d65: PointReflector;
+export const display_p3_into_xyz: PointReflector;
+export const hsl_into_a98_rgb: PointReflector;
+export const hsl_into_display_p3: PointReflector;
+export const hsl_into_hwb: PointReflector;
+export const hsl_into_lab: PointReflector;
+export const hsl_into_lch: PointReflector;
+export const hsl_into_oklab: PointReflector;
+export const hsl_into_oklch: PointReflector;
+export const hsl_into_prophoto_rgb: PointReflector;
+export const hsl_into_rec2020: PointReflector;
+export const hsl_into_rgb: PointReflector;
+export const hsl_into_srgb_linear: PointReflector;
+export const hsl_into_srgb: PointReflector;
+export const hsl_into_xyz_d50: PointReflector;
+export const hsl_into_xyz_d65: PointReflector;
+export const hsl_into_xyz: PointReflector;
+export const hwb_into_a98_rgb: PointReflector;
+export const hwb_into_display_p3: PointReflector;
+export const hwb_into_hsl: PointReflector;
+export const hwb_into_lab: PointReflector;
+export const hwb_into_lch: PointReflector;
+export const hwb_into_oklab: PointReflector;
+export const hwb_into_oklch: PointReflector;
+export const hwb_into_prophoto_rgb: PointReflector;
+export const hwb_into_rec2020: PointReflector;
+export const hwb_into_rgb: PointReflector;
+export const hwb_into_srgb_linear: PointReflector;
+export const hwb_into_srgb: PointReflector;
+export const hwb_into_xyz_d50: PointReflector;
+export const hwb_into_xyz_d65: PointReflector;
+export const hwb_into_xyz: PointReflector;
+export const lch_into_a98_rgb: PointReflector;
+export const lch_into_display_p3: PointReflector;
+export const lch_into_hsl: PointReflector;
+export const lch_into_hwb: PointReflector;
 
 /**
  * Возвращает точку в пространстве **CIE Lab**, которая является проекцией координат пространства **CIE LCH**.\
@@ -110,34 +207,140 @@ export const prophoto_rgb_into_lab: PointReflector;
  * величина светлотности копируется без изменений.
  */
 export const lch_into_lab: PointReflector;
-
-export const a98_rgb_into_display_p3: PointReflector;
-export const display_p3_into_a98_rgb: PointReflector;
-export const hsl_into_a98_rgb: PointReflector;
-export const hsl_into_display_p3: PointReflector;
-export const hwb_into_a98_rgb: PointReflector;
-export const hwb_into_display_p3: PointReflector;
-export const lab_into_a98_rgb: PointReflector;
-export const lab_into_display_p3: PointReflector;
-export const lch_into_a98_rgb: PointReflector;
-export const lch_into_display_p3: PointReflector;
+export const lch_into_oklab: PointReflector;
+export const lch_into_oklch: PointReflector;
+export const lch_into_prophoto_rgb: PointReflector;
+export const lch_into_rec2020: PointReflector;
+export const lch_into_rgb: PointReflector;
+export const lch_into_srgb_linear: PointReflector;
+export const lch_into_srgb: PointReflector;
+export const lch_into_xyz_d50: PointReflector;
+export const lch_into_xyz_d65: PointReflector;
+export const lch_into_xyz: PointReflector;
 export const oklab_into_a98_rgb: PointReflector;
 export const oklab_into_display_p3: PointReflector;
+export const oklab_into_hsl: PointReflector;
+export const oklab_into_hwb: PointReflector;
+export const oklab_into_lab: PointReflector;
+export const oklab_into_lch: PointReflector;
+export const oklab_into_oklch: PointReflector;
+export const oklab_into_prophoto_rgb: PointReflector;
+export const oklab_into_rec2020: PointReflector;
+export const oklab_into_rgb: PointReflector;
+export const oklab_into_srgb_linear: PointReflector;
+export const oklab_into_srgb: PointReflector;
+export const oklab_into_xyz_d50: PointReflector;
+export const oklab_into_xyz_d65: PointReflector;
+export const oklab_into_xyz: PointReflector;
 export const oklch_into_a98_rgb: PointReflector;
 export const oklch_into_display_p3: PointReflector;
-export const prophoto_rgb_into_a98_rgb: PointReflector;
-export const prophoto_rgb_into_display_p3: PointReflector;
+export const oklch_into_hsl: PointReflector;
+export const oklch_into_hwb: PointReflector;
+export const oklch_into_lab: PointReflector;
+export const oklch_into_lch: PointReflector;
+export const oklch_into_oklab: PointReflector;
+export const oklch_into_prophoto_rgb: PointReflector;
+export const oklch_into_rec2020: PointReflector;
+export const oklch_into_rgb: PointReflector;
+export const oklch_into_srgb_linear: PointReflector;
+export const oklch_into_srgb: PointReflector;
+export const oklch_into_xyz_d50: PointReflector;
+export const oklch_into_xyz_d65: PointReflector;
+export const oklch_into_xyz: PointReflector;
 export const rec2020_into_a98_rgb: PointReflector;
 export const rec2020_into_display_p3: PointReflector;
+export const rec2020_into_hsl: PointReflector;
+export const rec2020_into_hwb: PointReflector;
+export const rec2020_into_lab: PointReflector;
+export const rec2020_into_lch: PointReflector;
+export const rec2020_into_oklab: PointReflector;
+export const rec2020_into_oklch: PointReflector;
+export const rec2020_into_prophoto_rgb: PointReflector;
+export const rec2020_into_rgb: PointReflector;
+export const rec2020_into_srgb_linear: PointReflector;
+export const rec2020_into_srgb: PointReflector;
+export const rec2020_into_xyz_d50: PointReflector;
+export const rec2020_into_xyz_d65: PointReflector;
+export const rec2020_into_xyz: PointReflector;
+export const rgb_into_a98_rgb: PointReflector;
 export const rgb_into_display_p3: PointReflector;
+export const rgb_into_hsl: PointReflector;
+export const rgb_into_hwb: PointReflector;
+export const rgb_into_lab: PointReflector;
+export const rgb_into_lch: PointReflector;
+export const rgb_into_oklab: PointReflector;
+export const rgb_into_oklch: PointReflector;
+export const rgb_into_prophoto_rgb: PointReflector;
+export const rgb_into_rec2020: PointReflector;
+export const rgb_into_xyz_d50: PointReflector;
+export const rgb_into_xyz_d65: PointReflector;
+export const rgb_into_xyz: PointReflector;
 export const srgb_into_a98_rgb: PointReflector;
 export const srgb_into_display_p3: PointReflector;
+export const srgb_into_hsl: PointReflector;
+export const srgb_into_hwb: PointReflector;
+export const srgb_into_lab: PointReflector;
+export const srgb_into_lch: PointReflector;
+export const srgb_into_oklab: PointReflector;
+export const srgb_into_prophoto_rgb: PointReflector;
+export const srgb_into_rec2020: PointReflector;
+export const srgb_into_xyz_d50: PointReflector;
+export const srgb_into_xyz_d65: PointReflector;
+export const srgb_into_xyz: PointReflector;
 export const srgb_linear_into_a98_rgb: PointReflector;
 export const srgb_linear_into_display_p3: PointReflector;
+export const srgb_linear_into_hsl: PointReflector;
+export const srgb_linear_into_hwb: PointReflector;
+export const srgb_linear_into_lab: PointReflector;
+export const srgb_linear_into_lch: PointReflector;
+export const srgb_linear_into_oklab: PointReflector;
+export const srgb_linear_into_oklch: PointReflector;
+export const srgb_linear_into_prophoto_rgb: PointReflector;
+export const srgb_linear_into_rec2020: PointReflector;
+export const srgb_linear_into_xyz_d50: PointReflector;
+export const srgb_linear_into_xyz_d65: PointReflector;
+export const srgb_linear_into_xyz: PointReflector;
 export const xyz_d50_into_a98_rgb: PointReflector;
 export const xyz_d50_into_display_p3: PointReflector;
+export const xyz_d50_into_hsl: PointReflector;
+export const xyz_d50_into_hwb: PointReflector;
+export const xyz_d50_into_lab: PointReflector;
+export const xyz_d50_into_lch: PointReflector;
+export const xyz_d50_into_oklab: PointReflector;
+export const xyz_d50_into_oklch: PointReflector;
+export const xyz_d50_into_prophoto_rgb: PointReflector;
+export const xyz_d50_into_rec2020: PointReflector;
+export const xyz_d50_into_rgb: PointReflector;
+export const xyz_d50_into_srgb_linear: PointReflector;
+export const xyz_d50_into_srgb: PointReflector;
+export const xyz_d50_into_xyz_d65: PointReflector;
 export const xyz_d65_into_a98_rgb: PointReflector;
 export const xyz_d65_into_display_p3: PointReflector;
+export const xyz_d65_into_hsl: PointReflector;
+export const xyz_d65_into_hwb: PointReflector;
+export const xyz_d65_into_lab: PointReflector;
+export const xyz_d65_into_lch: PointReflector;
+export const xyz_d65_into_oklab: PointReflector;
+export const xyz_d65_into_oklch: PointReflector;
+export const xyz_d65_into_prophoto_rgb: PointReflector;
+export const xyz_d65_into_rec2020: PointReflector;
+export const xyz_d65_into_rgb: PointReflector;
+export const xyz_d65_into_srgb_linear: PointReflector;
+export const xyz_d65_into_srgb: PointReflector;
+export const xyz_d65_into_xyz_d50: PointReflector;
+export const xyz_into_a98_rgb: PointReflector;
+export const xyz_into_display_p3: PointReflector;
+export const xyz_into_hsl: PointReflector;
+export const xyz_into_hwb: PointReflector;
+export const xyz_into_lab: PointReflector;
+export const xyz_into_lch: PointReflector;
+export const xyz_into_oklab: PointReflector;
+export const xyz_into_oklch: PointReflector;
+export const xyz_into_prophoto_rgb: PointReflector;
+export const xyz_into_rec2020: PointReflector;
+export const xyz_into_rgb: PointReflector;
+export const xyz_into_srgb_linear: PointReflector;
+export const xyz_into_srgb: PointReflector;
 
 type TParams = ArrayBufferLike | Triplet<number> | ArrayLike<number>;
 declare function initPointInSpace(colorspace: Space, parameters: TParams): PointInSpace | never;
@@ -151,7 +354,7 @@ interface CoordinateSystem extends Iterable<SpatialDimension> {
 	readonly 2: SpatialDimension | undefined;
 	readonly length: 2 | 3;
 	readonly tgeom: 'circle' | 'plane' | 'cilinder' | 'cube';
-	adapt(c1: number, c2: number, c3: number): Triplet;
+	adapt?: (c1: number, c2: number, c3: number) => Triplet;
 	entries(): Iterator<[0 | 1 | 2, SpatialDimension]>;
 	toArray(): Array<SpatialDimension>;
 }
@@ -240,9 +443,6 @@ type SpaceID =
 
 type Space = {
 	ident: SpaceID;
-	CSYS: CoordinateSystem;
-	whitepoint: Float64Array<ArrayBuffer>;
-
 	/**
 	 * A color appearance model (CAM) is a mathematical model that seeks to describe
 	 * the perceptual aspects of human color vision, i.e. viewing conditions under which
@@ -250,10 +450,8 @@ type Space = {
 	 * (In contrast, a color model defines a coordinate space to describe colors, such as the RGB and CMYK color models.)
 	 */
 	CAM?: CoordinateSystem;
-
-	alias?: SpaceID;
-	copyright?: string;
-	description?: string;
+	CSYS: CoordinateSystem;
+	whitepoint: Float64Array<ArrayBuffer>;
 };
 
 type Triplet<T = number> = [T, T, T];
@@ -268,7 +466,6 @@ type SpatialDimension = {
 	input?: (parameter: number, range?: Range) => number;
 	output?: (value: number) => number;
 
-	description?: string;
 	tgeom?: 'altitude' | 'azimuth' | 'directed-line' | 'reference-ray';
 	tcoord?: 'cartesian-coordinate-axis' | 'polar';
 };
