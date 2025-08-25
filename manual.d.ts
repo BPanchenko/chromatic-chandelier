@@ -31,6 +31,50 @@ export const HWBSpace: Space;
 export const LABSpace: Space;
 
 /**
+ * Пространство **LCh** служит цилиндрической моделью представления пространства **CIE 1976 Lab**.\
+ */
+export const LCHSpace: Space;
+
+export const okLCHSpace: Space;
+export const okLABSpace: Space;
+
+/**
+ * RGB - аддитивная цветовая модель, описывающая способ кодирования цвета для цветовоспроизведения с помощью трёх цветов,
+ * которые принято называть основными.
+ *
+ * Цветовое пространство RGB определяется следующими характеристиками:
+ *  - Координаты цветности аддитивных основных цветов — красного, зеленого и синего.
+ *  - Цветность точки белого, которая обычно является стандартным источником света.
+ *  - Передаточная функция, также известная как кривая тонального отклика или гамма,
+ *    которая отображает цветность на трехстимулные значения.
+ */
+export const RGBModel: Space;
+
+/**
+ * Цветовое пространство sRGB охватывает большую часть видимого спектра и позволяет получить точное отображение цветов на большинстве устройств с его поддержкой.
+ * Иногда вы можете встретить упоминание стандарта Rec.709 (BT.709), который по своим возможностям цветовоспроизведения является копией sRGB, но изначально предлагает другие настройки гаммы, задающей контрастность изображения.
+ *
+ * [Wikipedia](https://en.wikipedia.org/wiki/SRGB)
+ */
+export const sRGBSpace: Space;
+export const sRGBLinearSpace: Space;
+export const A98RGBSpace: Space;
+export const DisplayP3Space: Space;
+export const ProPhotoRGBSpace: Space;
+export const Rec2020Space: Space;
+
+/**
+ * Эталонная цветовая модель, заданная в строгом математическом смысле Международной комиссией по освещению в 1931 году.\
+ * Модель CIEXYZ является мастер-моделью практически всех остальных цветовых моделей.
+ *
+ * [WIKI: Meaning of X, Y and Z](https://en.wikipedia.org/wiki/CIE_1931_color_space#Meaning_of_X,_Y_and_Z) |
+ * [Перевод](https://translated.turbopages.org/proxy_u/en-ru.ru.4b93d87b-68494692-35524c25-74722d776562/https/en.wikipedia.org/wiki/CIE_1931_color_space) |
+ * [Описание мат. модели](https://unick-soft.ru/article.php?id=32) |
+ */
+export const XYZD65Space: Space;
+export const XYZD50Space: Space;
+
+/**
  * Определяет местоположения новой точки путём выполнения афинных преобразований над компонентами аддитивной модели
  * исходного пространства **Adobe® 1998 RGB**; с последующим приведением хроматической составляющей к представлению
  * в плоской системе координат цветности и выделением величины светлотности цвета.
@@ -67,21 +111,49 @@ export const prophoto_rgb_into_lab: PointReflector;
  */
 export const lch_into_lab: PointReflector;
 
+export const a98_rgb_into_display_p3: PointReflector;
+export const display_p3_into_a98_rgb: PointReflector;
+export const hsl_into_a98_rgb: PointReflector;
+export const hsl_into_display_p3: PointReflector;
+export const hwb_into_a98_rgb: PointReflector;
+export const hwb_into_display_p3: PointReflector;
+export const lab_into_a98_rgb: PointReflector;
+export const lab_into_display_p3: PointReflector;
+export const lch_into_a98_rgb: PointReflector;
+export const lch_into_display_p3: PointReflector;
+export const oklab_into_a98_rgb: PointReflector;
+export const oklab_into_display_p3: PointReflector;
+export const oklch_into_a98_rgb: PointReflector;
+export const oklch_into_display_p3: PointReflector;
+export const prophoto_rgb_into_a98_rgb: PointReflector;
+export const prophoto_rgb_into_display_p3: PointReflector;
+export const rec2020_into_a98_rgb: PointReflector;
+export const rec2020_into_display_p3: PointReflector;
+export const rgb_into_display_p3: PointReflector;
+export const srgb_into_a98_rgb: PointReflector;
+export const srgb_into_display_p3: PointReflector;
+export const srgb_linear_into_a98_rgb: PointReflector;
+export const srgb_linear_into_display_p3: PointReflector;
+export const xyz_d50_into_a98_rgb: PointReflector;
+export const xyz_d50_into_display_p3: PointReflector;
+export const xyz_d65_into_a98_rgb: PointReflector;
+export const xyz_d65_into_display_p3: PointReflector;
+
 type TParams = ArrayBufferLike | Triplet<number> | ArrayLike<number>;
 declare function initPointInSpace(colorspace: Space, parameters: TParams): PointInSpace | never;
 declare function isPointInSpace(entity: unknown): entity is PointInSpace;
 
 export { initPointInSpace as default, initPointInSpace, isPointInSpace };
 
-interface CoordinateSystem extends Iterable<Dimension> {
-	readonly 0: Dimension;
-	readonly 1: Dimension;
-	readonly 2: Dimension | undefined;
+interface CoordinateSystem extends Iterable<SpatialDimension> {
+	readonly 0: SpatialDimension;
+	readonly 1: SpatialDimension;
+	readonly 2: SpatialDimension | undefined;
 	readonly length: 2 | 3;
 	readonly tgeom: 'circle' | 'plane' | 'cilinder' | 'cube';
-	adapt?: (c1: number, c2: number, c3: number) => Triplet;
-	entries(): Iterator<[0 | 1 | 2, Dimension]>;
-	toArray(): Array<Dimension>;
+	adapt(c1: number, c2: number, c3: number): Triplet;
+	entries(): Iterator<[0 | 1 | 2, SpatialDimension]>;
+	toArray(): Array<SpatialDimension>;
 }
 
 interface PointInSpace extends Iterable<number> {
@@ -91,8 +163,10 @@ interface PointInSpace extends Iterable<number> {
 
 	get adapted(): IteratorObject<number>;
 	get position(): IteratorObject<number>;
+	entries(): IteratorObject<[SpatialDimension, number]>;
 	equals(pins: PointInSpace, epsilon?: number): boolean;
 	set(parameters: Triplet<number | string>): PointInSpace;
+	values(): [number, number, number];
 
 	readonly length: 3;
 	get 0(): number;
@@ -184,8 +258,8 @@ type Space = {
 
 type Triplet<T = number> = [T, T, T];
 
-type Dimension = {
-	$coord?: Dimension;
+type SpatialDimension = {
+	$coord?: SpatialDimension;
 	ident: DimID;
 	short: DimKey;
 
