@@ -359,7 +359,7 @@ interface CoordinateSystem extends Iterable<SpatialDimension> {
 	toArray(): Array<SpatialDimension>;
 }
 
-interface PointInSpace extends Iterable<number> {
+export interface PointInSpace extends Iterable<number> {
 	readonly buffer: ArrayBuffer;
 	readonly colorspace: SpaceID;
 	readonly space: Space;
@@ -380,7 +380,7 @@ interface PointInSpace extends Iterable<number> {
 	set 2(value: number | string);
 }
 
-interface PointReflector {
+export interface PointReflector {
 	name: string;
 	(point: PointInSpace): PointInSpace;
 }
@@ -441,13 +441,14 @@ type SpaceID =
 	| 'xyz-d65'
 	| 'xyz';
 
-type Space = {
+export type Space = {
 	ident: SpaceID;
 	/**
-	 * A color appearance model (CAM) is a mathematical model that seeks to describe
-	 * the perceptual aspects of human color vision, i.e. viewing conditions under which
-	 * the appearance of a color does not tally with the corresponding physical measurement of the stimulus source.
-	 * (In contrast, a color model defines a coordinate space to describe colors, such as the RGB and CMYK color models.)
+	 * A color appearance model (CAM) is a mathematical model that seeks to describe the perceptual aspects of human color vision, i.e. viewing conditions under which the appearance of a color does not tally with the corresponding physical measurement of the stimulus source. (In contrast, a color model defines a coordinate space to describe colors, such as the RGB and CMYK color models.)
+	 * 
+	 * A uniform color space (UCS) is a color model that seeks to make the color-making attributes perceptually uniform, i.e. identical spatial distance between two colors equals identical amount of perceived color difference. A CAM under a fixed viewing condition results in a UCS; a UCS with a modeling of variable viewing conditions results in a CAM. A UCS without such modelling can still be used as a rudimentary CAM.
+	 *
+	 * [WIKI](https://en.wikipedia.org/wiki/Color_appearance_model)
 	 */
 	CAM?: CoordinateSystem;
 	CSYS: CoordinateSystem;
