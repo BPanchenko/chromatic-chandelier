@@ -1,4 +1,78 @@
-import { BezierPoints, CubicBezierCorrelator, EasingName } from "../math-gl/lib.ease-correlation.ts";
+export type BezierPoints = [p1x: number, p1y: number, p2x: number, p2y: number];
+
+export interface CubicBezierCorrelator {
+	name: string;
+	cx: number;
+	bx: number;
+	ax: number;
+	cy: number;
+	by: number;
+	ay: number;
+
+	/**
+	 * @param W progress [0-1]
+	 * @returns sampled X value
+	 */
+	sampleCurveX(Y: number): number;
+
+	/**
+	 * @param X progress [0-1]
+	 * @returns sampled Y value
+	 */
+	sampleCurveY(X: number): number;
+
+	/**
+	 * @param weight progress [0-1]
+	 * @returns sampled curve derivative X value
+	 */
+	sampleCurveDerivativeX(weight: number): number;
+
+	/**
+	 * @param x progress [0-1]
+	 * @returns solved curve X value
+	 */
+	solveCurveX(x: number): number;
+}
+
+export interface CubicBezieConstructor {
+	/**
+	 * @param p1x First point horizontal position
+	 * @param p1y First point vertical position
+	 * @param p2x Second point horizontal position
+	 * @param p2y Second point vertical position
+	 * @param name An optional function name
+	 * @returns A new CubicBezier instance
+	 */
+	new(p1x: number, p1y: number, p2x: number, p2y: number, name?: string): CubicBezierCorrelator;
+}
+
+export type EasingName =
+	| 'ease'
+	| 'ease-in'
+	| 'ease-out'
+	| 'ease-in-out'
+	| 'ease-in-circ'
+	| 'ease-in-cubic'
+	| 'ease-in-expo'
+	| 'ease-in-out-circ'
+	| 'ease-in-out-cubic'
+	| 'ease-in-out-expo'
+	| 'ease-in-out-quad'
+	| 'ease-in-out-quart'
+	| 'ease-in-out-quint'
+	| 'ease-in-out-sine'
+	| 'ease-in-quad'
+	| 'ease-in-quart'
+	| 'ease-in-quint'
+	| 'ease-in-sine'
+	| 'ease-out-circ'
+	| 'ease-out-cubic'
+	| 'ease-out-expo'
+	| 'ease-out-quad'
+	| 'ease-out-quart'
+	| 'ease-out-quint'
+	| 'ease-out-sine'
+	| 'linear';
 
 export declare const BezierPointsByName: Map<EasingName, BezierPoints>;
 export declare const EaseCorrelationByName: Map<EasingName, CubicBezierCorrelator>;

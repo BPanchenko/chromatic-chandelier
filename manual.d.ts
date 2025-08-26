@@ -1,3 +1,4 @@
+import type { Triplet } from './types';
 
 /**
  * HSL, HLS или HSI (от англ. hue, saturation, lightness (intensity)) — цветовая модель, в которой цветовыми координатами являются тон, насыщенность и светлота.
@@ -423,22 +424,9 @@ type DimID =
 	| 'saturation'
 	| 'whiteness';
 
-type SpaceID =
-	| 'a98-rgb'
-	| 'display-p3'
-	| 'hsl'
-	| 'hwb'
-	| 'lab'
-	| 'lch'
-	| 'oklab'
-	| 'oklch'
-	| 'prophoto-rgb'
-	| 'rec2020'
+export type SpaceID =
+	| UniqSpaceID
 	| 'rgb'
-	| 'srgb-linear'
-	| 'srgb'
-	| 'xyz-d50'
-	| 'xyz-d65'
 	| 'xyz';
 
 export type Space = {
@@ -455,8 +443,6 @@ export type Space = {
 	whitepoint: Float64Array<ArrayBuffer>;
 };
 
-type Triplet<T = number> = [T, T, T];
-
 type SpatialDimension = {
 	$coord?: SpatialDimension;
 	ident: DimID;
@@ -470,3 +456,19 @@ type SpatialDimension = {
 	tgeom?: 'altitude' | 'azimuth' | 'directed-line' | 'reference-ray';
 	tcoord?: 'cartesian-coordinate-axis' | 'polar';
 };
+
+export type UniqSpaceID =
+	| 'a98-rgb'
+	| 'display-p3'
+	| 'hsl'
+	| 'hwb'
+	| 'lab'
+	| 'lch'
+	| 'oklab'
+	| 'oklch'
+	| 'prophoto-rgb'
+	| 'rec2020'
+	| 'srgb-linear'
+	| 'srgb'
+	| 'xyz-d50'
+	| 'xyz-d65';

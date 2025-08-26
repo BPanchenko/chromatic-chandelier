@@ -1,0 +1,1 @@
+export type Triplet<T = number> = [T, T, T];
