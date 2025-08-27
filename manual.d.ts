@@ -369,8 +369,8 @@ export interface PointInSpace extends Iterable<number> {
 	get position(): IteratorObject<number>;
 	entries(): IteratorObject<[SpatialDimension, number]>;
 	equals(pins: PointInSpace, epsilon?: number): boolean;
-	set(parameters: Triplet<number | string>): PointInSpace;
-	values(): [number, number, number];
+	set(parameters: Iterable<number>): PointInSpace;
+	values(): IteratorObject<number>;
 
 	readonly length: 3;
 	get 0(): number;
