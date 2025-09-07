@@ -1,21 +1,22 @@
 {
   "name": "chromatic-chandelier",
-  "version": "0.18.48",
+  "version": "0.18.49",
   "homepage": "http://palette.protosite.xyz",
   "author": "Boris Panchenko <boris.v.panchenko@mail.ru> (http://bp-studio.ru)",
   "license": "LGPL-3.0-only",
   "keywords": [
-    "color-palette",
-    "color-picker",
-    "colorful-spreadsheet",
-    "palette-constructor",
-    "palette-generator"
+    "Color Picker",
+    "Color Scheme Constructor",
+    "Color Scheme Toolkit",
+    "Colour Palette Generator",
+    "Colour Palette"
   ],
   "type": "module",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "main": "./main.js",
   "exports": {
-    ".": "./index.js",
+    ".": "./main.js",
+    "./toolkit": "./toolkit.js",
+    "./math-gl": "./math-gl.js",
     "./manual": "./manual.js"
   },
   "scripts": {
