@@ -52,27 +52,76 @@ export const okLABSpace: Space;
 export const RGBModel: Space;
 
 /**
- * Цветовое пространство sRGB охватывает большую часть видимого спектра и позволяет получить точное отображение цветов на большинстве устройств с его поддержкой.
- * Иногда вы можете встретить упоминание стандарта Rec.709 (BT.709), который по своим возможностям цветовоспроизведения является копией sRGB, но изначально предлагает другие настройки гаммы, задающей контрастность изображения.
+ * Цветовое пространство sRGB охватывает большую часть видимого спектра и позволяет получить точное отображение цветов на большинстве устройств с его поддержкой.\
+ * Иногда вы можете встретить упоминание стандарта Rec.709 (BT.709), который по своим возможностям цветовоспроизведения является копией sRGB,
+ * но изначально предлагает другие настройки гаммы, задающей контрастность изображения.
  *
  * [Wikipedia](https://en.wikipedia.org/wiki/SRGB)
  */
 export const sRGBSpace: Space;
+
+/**
+ * Линейная форма цвета sRGB, также называемая линейным sRGB, &mdash; это цветовое пространство, которое является линейным преобразованием стандартного цветового пространства sRGB,
+ * устраняющим его нелинейную гамма-коррекцию путем возведения значений RGB в степень 2,2 (или применения обратной гамма-функции).
+ * Это делает его подходящим для математических операций, таких как сложение, вычитание, умножение и деление цветов, в отличие от стандартного (нелинейного) sRGB.
+ */
 export const sRGBLinearSpace: Space;
+
+/**
+ * **Adobe RGB (1998)** — цветовое пространство, разработанное компанией _Adobe Systems, Inc._ в 1998 году.\
+ * Оно было создано с целью охватить большинство оттенков, достижимых на цветных принтерах CMYK,\
+ * но при использовании основных цветов RGB на таких устройствах, как компьютерный дисплей.\
+ * Цветовое пространство Adobe RGB (1998) охватывает около 50 % видимых цветов, определяемых цветовым пространством CIELAB,\
+ * что улучшает диапазон цветового пространства **sRGB** в зелено-голубых тонах.
+ * 
+ * _Для достижения требований цветового пространства к отображению цвета_, яркость монитора должна быть 160,00 кд/м2 в белой точке\
+ * и 0,5557 кд/м2 в чёрной точке, из чего следует коэффициент контрастности 287,9.\
+ * Более того, чёрная точка должна иметь такую же цветность, как и белая, но с яркостью равной 0,0034731% от яркости белой точки.\
+ * Уровень освещенности окружающей среды на лицевой панели монитора, когда монитор выключен, должен быть 32 Люкса.
+ *
+ * [Wikipedia](https://en.wikipedia.org/wiki/Adobe_RGB_color_space)
+ */
 export const A98RGBSpace: Space;
+
+/**
+ * **Display P3** — это широкий цветовой профиль, который предлагает более насыщенный и яркий диапазон цветов.\
+ * Пространство Display P3 примерно на 25% шире sRGB, особенно в области красного и зелёного.\
+ * Стандарт был разработан Apple, основываясь на цветовом пространстве DCI-P3, которое используется в цифровом кино.
+ * 
+ * [Wikipedia](https://ru.wikipedia.org/wiki/DCI-P3)
+ */
 export const DisplayP3Space: Space;
+
+/**
+ * Цветовое пространство ProPhoto RGB охватывает более 90% возможных цветов в пространстве L*a*b Международной комиссии по освещению (CIE),\
+ * и почти 100% имеющихся в реальном мире цветов поверхности.
+ * 
+ * [Wikipedia](https://ru.wikipedia.org/wiki/ProPhoto)
+ */
 export const ProPhotoRGBSpace: Space;
 export const Rec2020Space: Space;
 
 /**
- * Эталонная цветовая модель, заданная в строгом математическом смысле Международной комиссией по освещению в 1931 году.\
- * Модель CIEXYZ является мастер-моделью практически всех остальных цветовых моделей.
+ * **XYZ** — это эталонное цветовое пространство, разработанное Международной комиссией по освещению (CIE) в 1931 году.\
+ * 
+ * Модель CIEXYZ является мастер-моделью практически всех остальных цветовых моделей.\
+ * **Канал Y** представляет яркость цвета.\
+ * **Канал Z** приблизительно соотносится с интенсивностью **синего**, но значение _Z_ в цветовом пространстве XYZ не идентично значению _B_ в цветовом пространстве RGB.\
+ * **Канал X** не имеет ясной цветной аналогии.
  *
  * [WIKI: Meaning of X, Y and Z](https://en.wikipedia.org/wiki/CIE_1931_color_space#Meaning_of_X,_Y_and_Z) |
  * [Перевод](https://translated.turbopages.org/proxy_u/en-ru.ru.4b93d87b-68494692-35524c25-74722d776562/https/en.wikipedia.org/wiki/CIE_1931_color_space) |
  * [Описание мат. модели](https://unick-soft.ru/article.php?id=32) |
  */
 export const XYZD65Space: Space;
+
+/**
+ * Вариант пространства XYZ с точкой белого **D50**.
+ * 
+ * **Источник света стандарта CIE D50**\
+ * Симулирует теплый дневной свет в восходе солнца или закате с коррелированой цветовой температурой 5003 K.\
+ * Также известный как horizon light.
+ */
 export const XYZD50Space: Space;
 
 /**
@@ -343,22 +392,72 @@ export const xyz_into_rgb: PointReflector;
 export const xyz_into_srgb_linear: PointReflector;
 export const xyz_into_srgb: PointReflector;
 
-type TParams = ArrayBufferLike | Triplet<number> | ArrayLike<number>;
-declare function initPointInSpace(colorspace: Space, parameters: TParams): PointInSpace | never;
-declare function isPointInSpace(entity: unknown): entity is PointInSpace;
+export function initPointInSpace(colorspace: Space, parameters: TParams): PointInSpace | never;
+export function isPointInSpace(entity: unknown): entity is PointInSpace;
 
-export { initPointInSpace as default, initPointInSpace, isPointInSpace };
+/**
+ * **Определение цветового тона (Hue)** путём преобразования координат пространства sRGB.
+ * 
+ * @param r Интенсивность **красного** задаётся _в диапазоне от 0 до 1_
+ * @param g Интенсивность **зелёного** задаётся _в диапазоне от 0 до 1_
+ * @param b Интенсивность **синего** задаётся _в диапазоне от 0 до 1_
+ * @returns **Радианная мера угла** определяется _в диапазоне от -ℼ до +ℼ_
+ */
+export const convertRgbToHue: (r: number, g: number, b: number) => number;
 
-interface CoordinateSystem extends Iterable<SpatialDimension> {
-	readonly 0: SpatialDimension;
-	readonly 1: SpatialDimension;
-	readonly 2: SpatialDimension | undefined;
-	readonly length: 2 | 3;
-	readonly tgeom: 'circle' | 'plane' | 'cilinder' | 'cube';
-	adapt?: (c1: number, c2: number, c3: number) => Triplet;
-	entries(): Iterator<[0 | 1 | 2, SpatialDimension]>;
-	toArray(): Array<SpatialDimension>;
-}
+/**
+ * **Коррекция гаммы sRGB** – это нелинейная операция над линейными значениями хроматических компонент цвета,
+ * которая корректирует яркость для компенсации нелинейного восприятия яркости человеческим глазом.
+ */
+export const gam_srgb: PointPositionConverter
+
+/**
+ * Преобразование хроматических координат цвета в гамме **sRGB** в линейные RGB-значения**.\
+ * Линейные цветовые модели лучше соответствуют тому, как глаз человека воспринимает цвета.\
+ * Это означает, что математические операции над значениями цвета будут давать правильный результат.
+ */
+export const lin_srgb: PointPositionConverter
+
+/**
+ * **Коррекция гаммы Rec. 2020** – это нелинейная операция над линейными значениями хроматических компонент цвета,\
+ * которая корректирует яркость для компенсации нелинейного восприятия яркости человеческим глазом.
+ */
+export const gam_rec2020: PointPositionConverter
+
+/**
+ * Преобразование хроматических координат цвета в гамме **Rec. 2020 в линейные RGB-значения**.\
+ * Линейные цветовые модели лучше соответствуют тому, как глаз человека воспринимает цвета.\
+ * Это означает, что математические операции над значениями цвета будут давать правильный результат.
+ */
+export const lin_rec2020: PointPositionConverter
+
+/**
+ * **Коррекция гаммы ProPhoto RGB** – это нелинейная операция над линейными значениями хроматических компонент цвета,\
+ * которая корректирует яркость для компенсации нелинейного восприятия яркости человеческим глазом.
+ */
+export const gam_prophoto: PointPositionConverter
+
+/**
+ * Преобразование хроматических координат цвета в гамме **ProPhoto RGB в линейные RGB-значения**.\
+ * Линейные цветовые модели лучше соответствуют тому, как глаз человека воспринимает цвета.\
+ * Это означает, что математические операции над значениями цвета будут давать правильный результат.
+ */
+export const lin_prophoto: PointPositionConverter
+
+/**
+ * **Коррекция гаммы ProPhoto RGB** – это нелинейная операция над линейными значениями хроматических компонент цвета,\
+ * которая корректирует яркость для компенсации нелинейного восприятия яркости человеческим глазом.
+ */
+export const gam_p3: PointPositionConverter
+
+/**
+ * Преобразование хроматических координат цвета в гамме **ProPhoto RGB в линейные RGB-значения**.\
+ * Линейные цветовые модели лучше соответствуют тому, как глаз человека воспринимает цвета.\
+ * Это означает, что математические операции над значениями цвета будут давать правильный результат.
+ */
+export const lin_p3: PointPositionConverter
+
+export default initPointInSpace;
 
 export interface PointInSpace extends Iterable<number> {
 	readonly buffer: ArrayBuffer;
@@ -384,6 +483,17 @@ export interface PointInSpace extends Iterable<number> {
 export interface PointReflector {
 	name: string;
 	(point: PointInSpace): PointInSpace;
+}
+
+interface CoordinateSystem extends Iterable<SpatialDimension> {
+	readonly 0: SpatialDimension;
+	readonly 1: SpatialDimension;
+	readonly 2: SpatialDimension | undefined;
+	readonly length: 2 | 3;
+	readonly tgeom: 'circle' | 'plane' | 'cilinder' | 'cube';
+	adapt?: (c1: number, c2: number, c3: number) => Triplet;
+	entries(): Iterator<[0 | 1 | 2, SpatialDimension]>;
+	toArray(): Array<SpatialDimension>;
 }
 
 type DimKey =
@@ -423,6 +533,10 @@ type DimID =
 	| 'red'
 	| 'saturation'
 	| 'whiteness';
+
+type TParams = ArrayBufferLike | Triplet<number> | ArrayLike<number>;
+
+type PointPositionConverter = (pins: PointInSpace) => IteratorObject<number>;
 
 export type SpaceID =
 	| UniqSpaceID
