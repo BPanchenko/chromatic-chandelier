@@ -23,3 +23,9 @@ npm install chromatic-chandelier -D
 ### Проекция цвета в другое пространство
 
 Изменение пространства определения цвета осуществляется путём определения новой точки в целевом пространстве по вычисленным координатам проекции цветовых компонент исходного пространства. В справочнике реализованы преобразования цветовых пространств из спецификации [CSS Color 4](https://www.w3.org/TR/css-color-4/#color-conversion-code), дан обновлённый стандарт вычислительных алгоритмов.
+
+Датасеты публичных образцов цвета, для которых были применены преобразования цвета с использованием модуля `chromatic-chandelier/manual`:
+
+1. http://palette.protosite.xyz/atlas.pantone-fhi.json
+1. http://palette.protosite.xyz/atlas.ral-colours.json
+1. http://palette.protosite.xyz/atlas.yandex-wizard.json
