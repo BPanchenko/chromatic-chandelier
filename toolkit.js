@@ -1,69 +1,73 @@
-var D=Object.defineProperty;var n=(e,t)=>D(e,"name",{value:t,configurable:!0});var S=n(e=>s(e)&&Symbol.iterator in e&&"minimum"in e&&c(e.minimum)&&
-"maximum"in e&&c(e.maximum)&&"value"in e&&c(e.value)&&e.value>0,"\
-isRange");function d(...e){let t=e.length===1?Array.of(0,e[0]):Array.of(Math.
-min(...e),Math.max(...e)),[r,o]=t,a=o-r,i=r+a/2;return Object.create(
-null,{from:{value:r},to:{value:o},minimum:{enumerable:!0,value:r},
-maximum:{enumerable:!0,value:o},avg:{enumerable:!0,value:i},value:{
-enumerable:!0,value:a},allot:{value:I},clamp:{value:k},test:{value:n(
-l=>r<=l&&l<=o,"value")},toString:{value:n(()=>String.raw`{x ∈ R; ${r} ⋜ x ⋜ ${o}}`,
-"value")},[Symbol.iterator]:{value:n(function*(){yield this.from,
-yield this.to},"value")},length:{value:2}})}n(d,"createRange");function I(e){
-return this.test(e)?e:e>this.from?(e-this.to)%this.value+this.from:
-this.to-(this.from-e)%this.value}n(I,"allocateOuterValue");function k(e){
-return this.test(e)?e:Math.max(Math.min(e,this.to),this.from)}n(k,
-"restrictOuterValue");var c=n(e=>typeof e=="number","isNumber"),g=n(e=>typeof e=="strin\
-g","isString"),W=n(e=>s(e)&&Symbol.iterator in e&&typeof e[Symbol.
-iterator]=="function","isIterableObject"),s=n(e=>e!==null&&typeof e==
-"object","isObject"),E=n(e=>g(e)&&z.has(e),"isColorChannelKey"),v=n(
-e=>g(e)&&M.has(e),"isSpaceDimensionID"),j=n(e=>g(e)&&O.has(e),"is\
-SpaceID"),X=n(e=>s(e)&&"ident"in e&&j(e.ident)&&"CSYS"in e&&s(e.CSYS)&&
-"length"in e.CSYS&&e.CSYS.length===3,"isColorSpace"),U=n(e=>s(e)&&
-"ident"in e&&v(e.ident)&&"short"in e&&E(e.short)&&"domain"in e&&S(
-e.domain),"isSpaceDimension"),_=n(e=>s(e)&&e instanceof Iterator&&
-"alpha"in e&&c(e.alpha),"isColorChannel");var M=new Set(["abscissa","angle","applicate","blackness","blue-y\
-ellow","blue","chroma","green","hue","lightness","ordinate","radi\
-us","green-red","red","saturation","whiteness"]),z=new Set(["a","\
-b","B","C","c","G","g","h","L","phi","R","r","rho","S","W","x","y",
-"z","rho","phi"]),O=new Set(["a98-rgb","display-p3","hsl","hwb","\
-lab","lch","oklab","oklch","prophoto-rgb","rec2020","srgb-linear",
-"srgb","rgb","xyz","xyz-d50","xyz-d65"]);var A=n(e=>{let t=Object.getOwnPropertyNames(e);for(let r of t){let o=e[r];
-s(o)&&A(o)}return Object.freeze(e)},"deepFreeze");var ne=n(e=>e.toLowerCase().replace(new RegExp(/[\W\s_-]+/,"g"),"\
--"),"toKebabCase");var oe=n((e,t="",r=!1)=>e.toLowerCase().replace(new RegExp(/[-_]+/,
+var I=Object.defineProperty;var t=(e,n)=>I(e,"name",{value:n,configurable:!0});var b=t(e=>i(e)&&Iterator.from(["minimum","maximum","from","to","\
+value","length"]).every(n=>n in e)&&e.length===2&&e.value>0&&Iterator.
+from(["allot","clamp","test"]).every(n=>n in e&&typeof e[n]=="fun\
+ction"),"isRange");var $=t(e=>typeof e=="number","isNumber"),g=t(e=>typeof e=="strin\
+g","isString"),Y=t(e=>i(e)&&Symbol.iterator in e&&typeof e[Symbol.
+iterator]=="function","isIterableObject"),i=t(e=>e!==null&&typeof e==
+"object","isObject"),D=t(e=>g(e)&&j.has(e),"isColorChannelKey"),v=t(
+e=>g(e)&&E.has(e),"isSpaceDimensionID"),k=t(e=>g(e)&&M.has(e),"is\
+SpaceID"),L=t(e=>i(e)&&"ident"in e&&k(e.ident)&&"CSYS"in e&&i(e.CSYS)&&
+"length"in e.CSYS&&e.CSYS.length===3,"isColorSpace"),W=t(e=>i(e)&&
+"ident"in e&&v(e.ident)&&"short"in e&&D(e.short)&&"domain"in e&&b(
+e.domain),"isSpaceDimension"),X=t(e=>i(e)&&e instanceof Iterator&&
+"alpha"in e&&$(e.alpha),"isColorChannel"),E=new Set(["abscissa","\
+angle","applicate","blackness","blue-yellow","blue","chroma","gre\
+en","hue","lightness","ordinate","radius","green-red","red","satu\
+ration","whiteness"]),j=new Set(["a","b","B","C","c","G","g","h",
+"L","phi","R","r","rho","S","W","x","y","z","rho","phi"]),M=new Set(
+["a98-rgb","display-p3","hsl","hwb","lab","lch","oklab","oklch","\
+prophoto-rgb","rec2020","srgb-linear","srgb","rgb","xyz","xyz-d50",
+"xyz-d65"]);var O=t(e=>{let n=Object.getOwnPropertyNames(e);for(let r of n){let a=e[r];
+i(a)&&O(a)}return Object.freeze(e)},"deepFreeze");var Z=t(e=>e.toLowerCase().replace(new RegExp(/[\W\s_-]+/,"g"),"-"),
+"toKebabCase");var ne=t((e,n="",r=!1)=>e.toLowerCase().replace(new RegExp(/[-_]+/,
 "g")," ").replace(new RegExp(/[^\w\s]+/,"g"),"").trim().split(" ").
-map((o,a)=>r||0<a?o[0].toUpperCase().concat(o.slice(1)):o).join(t),
-"toPascalCase");var m=String.raw`none|-?[\d\.]+%?`,x=`(${m}) (${m}) (${m})(?: / (${m}\
-))?`,u=String.raw`a-f\d`,P=String.raw`hsl|hwb|lab|lch|lch|oklab|oklch|rgb`,
-T=String.raw`srgb|srgb-linear|display-p3|a98-rgb|prophoto-rgb|rec2020|xyz|xyz-d50|xyz-d65`,
-w=new RegExp(`^(${P})\\(${x}\\)$`),b=new RegExp(`^color\\((${T}) ${x}\
-\\)$`),F=`#?[${u}]{3}[${u}]?`,V=`#?[${u}]{6}([${u}]{2})?`,C=new RegExp(
-`[^#${u}]`,"gi"),R=new RegExp(`^${F}$|^${V}$`,"i"),y=n(e=>w.test(
-e)||b.test(e),"isColorFunction"),$=n(e=>C.test(e)===!1&&R.test(e),
-"isHEXColor"),le=n(e=>typeof e=="string"&&($(e)||y(e)),"isCSSColo\
-r"),pe=n(e=>{if($(e))return["srgb",...H(e)];if(y(e)){let t=(b.test(
-e)?b.exec(e)?.slice(1):w.exec(e)?.slice(1))??["none","none","none"],
-r=N(t.pop()),o=t.shift()??"srgb",[a="none",i="none",l="none"]=t.map(
-p=>p!==void 0&&/^[-.\d]+$/.test(p)?parseFloat(p):p);return[o,[a,i,
-l],r]}throw new TypeError(`Expected a valid representation that d\
+map((a,s)=>r||0<s?a[0].toUpperCase().concat(a.slice(1)):a).join(n),
+"toPascalCase");function d(...e){let[n,r]=e.length===1?Array.of(0,e[0]):Array.of(
+Math.min(...e),Math.max(...e)),a=Object.create(null,{0:{value:n},
+1:{value:r},[Symbol.iterator]:{value:t(function*(){yield this[0],
+yield this[1]},"value")},[Symbol.toStringTag]:{get(){return`Range\
+{x \u2208 R; ${this[0]} \u22DC x \u22DC ${this[1]}}`}},avg:{enumerable:!0,
+get(){return this[0]+this.value/2}},length:{value:2},value:{enumerable:!0,
+get(){return this[1]-this[0]}},toString:{value:t(function(){return this[0]+
+","+this[1]},"value")}});return Object.defineProperties(a,{from:{
+enumerable:!0,value:n},to:{enumerable:!0,value:r},allot:{value:t(
+function(o){return this.test(o)?o:o>this.from?(o-this.to)%this.value+
+this.from:this.to-(this.from-o)%this.value},"allocateOuterValue")},
+clamp:{value:t(function(o){return this.test(o)?o:Math.max(Math.min(
+o,this.to),this.from)},"restrictOuterValue")},test:{value:t(function(s){
+return this.from<=s&&s<=this.to},"value")}}),a}t(d,"initRange");var c=String.raw`none|-?[\d\.]+%?`,S=`(${c}) (${c}) (${c})(?: / (${c}\
+))?`,p=String.raw`a-f\d`,z=String.raw`hsl|hwb|lab|lch|lch|oklab|oklch|rgb`,
+P=String.raw`srgb|srgb-linear|display-p3|a98-rgb|prophoto-rgb|rec2020|xyz|xyz-d50|xyz-d65`,
+x=new RegExp(`^(${z})\\(${S}\\)$`),m=new RegExp(`^color\\((${P}) ${S}\
+\\)$`),T=`#?[${p}]{3}[${p}]?`,A=`#?[${p}]{6}([${p}]{2})?`,w=new RegExp(
+`[^#${p}]`,"gi"),R=new RegExp(`^${T}$|^${A}$`,"i"),C=t(e=>x.test(
+e)||m.test(e),"isColorFunction"),y=t(e=>w.test(e)===!1&&R.test(e),
+"isHEXColor"),le=t(e=>typeof e=="string"&&(y(e)||C(e)),"isCSSColo\
+r"),pe=t(e=>{if(y(e))return["srgb",...F(e)];if(C(e)){let n=(m.test(
+e)?m.exec(e)?.slice(1):x.exec(e)?.slice(1))??["none","none","none"],
+r=V(n.pop()),a=n.shift()??"srgb",[s="none",o="none",u="none"]=n.map(
+l=>l!==void 0&&/^[-.\d]+$/.test(l)?parseFloat(l):l);return[a,[s,o,
+u],r]}throw new TypeError(`Expected a valid representation that d\
 efined as the <color> CSS data type, but passed "${e}".`)},"parse\
-CSSColor"),H=n(e=>{if(C.test(e)||!R.test(e))throw new TypeError("\
-Expected a valid hex string");e.startsWith("#")&&(e=e.slice(1));let t=1;
-e.length===8&&(t=parseInt(e.slice(6,8),16)/255,e=e.slice(0,6)),e.
-length===4&&(t=parseInt(e.slice(3,4).repeat(2),16)/255,e=e.slice(
+CSSColor"),F=t(e=>{if(w.test(e)||!R.test(e))throw new TypeError("\
+Expected a valid hex string");e.startsWith("#")&&(e=e.slice(1));let n=1;
+e.length===8&&(n=parseInt(e.slice(6,8),16)/255,e=e.slice(0,6)),e.
+length===4&&(n=parseInt(e.slice(3,4).repeat(2),16)/255,e=e.slice(
 0,3)),e.length===3&&(e=e[0].repeat(2)+e[1].repeat(2)+e[2].repeat(
-2));let r=parseInt(e,16),o=r>>16&255,a=r>>8&255,i=r&255;return[[o,
-a,i],t]},"parseHEXColor"),ce=n(e=>{let t=NaN,r="deg";if(typeof e==
-"number")t=e;else{let p=String.raw`deg|grad|rad|turn`,f=new RegExp(
-`^(-?[d.]+)(${p})?$`,"i");if(f.test(e)){let h=f.exec(e)?.slice(1)??
-["0","deg"];t=parseFloat(h[0]),r=h[1]}else if(e==="none")t=NaN;else
-throw new TypeError("Expected a valid <angle> string")}let[o,a]=r===
+2));let r=parseInt(e,16),a=r>>16&255,s=r>>8&255,o=r&255;return[[a,
+s,o],n]},"parseHEXColor"),ce=t(e=>{let n=NaN,r="deg";if(typeof e==
+"number")n=e;else{let l=String.raw`deg|grad|rad|turn`,h=new RegExp(
+`^(-?[d.]+)(${l})?$`,"i");if(h.test(e)){let f=h.exec(e)?.slice(1)??
+["0","deg"];n=parseFloat(f[0]),r=f[1]}else if(e==="none")n=NaN;else
+throw new TypeError("Expected a valid <angle> string")}let[a,s]=r===
 "grad"?[0,400]:r==="deg"?[0,360]:r==="rad"?[-Math.PI,Math.PI]:[0,
-1],i=d(o,a);i.test(t)===!1&&(t=i.allot(t));let l=r==="grad"?180/200:
-r==="rad"?180/Math.PI:r==="turn"?360:1;return t*l},"parseCSSAngle");
-function N(e){let t=0;return e===void 0||!e?1:e==="none"?0:(t=parseFloat(
-e),e.charAt(-1)==="%"&&(t/=100),Math.min(Math.max(t,0),1))}n(N,"p\
-arseCSSAlphaChannel");export{w as CSSCAMFunction,b as CSSColorFunction,A as deepFreeze,
-le as isCSSColor,_ as isColorChannel,E as isColorChannelKey,y as isColorFunction,
-X as isColorSpace,$ as isHEXColor,W as isIterableObject,c as isNumber,
-s as isObject,S as isRange,U as isSpaceDimension,v as isSpaceDimensionID,
-j as isSpaceID,g as isString,ce as parseCSSAngle,pe as parseCSSColor,
-H as parseHEXColor,ne as toKebabCase,oe as toPascalCase};
+1],o=d(a,s);o.test(n)===!1&&(n=o.allot(n));let u=r==="grad"?180/200:
+r==="rad"?180/Math.PI:r==="turn"?360:1;return n*u},"parseCSSAngle");
+function V(e){let n=0;return e===void 0||!e?1:e==="none"?0:(n=parseFloat(
+e),e.charAt(-1)==="%"&&(n/=100),Math.min(Math.max(n,0),1))}t(V,"p\
+arseCSSAlphaChannel");export{x as CSSCAMFunction,m as CSSColorFunction,O as deepFreeze,
+le as isCSSColor,X as isColorChannel,D as isColorChannelKey,C as isColorFunction,
+L as isColorSpace,y as isHEXColor,Y as isIterableObject,$ as isNumber,
+i as isObject,W as isSpaceDimension,v as isSpaceDimensionID,k as isSpaceID,
+g as isString,ce as parseCSSAngle,pe as parseCSSColor,F as parseHEXColor,
+Z as toKebabCase,ne as toPascalCase};

@@ -1,6 +1,6 @@
 {
   "name": "chromatic-chandelier",
-  "version": "0.18.51",
+  "version": "0.18.52",
   "homepage": "http://palette.protosite.xyz",
   "author": "Boris Panchenko <boris.v.panchenko@mail.ru> (http://bp-studio.ru)",
   "license": "LGPL-3.0-only",
@@ -15,9 +15,9 @@
   "main": "./main.js",
   "exports": {
     ".": "./main.js",
+    "./manual": "./manual.js",
     "./toolkit": "./toolkit.js",
-    "./math-gl": "./math-gl.js",
-    "./manual": "./manual.js"
+    "./correlator": "./correlator.js"
   },
   "scripts": {
     "test:e2e": "npx playwright test",

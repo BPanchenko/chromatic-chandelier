@@ -392,7 +392,7 @@ export const xyz_into_rgb: PointReflector;
 export const xyz_into_srgb_linear: PointReflector;
 export const xyz_into_srgb: PointReflector;
 
-export function initPointInSpace(colorspace: Space, parameters: TParams): PointInSpace | never;
+export function initPointInSpace(colorspace: Space, parameters: Iterable<number>): PointInSpace | never;
 export function isPointInSpace(entity: unknown): entity is PointInSpace;
 
 /**
@@ -459,10 +459,21 @@ export const lin_p3: PointPositionConverter
 
 export default initPointInSpace;
 
-export interface PointInSpace extends Iterable<number> {
+declare interface PointPosition extends Iterable<number> {
+	readonly length: 3;
+	get 0(): number;
+	set 0(value: number);
+	get 1(): number;
+	set 1(value: number);
+	get 2(): number;
+	set 2(value: number);
+}
+
+declare interface PointInSpace extends PointPosition {
 	readonly buffer: ArrayBuffer;
 	readonly colorspace: SpaceID;
 	readonly space: Space;
+	readonly wcs: EuclideanCoordinateSystem;
 
 	get adapted(): IteratorObject<number>;
 	get position(): IteratorObject<number>;
@@ -470,27 +481,19 @@ export interface PointInSpace extends Iterable<number> {
 	equals(pins: PointInSpace, epsilon?: number): boolean;
 	set(parameters: Iterable<number>): PointInSpace;
 	values(): IteratorObject<number>;
-
-	readonly length: 3;
-	get 0(): number;
-	set 0(value: number | string);
-	get 1(): number;
-	set 1(value: number | string);
-	get 2(): number;
-	set 2(value: number | string);
 }
 
-export interface PointReflector {
+declare interface PointReflector {
 	name: string;
 	(point: PointInSpace): PointInSpace;
 }
 
-interface CoordinateSystem extends Iterable<SpatialDimension> {
+interface EuclideanCoordinateSystem extends Iterable<SpatialDimension> {
 	readonly 0: SpatialDimension;
 	readonly 1: SpatialDimension;
-	readonly 2: SpatialDimension | undefined;
-	readonly length: 2 | 3;
-	readonly tgeom: 'circle' | 'plane' | 'cilinder' | 'cube';
+	readonly 2: SpatialDimension;
+	readonly length: 3;
+	tgeom: 'cilinder' | 'cube';
 	adapt?: (c1: number, c2: number, c3: number) => Triplet;
 	entries(): Iterator<[0 | 1 | 2, SpatialDimension]>;
 	toArray(): Array<SpatialDimension>;
@@ -552,9 +555,9 @@ export type Space = {
 	 *
 	 * [WIKI](https://en.wikipedia.org/wiki/Color_appearance_model)
 	 */
-	CAM?: CoordinateSystem;
-	CSYS: CoordinateSystem;
-	whitepoint: Float64Array<ArrayBuffer>;
+	CAM?: EuclideanCoordinateSystem;
+	CSYS: EuclideanCoordinateSystem;
+	whitepoint: WhitePoint;
 };
 
 type SpatialDimension = {
@@ -571,7 +574,11 @@ type SpatialDimension = {
 	tcoord?: 'cartesian-coordinate-axis' | 'polar';
 };
 
-export type UniqSpaceID =
+declare interface WhitePoint extends Float64Array {
+	ident?: 'd50' | 'd65';
+}
+
+declare type UniqSpaceID =
 	| 'a98-rgb'
 	| 'display-p3'
 	| 'hsl'

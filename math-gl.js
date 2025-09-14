@@ -1,115 +1,154 @@
-var C=Object.defineProperty;var o=(e,r)=>C(e,"name",{value:r,configurable:!0});var v=class{static{o(this,"CubicBezier")}cx;bx;ax;cy;by;ay;name;constructor(r=0,a=0,t=1,u=1,n){
-this.cx=3*r,this.bx=3*(t-r)-this.cx,this.ax=1-this.cx-this.bx,this.
-cy=3*a,this.by=3*(u-a)-this.cy,this.ay=1-this.cy-this.by,this.name=
-n||([r,a].every(i=>i===0)&&[t,u].every(i=>i===1)?"linear":`cubic-\
-bezier(${[r,a,t,u].join(",")})`)}sampleCurveX(r){return((this.ax*
+var E=Object.defineProperty;var e=(t,r)=>E(t,"name",{value:r,configurable:!0});var O=class{static{e(this,"CubicBezier")}cx;bx;ax;cy;by;ay;name;constructor(r=0,i=0,n=1,u=1,l){
+this.cx=3*r,this.bx=3*(n-r)-this.cx,this.ax=1-this.cx-this.bx,this.
+cy=3*i,this.by=3*(u-i)-this.cy,this.ay=1-this.cy-this.by,this.name=
+l||([r,i].every(a=>a===0)&&[n,u].every(a=>a===1)?"linear":`cubic-\
+bezier(${[r,i,n,u].join(",")})`)}sampleCurveX(r){return((this.ax*
 r+this.bx)*r+this.cx)*r}sampleCurveY(r){return((this.ay*r+this.by)*
 r+this.cy)*r}sampleCurveDerivativeX(r){return(3*this.ax*r+2*this.
-bx)*r+this.cx}solveCurveX(r){if(0>=r)return 0;if(1<=r)return 1;let t=r,
-u=0,n=0;for(let c=0;8>c;c+=1){if(u=this.sampleCurveX(t)-r,Math.abs(
-u)<1e-6)return t;if(n=this.sampleCurveDerivativeX(t),Math.abs(n)<
-1e-6)break;t-=u/n}let i=0,l=1;for(t=r;i<l;){if(u=this.sampleCurveX(
-t),Math.abs(u-r)<1e-6)return t;r>u?i=t:l=t,t=i+(l-i)/2}return t}};var D=o(e=>x(e)&&Symbol.iterator in e&&"minimum"in e&&g(e.minimum)&&
-"maximum"in e&&g(e.maximum)&&"value"in e&&g(e.value)&&e.value>0,"\
-isRange");function p(...e){let r=e.length===1?Array.of(0,e[0]):Array.of(Math.
-min(...e),Math.max(...e)),[a,t]=r,u=t-a,n=a+u/2;return Object.create(
-null,{from:{value:a},to:{value:t},minimum:{enumerable:!0,value:a},
-maximum:{enumerable:!0,value:t},avg:{enumerable:!0,value:n},value:{
-enumerable:!0,value:u},allot:{value:E},clamp:{value:O},test:{value:o(
-i=>a<=i&&i<=t,"value")},toString:{value:o(()=>String.raw`{x ∈ R; ${a} ⋜ x ⋜ ${t}}`,
-"value")},[Symbol.iterator]:{value:o(function*(){yield this.from,
-yield this.to},"value")},length:{value:2}})}o(p,"createRange");function E(e){
-return this.test(e)?e:e>this.from?(e-this.to)%this.value+this.from:
-this.to-(this.from-e)%this.value}o(E,"allocateOuterValue");function O(e){
-return this.test(e)?e:Math.max(Math.min(e,this.to),this.from)}o(O,
-"restrictOuterValue");var g=o(e=>typeof e=="number","isNumber"),T=o(e=>typeof e=="strin\
-g","isString"),f=o(e=>x(e)&&Symbol.iterator in e&&typeof e[Symbol.
-iterator]=="function","isIterableObject"),x=o(e=>e!==null&&typeof e==
-"object","isObject");var j=o(e=>T(e)&&k.has(e),"isSpaceID"),w=o(e=>x(e)&&"ident"in e&&
-j(e.ident)&&"CSYS"in e&&x(e.CSYS)&&"length"in e.CSYS&&e.CSYS.length===
-3,"isColorSpace");var k=new Set(["a98-rgb","display-p3","hsl","hwb","lab","lch","ok\
+bx)*r+this.cx}solveCurveX(r){if(0>=r)return 0;if(1<=r)return 1;let n=r,
+u=0,l=0;for(let c=0;8>c;c+=1){if(u=this.sampleCurveX(n)-r,Math.abs(
+u)<1e-6)return n;if(l=this.sampleCurveDerivativeX(n),Math.abs(l)<
+1e-6)break;n-=u/l}let a=0,m=1;for(n=r;a<m;){if(u=this.sampleCurveX(
+n),Math.abs(u-r)<1e-6)return n;r>u?a=n:m=n,n=a+(m-a)/2}return n}};var M=e(t=>typeof t=="number","isNumber"),j=e(t=>typeof t=="strin\
+g","isString"),S=e(t=>I(t)&&Symbol.iterator in t&&typeof t[Symbol.
+iterator]=="function","isIterableObject"),I=e(t=>t!==null&&typeof t==
+"object","isObject");var Q=e(t=>j(t)&&z.has(t),"isSpaceID"),V=e(t=>I(t)&&"ident"in t&&
+Q(t.ident)&&"CSYS"in t&&I(t.CSYS)&&"length"in t.CSYS&&t.CSYS.length===
+3,"isColorSpace");var z=new Set(["a98-rgb","display-p3","hsl","hwb","lab","lch","ok\
 lab","oklch","prophoto-rgb","rec2020","srgb-linear","srgb","rgb",
-"xyz","xyz-d50","xyz-d65"]);var R=o(e=>f(e)&&"length"in e&&typeof e.length=="number"&&e.length>=
-9,"isMatrix");function S(...e){let r=Math.max(e.length,9),a=new ArrayBuffer(r*8),
-t=new Float64Array(a,0,r),u=Object.create(null,{[Symbol.iterator]:{
-value:o(function*(){for(let n=0;n<t.length;n++)yield this[n]},"va\
-lue")},[Symbol.isConcatSpreadable]:{value:!0},[Symbol.toStringTag]:{
-value:o(()=>"Matrix"+t.toString(),"value")},length:{enumerable:!0,
-value:r},toArray:{value:o(()=>Iterator.from(t).toArray(),"value")},
-toString:{value:t.toString}});for(let n=0;n<r;n++)(function(i,l,c){
-Object.defineProperty(i,l,{enumerable:!0,get:o(()=>c[l],"get"),set:o(
-m=>{if(typeof m=="number")c[l]=m;else throw new TypeError("Expect\
-ed Number")},"set")})})(u,n,t);return Object.defineProperties(u,{
-clone:{value:o(()=>S(...t),"value")},each:{value:o(function(n){return t.
-forEach((i,l,c)=>n(i,l,this)),this},"value")},determinant:{value:o(
-()=>{let[n,i,l,c,m,s,h,b,d]=t,y=d*m-s*b,M=-d*c+s*h,I=b*c-m*h;return n*
-y+i*M+l*I},"value")},invert:{value:o(function(){let n=this.determinant();
-if(n===0)throw console.table(this),new Error("A singular or non-s\
-quare matrix matrix cannot be inverted.");let[i,l,c,m,s,h,b,d,y]=t,
-M=y*s-h*d,I=-y*m+h*b,P=d*m-s*b;return this.update(M/n,(-y*l+c*d)/
-n,(h*l-c*s)/n,I/n,(y*i-c*b)/n,(-h*i+c*m)/n,P/n,(-d*i+l*b)/n,(s*i-
-l*m)/n)},"value")},update:{value:o(function(){return t.set(Iterator.
-from(arguments).map(n=>typeof n=="number"?n:0).toArray()),this},"\
-value")}}),u.update(...e)}o(S,"createMatrix");var A=o(e=>f(e)&&"space"in e&&w(e.space)&&"length"in e&&e.length===
-3&&Iterator.from(e).every(r=>typeof r=="number"),"isPointInSpace");var V=o((e,r=12)=>{let a=r?10**r:1;return Math.sign(e)*Math.round(
-(Math.abs(e)+Number.EPSILON)*a)/a},"round");var N=o(e=>f(e)&&"length"in e&&e.length===3&&Iterator.from(e).every(
-r=>typeof r=="number")&&"magnitude"in e&&g(e.magnitude)&&"base"in
-e&&f(e.base)&&"head"in e&&f(e.head),"isVector");function z(e,r=0,a=0){let t=A(e)?new Float64Array(e.buffer):Float64Array.
-of(e,r,a),u=Object.create(null,{base:{get:o(()=>Iterator.from([0,
-0,0]),"get")},head:{enumerable:!0,get:o(()=>Iterator.from(t),"get")},
-magnitude:{enumerable:!0,get:o(()=>V(Math.hypot(...t),9),"get")},
-sqrMagnitude:{get:o(()=>t.reduce((n,i)=>n+i**2,0),"get")}});return Object.
-defineProperties(u,{clone:{value:o(()=>z(t[0],t[1],t[2]),"value")},
-angle:{value:F},cross:{value:X},distance:{value:Y},dot:{value:q},
-each:{value:_},equals:{value:G},multiply:{value:B},normalize:{value:K},
-randomly:{value:L},strictEquals:{value:$},update:{value:o(function(n,i,l){
-let c=Array.isArray(n)?n.slice(3):Array.of(n,i,l);return t.set(this.
-head.map((m,s)=>c[s]??m).toArray()),this},"value")},zeroize:{value:Z}}),
-Object.defineProperties(u,{[Symbol.toStringTag]:{get(){return`Vec\
-tor[${this.toString()}]`}},entries:{value:o(function(){return this.
-values().map((n,i)=>Object.seal(Array.of(i,n)))},"value")},toArray:{
-value:o(function(){return Object.seal(Array.of(this[0],this[1],this[2]))},
-"value")},toString:{value:o(()=>t.toString(),"value")},values:{value:o(
-function(){return Iterator.from(this.toArray())},"value")}}),Object.
-defineProperties(u,{[Symbol.isConcatSpreadable]:{value:!0},[Symbol.
-iterator]:{value:o(function*(){yield this[0],yield this[1],yield this[2]},
-"value")},0:{enumerable:!0,get:o(()=>t[0],"get"),set:o(n=>{if(typeof n==
-"number")t[0]=n;else throw new TypeError("Expected Number")},"set")},
-1:{enumerable:!0,get:o(()=>t[1],"get"),set:o(n=>{if(typeof n=="nu\
-mber")t[1]=n;else throw new TypeError("Expected Number")},"set")},
-2:{enumerable:!0,get:o(()=>t[2],"get"),set:o(n=>{if(typeof n=="nu\
-mber")t[2]=n;else throw new TypeError("Expected Number")},"set")},
-length:{enumerable:!0,value:3}}),u}o(z,"createVector");function F(e,r=!1){
-let a=Math.sqrt(this.sqrMagnitude*e.sqrMagnitude),t=a&&this.dot(e)/
-a,u=Math.acos(Math.min(Math.max(t,-1),1));return r?u*180/Math.PI:
-u}o(F,"angle");function X(e){let[r,a,t]=this.head,[u,n,i]=e,l=a*i-
-t*n,c=t*u-r*i,m=r*n-a*u;return this.update(l,c,m)}o(X,"cross");function Y(e){
-return Math.sqrt(this.head.reduce((r,a,t)=>r+Math.pow(e[t]-a,2),0))}
-o(Y,"distance");function q(e){let[r,a,t]=this.head,[u,n,i]=e;return r*
-u+a*n+t*i}o(q,"dot");function _(e){for(let r=0;r<3;r++)e(this[r],
-r,this);return this}o(_,"each");function G(e,r=1e-5){let[a,t,u]=this.
-head,[n,i,l]=e;return Math.abs(a-n)<=r*Math.max(1,Math.abs(a),Math.
-abs(n))&&Math.abs(t-i)<=r*Math.max(1,Math.abs(t),Math.abs(i))&&Math.
-abs(u-l)<=r*Math.max(1,Math.abs(u),Math.abs(l))}o(G,"equals");function $(e){
-let[r,a,t]=this.head,[u,n,i]=e;return r===u&&a===n&&t===i}o($,"st\
-rictEquals");function B(e){let[r,a,t]=this.head;if(R(e)||N(e)){let[
-u,n,i,l=0,c=0,m=0,s=0,h=0,b=0]=e;return this.update(r*u+a*l+t*s,r*
-n+a*c+t*h,r*i+a*m+t*b)}else throw new TypeError("Unsupported Mult\
-iplicator: "+e)}o(B,"multiply");function K(){let e=1/this.magnitude;
-return this.each((r,a,t)=>t[a]=r*e)}o(K,"normalize");function L(e=1){
-let r=Math.random()*2*Math.PI,a=Math.random()*2-1,t=Math.sqrt(1-Math.
-pow(a,2))*e;return this.update(Math.cos(r)*t,Math.sin(r)*t,a*e)}o(
-L,"randomly");function Z(){return this.update(0,0,0)}o(Z,"zeroize");function Se(e=[0,100],r=[0,1]){let[a,t]=r,[u,n]=e,[i,l]=[t-a,n-u];
-function c(s){return typeof s=="string"&&(s=parseFloat(s)),m.domain.
-test(s)===!1&&(s=s>t?(s-t)%i+a:t-(a-s)%i),l*(s-a)/i+u}o(c,"invert");
-function m(s){return typeof s=="string"&&(s=parseFloat(s)),m.range.
-test(s)===!1&&(s=s>n?(s-n)%l+u:n-(u-s)%l),i*(s-u)/l+a}return o(m,
-"calculator"),Object.defineProperties(m,{domain:{enumerable:!0,value:p(
-a,t)},range:{enumerable:!0,value:p(u,n)},invert:{enumerable:!0,value:c}})}
-o(Se,"initScale");var ve=S(1,0,0,0,1,0,0,0,1),we=S(0,1,0,0,0,1,0,0,0),Re=S(0,0,0,1,
-0,0,0,1,0),Ae=S(0,0,1,0,1,0,1,0,0);var Ce=p(0,360),De=p(0,2*Math.PI),Ee=p(0,100),Oe=p(0,255),Te=p(0,
-1);export{v as CubicBezier,Ce as DEGREE_RANGE,Ae as EXCHANGE_MATRIX,
-ve as IDENTITY_MATRIX,Oe as INT8_RANGE,Re as LOWER_SHIFT_MATRIX,Ee as PERCENT_RANGE,
-De as RADIAN_RANGE,Te as UNIT_RANGE,we as UPPER_SHIFT_MATRIX,S as createMatrix,
-p as createRange,z as createVector,Se as initScale,R as isMatrix,
-D as isRange,N as isVector,V as round};
+"xyz","xyz-d50","xyz-d65"]);var T=e(t=>S(t)&&Iterator.from(t).every(r=>typeof r=="number")&&"\
+length"in t&&t.length===3&&"space"in t&&V(t.space),"isPointInSpac\
+e");function ct(t,r){if(V(t)===!1)throw new TypeError("Point must be \
+declared in a valid color space instead of "+JSON.stringify(t,void 0,
+2));if((S(r)&&Iterator.from(r).every(o=>M(o)))===!1)throw new TypeError(
+"Point in space has valid coordinates. Wrong parameters: "+JSON.stringify(
+r,void 0,2));let i=t.CSYS.length,n=new Float64Array(i),u=t.CAM===
+void 0?Array.of(0,1,2):t.CAM.toArray().map(o=>t.CSYS.toArray().findIndex(
+s=>o.$coord===s)),l={adapted:{get(){if(typeof this.space.CSYS.adapt==
+"function"){let[o,s,h]=this.position;return Iterator.from(this.space.
+CSYS.adapt(o,s,h))}else return this.position}},position:{get:e(()=>Iterator.
+from(n),"get"),set:e(o=>n.set(o),"set")},set:{value:e(function(o){
+return Iterator.from(o).take(3).forEach((s,h)=>this[h]=s),this},"\
+value")}};for(let o=0;o<i;o++)((s,h,f)=>{l[s]={enumerable:!0,get(){
+let{CAM:p,CSYS:b}=this.space,y=b[h],d=p!==void 0?p[s]:null,g=f[h];
+return"output"in y&&typeof y.output=="function"&&(g=y.output(g)),
+d!==null&&"output"in d&&typeof d.output=="function"&&(g=d.output(
+g)),g},set(p){let{CAM:b,CSYS:y}=this.space,d=y[h],g=b!==void 0?b[s]:
+null;g!==null&&"input"in g&&typeof g.input=="function"&&(p=g.input(
+p)),"input"in d&&typeof d.input=="function"&&(p=d.input(p)),typeof p==
+"string"&&(p=parseFloat(p)),f[h]=p}}})(o,u[o],n);let a={buffer:{value:n.
+buffer},colorspace:{enumerable:!0,value:t.ident},equals:{value:e(
+function(o,s=1e-12){let[h,f,p]=this.position,[b,y,d]=o.position;return this.
+colorspace===o.colorspace&&Math.abs(h-b)<=s*Math.max(1,Math.abs(h),
+Math.abs(b))&&Math.abs(f-y)<=s*Math.max(1,Math.abs(f),Math.abs(y))&&
+Math.abs(p-d)<=s*Math.max(1,Math.abs(p),Math.abs(d))},"value")},space:{
+value:t},wcs:{value:t.CAM??t.CSYS}};return Object.create(null,{...l,
+...a,...{[Symbol.iterator]:{value:e(function*(){yield this[0],yield this[1],
+yield this[2]},"value")},[Symbol.toStringTag]:{get(){return`Point\
+InSpace(${this.toString()})`}},toString:{value:e(function(){return`${this.
+colorspace};[${this.values().toArray().toString()}]`},"value")},length:{
+value:i},entries:{value:e(function(){let o=this.space.CAM??this.space.
+CSYS;return Iterator.from([[o[0],this[0]],[o[1],this[1]],[o[2],this[2]]])},
+"value")},values:{value:e(function(){return Iterator.from(this)},
+"value")}}}).set(Array.from(r))}e(ct,"initPointInSpace");function x(...t){let[r,i]=t.length===1?Array.of(0,t[0]):Array.of(
+Math.min(...t),Math.max(...t)),n=Object.create(null,{0:{value:r},
+1:{value:i},[Symbol.iterator]:{value:e(function*(){yield this[0],
+yield this[1]},"value")},[Symbol.toStringTag]:{get(){return`Range\
+{x \u2208 R; ${this[0]} \u22DC x \u22DC ${this[1]}}`}},avg:{enumerable:!0,
+get(){return this[0]+this.value/2}},length:{value:2},value:{enumerable:!0,
+get(){return this[1]-this[0]}},toString:{value:e(function(){return this[0]+
+","+this[1]},"value")}});return Object.defineProperties(n,{from:{
+enumerable:!0,value:r},to:{enumerable:!0,value:i},allot:{value:e(
+function(l){return this.test(l)?l:l>this.from?(l-this.to)%this.value+
+this.from:this.to-(this.from-l)%this.value},"allocateOuterValue")},
+clamp:{value:e(function(l){return this.test(l)?l:Math.max(Math.min(
+l,this.to),this.from)},"restrictOuterValue")},test:{value:e(function(u){
+return this.from<=u&&u<=this.to},"value")}}),n}e(x,"initRange");function yt(t=[0,100],r=[0,1]){let[i,n]=r,[u,l]=t,[a,m]=[n-i,l-u];
+function c(s){return typeof s=="string"&&(s=parseFloat(s)),o.domain.
+test(s)===!1&&(s=s>n?(s-n)%a+i:n-(i-s)%a),m*(s-i)/a+u}e(c,"invert");
+function o(s){return typeof s=="string"&&(s=parseFloat(s)),o.range.
+test(s)===!1&&(s=s>l?(s-l)%m+u:l-(u-s)%m),a*(s-u)/m+i}return e(o,
+"calculator"),Object.defineProperties(o,{domain:{enumerable:!0,value:x(
+i,n)},range:{enumerable:!0,value:x(u,l)},invert:{enumerable:!0,value:c}})}
+e(yt,"initScale");var A=e(t=>S(t)&&"length"in t&&t.length===3&&"magnitude"in t&&M(t.
+magnitude)&&"base"in t&&S(t.base)&&"head"in t&&S(t.head),"isVecto\
+rQuantity"),X=e(t=>I(t)&&Iterator.from(["angle","dot","distance",
+"cross"]).every(r=>r in t&&typeof t[r]=="function"),"hasVectorCal\
+culus"),xt=e(t=>A(t)&&X(t),"isVector");var k=e((t,r=12)=>{let i=r?10**r:1;return Math.sign(t)*Math.round(
+(Math.abs(t)+Number.EPSILON)*i)/i},"round");function C(t,r=0,i=0){let n=T(t)?new Float64Array(t.buffer):Float64Array.
+of(t,r,i),{length:u}=n,l={each:{value:e(function(c){for(let o=0;o<
+this.length;o++)c(this[o],o,this);return this},"value")},multiply:{
+value:e(function(o){if(S(o)){let[s,h,f,p,b,y,d,g,D]=o,[R,P,w]=this.
+head;return this.update(R*s+P*p+w*d,R*h+P*b+w*g,R*f+P*y+w*D)}else
+throw new TypeError("Unsupported Multiplicator: "+o)},"multiply")},
+update:{value:e(function(c,o,s){let[h,f,p]=(Array.isArray(c)?c.slice(
+3):Array.of(c,o,s)).filter(b=>typeof b=="number");return this.head=
+Array.of(h??this[0],f??this[1],p??this[2]),this},"value")}},a={base:{
+get:e(()=>Iterator.from([0,0,0]),"get")},head:{enumerable:!0,get:e(
+()=>Iterator.from(n),"get"),set:e(c=>n.set(c),"set")},magnitude:{
+enumerable:!0,get(){return k(Math.hypot(...this.head))}}},m={[Symbol.
+iterator]:{value:e(function*(){for(let c of this.head)yield c},"v\
+alue")},length:{enumerable:!0,value:u}};for(let c=0;c<u;c++)(o=>{
+m[o]={enumerable:!0,get:e(()=>n[o],"get"),set:e(s=>{if(typeof s==
+"number")n[c]=s;else throw new TypeError("Expected Number")},"set")}})(
+c);return Object.create(null,Object.assign({},l,a,m))}e(C,"makeVe\
+ctorQuantity");function kt(t,r=0,i=0){let n=A(t)?t:T(t)?C(t):C(t,r,i),u={[Symbol.
+isConcatSpreadable]:{value:!0},[Symbol.toStringTag]:{get(){return`\
+Vector[${this.toString()}]`}},entries:{value:e(function(){return this.
+values().map((c,o)=>[o,c])},"value")},values:{value:e(function(){
+return Iterator.from(this)},"value")},toArray:{value:e(function(){
+return this.head.toArray()},"value")},toString:{value:e(function(){
+return this.head.toString()},"value")}},l={each:Object.getOwnPropertyDescriptor(
+n,"each"),multiply:Object.getOwnPropertyDescriptor(n,"multiply"),
+update:Object.getOwnPropertyDescriptor(n,"update")};return Object.
+create(n,Object.assign({},u,l,{sqrtMagnitude:{get(){return this.head.
+reduce((c,o)=>c+o**2,0)}}},{clone:{value:G},angle:{value:_},cross:{
+value:N},distance:{value:F},dot:{value:Y},equals:{value:q},normalize:{
+value:K},randomly:{value:L},strictEquals:{value:$},zeroize:{value:U}}))}
+e(kt,"initVectorCalculus");function _(t,r="deg"){let i=Math.sqrt(
+this.sqrtMagnitude*t.sqrtMagnitude),n=i&&this.dot(t)/i,u=Math.acos(
+Math.min(Math.max(n,-1),1));return r==="deg"?u*180/Math.PI:r==="g\
+rad"?u*200/Math.PI:r==="turn"?u/Math.PI:u}e(_,"angle");function N(t){
+let[r,i,n]=this.head,[u,l,a]=t,m=i*a-n*l,c=n*u-r*a,o=r*l-i*u;return this.
+update(m,c,o)}e(N,"cross");function F(t){return Math.sqrt(this.head.
+reduce((r,i,n)=>r+Math.pow(t[n]-i,2),0))}e(F,"distance");function Y(t){
+let[r,i,n]=this.head,[u,l,a]=t;return r*u+i*l+n*a}e(Y,"dot");function q(t,r=1e-5){
+let[i,n,u]=this.head,[l,a,m]=t;return Math.abs(i-l)<=r*Math.max(1,
+Math.abs(i),Math.abs(l))&&Math.abs(n-a)<=r*Math.max(1,Math.abs(n),
+Math.abs(a))&&Math.abs(u-m)<=r*Math.max(1,Math.abs(u),Math.abs(m))}
+e(q,"equals");function $(t){let[r,i,n]=this.head,[u,l,a]=t;return r===
+u&&i===l&&n===a}e($,"strictEquals");function G(){return C(this[0],
+this[1],this[2])}e(G,"makeEqualVectorQuantity");function K(){let t=1/
+this.magnitude;return this.each((r,i,n)=>n[i]=r*t)}e(K,"normalize");
+function L(t=1){let r=Math.random()*2*Math.PI,i=Math.random()*2-1,
+n=Math.sqrt(1-Math.pow(i,2))*t;return this.update(Math.cos(r)*n,Math.
+sin(r)*n,i*t)}e(L,"randomly");function U(){return this.update(0,0,
+0)}e(U,"zeroize");function v(...t){let r=Math.max(t.length,9),i=new ArrayBuffer(r*8),
+n=new Float64Array(i,0,r);n.set(t);let u={[Symbol.isConcatSpreadable]:{
+value:!0},[Symbol.iterator]:{value:e(function*(){for(let a=0;a<this.
+length;a++)yield this[a]},"value")},[Symbol.toStringTag]:{value:e(
+()=>`Matrix[${n.toString()}]`,"value")},toArray:{value:e(()=>Array.
+from(n.values()),"value")},toString:{value:e(()=>n.toString(),"va\
+lue")},length:{enumerable:!0,value:r},values:{value:e(()=>n.values(),
+"value")}};for(let a=0;a<r;a++)u[a]=((m,c)=>({enumerable:!0,get:e(
+()=>m[c],"get"),set:e(o=>{if(typeof o=="number")m[c]=o;else throw new TypeError(
+"Expected Number")},"set")}))(n,a);return Object.create(null,Object.
+assign({},u,{clone:{value:e(function(){return v(...this.toArray())},
+"value")},each:{value:e(function(a){return this.toArray().forEach(
+(m,c,o)=>a(m,c,this)),this},"value")},determinant:{value:e(function(){
+let[a,m,c,o,s,h,f,p,b]=this.toArray(),y=b*s-h*p,d=-b*o+h*f,g=p*o-
+s*f;return a*y+m*d+c*g},"value")},invert:{value:e(function(){let a=this.
+determinant();if(a===0)throw console.table(this),new Error("A sin\
+gular or non-square matrix matrix cannot be inverted.");let[m,c,o,
+s,h,f,p,b,y]=this.toArray(),d=y*h-f*b,g=-y*s+f*p,D=b*s-h*p;return this.
+update(d/a,(-y*c+o*b)/a,(f*c-o*h)/a,g/a,(y*m-o*p)/a,(-f*m+o*s)/a,
+D/a,(-b*m+c*p)/a,(h*m-c*s)/a)},"value")},update:{value:e(function(...a){
+return n.set(a.map((m,c)=>typeof m=="number"?m:n[c])),this},"valu\
+e")}}))}e(v,"makeMatrix");var _t=v(1,0,0,0,1,0,0,0,1),Nt=v(0,1,0,0,0,1,0,0,0),Ft=v(0,0,0,1,
+0,0,0,1,0),Yt=v(0,0,1,0,1,0,1,0,0);var Gt=x(0,360),Kt=x(0,2*Math.PI),Lt=x(0,100),Ut=x(0,255),Zt=x(0,
+1);export{O as CubicBezier,Gt as DEGREE_RANGE,Yt as EXCHANGE_MATRIX,
+_t as IDENTITY_MATRIX,Ut as INT8_RANGE,Ft as LOWER_SHIFT_MATRIX,Lt as PERCENT_RANGE,
+Kt as RADIAN_RANGE,Zt as UNIT_RANGE,Nt as UPPER_SHIFT_MATRIX,X as hasVectorCalculus,
+ct as initPointInSpace,x as initRange,yt as initScale,kt as initVector,
+kt as initVectorCalculus,T as isPointInSpace,xt as isVector,A as isVectorQuantity,
+v as makeMatrix,k as round};
