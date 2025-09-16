@@ -396,6 +396,16 @@ export function initPointInSpace(colorspace: Space, parameters: Iterable<number>
 export function isPointInSpace(entity: unknown): entity is PointInSpace;
 
 /**
+ * Приведение монохроматических компонент к шестнадцатеричному формату **#RRGGBB**
+ * 
+ * @param r Интенсивность **красного** задаётся _в диапазоне от 0 до 255_
+ * @param g Интенсивность **зелёного** задаётся _в диапазоне от 0 до 255_
+ * @param b Интенсивность **синего** задаётся _в диапазоне от 0 до 255_
+ * @returns HEX-код, который начинается с #
+ */
+export const rgb_to_hex: (R: number, G: number, B: number) => string;
+
+/**
  * **Определение цветового тона (Hue)** путём преобразования координат пространства sRGB.
  * 
  * @param r Интенсивность **красного** задаётся _в диапазоне от 0 до 1_
@@ -403,7 +413,7 @@ export function isPointInSpace(entity: unknown): entity is PointInSpace;
  * @param b Интенсивность **синего** задаётся _в диапазоне от 0 до 1_
  * @returns **Радианная мера угла** определяется _в диапазоне от -ℼ до +ℼ_
  */
-export const convertRgbToHue: (r: number, g: number, b: number) => number;
+export const rgb_to_hue: (r: number, g: number, b: number) => number;
 
 /**
  * **Коррекция гаммы sRGB** – это нелинейная операция над линейными значениями хроматических компонент цвета,
