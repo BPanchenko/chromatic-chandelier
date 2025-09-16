@@ -41,8 +41,8 @@ clamp:{value:zt(function(n){return this.test(n)?n:Math.max(Math.min(
 n,this.to),this.from)},"restrictOuterValue")},test:{value:zt(function(n){
 return this.from<=n&&n<=this.to},"value")}}),i}o(h,"o");zt(h,"ini\
 tRange");var ct=Object.freeze({$coord:ut,bytes:8,domain:h(0,360),ident:"hu\
-e",short:"h",input:o(t=>ct.domain.allot(t),"input"),output:o(t=>Number.
-isNaN(t)?Number.NaN:Math.abs(t)<.01?0:d(t),"output")});var at=Object.freeze({bytes:8,domain:h(0,1),ident:"applicate",short:"\
+e",short:"h",input:o(t=>ct.domain.allot(t),"input"),output:o(t=>isNaN(
+t)?NaN:t<1e-6?0:d(t,6),"output")});var at=Object.freeze({bytes:8,domain:h(0,1),ident:"applicate",short:"\
 z",tcoord:"cartesian-coordinate-axis",tgeom:"directed-line"});var mt=Object.freeze({$coord:at,bytes:8,domain:h(0,100),ident:"li\
 ghtness",input:o(t=>d(t/100),"input"),output:o(t=>d(t*100),"outpu\
 t"),short:"L"});var _t=Object.freeze({bytes:8,domain:h(0,1),ident:"radius",short:"\
@@ -79,14 +79,14 @@ put"),short:"a"}),wo=Object.freeze({$coord:lt,bytes:8,domain:h(-.4,
 .4),ident:"green-red",short:"a"});var st=Object.freeze({bytes:8,domain:h(-1,1),ident:"ordinate",short:"\
 y",tcoord:"cartesian-coordinate-axis",tgeom:"directed-line"});var ko=Object.freeze({$coord:st,bytes:8,domain:h(-125,125),ident:"\
 blue-yellow",input:o(t=>d(t/125),"input"),output:o(t=>d(t*125),"o\
-utput"),short:"b"}),Mo=Object.freeze({$coord:st,bytes:8,domain:h(
+utput"),short:"b"}),vo=Object.freeze({$coord:st,bytes:8,domain:h(
 -.4,.4),ident:"blue-yellow",short:"b"});var ci=S(lt,st)({adapt:{value:fo}});function fo(t,r){let e=0,i=NaN;return(t!==0||r!==0)&&(e=Math.sqrt(
 t**2+r**2),t!==0&&!r||r!==0&&!t?i=r/Math.abs(r)*(Math.PI/2):i=Math.
 atan(r/t)),[e,i]}o(fo,"calcPolarCoordinates");var xt=S(lt,st,at)({adapt:{value:gr}});function gr(t,r,e){return[
-...fo(t,r),e]}o(gr,"calcCylindricalCoordinates");var jt=Object.freeze({CAM:S(mt,Po,ko)(),CSYS:xt,ident:"lab",whp:R});var vo=Object.freeze({$coord:_t,bytes:8,domain:h(0,150),ident:"ch\
+...fo(t,r),e]}o(gr,"calcCylindricalCoordinates");var jt=Object.freeze({CAM:S(mt,Po,ko)(),CSYS:xt,ident:"lab",whp:R});var Mo=Object.freeze({$coord:_t,bytes:8,domain:h(0,150),ident:"ch\
 roma",input:o(t=>d(t/150),"input"),output:o(t=>d(t*150),"output"),
 short:"C"}),Yo=Object.freeze({$coord:_t,bytes:8,domain:h(0,.4),ident:"\
-chroma",short:"c"});var Co=Object.freeze({CAM:S(mt,vo,ct)(),CSYS:bt,ident:"lch",whp:R});var Ct=Object.freeze({CAM:S(mt,wo,Mo)(),CSYS:xt,ident:"oklab",whp:K});var It={CAM:S(mt,Yo,ct)(),CSYS:bt,ident:"oklch",whp:K};var Io=Object.freeze({$coord:at,bytes:8,domain:h(0,100),ident:"bl\
+chroma",short:"c"});var Co=Object.freeze({CAM:S(mt,Mo,ct)(),CSYS:bt,ident:"lch",whp:R});var Ct=Object.freeze({CAM:S(mt,wo,vo)(),CSYS:xt,ident:"oklab",whp:K});var It={CAM:S(mt,Yo,ct)(),CSYS:bt,ident:"oklch",whp:K};var Io=Object.freeze({$coord:at,bytes:8,domain:h(0,100),ident:"bl\
 ue",input:o(t=>d(t/100),"input"),output:o(t=>d(t*100),"output"),short:"\
 b"}),Ao=Object.freeze({$coord:at,bytes:1,domain:h(0,255),ident:"b\
 lue",input:o(t=>d(t/255),"input"),output:o(t=>Math.round(t*255)&255,
@@ -160,10 +160,10 @@ value:E(function(){let _=this.space.CAM??this.space.CSYS;return Iterator.
 from([[_[0],this[0]],[_[1],this[1]],[_[2],this[2]]])},"value")},values:{
 value:E(function(){return Iterator.from(this)},"value")}}).set(r)}
 o(a,"$");E(a,"initPointInSpace");var kr=Object.defineProperty,T=o((t,r)=>kr(t,"name",{value:r,configurable:!0}),
-"t"),Mr=T(t=>typeof t=="string","isString"),Ro=T(t=>yo(t)&&Symbol.
+"t"),vr=T(t=>typeof t=="string","isString"),Ro=T(t=>yo(t)&&Symbol.
 iterator in t&&typeof t[Symbol.iterator]=="function","isIterableO\
-bject"),yo=T(t=>t!==null&&typeof t=="object","isObject"),vr=T(t=>Mr(
-t)&&Cr.has(t),"isSpaceID"),Yr=T(t=>yo(t)&&"ident"in t&&vr(t.ident)&&
+bject"),yo=T(t=>t!==null&&typeof t=="object","isObject"),Mr=T(t=>vr(
+t)&&Cr.has(t),"isSpaceID"),Yr=T(t=>yo(t)&&"ident"in t&&Mr(t.ident)&&
 "CSYS"in t&&yo(t.CSYS)&&"length"in t.CSYS&&t.CSYS.length===3,"isC\
 olorSpace"),Cr=new Set(["a98-rgb","display-p3","hsl","hwb","lab",
 "lch","oklab","oklch","prophoto-rgb","rec2020","srgb-linear","srg\
@@ -247,22 +247,22 @@ n=ht(e,r,i).map(p=>p*100);return a(H,n)}else throw new Error("Wro\
 ng parameter passed: "+t)},"hwb_into_srgb"),Fp=o(t=>{if(f(t)&&t.colorspace===
 "hwb"){let[r,e,i]=t.position,n=ht(e,r,i).map(p=>J(p)*100);return a(
 gt,n)}else throw new Error("Wrong parameter passed: "+t)},"hwb_in\
-to_srgb_linear");var v=o(t=>{if(f(t)&&t.colorspace==="lab"){let r=903.2962962962963,
+to_srgb_linear");var M=o(t=>{if(f(t)&&t.colorspace==="lab"){let r=903.2962962962963,
 e=216/24389,[i,n,p]=t,m=(i+16)/116,_=n/500+m,l=Math.pow(_,3),s=m-
 p/200,x=Math.pow(s,3),z=(l>e?l:(116*_-16)/r)*R[0],O=(i>r*e?Math.pow(
 (i+16)/116,3):i/r)*R[1],U=(x>e?x:(116*s-16)/r)*R[2];return a(B,[z,
 O,U])}else throw new Error("Wrong parameter passed: "+t)},"lab_in\
-to_xyz_d50"),kt=o(t=>{let r=v(t),[e,i,n]=c(r).multiply(g.d50.d65);
-return a(W,[e,i,n])},"lab_into_xyz_d65");var Nt=o(t=>dt(v(t)),"lab_into_srgb"),ea=o(t=>Et(v(t)),"lab_into_\
+to_xyz_d50"),kt=o(t=>{let r=M(t),[e,i,n]=c(r).multiply(g.d50.d65);
+return a(W,[e,i,n])},"lab_into_xyz_d65");var Nt=o(t=>dt(M(t)),"lab_into_srgb"),ea=o(t=>Et(M(t)),"lab_into_\
 srgb_linear");var D=o(t=>{if(f(t)&&t.colorspace==="lch"){let[r,e]=t,i=t.position.
 drop(1).next().value??NaN,n=e*Math.cos(i),p=e*Math.sin(i);return a(
 jt,[r,n,p])}else throw new Error("Wrong parameter passed: "+t)},"\
-lch_into_lab");var Ht=o(t=>dt(v(D(t))),"lch_into_srgb"),ca=o(t=>Et(v(D(t))),"lch\
+lch_into_lab");var Ht=o(t=>dt(M(D(t))),"lch_into_srgb"),ca=o(t=>Et(M(D(t))),"lch\
 _into_srgb_linear");var Go=Float64Array.of(1,1,1,.3963377773761749,-.1055613458156586,
 -.0894841775298119,.2158037573099136,-.0638541728258133,-1.2914855480194092),
-Mt=Float64Array.of(.819022437996703,.0329836539323885,.0481771893596242,
+vt=Float64Array.of(.819022437996703,.0329836539323885,.0481771893596242,
 .3619062600528904,.9292868615863434,.2642395317527308,-.1288737815209879,
-.0361446663506424,.6335478284694309),vt=Float64Array.of(.210454268309314,
+.0361446663506424,.6335478284694309),Mt=Float64Array.of(.210454268309314,
 1.9779985324311684,.0259040424655478,.7936177747023054,-2.42859224204858,
 .7827717124575296,-.0040720430116193,.450593709617411,-.8086757549230774),
 $o=Float64Array.of(1.2268798758459243,-.0405757452148008,-.0763729366746601,
@@ -271,7 +271,7 @@ $o=Float64Array.of(1.2268798758459243,-.0405757452148008,-.0763729366746601,
 [n,p,m]=c(i,r,e).multiply(Go).each((_,l,s)=>s[l]=_**3).multiply($o);
 return a(W,[n,p,m])}else throw new Error("Wrong parameter passed:\
  "+t)},"oklab_into_xyz_d65"),Ft=o(t=>{let[r,e,i]=c(u(t)).multiply(
-g.d65.d50);return a(B,[r,e,i])},"oklab_into_xyz_d50");var Gt=o(t=>L(u(t)),"oklab_into_srgb"),Ma=o(t=>it(u(t)),"oklab_in\
+g.d65.d50);return a(B,[r,e,i])},"oklab_into_xyz_d50");var Gt=o(t=>L(u(t)),"oklab_into_srgb"),va=o(t=>it(u(t)),"oklab_in\
 to_srgb_linear");var Q=o(t=>{if(f(t)&&t.colorspace==="oklch"){let[r,e]=t,i=t.position.
 drop(1).next().value??NaN,n=isNaN(i)?0:e*Math.cos(i),p=isNaN(i)?0:
 e*Math.sin(i);return a(Ct,[r,n,p])}else throw new Error("Wrong pa\
@@ -319,7 +319,7 @@ inear_into_a98_rgb");var N_=o(t=>Qt(Fo(t)),"hsl_into_a98_rgb");var K_=o(t=>{if(f
 if(r+i>=1){let n=r/(r+i);return a(At,[n,n,n])}else{let n=ot(e,1,.5).
 map(p=>(p*(1-r-i)+r)*100);return Qt(a(H,n))}}else throw new Error(
 "Wrong parameter passed: "+t)},"hwb_into_a98_rgb");var om=o(t=>X(kt(t)),"lab_into_a98_rgb");var am=o(t=>X(kt(D(t))),"lch_into_a98_rgb");var fm=o(t=>X(u(t)),"oklab_into_a98_rgb");var qo=o(t=>Ft(Q(t)),"oklch_into_xyz_d50"),Qo=o(t=>u(Q(t)),"oklch\
-_into_xyz_d65");var zm=o(t=>X(Qo(t)),"oklch_into_a98_rgb");var Mm=o(t=>X(rt(t)),"prophoto_rgb_into_a98_rgb");var Am=o(t=>X($(t)),"rec2020_into_a98_rgb");var Tm=o(t=>t.position.map(Wt),"gam_a98"),Xm=o(t=>t.position.map(
+_into_xyz_d65");var zm=o(t=>X(Qo(t)),"oklch_into_a98_rgb");var vm=o(t=>X(rt(t)),"prophoto_rgb_into_a98_rgb");var Am=o(t=>X($(t)),"rec2020_into_a98_rgb");var Tm=o(t=>t.position.map(Wt),"gam_a98"),Xm=o(t=>t.position.map(
 Ot),"lin_a98");var tr=Float64Array.of(446124/178915,-14852/17905,11844/330415,-333277/
 357830,63121/35810,-50337/660830,-72051/178915,423/17905,316169/330415),
 Z=o(t=>{if(f(t)&&t.colorspace==="xyz-d65"){let[r,e,i]=t.position,
@@ -338,7 +338,7 @@ n=ht(e,r,i).map(m=>m*100),p=a(H,n);return Yt(p)}else throw new Error(
 "Wrong parameter passed: "+t)},"hwb_into_xyz_d50"),pt=o(t=>{if(f(
 t)&&t.colorspace==="hwb"){let[r,e,i]=t.position,n=ht(e,r,i).map(m=>m*
 100),p=a(H,n);return A(p)}else throw new Error("Wrong parameter p\
-assed: "+t)},"hwb_into_xyz_d65");var vl=o(t=>Z(pt(t)),"hwb_into_display_p3");var Ol=o(t=>to(v(t)),"lab_into_display_p3");var jl=o(t=>to(v(D(t))),"lch_into_display_p3");var Nl=o(t=>Z(u(t)),"oklab_into_display_p3");var Ul=o(t=>Z(u(Q(t))),"oklch_into_display_p3");var ts=o(t=>Z(rt(t)),"prophoto_rgb_into_display_p3");var ns=o(t=>Z($(t)),"rec2020_into_display_p3");var ls=o(t=>Z(A(t)),"srgb_into_display_p3"),ss=o(t=>Z(tt(t)),"srg\
+assed: "+t)},"hwb_into_xyz_d65");var Ml=o(t=>Z(pt(t)),"hwb_into_display_p3");var Ol=o(t=>to(M(t)),"lab_into_display_p3");var jl=o(t=>to(M(D(t))),"lch_into_display_p3");var Nl=o(t=>Z(u(t)),"oklab_into_display_p3");var Ul=o(t=>Z(u(Q(t))),"oklch_into_display_p3");var ts=o(t=>Z(rt(t)),"prophoto_rgb_into_display_p3");var ns=o(t=>Z($(t)),"rec2020_into_display_p3");var ls=o(t=>Z(A(t)),"srgb_into_display_p3"),ss=o(t=>Z(tt(t)),"srg\
 b_linear_into_display_p3");var bs=o(t=>t.position.map(q),"gam_p3"),ds=o(t=>t.position.map(J),
 "lin_p3");var Wr=o((t,r,e)=>"#"+Array.of(t,r,e).map(i=>i.toString(16).padStart(
 2,"0")).join(""),"rgb_to_hex"),k=o((t,r,e)=>{let i=Math.max(t,r,e),
@@ -347,7 +347,7 @@ l===0||l===1?0:(i-l)/Math.min(l,1-l)),_<0&&(m+=Math.PI,_=Math.abs(
 _)),_<=1e-5&&(m=NaN),[m*180/Math.PI,_*100,l*100]},"rgb_to_hsl"),go=o(
 (t,r,e)=>{let i=Math.max(t,r,e),n=Math.min(t,r,e),p=NaN,m=i-n;if(m!==
 0){switch(i){case t:p=(r-e)/m+(r<e?6:0);break;case r:p=(e-t)/m+2;
-break;case e:p=(t-r)/m+4}p*=Math.PI/3}return p},"rgb_to_hue"),M=o(
+break;case e:p=(t-r)/m+4}p*=Math.PI/3}return p},"rgb_to_hue"),v=o(
 (t,r,e)=>{let i=go(t,r,e),n=Math.min(t,Math.min(r,e)),p=1-Math.max(
 t,Math.max(r,e));return[i*180/Math.PI,n*100,p*100]},"rgb_to_hwb");var Xs=o(t=>{let[r,e,i]=Lt(t).position;return a(P,k(r,e,i))},"a98\
 _rgb_into_hsl");var Ns=o(t=>{let[r,e,i]=Dt(t).position;return a(P,k(r,e,i))},"dis\
@@ -366,23 +366,23 @@ t.colorspace==="srgb-linear"){let[r,e,i]=t.position.map(_=>q(_)),
 [n,p,m]=k(r,e,i);return a(P,[n,p,m])}else throw new Error("Wrong \
 parameter passed: "+t)},"srgb_linear_into_hsl");var t0=o(t=>{let[r,e,i]=dt(t).position;return a(P,k(r,e,i))},"xyz\
 _d50_into_hsl"),o0=o(t=>{let[r,e,i]=L(t).position;return a(P,k(r,
-e,i))},"xyz_d65_into_hsl");var u0=o(t=>{let[r,e,i]=Lt(t).position;return a(w,M(r,e,i))},"a98\
-_rgb_into_hwb");var v0=o(t=>{let[r,e,i]=Dt(t).position;return a(w,M(r,e,i))},"dis\
+e,i))},"xyz_d65_into_hsl");var u0=o(t=>{let[r,e,i]=Lt(t).position;return a(w,v(r,e,i))},"a98\
+_rgb_into_hwb");var M0=o(t=>{let[r,e,i]=Dt(t).position;return a(w,v(r,e,i))},"dis\
 play_p3_into_hwb");var B0=o(t=>{if(f(t)&&t.colorspace==="hsl"){let[r,e,i]=t.position,
-[n,p,m]=ot(e,r,i);return a(w,M(n,p,m))}else throw new Error("Wron\
-g parameter passed: "+t)},"hsl_into_hwb");var L0=o(t=>{let[r,e,i]=Nt(t).position;return a(w,M(r,e,i))},"lab\
-_into_hwb");var V0=o(t=>{let[r,e,i]=Ht(t).position;return a(w,M(r,e,i))},"lch\
-_into_hwb");var oc=o(t=>{let[r,e,i]=Gt(t).position;return a(w,M(r,e,i))},"okl\
-ab_into_hwb");var _c=o(t=>{let[r,e,i]=$t(t).position;return a(w,M(r,e,i))},"okl\
-ch_into_hwb");var bc=o(t=>{let[r,e,i]=Ut(t).position;return a(w,M(r,e,i))},"pro\
-photo_rgb_into_hwb");var Sc=o(t=>{let[r,e,i]=Jt(t).position;return a(w,M(r,e,i))},"rec\
+[n,p,m]=ot(e,r,i);return a(w,v(n,p,m))}else throw new Error("Wron\
+g parameter passed: "+t)},"hsl_into_hwb");var L0=o(t=>{let[r,e,i]=Nt(t).position;return a(w,v(r,e,i))},"lab\
+_into_hwb");var V0=o(t=>{let[r,e,i]=Ht(t).position;return a(w,v(r,e,i))},"lch\
+_into_hwb");var oc=o(t=>{let[r,e,i]=Gt(t).position;return a(w,v(r,e,i))},"okl\
+ab_into_hwb");var _c=o(t=>{let[r,e,i]=$t(t).position;return a(w,v(r,e,i))},"okl\
+ch_into_hwb");var bc=o(t=>{let[r,e,i]=Ut(t).position;return a(w,v(r,e,i))},"pro\
+photo_rgb_into_hwb");var Sc=o(t=>{let[r,e,i]=Jt(t).position;return a(w,v(r,e,i))},"rec\
 2020_into_hwb");var Cc=o(t=>{if(f(t)&&["rgb","srgb"].includes(t.colorspace)){let[
-r,e,i]=t.position;return a(w,M(r,e,i))}else throw new Error("Wron\
+r,e,i]=t.position;return a(w,v(r,e,i))}else throw new Error("Wron\
 g parameter passed: "+t)},"srgb_into_hwb"),Ic=o(t=>{if(f(t)&&t.colorspace===
-"srgb-linear"){let[r,e,i]=t.position.map(n=>q(n));return a(w,M(r,
+"srgb-linear"){let[r,e,i]=t.position.map(n=>q(n));return a(w,v(r,
 e,i))}else throw new Error("Wrong parameter passed: "+t)},"srgb_l\
-inear_into_hwb");var Zc=o(t=>{let[r,e,i]=dt(t).position;return a(w,M(r,e,i))},"xyz\
-_d50_into_hwb"),jc=o(t=>{let[r,e,i]=L(t).position;return a(w,M(r,
+inear_into_hwb");var Zc=o(t=>{let[r,e,i]=dt(t).position;return a(w,v(r,e,i))},"xyz\
+_d50_into_hwb"),jc=o(t=>{let[r,e,i]=L(t).position;return a(w,v(r,
 e,i))},"xyz_d65_into_hwb");var oo=o(t=>{if(f(t)&&t.colorspace==="xyz-d50"){let r=a(W,t.position.
 toArray());return c(r).multiply(g.d50.d65),r}else throw new Error(
 "Wrong parameter passed: "+t)},"xyz_d50_into_xyz_d65"),y=o(t=>{if(f(
@@ -392,7 +392,7 @@ ssed: "+t)},"xyz_d65_into_xyz_d50");var er=o(t=>b(y(t)),"xyz_d65_into_lab"),b=o(
 "xyz-d50"){let r=.008856451679035631,e=29**3/3**3,[i,n,p]=t.position.
 map((s,x)=>s/R[x]).map(s=>s>r?Math.cbrt(s):(e*s+16)/116),m=116*n-
 16,_=500*(i-n),l=200*(n-p);return a(jt,[m,_,l])}else throw new Error(
-"Wrong parameter passed: "+t)},"xyz_d50_into_lab");var xx=o(t=>{let r=G(t),e=y(r);return b(e)},"a98_rgb_into_lab");var ux=o(t=>{let r=F(t),e=y(r);return b(e)},"display_p3_into_lab");var Mx=o(t=>{let r=nt(t),e=y(r);return b(e)},"hsl_into_lab");var Ox=o(t=>{let r=pt(t),e=y(r);return b(e)},"hwb_into_lab");var jx=o(t=>{let r=u(t),e=y(r);return b(e)},"oklab_into_lab");var Fx=o(t=>{let r=Q(t),e=u(r),i=y(e);return b(i)},"oklch_into_la\
+"Wrong parameter passed: "+t)},"xyz_d50_into_lab");var xx=o(t=>{let r=G(t),e=y(r);return b(e)},"a98_rgb_into_lab");var ux=o(t=>{let r=F(t),e=y(r);return b(e)},"display_p3_into_lab");var vx=o(t=>{let r=nt(t),e=y(r);return b(e)},"hsl_into_lab");var Ox=o(t=>{let r=pt(t),e=y(r);return b(e)},"hwb_into_lab");var jx=o(t=>{let r=u(t),e=y(r);return b(e)},"oklab_into_lab");var Fx=o(t=>{let r=Q(t),e=u(r),i=y(e);return b(i)},"oklch_into_la\
 b");var Kx=o(t=>{let r=Tt(t);return b(r)},"prophoto_rgb_into_lab");var rb=o(t=>{let r=$(t),e=y(r);return b(e)},"rec2020_into_lab");var _b=o(t=>{let r=A(t),e=y(r);return b(e)},"srgb_into_lab"),mb=o(
 t=>{let r=tt(t),e=y(r);return b(e)},"srgb_linear_into_lab");var Y=o(t=>{if(f(t)&&t.colorspace==="lab"){let[r,e,i]=t,n=Math.atan2(
 i,e)*(180/Math.PI),p=Math.hypot(e,i);return a(Co,[r,p,n])}else throw new Error(
@@ -401,29 +401,29 @@ lch");var Rb=o(t=>{let r=F(t),e=y(r),i=b(e);return Y(i)},"display_p3_in\
 to_lch");var Gb=o(t=>{let r=nt(t),e=y(r),i=b(e);return Y(i)},"hsl_into_lch");var Qb=o(t=>{let r=pt(t),e=y(r),i=b(e);return Y(i)},"hwb_into_lch");var pd=o(t=>{let r=u(t),e=y(r),i=b(e);return Y(i)},"oklab_into_lc\
 h");var xd=o(t=>{let r=Q(t),e=u(r),i=y(e),n=b(i);return Y(n)},"oklch_\
 into_lch");var ud=o(t=>{let r=Tt(t),e=b(r);return Y(e)},"prophoto_rgb_into_l\
-ch");var vd=o(t=>{let r=$(t),e=y(r),i=b(e);return Y(i)},"rec2020_into_\
+ch");var Md=o(t=>{let r=$(t),e=y(r),i=b(e);return Y(i)},"rec2020_into_\
 lch");var Bd=o(t=>{let r=A(t),e=y(r),i=b(e);return Y(i)},"srgb_into_lch"),
 Td=o(t=>{let r=tt(t),e=y(r),i=b(e);return Y(i)},"srgb_linear_into\
 _lch");var Ed=o(t=>Y(b(t)),"xyz_d50_into_lch"),Ld=o(t=>Y(er(t)),"xyz_d65\
 _into_lch");var I=o(t=>{if(f(t)&&t.colorspace==="xyz-d65"){let[r,e,i]=t.position,
-[n,p,m]=c(r,e,i).multiply(Mt).each((_,l,s)=>s[l]=Math.cbrt(_)).multiply(
-vt);return a(Ct,[n*100,p,m])}else throw new Error("Wrong paramete\
+[n,p,m]=c(r,e,i).multiply(vt).each((_,l,s)=>s[l]=Math.cbrt(_)).multiply(
+Mt);return a(Ct,[n*100,p,m])}else throw new Error("Wrong paramete\
 r passed: "+t)},"xyz_d65_into_oklab"),ah=o(t=>{if(f(t)&&t.colorspace===
 "xyz-d50"){let[r,e,i]=t.position,[n,p,m]=c(r,e,i).multiply(g.d50.
-d65).multiply(Mt).each((_,l,s)=>s[l]=Math.cbrt(_)).multiply(vt);return a(
+d65).multiply(vt).each((_,l,s)=>s[l]=Math.cbrt(_)).multiply(Mt);return a(
 Ct,[n*100,p,m])}else throw new Error("Wrong parameter passed: "+t)},
-"xyz_d50_into_oklab");var fh=o(t=>I(G(t)),"a98_rgb_into_oklab");var hh=o(t=>I(F(t)),"display_p3_into_oklab");var Sh=o(t=>{let r=nt(t);return I(r)},"hsl_into_oklab");var vh=o(t=>I(pt(t)),"hwb_into_oklab");var ro=o(t=>{let r=v(t),e=oo(r);return I(e)},"lab_into_oklab");var Rh=o(t=>{let r=D(t),e=v(r),i=oo(e);return I(i)},"lch_into_okl\
+"xyz_d50_into_oklab");var fh=o(t=>I(G(t)),"a98_rgb_into_oklab");var hh=o(t=>I(F(t)),"display_p3_into_oklab");var Sh=o(t=>{let r=nt(t);return I(r)},"hsl_into_oklab");var Mh=o(t=>I(pt(t)),"hwb_into_oklab");var ro=o(t=>{let r=M(t),e=oo(r);return I(e)},"lab_into_oklab");var Rh=o(t=>{let r=D(t),e=M(r),i=oo(e);return I(i)},"lch_into_okl\
 ab");var Hh=o(t=>I(rt(t)),"prophoto_rgb_into_oklab");var Uh=o(t=>I($(t)),"rec2020_into_oklab");var t5=o(t=>{let r=A(t);return I(r)},"srgb_into_oklab"),o5=o(t=>{
 let r=tt(t);return I(r)},"srgb_linear_into_oklab");var V=o(t=>{if(f(t)&&t.colorspace==="xyz-d65"){let[r,e,i]=t.position,
-[n,p,m]=c(r,e,i).multiply(Mt).each((x,z,O)=>O[z]=Math.cbrt(x)).multiply(
-vt),_=n*100,l=Math.hypot(p,m),s=l<.001?NaN:Math.atan2(m,p)*180/Math.
+[n,p,m]=c(r,e,i).multiply(vt).each((x,z,O)=>O[z]=Math.cbrt(x)).multiply(
+Mt),_=n*100,l=Math.hypot(p,m),s=l<.001?NaN:Math.atan2(m,p)*180/Math.
 PI;return a(It,[_,l,s])}else throw new Error("Wrong parameter pas\
 sed: "+t)},"xyz_d65_into_oklch"),z5=o(t=>{if(f(t)&&t.colorspace===
 "xyz-d50"){let[r,e,i]=t.position.toArray(),[n,p,m]=c(r,e,i).multiply(
-g.d50.d65).multiply(Mt).each((x,z,O)=>O[z]=Math.cbrt(x)).multiply(
-vt),_=n*100,l=Math.hypot(p,m),s=l<.001?NaN:Math.atan2(m,p)*180/Math.
+g.d50.d65).multiply(vt).each((x,z,O)=>O[z]=Math.cbrt(x)).multiply(
+Mt),_=n*100,l=Math.hypot(p,m),s=l<.001?NaN:Math.atan2(m,p)*180/Math.
 PI;return a(It,[_,l,s])}else throw new Error("Wrong parameter pas\
-sed: "+t)},"xyz_d50_into_oklch");var M5=o(t=>{let r=G(t);return V(r)},"a98_rgb_into_oklch");var A5=o(t=>{let r=F(t);return V(r)},"display_p3_into_oklch");var X5=o(t=>{let r=nt(t);return V(r)},"hsl_into_oklch");var L5=o(t=>{let r=pt(t);return V(r)},"hwb_into_oklch");var eo=o(t=>{if(f(t)&&t.colorspace==="oklab"){let[r,e,i]=t,n=Math.
+sed: "+t)},"xyz_d50_into_oklch");var v5=o(t=>{let r=G(t);return V(r)},"a98_rgb_into_oklch");var A5=o(t=>{let r=F(t);return V(r)},"display_p3_into_oklch");var X5=o(t=>{let r=nt(t);return V(r)},"hsl_into_oklch");var L5=o(t=>{let r=pt(t);return V(r)},"hwb_into_oklch");var eo=o(t=>{if(f(t)&&t.colorspace==="oklab"){let[r,e,i]=t,n=Math.
 hypot(e,i),p=n<.001?NaN:Math.atan2(i,e)*180/Math.PI;return a(It,[
 r,n,p])}else throw new Error("Wrong parameter passed: "+t)},"okla\
 b_into_oklch");var K5=o(t=>eo(ro(t)),"lab_into_oklch");var ry=o(t=>{let r=D(t),e=ro(r);return eo(e)},"lch_into_oklch");var ay=o(t=>{let r=rt(t);return V(r)},"prophoto_rgb_into_oklch");var fy=o(t=>{let r=$(t);return V(r)},"rec2020_into_oklch");var hy=o(t=>{let r=A(t);return V(r)},"srgb_into_oklch"),yy=o(t=>{
@@ -436,8 +436,8 @@ eter passed: "+t)},"xyz_d65_into_prophoto_rgb"),C=o(t=>{if(f(t)&&
 t.colorspace==="xyz-d50"){let[r,e,i]=t.position,[n,p,m]=c(r,e,i).
 multiply(ir).each((_,l,s)=>s[l]=Bt(_)*100);return a(xo,[n,p,m])}else
 throw new Error("Wrong parameter passed: "+t)},"xyz_d50_into_prop\
-hoto_rgb");var Ny=o(t=>C(Ho(t)),"a98_rgb_into_prophoto_rgb");var Vy=o(t=>C(Lo(t)),"display_p3_into_prophoto_rgb");var nr=o(t=>v(D(t)),"lch_into_xyz_d50"),Qy=o(t=>kt(D(t)),"lch_int\
-o_xyz_d65");var hg=o(t=>C(or(t)),"hsl_into_prophoto_rgb");var Sg=o(t=>C(rr(t)),"hwb_into_prophoto_rgb");var vg=o(t=>C(v(t)),"lab_into_prophoto_rgb");var Og=o(t=>C(nr(t)),"lch_into_prophoto_rgb");var Zg=o(t=>C(Ft(t)),"oklab_into_prophoto_rgb");var Dg=o(t=>C(qo(t)),"oklch_into_prophoto_rgb");var $g=o(t=>C(Ko(t)),"rec2020_into_prophoto_rgb");var qg=o(t=>C(Yt(t)),"srgb_into_prophoto_rgb"),Qg=o(t=>C(Jo(t)),"\
+hoto_rgb");var Ny=o(t=>C(Ho(t)),"a98_rgb_into_prophoto_rgb");var Vy=o(t=>C(Lo(t)),"display_p3_into_prophoto_rgb");var nr=o(t=>M(D(t)),"lch_into_xyz_d50"),Qy=o(t=>kt(D(t)),"lch_int\
+o_xyz_d65");var hg=o(t=>C(or(t)),"hsl_into_prophoto_rgb");var Sg=o(t=>C(rr(t)),"hwb_into_prophoto_rgb");var Mg=o(t=>C(M(t)),"lab_into_prophoto_rgb");var Og=o(t=>C(nr(t)),"lch_into_prophoto_rgb");var Zg=o(t=>C(Ft(t)),"oklab_into_prophoto_rgb");var Dg=o(t=>C(qo(t)),"oklch_into_prophoto_rgb");var $g=o(t=>C(Ko(t)),"rec2020_into_prophoto_rgb");var qg=o(t=>C(Yt(t)),"srgb_into_prophoto_rgb"),Qg=o(t=>C(Jo(t)),"\
 srgb_linear_into_prophoto_rgb");var eu=o(t=>t.position.map(Bt),"gam_prophoto"),iu=o(t=>t.position.
 map(Vt),"lin_prophoto");var pr=Float64Array.of(30757411/17917100,-19765991/29648200,792561/
 44930125,-6372589/17917100,47925759/29648200,-1921689/44930125,-4539589/
@@ -448,58 +448,58 @@ map(Vt),"lin_prophoto");var pr=Float64Array.of(30757411/17917100,-19765991/29648
 t)&&t.colorspace==="xyz-d50"){let[r,e,i]=t.position,[n,p,m]=c(r,e,
 i).multiply(g.d50.d65).multiply(pr).each((_,l,s)=>s[l]=Zt(_)*100);
 return a(bo,[n,p,m])}else throw new Error("Wrong parameter passed\
-: "+t)},"xyz_d50_into_rec2020");var vu=o(t=>j(G(t)),"a98_rgb_into_rec2020");var Ou=o(t=>j(F(t)),"display_p3_into_rec2020");var Zu=o(t=>j(nt(t)),"hsl_into_rec2020");var Du=o(t=>j(pt(t)),"hwb_into_rec2020");var $u=o(t=>io(v(t)),"lab_into_rec2020");var Qu=o(t=>io(v(D(t))),"lch_into_rec2020");var i1=o(t=>j(u(t)),"oklab_into_rec2020");var l1=o(t=>j(u(Q(t))),"oklch_into_rec2020");var b1=o(t=>j(rt(t)),"prophoto_rgb_into_rec2020");var u1=o(t=>j(A(t)),"srgb_into_rec2020"),z1=o(t=>j(tt(t)),"srgb_l\
-inear_into_rec2020");var k1=o(t=>t.position.map(Zt),"gam_rec2020"),M1=o(t=>t.position.
+: "+t)},"xyz_d50_into_rec2020");var Mu=o(t=>j(G(t)),"a98_rgb_into_rec2020");var Ou=o(t=>j(F(t)),"display_p3_into_rec2020");var Zu=o(t=>j(nt(t)),"hsl_into_rec2020");var Du=o(t=>j(pt(t)),"hwb_into_rec2020");var $u=o(t=>io(M(t)),"lab_into_rec2020");var Qu=o(t=>io(M(D(t))),"lch_into_rec2020");var i1=o(t=>j(u(t)),"oklab_into_rec2020");var l1=o(t=>j(u(Q(t))),"oklch_into_rec2020");var b1=o(t=>j(rt(t)),"prophoto_rgb_into_rec2020");var u1=o(t=>j(A(t)),"srgb_into_rec2020"),z1=o(t=>j(tt(t)),"srgb_l\
+inear_into_rec2020");var k1=o(t=>t.position.map(Zt),"gam_rec2020"),v1=o(t=>t.position.
 map(Xt),"lin_rec2020");export{At as A98RGBSpace,co as DisplayP3Space,P as HSLSpace,w as HWBSpace,
 jt as LABSpace,Co as LCHSpace,xo as ProPhotoRGBSpace,Xo as RGBModel,
 bo as Rec2020Space,B as XYZD50Space,W as XYZD65Space,nl as a98_rgb_into_display_p3,
 Xs as a98_rgb_into_hsl,u0 as a98_rgb_into_hwb,xx as a98_rgb_into_lab,
-Ob as a98_rgb_into_lch,fh as a98_rgb_into_oklab,M5 as a98_rgb_into_oklch,
-Ny as a98_rgb_into_prophoto_rgb,vu as a98_rgb_into_rec2020,Lt as a98_rgb_into_rgb,
+Ob as a98_rgb_into_lch,fh as a98_rgb_into_oklab,v5 as a98_rgb_into_oklch,
+Ny as a98_rgb_into_prophoto_rgb,Mu as a98_rgb_into_rec2020,Lt as a98_rgb_into_rgb,
 Lt as a98_rgb_into_srgb,gp as a98_rgb_into_srgb_linear,G as a98_rgb_into_xyz,
 Ho as a98_rgb_into_xyz_d50,G as a98_rgb_into_xyz_d65,tp as display_p3_into_a98_rgb,
-Ns as display_p3_into_hsl,v0 as display_p3_into_hwb,ux as display_p3_into_lab,
+Ns as display_p3_into_hsl,M0 as display_p3_into_hwb,ux as display_p3_into_lab,
 Rb as display_p3_into_lch,hh as display_p3_into_oklab,A5 as display_p3_into_oklch,
 Vy as display_p3_into_prophoto_rgb,Ou as display_p3_into_rec2020,
 Dt as display_p3_into_rgb,Dt as display_p3_into_srgb,wp as display_p3_into_srgb_linear,
 F as display_p3_into_xyz,Lo as display_p3_into_xyz_d50,F as display_p3_into_xyz_d65,
 Tm as gam_a98,bs as gam_p3,eu as gam_prophoto,k1 as gam_rec2020,x_ as gam_srgb,
 N_ as hsl_into_a98_rgb,dl as hsl_into_display_p3,B0 as hsl_into_hwb,
-Mx as hsl_into_lab,Gb as hsl_into_lch,Sh as hsl_into_oklab,X5 as hsl_into_oklch,
+vx as hsl_into_lab,Gb as hsl_into_lch,Sh as hsl_into_oklab,X5 as hsl_into_oklch,
 hg as hsl_into_prophoto_rgb,Zu as hsl_into_rec2020,Wp as hsl_into_rgb,
 Fo as hsl_into_srgb,Bp as hsl_into_srgb_linear,nt as hsl_into_xyz,
 or as hsl_into_xyz_d50,nt as hsl_into_xyz_d65,K_ as hwb_into_a98_rgb,
-vl as hwb_into_display_p3,Ks as hwb_into_hsl,Ox as hwb_into_lab,Qb as hwb_into_lch,
-vh as hwb_into_oklab,L5 as hwb_into_oklch,Sg as hwb_into_prophoto_rgb,
+Ml as hwb_into_display_p3,Ks as hwb_into_hsl,Ox as hwb_into_lab,Qb as hwb_into_lch,
+Mh as hwb_into_oklab,L5 as hwb_into_oklch,Sg as hwb_into_prophoto_rgb,
 Du as hwb_into_rec2020,Hp as hwb_into_rgb,Hp as hwb_into_srgb,Fp as hwb_into_srgb_linear,
 pt as hwb_into_xyz,rr as hwb_into_xyz_d50,pt as hwb_into_xyz_d65,
 a as initPointInSpace,f as isPointInSpace,om as lab_into_a98_rgb,
 Ol as lab_into_display_p3,ef as lab_into_hsl,L0 as lab_into_hwb,Y as lab_into_lch,
-ro as lab_into_oklab,K5 as lab_into_oklch,vg as lab_into_prophoto_rgb,
+ro as lab_into_oklab,K5 as lab_into_oklch,Mg as lab_into_prophoto_rgb,
 $u as lab_into_rec2020,Nt as lab_into_rgb,Nt as lab_into_srgb,ea as lab_into_srgb_linear,
-kt as lab_into_xyz,v as lab_into_xyz_d50,kt as lab_into_xyz_d65,am as lch_into_a98_rgb,
+kt as lab_into_xyz,M as lab_into_xyz_d50,kt as lab_into_xyz_d65,am as lch_into_a98_rgb,
 jl as lch_into_display_p3,sf as lch_into_hsl,V0 as lch_into_hwb,D as lch_into_lab,
 Rh as lch_into_oklab,ry as lch_into_oklch,Og as lch_into_prophoto_rgb,
 Qu as lch_into_rec2020,Ht as lch_into_rgb,Ht as lch_into_srgb,ca as lch_into_srgb_linear,
 Qy as lch_into_xyz,nr as lch_into_xyz_d50,Qy as lch_into_xyz_d65,
-Xm as lin_a98,ds as lin_p3,iu as lin_prophoto,M1 as lin_rec2020,b_ as lin_srgb,
+Xm as lin_a98,ds as lin_p3,iu as lin_prophoto,v1 as lin_rec2020,b_ as lin_srgb,
 Ct as okLABSpace,It as okLCHSpace,fm as oklab_into_a98_rgb,Nl as oklab_into_display_p3,
 yf as oklab_into_hsl,oc as oklab_into_hwb,jx as oklab_into_lab,pd as oklab_into_lch,
 eo as oklab_into_oklch,Zg as oklab_into_prophoto_rgb,i1 as oklab_into_rec2020,
-Gt as oklab_into_rgb,Gt as oklab_into_srgb,Ma as oklab_into_srgb_linear,
+Gt as oklab_into_rgb,Gt as oklab_into_srgb,va as oklab_into_srgb_linear,
 u as oklab_into_xyz,Ft as oklab_into_xyz_d50,u as oklab_into_xyz_d65,
 zm as oklch_into_a98_rgb,Ul as oklch_into_display_p3,kf as oklch_into_hsl,
 _c as oklch_into_hwb,Fx as oklch_into_lab,xd as oklch_into_lch,Q as oklch_into_oklab,
 Dg as oklch_into_prophoto_rgb,l1 as oklch_into_rec2020,$t as oklch_into_rgb,
 $t as oklch_into_srgb,Xa as oklch_into_srgb_linear,Qo as oklch_into_xyz,
-qo as oklch_into_xyz_d50,Qo as oklch_into_xyz_d65,Mm as prophoto_rgb_into_a98_rgb,
+qo as oklch_into_xyz_d50,Qo as oklch_into_xyz_d65,vm as prophoto_rgb_into_a98_rgb,
 ts as prophoto_rgb_into_display_p3,Of as prophoto_rgb_into_hsl,bc as prophoto_rgb_into_hwb,
 Kx as prophoto_rgb_into_lab,ud as prophoto_rgb_into_lch,Hh as prophoto_rgb_into_oklab,
 ay as prophoto_rgb_into_oklch,b1 as prophoto_rgb_into_rec2020,Ut as prophoto_rgb_into_rgb,
 Ut as prophoto_rgb_into_srgb,Ka as prophoto_rgb_into_srgb_linear,
 rt as prophoto_rgb_into_xyz,Tt as prophoto_rgb_into_xyz_d50,rt as prophoto_rgb_into_xyz_d65,
 Am as rec2020_into_a98_rgb,ns as rec2020_into_display_p3,Rf as rec2020_into_hsl,
-Sc as rec2020_into_hwb,rb as rec2020_into_lab,vd as rec2020_into_lch,
+Sc as rec2020_into_hwb,rb as rec2020_into_lab,Md as rec2020_into_lch,
 Uh as rec2020_into_oklab,fy as rec2020_into_oklch,$g as rec2020_into_prophoto_rgb,
 Jt as rec2020_into_rgb,Jt as rec2020_into_srgb,l_ as rec2020_into_srgb_linear,
 $ as rec2020_into_xyz,Ko as rec2020_into_xyz_d50,$ as rec2020_into_xyz_d65,

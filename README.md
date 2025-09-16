@@ -26,6 +26,5 @@ npm install chromatic-chandelier -D
 
 Датасеты публичных образцов цвета, для которых были применены преобразования цвета с использованием модуля `chromatic-chandelier/manual`:
 
-1. http://palette.protosite.xyz/atlas.pantone-fhi.json
-1. http://palette.protosite.xyz/atlas.ral-colours.json
+1. http://palette.protosite.xyz/atlas.ral.json
 1. http://palette.protosite.xyz/atlas.yandex-wizard.json
