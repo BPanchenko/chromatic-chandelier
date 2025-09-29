@@ -3,4 +3,5 @@ tests/
 types/
 @types/
 
-playwright.config.ts
+/main.*
+/playwright.config.ts

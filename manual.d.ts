@@ -503,7 +503,7 @@ interface EuclideanCoordinateSystem extends Iterable<SpatialDimension> {
 	readonly 1: SpatialDimension;
 	readonly 2: SpatialDimension;
 	readonly length: 3;
-	tgeom: 'cilinder' | 'cube';
+	tgeom: 'cylinder' | 'cube';
 	adapt?: (c1: number, c2: number, c3: number) => Triplet;
 	entries(): Iterator<[0 | 1 | 2, SpatialDimension]>;
 	toArray(): Array<SpatialDimension>;
@@ -588,7 +588,7 @@ declare interface WhitePoint extends Float64Array {
 	ident?: 'd50' | 'd65';
 }
 
-declare type UniqSpaceID =
+export type UniqSpaceID =
 	| 'a98-rgb'
 	| 'display-p3'
 	| 'hsl'
