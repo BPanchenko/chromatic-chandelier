@@ -1,0 +1,43 @@
+<extends src="document.html">
+
+	<block name="links" type="append">
+		<link rel="prerender" href="/">
+	</block>
+
+	<block name="design">
+		<style type="text/css">
+			@import "@bpanchenko/uikit/element/main.css";
+			@import "@bpanchenko/uikit/utility/container.css";
+			@import "@bpanchenko/uikit/style/coloring.css";
+			@import "@bpanchenko/uikit/theme/document.css";
+			@import "@bpanchenko/uikit/utility/margins.css";
+		</style>
+	</block>
+
+	<block name="content">
+		<h3 class="s-warning">Ошибка 500</h3>
+		<h1>Возникла ошибка при обработке запроса</h1>
+		<pre class="u-margin-md-top">stack trace error not available...</pre>
+		<p class="u-margin-top">
+			Возможные причины, по которым возникла эта ошибка:
+		</p>
+		<ul>
+			<li>
+				<strong>Ошибка выполнения скрипта</strong>
+				<p class="u-margin-xs-top">
+					Проинформируйте пожалуйста владельца сайта o возникшей ошибке.
+					<br>
+					<a href="mailto:hello@bpanchenko.ru">Написать разработчику</a>
+				</p>
+			</li>
+			<li>
+				<strong>He хватает ресурсов для работы виртуального сервера</strong>
+				<p class="u-margin-xs-top">
+					Попробуйте обратиться к сайту позже.
+					<br>
+					<a href="/">Перейти на главную страницу</a>
+				</p>
+			</li>
+		</ul>
+	</block>
+</extends>

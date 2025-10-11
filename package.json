@@ -1,6 +1,6 @@
 {
   "name": "chromatic-chandelier",
-  "version": "0.18.55",
+  "version": "0.18.57",
   "homepage": "http://palette.protosite.xyz",
   "author": "Boris Panchenko <boris.v.panchenko@mail.ru> (http://bp-studio.ru)",
   "license": "LGPL-3.0-only",
@@ -12,19 +12,20 @@
     "Colour Palette"
   ],
   "type": "module",
-  "main": "./main.js",
+  "main": "./index.js",
   "exports": {
-    ".": "./main.js",
+    ".": "./index.js",
     "./manual": "./manual.js",
     "./toolkit": "./toolkit.js",
     "./correlator": "./correlator.js"
   },
   "scripts": {
-    "test:e2e": "npx playwright test",
-    "debug:e2e": "npx playwright test --debug --ui --update-snapshots"
+    "test": "npx playwright test",
+    "debug": "npx playwright test --debug --ui --update-snapshots"
   },
   "devDependencies": {
-    "chromatic-dataset": "file:../repository.chandelier-composer"
+    "@playwright/test": "1.56.0",
+    "@types/node": "24.7.1"
   },
   "repository": {
     "type": "git",

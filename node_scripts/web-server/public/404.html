@@ -1,0 +1,43 @@
+<extends src="document.html" locals='{
+	"title": "Ошибка 404 - Запрашиваемая страница на сайте отсутствует"
+}'>
+
+	<block name="links" type="append">
+		<link rel="prerender" href="/">
+	</block>
+
+	<block name="design">
+		<style type="text/css">
+			@import "@bpanchenko/uikit/element/main.css";
+			@import "@bpanchenko/uikit/utility/container.css";
+			@import "@bpanchenko/uikit/style/coloring.css";
+			@import "@bpanchenko/uikit/theme/document.css";
+			@import "@bpanchenko/uikit/utility/margins.css";
+		</style>
+	</block>
+
+	<block name="content">
+		<h3 class="s-warning">Ошибка 404</h3>
+		<h1>Запрашиваемая страница на сайте отсутствует</h1>
+		<p class="u-margin-md-top">
+			Возможные причины, по которым возникла ошибка:
+		</p>
+		<ul>
+			<li>
+				<strong>Неправильно указан адрес страницы</strong>
+				<p class="u-margin-xs-top">
+					Проверьте правильность набора адреса страницы в адресной строке браузера.
+				</p>
+			</li>
+			<li>
+				<strong>Эта страница была удалена c сервера либо перемещена по другому адресу</strong>
+				<p class="u-margin-xs-top">
+					Попробуйте найти интересующий документ, используя навигацию по разделам сайта.
+				</p>
+			</li>
+		</ul>
+		<p class="u-margin-top">
+			<a href="/">Перейти на главную страницу</a>
+		</p>
+	</block>
+</extends>

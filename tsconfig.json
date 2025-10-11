@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "preserveConstEnums": true,
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "target": "ES2022"
+  },
+  "files": ["playwright.config.js", "node_scripts/web-server/index.cjs"],
+  "include": ["__tests__/*", ".config/*", "node_scripts/*"]
+}
