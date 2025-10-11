@@ -6,7 +6,7 @@
 ### Тестирование исходного кода
 
 ПО "Цветная Люстра" разрабатывается через автоматизированное тестирование.
-Смотри [покрытие кода](http://protosite.xyz/code-coverage/chromatic-chandelier/).
+Смотри [отчёт о покрытии кода тестами](http://protosite.xyz/test-reports/chromatic-chandelier/coverage/) и [результаты прогона автотестов](http://protosite.xyz/test-reports/chromatic-chandelier/results.spec-testing.html).
 
 ## В NPM-пакете опубликован программный справочник цветовых пространст вместе с набором необходимых для работы с цветом классов и утилит.
 

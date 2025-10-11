@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Тестирование спецификаций (требований). Отчет о прогоне тестов" tests="284" failures="0" errors="0" time="7.55">
+  <testsuite name="reflector.display-p3.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:10" time="3.158" tests="14">
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="HSL" time="0.024">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="HWB" time="0.003">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.002">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="LCh" time="0.002">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="okLAB" time="0.002">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="okLCH" time="0.002">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="RGB Model" time="0.019">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.003">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.004">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.001">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0.006">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="XYZ D65" time="0.001">
+    </testcase>
+    <testcase classname="Display P3 Reflector. Testing a point reflected from ..." name="XYZ D50" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.xyz-d50.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:10" time="3.242" tests="14">
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="HSL" time="0.008">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="HWB" time="0.003">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.018">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="LCh" time="0.003">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="okLAB" time="0.003">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="okLCH" time="0.002">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="Display P3" time="0.002">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.002">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.002">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0">
+    </testcase>
+    <testcase classname="XYZ D50 Reflector. Testing a point reflected from ..." name="XYZ D65" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.prophoto-rgb.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:10" time="3.191" tests="14">
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="HSL" time="0.012">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="HWB" time="0.002">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.001">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="LCh" time="0.003">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="okLAB" time="0.002">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="okLCH" time="0.028">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="RGB Model" time="0.003">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.002">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="Display P3" time="0.002">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.002">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.001">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0.001">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="XYZ D65" time="0.001">
+    </testcase>
+    <testcase classname="ProPhoto RGB Reflector. Testing a point reflected from ..." name="XYZ D50" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.rec2020.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:14" time="0.453" tests="14">
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="HSL" time="0.003">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="HWB" time="0.002">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="okLCH" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.01">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="Display P3" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0.001">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="XYZ D65" time="0">
+    </testcase>
+    <testcase classname="Rec BT.2020 Reflector. Testing a point reflected from ..." name="XYZ D50" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.oklch.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:14" time="0.564" tests="14">
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="HSL" time="0.004">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="HWB" time="0.009">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.015">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="Display P3" time="0.001">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.002">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.001">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0.002">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="XYZ D65" time="0.002">
+    </testcase>
+    <testcase classname="okLCH Reflector. Testing a point reflected from ..." name="XYZ D50" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.a98-rgb.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:14" time="0.858" tests="14">
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="HSL" time="0.003">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="HWB" time="0.003">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="L*a*b*" time="0.002">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="okLCH" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="Display P3" time="0.002">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="ProPhoto RGB" time="0.002">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="Rec BT.2020" time="0.002">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="Linear sRGB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="XYZ D65" time="0">
+    </testcase>
+    <testcase classname="Reflector of the Adobe RGB (1998) color space. Testing a point reflected from ..." name="XYZ D50" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.xyz-d65.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:14" time="0.184" tests="14">
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="HSL" time="0.002">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="HWB" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="okLCH" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="Display P3" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.001">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0">
+    </testcase>
+    <testcase classname="XYZ D65 Reflector. Testing a point reflected from ..." name="XYZ D50" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.oklab.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:14" time="0.35" tests="14">
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="HSL" time="0.003">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="HWB" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.002">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="okLCH" time="0.01">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="Display P3" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="XYZ D50" time="0.001">
+    </testcase>
+    <testcase classname="okLAB Reflector. Testing a point reflected from ..." name="XYZ D65" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.lab.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:15" time="0.381" tests="14">
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="HSL" time="0.003">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="HWB" time="0.002">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="okLCH" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="Display P3" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="ProPhoto RGB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.002">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="Linear sRGB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="XYZ D65" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*a*b* color space. Testing a point reflected from ..." name="XYZ D50" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.lch.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:15" time="0.365" tests="14">
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="HSL" time="0.003">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="HWB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="L*a*b*" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="okLCH" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="A98 RGB" time="0">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="Display P3" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="ProPhoto RGB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.002">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="Linear sRGB" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="XYZ D65" time="0.001">
+    </testcase>
+    <testcase classname="Reflector of the L*C*h color space. Testing a point reflected from ..." name="XYZ D50" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.hsl.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:15" time="0.489" tests="14">
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="HWB" time="0.002">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.004">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="okLCH" time="0.002">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="RGB Model" time="0.001">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="Display P3" time="0.003">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.002">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.003">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0.001">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0.001">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="XYZ D65" time="0.001">
+    </testcase>
+    <testcase classname="HSL Reflector. Testing a point reflected from ..." name="XYZ D50" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.srgb-linear.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:15" time="0.214" tests="12">
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="HSL" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="HWB" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="okLCH" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="Display P3" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="XYZ D65" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="XYZ D50" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.srgb.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:15" time="0.168" tests="12">
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="HSL" time="0.017">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="HWB" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="okLAB" time="0">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="okLCH" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="Display P3" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="XYZ D65" time="0.001">
+    </testcase>
+    <testcase classname="sRGB Reflector. Testing a point reflected from ..." name="XYZ D50" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="reflector.hwb.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:15" time="0.445" tests="14">
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="HSL" time="0.002">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="L*a*b*" time="0.003">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="LCh" time="0.001">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="okLAB" time="0.001">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="okLCH" time="0.001">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="RGB Model" time="0">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="A98 RGB" time="0.001">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="Display P3" time="0.003">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="ProPhoto RGB" time="0.001">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="Rec BT.2020" time="0.001">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="sRGB (IEC 61966-2-1 Default RGB Colour Space)" time="0">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="Linear sRGB" time="0">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="XYZ D65" time="0">
+    </testcase>
+    <testcase classname="HWB Reflector. Testing a point reflected from ..." name="XYZ D50" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="css-color.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:15" time="0.296" tests="18">
+    <testcase classname="CSS Color Processing CHECKING &lt;color-function&gt; for the color appearance models" name="returns true for the value &quot;lab(50 -20 0)&quot;" time="0.001">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;color-function&gt; for the color appearance models" name="returns true for the value &quot;lab(50 0 -20)&quot;" time="0.001">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;color-function&gt; for the color appearance models" name="returns true for the value &quot;lab(100 0 10 / 50%)&quot;" time="0">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;color-function&gt; for the color appearance models" name="returns true for the value &quot;hwb(222.6 8.8365% 89.748%)&quot;" time="0">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;color-function&gt; for the color appearance models" name="returns true for the value &quot;oklch(53.85% 0.1725 320.67 / 70%)&quot;" time="0.001">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;color-function&gt; for the RGB color spaces" name="returns true for the value &quot;color(a98-rgb 0.25 1 0.5)&quot;" time="0.001">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;hex-color&gt; can be specified using the three-, four-, six-, and eight-value hex notations" name="&quot;#f09&quot; is valid" time="0">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;hex-color&gt; can be specified using the three-, four-, six-, and eight-value hex notations" name="&quot;#f09a&quot; is valid" time="0.005">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;hex-color&gt; can be specified using the three-, four-, six-, and eight-value hex notations" name="&quot;#ff0099&quot; is valid" time="0">
+    </testcase>
+    <testcase classname="CSS Color Processing CHECKING &lt;hex-color&gt; can be specified using the three-, four-, six-, and eight-value hex notations" name="&quot;#ff0099aa&quot; is valid" time="0">
+    </testcase>
+    <testcase classname="CSS Color Processing PARSING" name="`lab(50% -20 0)` converts to `[&quot;lab&quot;, [Array], 1]`" time="0.002">
+    </testcase>
+    <testcase classname="CSS Color Processing PARSING" name="`lab(50 0 -20)` converts to `[&quot;lab&quot;, [Array], 1]`" time="0.001">
+    </testcase>
+    <testcase classname="CSS Color Processing PARSING" name="`lab(100% none 10 / 50%)` converts to `[&quot;lab&quot;, [Array], 1]`" time="0.002">
+    </testcase>
+    <testcase classname="CSS Color Processing PARSING" name="`hwb(222.6 8.8365% 89.748%)` converts to `[&quot;hwb&quot;, [Array], 1]`" time="0.001">
+    </testcase>
+    <testcase classname="CSS Color Processing PARSING" name="`color(a98-rgb 0.25 1 0.5)` converts to `[&quot;a98-rgb&quot;, [Array], 1]`" time="0">
+    </testcase>
+    <testcase classname="CSS Color Processing PARSING" name="`#f09a` converts to `[&quot;srgb&quot;, [Array], 0.6666666666666666]`" time="0.003">
+    </testcase>
+    <testcase classname="CSS Color Processing PARSING" name="`rgb(221 52 32 / 1)` converts to `[&quot;rgb&quot;, [Array], 1]`" time="0.001">
+    </testcase>
+    <testcase classname="CSS Color Processing PARSING" name="`oklch(53.85% 17.25% 320.67 / 70%)` converts to `[&quot;oklch&quot;, [Array], 1]`" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="vector.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:16" time="0.202" tests="7">
+    <testcase classname="MathGL Specification. Vector ..." name="is initialized by coordinates;" time="0.002">
+    </testcase>
+    <testcase classname="MathGL Specification. Vector ..." name="is initialized by predefined the point in space;" time="0">
+    </testcase>
+    <testcase classname="MathGL Specification. Vector ..." name="is an object that has both magnitude and direction;" time="0.001">
+    </testcase>
+    <testcase classname="MathGL Specification. Vector ..." name="can be normilized;" time="0.001">
+    </testcase>
+    <testcase classname="MathGL Specification. Vector ..." name="can be zeroed;" time="0.006">
+    </testcase>
+    <testcase classname="MathGL Specification. Vector ..." name="can get a random direction and be normalized at the same time;" time="0.002">
+    </testcase>
+    <testcase classname="MathGL Specification. Vector ..." name="is specified by a point, updating the vector changes the coordinates of that point synchronously." time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="point-in-space.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:16" time="0.148" tests="6">
+    <testcase classname="Point in Space (PinS). Test Specification:" name="PinS can be initialized by passed a color space and parameters." time="0.001">
+    </testcase>
+    <testcase classname="Point in Space (PinS). Test Specification:" name="Color parameters defined by numeric properties." time="0.002">
+    </testcase>
+    <testcase classname="Point in Space (PinS). Test Specification:" name="Space coordinates are determined using destructuring of a point position." time="0">
+    </testcase>
+    <testcase classname="Point in Space (PinS). Test Specification:" name="Location can be determined by coordinates adapted to a cylindrical or cubic space." time="0">
+    </testcase>
+    <testcase classname="Point in Space (PinS). Test Specification:" name="Instance has a custom string representation." time="0">
+    </testcase>
+    <testcase classname="Point in Space (PinS). Test Specification:" name="PinS updates by calling method `PinS.set(&lt;parameters&gt;).`" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="point-in-space.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:16" time="0.174" tests="15">
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;hsl&gt; at &lt;[324.41, 29.95, 61.37]&gt;" time="0.005">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;hwb&gt; at &lt;[324.41, 49.8, 27.06]&gt;" time="0.001">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;lab&gt; at &lt;[60.19, 27.44, -9.05]&gt;" time="0.002">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;lch&gt; at &lt;[60.19, 28.9, 341.8]&gt;" time="0.001">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;oklab&gt; at &lt;[66.7, 0.0825879392, -0.0247496514]&gt;" time="0.001">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;oklch&gt; at &lt;[66.7, 0.0862166628, 343.3]&gt;" time="0.001">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;rgb&gt; at &lt;[186, 127, 162]&gt;" time="0">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;a98-rgb&gt; at &lt;[66.79, 49.42, 62.46]&gt;" time="0">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;display-p3&gt; at &lt;[69.54, 57.96, 62.84]&gt;" time="0.001">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;prophoto-rgb&gt; at &lt;[58.48, 45.65, 55.45]&gt;" time="0.001">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;rec2020&gt; at &lt;[62.33, 47.16, 58.64]&gt;" time="0.001">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;srgb&gt; at &lt;[72.94, 49.8, 63.53]&gt;" time="0.001">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;srgb-linear&gt; at &lt;[49.1, 21.22, 36.13]&gt;" time="0">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;xyz-d65&gt; at &lt;[0.3435918084, 0.2822745487, 0.3782223444]&gt;" time="0">
+    </testcase>
+    <testcase classname="the &lt;bouquet&gt; pins:" name="into &lt;xyz-d50&gt; at &lt;[0.3475535734, 0.2832966109, 0.2854495178]&gt;" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="vector.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:16" time="0.124" tests="10">
+    <testcase classname="Vector" name="Squared Euclidian Distance between {} and {}" time="0.002">
+    </testcase>
+    <testcase classname="Vector" name="Squared Euclidian Distance between {} and {}" time="0.001">
+    </testcase>
+    <testcase classname="Vector" name="Squared Euclidian Distance between {} and {}" time="0.003">
+    </testcase>
+    <testcase classname="Vector" name="Normalization of {}" time="0.002">
+    </testcase>
+    <testcase classname="Vector" name="Normalization of {}" time="0.001">
+    </testcase>
+    <testcase classname="Vector" name="Normalization of {}" time="0.001">
+    </testcase>
+    <testcase classname="Vector" name="Normalization of {}" time="0">
+    </testcase>
+    <testcase classname="Vector" name="Normalization of {}" time="0">
+    </testcase>
+    <testcase classname="Vector" name="Normalization of {}" time="0.001">
+    </testcase>
+    <testcase classname="Vector" name="Normalization of {}" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="converter.rgb-to-hue.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:16" time="0.097" tests="8">
+    <testcase classname="Calculating the hue using the RGB converter" name="Hue of Black is NaN" time="0.001">
+    </testcase>
+    <testcase classname="Calculating the hue using the RGB converter" name="Hue of White is NaN" time="0">
+    </testcase>
+    <testcase classname="Calculating the hue using the RGB converter" name="Hue of Blue is 4.1887902047863905" time="0.001">
+    </testcase>
+    <testcase classname="Calculating the hue using the RGB converter" name="Hue of Green is 2.0943951023931953" time="0">
+    </testcase>
+    <testcase classname="Calculating the hue using the RGB converter" name="Hue of Orange is 0.6806784082777885" time="0.001">
+    </testcase>
+    <testcase classname="Calculating the hue using the RGB converter" name="Hue of Purple is 5.235987755982988" time="0">
+    </testcase>
+    <testcase classname="Calculating the hue using the RGB converter" name="Hue of Red is 0" time="0">
+    </testcase>
+    <testcase classname="Calculating the hue using the RGB converter" name="Hue of Yellow is 1.0471975511965976" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="color-channel.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:16" time="0.15" tests="2">
+    <testcase classname="Color Channel" name="is iterable object that has a `null` prototype" time="0.001">
+    </testcase>
+    <testcase classname="Color Channel" name="can be stringified to specified representation" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="math-gl.range.test.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:16" time="0.095" tests="8">
+    <testcase classname="MathGL.Range:" name="[0 .. 360]" time="0.002">
+    </testcase>
+    <testcase classname="MathGL.Range:" name="[-3.141592653589793 .. 3.141592653589793]" time="0.001">
+    </testcase>
+    <testcase classname="MathGL.Range:" name="[0 .. 100]" time="0.001">
+    </testcase>
+    <testcase classname="MathGL.Range:" name="[125 .. 125]" time="0.001">
+    </testcase>
+    <testcase classname="MathGL.Range:" name="[0 .. 255]" time="0.001">
+    </testcase>
+    <testcase classname="MathGL.Range:" name="[0 .. 65535]" time="0.001">
+    </testcase>
+    <testcase classname="MathGL.Range:" name="[0 .. 1]" time="0">
+    </testcase>
+    <testcase classname="MathGL.Range:" name="[-1 .. 1]" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="color.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:15" time="0.946" tests="14">
+    <testcase classname="the color instance" name="snapshot of a color sample" time="0.005">
+    </testcase>
+    <testcase classname="the color instance" name="serializing to the CSS functional notation" time="0.002">
+    </testcase>
+    <testcase classname="the color instance" name="method &apos;color.in(&lt;colorspace&gt;)&apos; returns a point reflected in the passed space" time="0.003">
+    </testcase>
+    <testcase classname="the color instance" name="method &apos;color.to(&lt;colorspace&gt;)&apos; changes the space of color instance" time="0.001">
+    </testcase>
+    <testcase classname="the color instance" name="method &apos;color.to(&lt;colorspace&gt;)&apos; changes the space of color instance" time="0.002">
+    </testcase>
+    <testcase classname="the color instance" name="method &apos;color.to(&lt;colorspace&gt;)&apos; changes the space of color instance" time="0.001">
+    </testcase>
+    <testcase classname="the color instance" name="getter &apos;color.chroma&apos; returns ..." time="0.001">
+    </testcase>
+    <testcase classname="the color instance" name="getter &apos;color.hue&apos; returns a numeric object that describes additional properties of the angular position on the color wheel" time="0.002">
+    </testcase>
+    <testcase classname="the color instance" name="getter &apos;color.lightness&apos; returns value of the lightness attribute" time="0.002">
+    </testcase>
+    <testcase classname="the color instance" name="getter &apos;color.luminance&apos; returns the relative luminance of the color instance" time="0">
+    </testcase>
+    <testcase classname="the color instance" name="getter &apos;color.rgb&apos; returns extened array of coordinates" time="0">
+    </testcase>
+    <testcase classname="the color instance" name="getter &apos;color.xyz&apos; that returns a triplet of coordinates in the XYZ color space" time="0">
+    </testcase>
+    <testcase classname="the color instance" name="getter &apos;color.yuv&apos; that returns a triplet of coordinates in the XYZ color space" time="0">
+    </testcase>
+    <testcase classname="the color instance" name="getter &apos;color.uv&apos; that returns a pair of coordinates in the XYZ color space" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="light-diffuser.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-10-11T06:32:16" time="0.554" tests="4">
+    <testcase classname="Light Diffuser Functionality the palette" name="has correctly Black Color" time="0.002">
+    </testcase>
+    <testcase classname="Light Diffuser Functionality the palette" name="has correctly White Color" time="0">
+    </testcase>
+    <testcase classname="Light Diffuser Functionality the palette" name="has correctly Gray Color" time="0.001">
+    </testcase>
+    <testcase classname="Light Diffuser Functionality the palette" name="generates grayscale based on the predefined black and white colors" time="0.007">
+    </testcase>
+  </testsuite>
+</testsuites>
