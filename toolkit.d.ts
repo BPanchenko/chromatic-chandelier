@@ -1,8 +1,9 @@
 import type { SpaceID } from './manual.d.ts';
 import type { AngleUnit, Triplet } from './types.d.ts';
 export const isColorFunction: (value: string) => boolean;
-export const isHEXColor: (value: string) => boolean;
 export const isCSSColor: (value: unknown) => value is string;
+export const isCSSIdent: (value: unknown) => value is string;
+export const isHEXColor: (value: string) => boolean;
 
 /**
  * Тип данных CSS <angle> представляет собой значение угла, выраженное в градусах, градах, радианах или оборотах.

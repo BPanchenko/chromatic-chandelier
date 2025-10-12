@@ -16,7 +16,7 @@ return this.from<=n&&n<=this.to},"value")}}),i}o(ao,"g");lt(ao,"i\
 nitRange");function _o(t=[0,100],r=[0,1]){let[e,i]=r,[n,p]=t,[l,_]=[
 i-e,p-n];function m(x){return typeof x=="string"&&(x=parseFloat(x)),
 s.domain.test(x)===!1&&(x=x>i?(x-i)%l+e:i-(e-x)%l),_*(x-e)/l+n}o(
-m,"h"),lt(m,"invert");function s(x){return typeof x=="string"&&(x=
+m,"c"),lt(m,"invert");function s(x){return typeof x=="string"&&(x=
 parseFloat(x)),s.range.test(x)===!1&&(x=x>p?(x-p)%_+n:p-(n-x)%_),
 l*(x-n)/_+e}return o(s,"l"),lt(s,"calculator"),Object.defineProperties(
 s,{domain:{enumerable:!0,value:ao(e,i)},range:{enumerable:!0,value:ao(
@@ -39,7 +39,7 @@ function(n){return this.test(n)?n:n>this.from?(n-this.to)%this.value+
 this.from:this.to-(this.from-n)%this.value},"allocateOuterValue")},
 clamp:{value:zt(function(n){return this.test(n)?n:Math.max(Math.min(
 n,this.to),this.from)},"restrictOuterValue")},test:{value:zt(function(n){
-return this.from<=n&&n<=this.to},"value")}}),i}o(d,"o");zt(d,"ini\
+return this.from<=n&&n<=this.to},"value")}}),i}o(d,"l");zt(d,"ini\
 tRange");var st=Object.freeze({$coord:ut,bytes:8,domain:d(0,360),ident:"hu\
 e",short:"h",input:o(t=>st.domain.allot(t),"input"),output:o(t=>isNaN(
 t)?NaN:t<1e-6?0:y(t,6),"output"),precision:3,unit:"deg"});var _t=Object.freeze({bytes:8,domain:d(0,1),ident:"applicate",short:"\
