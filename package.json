@@ -1,6 +1,6 @@
 {
   "name": "chromatic-chandelier",
-  "version": "0.18.57",
+  "version": "0.18.58",
   "homepage": "http://palette.protosite.xyz",
   "author": "Boris Panchenko <boris.v.panchenko@mail.ru> (http://bp-studio.ru)",
   "license": "LGPL-3.0-only",
@@ -25,7 +25,8 @@
   },
   "devDependencies": {
     "@playwright/test": "1.56.0",
-    "@types/node": "24.7.1"
+    "@types/node": "24.7.1",
+    "node-color-log": "13.0.3"
   },
   "repository": {
     "type": "git",

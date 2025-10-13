@@ -15,5 +15,10 @@
     "target": "ES2022"
   },
   "files": ["playwright.config.js", "node_scripts/web-server/index.cjs"],
-  "include": ["__tests__/*", ".config/*", "node_scripts/*"]
+  "include": [
+    "__tests__/*",
+    ".config/*",
+    "node_scripts/*",
+    ".config/web-server.cjs"
+  ]
 }

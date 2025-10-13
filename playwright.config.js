@@ -9,7 +9,7 @@ import { baseURL } from "./.config/web-server.cjs";
 
 /** @type {PlaywrightTestConfig["webServer"]} */
 const webServer = {
-  command: "node ./node_scripts/web-server",
+  command: "node ./node_scripts/web-server/index.cjs",
   url: baseURL,
   reuseExistingServer: true,
   stdout: "pipe",
