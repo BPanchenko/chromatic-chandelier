@@ -6,7 +6,7 @@ test.describe("PaletteVIs...", () => {
       width: 540,
       height: 720,
     });
-    await page.goto("/__tests__/palette-visualization.svg");
+    await page.goto("palette-visualization.svg");
     await expect(page).toHaveScreenshot();
   });
 });

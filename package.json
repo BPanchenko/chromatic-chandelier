@@ -1,6 +1,6 @@
 {
   "name": "chromatic-chandelier",
-  "version": "0.18.58",
+  "version": "0.19.58",
   "homepage": "http://palette.protosite.xyz",
   "author": "Boris Panchenko <boris.v.panchenko@mail.ru> (http://bp-studio.ru)",
   "license": "LGPL-3.0-only",
@@ -20,12 +20,12 @@
     "./correlator": "./correlator.js"
   },
   "scripts": {
-    "test": "npx playwright test",
-    "debug": "npx playwright test --debug --ui --update-snapshots"
+    "test": "npx playwright test -c ./.config/playwright.js",
+    "debug": "npm run test -- --debug --ui"
   },
   "devDependencies": {
     "@playwright/test": "1.56.0",
-    "@types/node": "24.7.1",
+    "@types/node": "24.7.2",
     "node-color-log": "13.0.3"
   },
   "repository": {

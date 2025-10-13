@@ -1,0 +1,65 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="28.659011000000003">
+<testsuite name="palette-visualization.e2e.js" timestamp="2025-10-13T17:01:52.705Z" hostname="firefox" tests="1" failures="1" skipped="0" time="22.118" errors="0">
+<testcase name="PaletteVIs... › Light Diffuser Functionality" classname="palette-visualization.e2e.js" time="22.118">
+<failure message="palette-visualization.e2e.js:4:3 Light Diffuser Functionality" type="FAILURE">
+<![CDATA[  [firefox] › palette-visualization.e2e.js:4:3 › PaletteVIs... › Light Diffuser Functionality ──────
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+      205274 pixels (ratio 0.53 of all image pixels) are different.
+
+    Call log:
+      - Expect "toHaveScreenshot" with timeout 5000ms
+        - verifying given screenshot expectation
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - 205274 pixels (ratio 0.53 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - captured a stable screenshot
+      - 205274 pixels (ratio 0.53 of all image pixels) are different.
+
+
+       8 |     });
+       9 |     await page.goto("palette-visualization.svg");
+    > 10 |     await expect(page).toHaveScreenshot();
+         |                        ^
+      11 |   });
+      12 | });
+      13 |
+        at D:\_GIGA\protosite-palette\pkg.chromatic-chandelier\__tests__\palette-visualization.e2e.js:10:24
+
+    attachment #1: PaletteVIs-Light-Diffuser-Functionality-1 (image/png) ───────────────────────────
+    Expected: __screenshots__\PaletteVIs-Light-Diffuser-Functionality\PaletteVIs-Light-Diffuser-Functionality-1.png
+    Received: ..\.test-temp\palette-visualization.e2e.-2b705-ight-Diffuser-Functionality-firefox\PaletteVIs-Light-Diffuser-Functionality-1-actual.png
+    Diff:     ..\.test-temp\palette-visualization.e2e.-2b705-ight-Diffuser-Functionality-firefox\PaletteVIs-Light-Diffuser-Functionality-1-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.test-temp\palette-visualization.e2e.-2b705-ight-Diffuser-Functionality-firefox\trace.zip
+    Usage:
+
+        yarn playwright show-trace ..\.test-temp\palette-visualization.e2e.-2b705-ight-Diffuser-Functionality-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\__tests__\__screenshots__\PaletteVIs-Light-Diffuser-Functionality\PaletteVIs-Light-Diffuser-Functionality-1.png]]
+
+[[ATTACHMENT|..\.test-temp\palette-visualization.e2e.-2b705-ight-Diffuser-Functionality-firefox\PaletteVIs-Light-Diffuser-Functionality-1-actual.png]]
+
+[[ATTACHMENT|..\.test-temp\palette-visualization.e2e.-2b705-ight-Diffuser-Functionality-firefox\PaletteVIs-Light-Diffuser-Functionality-1-diff.png]]
+
+[[ATTACHMENT|..\.test-temp\palette-visualization.e2e.-2b705-ight-Diffuser-Functionality-firefox\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
