@@ -1,7 +1,7 @@
-.github/
-tests/
-types/
-@types/
+__tests__/
+.config/
+.test-report/
+.test-temp/
+node_scripts/
 
-/main.*
-/playwright.config.ts
+main.*

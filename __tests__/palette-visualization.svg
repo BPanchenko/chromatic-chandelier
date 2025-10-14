@@ -26,13 +26,13 @@
 	<script type="module">
 		// <![CDATA[
 		import Palette from '../main.js'
-		const palette = new Palette('protosite-palette')
-
+		const palette = new Palette('protosite-palette', {})
+		
 		/**
 		* Define monochrome colors via register CSS properties
 		*/
 		{
-			const { black, gray, white } = palette
+			let { black, gray, white } = palette
 
 			CSS.registerProperty({
 				name: "--clr-black",
