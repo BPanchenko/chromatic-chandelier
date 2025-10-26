@@ -1,6 +1,6 @@
-/.test-temp/
-/node_modules/
+.test-temp/
+node_modules/
 
-/*.tgz
-/main.*
-/yarn.lock
+*.tgz
+main.*
+yarn.lock
