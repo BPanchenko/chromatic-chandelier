@@ -14,5 +14,6 @@
     "sourceMap": true,
     "target": "ES2022"
   },
-  "include": ["__tests__/*", ".config/*", "node_scripts/**/*"]
+  "files": ["playwright.config.js", "index.js"],
+  "include": ["__tests__/*"]
 }

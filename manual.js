@@ -127,32 +127,34 @@ r,void 0,2));let e=t.CSYS.length,i=new Float64Array(e),n=t.CAM===
 void 0?Array.of(0,1,2):t.CAM.toArray().map(_=>t.CSYS.toArray().findIndex(
 m=>_.$coord===m)),p={adapted:{get(){if(typeof this.space.CSYS.adapt==
 "function"){let[_,m,s]=this.position;return Iterator.from(this.space.
-CSYS.adapt(_,m,s))}else return this.position}},position:{get:R(()=>i.
-values(),"get"),set:R(_=>i.set(_),"set")},set:{value:R(function(_){
-let m=Array.from(_),s=Math.min(m.length,3);for(let x=0;x<s;x++)this[x]=
-m[x];return this},"value")}};for(let _=0;_<e;_++)((m,s,x)=>{p[m]=
-{enumerable:!0,get(){let{CAM:z,CSYS:W}=this.space,K=W[s],N=z!==void 0?
-z[m]:null,et=x[s];return"output"in K&&typeof K.output=="function"&&
-(et=K.output(et)),N!==null&&"output"in N&&typeof N.output=="funct\
-ion"&&(et=N.output(et)),et},set(z){let{CAM:W,CSYS:K}=this.space,N=K[s],
-et=W!==void 0?W[m]:null;et!==null&&"input"in et&&typeof et.input==
-"function"&&(z=et.input(z)),"input"in N&&typeof N.input=="functio\
-n"&&(z=N.input(z)),typeof z=="string"&&(z=parseFloat(z)),x[s]=z}}})(
-_,n[_],i);let l={buffer:{value:i.buffer},colorspace:{enumerable:!0,
-value:t.ident},equals:{value:R(function(_,m=1e-12){let[s,x,z]=this.
-position,[W,K,N]=_.position;return this.colorspace===_.colorspace&&
-Math.abs(s-W)<=m*Math.max(1,Math.abs(s),Math.abs(W))&&Math.abs(x-
-K)<=m*Math.max(1,Math.abs(x),Math.abs(K))&&Math.abs(z-N)<=m*Math.
-max(1,Math.abs(z),Math.abs(N))},"value")},space:{value:t},wcs:{value:t.
-CAM??t.CSYS}};return Object.create(null,{...p,...l,[Symbol.iterator]:{
-value:R(function*(){yield this[0],yield this[1],yield this[2]},"v\
-alue")},[Symbol.toStringTag]:{get(){return`PointInSpace(${this.toString()}\
-)`}},toString:{value:R(function(){return`${this.colorspace};[${this.
-values().toArray().toString()}]`},"value")},length:{value:e},entries:{
-value:R(function(){let _=this.space.CAM??this.space.CSYS;return Iterator.
-from([[_[0],this[0]],[_[1],this[1]],[_[2],this[2]]])},"value")},values:{
-value:R(function(){return Iterator.from(this)},"value")}}).set(r)}
-o(a,"$");R(a,"initPointInSpace");var zr=Object.defineProperty,B=o((t,r)=>zr(t,"name",{value:r,configurable:!0}),
+CSYS.adapt(_,m,s))}else return this.position}},position:{get:R(()=>Object.
+defineProperties(Iterator.from(i.values()),{colorspace:{enumerable:!0,
+value:t.ident},length:{enumerable:!0,value:3}}),"get"),set:R(_=>i.
+set(_),"set")},set:{value:R(function(_){let m=Array.from(_),s=Math.
+min(m.length,3);for(let x=0;x<s;x++)this[x]=m[x];return this},"va\
+lue")}};for(let _=0;_<e;_++)((m,s,x)=>{p[m]={enumerable:!0,get(){
+let{CAM:z,CSYS:W}=this.space,K=W[s],N=z!==void 0?z[m]:null,et=x[s];
+return"output"in K&&typeof K.output=="function"&&(et=K.output(et)),
+N!==null&&"output"in N&&typeof N.output=="function"&&(et=N.output(
+et)),et},set(z){let{CAM:W,CSYS:K}=this.space,N=K[s],et=W!==void 0?
+W[m]:null;et!==null&&"input"in et&&typeof et.input=="function"&&(z=
+et.input(z)),"input"in N&&typeof N.input=="function"&&(z=N.input(
+z)),typeof z=="string"&&(z=parseFloat(z)),x[s]=z}}})(_,n[_],i);let l={
+buffer:{value:i.buffer},colorspace:{enumerable:!0,value:t.ident},
+equals:{value:R(function(_,m=1e-12){let[s,x,z]=this.position,[W,K,
+N]=_.position;return this.colorspace===_.colorspace&&Math.abs(s-W)<=
+m*Math.max(1,Math.abs(s),Math.abs(W))&&Math.abs(x-K)<=m*Math.max(
+1,Math.abs(x),Math.abs(K))&&Math.abs(z-N)<=m*Math.max(1,Math.abs(
+z),Math.abs(N))},"value")},space:{value:t},wcs:{value:t.CAM??t.CSYS}};
+return Object.create(null,{...p,...l,[Symbol.iterator]:{value:R(function*(){
+yield this[0],yield this[1],yield this[2]},"value")},[Symbol.toStringTag]:{
+get(){return`PointInSpace(${this.toString()})`}},toString:{value:R(
+function(){return`${this.colorspace};[${this.values().toArray().toString()}\
+]`},"value")},length:{value:e},entries:{value:R(function(){let _=this.
+space.CAM??this.space.CSYS;return Iterator.from([[_[0],this[0]],[
+_[1],this[1]],[_[2],this[2]]])},"value")},values:{value:R(function(){
+return Iterator.from(this)},"value")}}).set(r)}o(a,"$");R(a,"init\
+PointInSpace");var zr=Object.defineProperty,B=o((t,r)=>zr(t,"name",{value:r,configurable:!0}),
 "t"),Sr=B(t=>typeof t=="string","isString"),Bo=B(t=>ho(t)&&Symbol.
 iterator in t&&typeof t[Symbol.iterator]=="function","isIterableO\
 bject"),ho=B(t=>t!==null&&typeof t=="object","isObject"),Pr=B(t=>Sr(

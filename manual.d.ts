@@ -469,21 +469,22 @@ export const lin_p3: PointPositionConverter
 
 export default initPointInSpace;
 
-declare interface PointPosition extends Iterable<number> {
+declare interface PointPosition extends IteratorObject<number> {
+	readonly colorspace: SpaceID;
 	readonly length: 3;
+}
+
+declare interface PointInSpace extends PointPosition {
+	readonly buffer: ArrayBuffer;
+	readonly space: Space;
+	readonly wcs: EuclideanCoordinateSystem;
+	
 	get 0(): number;
 	set 0(value: number);
 	get 1(): number;
 	set 1(value: number);
 	get 2(): number;
 	set 2(value: number);
-}
-
-declare interface PointInSpace extends PointPosition {
-	readonly buffer: ArrayBuffer;
-	readonly colorspace: SpaceID;
-	readonly space: Space;
-	readonly wcs: EuclideanCoordinateSystem;
 
 	get adapted(): IteratorObject<number>;
 	get position(): IteratorObject<number>;

@@ -1,20 +1,9 @@
 /**
  * @module configuration/playwright
- * @import { PlaywrightTestConfig } from "@playwright/test"
  * @see https://playwright.dev/docs/test-configuration.
  */
 
 import { defineConfig, devices } from "@playwright/test";
-import { baseURL } from "./web-server.cjs";
-
-/** @type {PlaywrightTestConfig["webServer"]} */
-const webServer = {
-  command: "node ../node_scripts/web-server/index.cjs",
-  url: baseURL,
-  reuseExistingServer: true,
-  stdout: "pipe",
-  stderr: "pipe",
-};
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -28,7 +17,7 @@ export default defineConfig({
   },
   forbidOnly: true,
   fullyParallel: true,
-  outputDir: "../.test-temp",
+  outputDir: ".test-temp",
   preserveOutput: "always",
   projects: [
     {
@@ -38,16 +27,11 @@ export default defineConfig({
   ],
   reporter: [
     ["dot"],
-    ["junit", { outputFile: "../.test-report/results.e2e-testing.xml" }],
+    ["junit", { outputFile: ".test-report/results.e2e-testing.xml" }],
   ],
   retries: 2,
   snapshotPathTemplate: "{testDir}/__screenshots__{/testName}/{arg}{ext}",
-  testDir: "../__tests__",
+  testDir: "__tests__",
   testMatch: /.*\.e2e\.js/,
-  use: {
-    baseURL,
-    trace: "on-first-retry",
-  },
-  webServer,
   workers: 1,
 });
