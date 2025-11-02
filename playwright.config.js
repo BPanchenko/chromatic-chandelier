@@ -32,6 +32,6 @@ export default defineConfig({
   retries: 2,
   snapshotPathTemplate: "{testDir}/__screenshots__{/testName}/{arg}{ext}",
   testDir: "__tests__",
-  testMatch: /.*\.e2e\.js/,
+  testMatch: /.*\.test\.js/,
   workers: 1,
 });

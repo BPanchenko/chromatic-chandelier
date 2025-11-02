@@ -20,8 +20,8 @@
     "./correlator": "./correlator.js"
   },
   "scripts": {
-    "test": "npx playwright test",
-    "debug": "npm test -- --debug --ui"
+    "test": "npx playwright test --update-snapshots",
+    "debug": "npx playwright test --debug --update-snapshots --ui"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1",
