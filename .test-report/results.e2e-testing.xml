@@ -1,12 +1,8 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="3.798958">
-<testsuite name="protosite-palette.test.js" timestamp="2025-11-02T16:26:33.183Z" hostname="firefox" tests="1" failures="0" skipped="0" time="1.543" errors="0">
-<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="1.543">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.978462">
+<testsuite name="protosite-palette.test.js" timestamp="2025-11-03T14:12:13.957Z" hostname="firefox" tests="1" failures="0" skipped="0" time="2.534" errors="0">
+<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="2.534">
 <system-out>
-<![CDATA[A snapshot doesn't exist at W:\chromatic-chandelier\__tests__\__screenshots__\protosite-palette-chart-visual-comparisons\protosite-palette-chart-visual-comparisons-1.png, writing actual.
-
-[[ATTACHMENT|..\__tests__\__screenshots__\protosite-palette-chart-visual-comparisons\protosite-palette-chart-visual-comparisons-1.png]]
-
-[[ATTACHMENT|..\.test-temp\protosite-palette-protosite-palette-chart-visual-comparisons-firefox\protosite-palette-chart-visual-comparisons-1-actual.png]]
+<![CDATA[W:\chromatic-chandelier\__tests__\__screenshots__\protosite-palette-chart-visual-comparisons\protosite-palette-chart-visual-comparisons-1.png is re-generated, writing actual.
 ]]>
 </system-out>
 </testcase>
