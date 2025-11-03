@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.978462">
-<testsuite name="protosite-palette.test.js" timestamp="2025-11-03T14:12:13.957Z" hostname="firefox" tests="1" failures="0" skipped="0" time="2.534" errors="0">
-<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="2.534">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.843135">
+<testsuite name="protosite-palette.test.js" timestamp="2025-11-03T23:39:57.497Z" hostname="firefox" tests="1" failures="0" skipped="0" time="2.575" errors="0">
+<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="2.575">
 <system-out>
 <![CDATA[W:\chromatic-chandelier\__tests__\__screenshots__\protosite-palette-chart-visual-comparisons\protosite-palette-chart-visual-comparisons-1.png is re-generated, writing actual.
 ]]>
