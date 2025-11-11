@@ -1,9 +1,28 @@
 import type { SpaceID } from './manual';
+import type { Pair, Quad, Triplet } from './types';
+
+type Primitive =
+	| null
+	| undefined
+	| string
+	| number
+	| boolean
+	| symbol
+	| bigint;
+
+type TAssertionFunction = (condition: Primitive, payload?: Error | string) => asserts condition is true
+type TTupleCreator = {
+	<T extends string | number = number, P = T | Iterable<T>>(p1: P, p2: P): Pair<P>;
+	<T extends string | number = number, P = T | Iterable<T>>(p1: P, p2: P, p3: P): Triplet<P>;
+	<T extends string | number = number, P = T | Iterable<T>>(p1: P, p2: P, p3: P, p4: P): Quad<P>;
+};
 
 type TCSSParsingResult = [ColorSpace: SpaceID, Components: IteratorObject<number>, AlphaChannelValue: number];
 type TDataObject = Record<string, TDatumValue | Record<string, TDatumValue | Record<string, TDatumValue>>>;
 type TDatumValue = boolean | null | number | object | string;
 
+export const assert: TAssertionFunction;
+export const createTuple: TTupleCreator;
 export const deepFreeze: <T extends Record<string, TDatumValue> = TDataObject>(entity: T) => Readonly<T>;
 
 export const isCSSColor: (value: unknown) => value is string;
