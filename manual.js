@@ -63,7 +63,7 @@ function*(){yield[0,this[0]],yield[1,this[1]],this.length===3&&(yield[
 of(...this)},"value")},[Symbol.iterator]:{value:St(function*(){yield this[0],
 yield this[1],this.length===3&&(yield this[2])},"value")}});return n===
 3&&Object.defineProperty(l,2,{enumerable:!0,value:e}),_=>_===void 0?
-l:Object.defineProperties(l,_)}o(v,"I");St(v,"defCSYS");var se=v(at,ut)({adapt:{enumerable:!0,value:lo}});function lo(t=0,r=NaN){return[t*Math.cos(r),t*Math.sin(r)]}o(lo,"\
+l:Object.defineProperties(l,_)}o(v,"w");St(v,"defCSYS");var se=v(at,ut)({adapt:{enumerable:!0,value:lo}});function lo(t=0,r=NaN){return[t*Math.cos(r),t*Math.sin(r)]}o(lo,"\
 calcCartesianCoordinates");var bt=v(at,ut,_t)({adapt:{value:xr}});function xr(t,r,e){return[
 ...lo(t,r),e]}o(xr,"calcCubeCoordinates");var E=Float64Array.of(.9642956764295677,1,.8251046025104602);Object.
 defineProperty(E,"ident",{value:"d50"});Object.freeze(E.buffer);var J=Float64Array.
@@ -109,10 +109,10 @@ abs(t);return r>.0031308?Math.sign(t)*d(1.055*Math.pow(r,1/2.4)-.055):
 d65:Float64Array.of(.955473421488075,-.0283697093338637,.012314014864481998,
 -.02309845494876471,1.0099953980813041,-.020507649298898964,.06325924320057072,
 .021041441191917323,1.330365926242124)}};var dr=Object.defineProperty,R=o((t,r)=>dr(t,"name",{value:r,configurable:!0}),
-"n"),hr=R(t=>typeof t=="number","isNumber"),yr=R(t=>typeof t=="st\
-ring","isString"),Oo=R(t=>bo(t)&&Symbol.iterator in t&&typeof t[Symbol.
-iterator]=="function","isIterableObject"),bo=R(t=>t!==null&&typeof t==
-"object","isObject"),gr=R(t=>yr(t)&&ur.has(t),"isSpaceID"),To=R(t=>bo(
+"n"),Oo=R(t=>bo(t)&&Symbol.iterator in t&&typeof t[Symbol.iterator]==
+"function","isIterableObject"),hr=R(t=>typeof t=="number","isNumb\
+er"),bo=R(t=>t!==null&&typeof t=="object","isObject"),yr=R(t=>typeof t==
+"string","isString"),gr=R(t=>yr(t)&&ur.has(t),"isSpaceID"),To=R(t=>bo(
 t)&&"ident"in t&&gr(t.ident)&&"CSYS"in t&&bo(t.CSYS)&&"length"in t.
 CSYS&&t.CSYS.length===3,"isColorSpace"),ur=new Set(["a98-rgb","di\
 splay-p3","hsl","hwb","lab","lch","oklab","oklch","prophoto-rgb",
@@ -155,9 +155,9 @@ space.CAM??this.space.CSYS;return Iterator.from([[_[0],this[0]],[
 _[1],this[1]],[_[2],this[2]]])},"value")},values:{value:R(function(){
 return Iterator.from(this)},"value")}}).set(r)}o(a,"$");R(a,"init\
 PointInSpace");var zr=Object.defineProperty,B=o((t,r)=>zr(t,"name",{value:r,configurable:!0}),
-"t"),Sr=B(t=>typeof t=="string","isString"),Bo=B(t=>ho(t)&&Symbol.
-iterator in t&&typeof t[Symbol.iterator]=="function","isIterableO\
-bject"),ho=B(t=>t!==null&&typeof t=="object","isObject"),Pr=B(t=>Sr(
+"t"),Bo=B(t=>ho(t)&&Symbol.iterator in t&&typeof t[Symbol.iterator]==
+"function","isIterableObject"),ho=B(t=>t!==null&&typeof t=="objec\
+t","isObject"),Sr=B(t=>typeof t=="string","isString"),Pr=B(t=>Sr(
 t)&&kr.has(t),"isSpaceID"),wr=B(t=>ho(t)&&"ident"in t&&Pr(t.ident)&&
 "CSYS"in t&&ho(t.CSYS)&&"length"in t.CSYS&&t.CSYS.length===3,"isC\
 olorSpace"),kr=new Set(["a98-rgb","display-p3","hsl","hwb","lab",
