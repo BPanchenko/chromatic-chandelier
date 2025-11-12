@@ -1,69 +1,68 @@
-var z=Object.defineProperty;var t=(e,r)=>z(e,"name",{value:r,configurable:!0});var M=t((e,r=12)=>{let n=r>0?10**r:1;return Math.sign(e)*Math.round(
-(Math.abs(e)+Number.EPSILON)*n)/n},"round"),T=M;function q(e,r){if(!e)throw r??"Exception: something unexpected h\
-appened."}t(q,"assert");var I=t(e=>i(e)&&Iterator.from(["minimum","maximum","from","to","\
-value","length"]).every(r=>r in e)&&e.length===2&&e.value>0&&Iterator.
-from(["allot","clamp","test"]).every(r=>r in e&&typeof e[r]=="fun\
-ction"),"isRange");var y=t(e=>e===!0||e===!1||e==="true"||e==="on"||e==="off","isBoo\
-lean"),w=t(e=>i(e)&&Symbol.iterator in e&&typeof e[Symbol.iterator]==
-"function","isIterableObject"),g=t(e=>typeof e=="number","isNumbe\
-r"),i=t(e=>e!==null&&typeof e=="object","isObject"),l=t(e=>typeof e==
-"string","isString"),oe=t(e=>e===!0||e==="true"||e==="on","isTrut\
-hy"),se=t(e=>{if(P(e)){let r=Iterator.from(["hsl","hwb","lab","lc\
-h","oklab","oklch","rgb"]);for(let n of r)if(n===e)return!0}return!1},
-"isCAM"),A=t(e=>l(e)&&v.has(e),"isColorChannelKey"),N=t(e=>l(e)&&
-V.has(e),"isSpaceDimensionID"),P=t(e=>l(e)&&H.has(e),"isSpaceID"),
-ie=t(e=>i(e)&&"ident"in e&&P(e.ident)&&"CSYS"in e&&i(e.CSYS)&&"le\
-ngth"in e.CSYS&&e.CSYS.length===3,"isColorSpace"),ae=t(e=>i(e)&&"\
-ident"in e&&N(e.ident)&&"short"in e&&A(e.short)&&"domain"in e&&I(
-e.domain),"isSpaceDimension"),pe=t(e=>i(e)&&e instanceof Iterator&&
-"alpha"in e&&g(e.alpha),"isColorChannel"),V=new Set(["abscissa","\
+var y=Object.defineProperty;var r=(e,t)=>y(e,"name",{value:t,configurable:!0});var D=r((e,t=12)=>{let n=t>0?10**t:1;return Math.sign(e)*Math.round(
+(Math.abs(e)+Number.EPSILON)*n)/n},"round"),u=D;function L(e,t){if(!e)throw t??"Exception: something unexpected h\
+appened."}r(L,"assert");var b=r(e=>p(e)&&Iterator.from(["minimum","maximum","from","to","\
+value","length"]).every(t=>t in e)&&e.length===2&&e.value>0&&Iterator.
+from(["allot","clamp","test"]).every(t=>t in e&&typeof e[t]=="fun\
+ction"),"isRange");var h=r(e=>e===!0||e===!1||e==="true"||e==="on"||e==="off","isBoo\
+lean"),S=r(e=>p(e)&&Symbol.iterator in e&&typeof e[Symbol.iterator]==
+"function","isIterableObject"),m=r(e=>typeof e=="number","isNumbe\
+r"),p=r(e=>e!==null&&typeof e=="object","isObject"),l=r(e=>typeof e==
+"string","isString"),q=r(e=>e===!0||e==="true"||e==="on","isTruth\
+y"),J=r(e=>{if(x(e)){let t=Iterator.from(["hsl","hwb","lab","lch",
+"oklab","oklch","rgb"]);for(let n of t)if(n===e)return!0}return!1},
+"isCAM"),k=r(e=>l(e)&&j.has(e),"isColorChannelKey"),E=r(e=>l(e)&&
+$.has(e),"isSpaceDimensionID"),x=r(e=>l(e)&&O.has(e),"isSpaceID"),
+Z=r(e=>p(e)&&"ident"in e&&x(e.ident)&&"CSYS"in e&&p(e.CSYS)&&"len\
+gth"in e.CSYS&&e.CSYS.length===3,"isColorSpace"),ee=r(e=>p(e)&&"i\
+dent"in e&&E(e.ident)&&"short"in e&&k(e.short)&&"domain"in e&&b(e.
+domain),"isSpaceDimension"),re=r(e=>p(e)&&e instanceof Iterator&&
+"alpha"in e&&m(e.alpha),"isColorChannel"),$=new Set(["abscissa","\
 angle","applicate","blackness","blue-yellow","blue","chroma","gre\
 en","hue","lightness","ordinate","radius","green-red","red","satu\
-ration","whiteness"]),v=new Set(["a","b","B","C","c","G","g","h",
-"L","phi","R","r","rho","S","W","x","y","z","rho","phi"]),H=new Set(
+ration","whiteness"]),j=new Set(["a","b","B","C","c","G","g","h",
+"L","phi","R","r","rho","S","W","x","y","z","rho","phi"]),O=new Set(
 ["a98-rgb","display-p3","hsl","hwb","lab","lch","oklab","oklch","\
 prophoto-rgb","rec2020","srgb-linear","srgb","rgb","xyz","xyz-d50",
-"xyz-d65"]);function Te(e,r,n,o,c){let p=t(s=>y(s)||g(s)||l(s)||w(s)||s===null,
-"isValidValue"),a=t(s=>i(s)&&Object.values(s).every(m=>p(m)),"isA\
-ditionalProperties"),h=Iterator.from((function*(){yield e,yield r,
-p(n)&&(yield n),p(o)&&(yield o)})()),j=h.toArray().length,C=!0,x={
-length:{enumerable:C,value:j}},O=Object.entries(Iterator.from(arguments).
-filter(s=>a(s)).next().value??{});for(let[s,m]of O)x[s]={enumerable:C,
-value:m};return Object.defineProperties(h,x)}t(Te,"createTuple");var B=t(e=>{let r=Object.getOwnPropertyNames(e);for(let n of r){let o=e[n];
-i(o)&&B(o)}return Object.freeze(e)},"deepFreeze");var Se=t(e=>e.toLowerCase().replace(new RegExp(/[\W\s_-]+/,"g"),"\
--"),"toKebabCase");var xe=t((e,r="",n=!1)=>e.toLowerCase().replace(new RegExp(/[-_]+/,
+"xyz-d65"]);function ie(){let e=r(o=>h(o)||m(o)||l(o)||S(o)||o===null,"isVali\
+dValue"),t=r(o=>p(o)&&Object.values(o).every(s=>e(s)),"isAditiona\
+lProperties"),n=!0,i=Array.from(arguments).filter(o=>e(o)),a={};return Object.
+entries(Iterator.from(arguments).filter(o=>t(o)).next().value??{}).
+forEach(([o,s])=>a[o]={enumerable:n,value:s}),Object.defineProperties(
+i,a)}r(ie,"createTuple");var z=r(e=>{let t=Object.getOwnPropertyNames(e);for(let n of t){let i=e[n];
+p(i)&&z(i)}return Object.freeze(e)},"deepFreeze");var ue=r(e=>e.toLowerCase().replace(new RegExp(/[\W\s_-]+/,"g"),"\
+-"),"toKebabCase");var fe=r((e,t="",n=!1)=>e.toLowerCase().replace(new RegExp(/[-_]+/,
 "g")," ").replace(new RegExp(/[^\w\s]+/,"g"),"").trim().split(" ").
-map((o,c)=>n||0<c?o[0].toUpperCase().concat(o.slice(1)):o).join(r),
-"toPascalCase");var f=String.raw`\s?(-?[\d]+\.?[\d]{0,}(?:deg|rad|grad|turn|%)?|none)\s?`,
-R=`${f}${f}${f}(?:/${f})?`,u=String.raw`a-f\d`,F=String.raw`(hsl|hwb|lab|lch|lch|oklab|oklch|rgb)`,
-K=String.raw`(srgb|srgb-linear|display-p3|a98-rgb|prophoto-rgb|rec2020|xyz|xyz-d50|xyz-d65)`,
-b=new RegExp("^(-?[d]+.?[d]{0,})(deg|grad|rad|turn)?$","i"),k=new RegExp(
-`^${F}\\(${R}\\)$`,"i"),S=new RegExp(`^color\\(${K} ${R}\\)$`,"i"),
-_=`#?[${u}]{3}[${u}]?`,G=`#?[${u}]{6}([${u}]{2})?`,D=new RegExp(`\
-[^#${u}]`,"gi"),E=new RegExp(`^${_}$|^${G}$`,"i"),$=t(e=>D.test(e)===
-!1&&E.test(e),"isHEXColor"),L=t(e=>typeof e=="string"&&($(e)||k.test(
-e)||S.test(e)),"isCSSColor"),Re=t(e=>typeof e=="string"&&/-?(?:[_a-z]|[\\240-\\377]|(?:(:?\\[0-9a-f]{1,6}(\r\n|[ \t\r\n\f])?)|\\[^\r\n\f0-9a-f]))(?:[_a-z0-9-]|[\\240-\\377]|(?:(:?\\[0-9a-f]{1,6}(\r\n|[ \t\r\n\f])?)|\\[^\r\n\f0-9a-f]))*/.
-test(e),"isCSSIdent"),ke=t(e=>{if($(e))return Q(e);if(L(e)){let r=(S.
-test(e)?S.exec(e)?.slice(1):k.exec(e)?.slice(1))??Array.of("none",
-"none","none",void 0),n=r.pop()??1;l(n)&&(n=d(n));let o=r.shift(),
-c=o==="rgb",p=Iterator.from(r.map(a=>a?b.test(a)?W(a):c?d(a,255):
-d(a):NaN));return[o,p,n]}throw new TypeError(`Expected a valid re\
+map((i,a)=>n||0<a?i[0].toUpperCase().concat(i.slice(1)):i).join(t),
+"toPascalCase");var T=String.raw`\s?(-?[\d]+\.?[\d]{0,}(?:deg|rad|grad|turn|%)?|none)\s?`,
+C=`${T}${T}${T}(?:/${T})?`,c=String.raw`a-f\d`,M=String.raw`(hsl|hwb|lab|lch|lch|oklab|oklch|rgb)`,
+A=String.raw`(srgb|srgb-linear|display-p3|a98-rgb|prophoto-rgb|rec2020|xyz|xyz-d50|xyz-d65)`,
+d=new RegExp("^(-?[d]+.?[d]{0,})(deg|grad|rad|turn)?$","i"),I=new RegExp(
+`^${M}\\(${C}\\)$`,"i"),g=new RegExp(`^color\\(${A} ${C}\\)$`,"i"),
+N=`#?[${c}]{3}[${c}]?`,V=`#?[${c}]{6}([${c}]{2})?`,P=new RegExp(`\
+[^#${c}]`,"gi"),R=new RegExp(`^${N}$|^${V}$`,"i"),w=r(e=>P.test(e)===
+!1&&R.test(e),"isHEXColor"),Q=r(e=>typeof e=="string"&&(w(e)||I.test(
+e)||g.test(e)),"isCSSColor"),Se=r(e=>typeof e=="string"&&/-?(?:[_a-z]|[\\240-\\377]|(?:(:?\\[0-9a-f]{1,6}(\r\n|[ \t\r\n\f])?)|\\[^\r\n\f0-9a-f]))(?:[_a-z0-9-]|[\\240-\\377]|(?:(:?\\[0-9a-f]{1,6}(\r\n|[ \t\r\n\f])?)|\\[^\r\n\f0-9a-f]))*/.
+test(e),"isCSSIdent"),xe=r(e=>{if(w(e))return H(e);if(Q(e)){let t=(g.
+test(e)?g.exec(e)?.slice(1):I.exec(e)?.slice(1))??Array.of("none",
+"none","none",void 0),n=t.pop()??1;l(n)&&(n=f(n));let i=t.shift(),
+a=i==="rgb",o=Iterator.from(t.map(s=>s?d.test(s)?v(s):a?f(s,255):
+f(s):NaN));return[i,o,n]}throw new TypeError(`Expected a valid re\
 presentation that defined as the <color> CSS data type, but passe\
-d "${e}".`)},"parseCSSColor"),Q=t(e=>{if(D.test(e)||!E.test(e))throw new TypeError(
+d "${e}".`)},"parseCSSColor"),H=r(e=>{if(P.test(e)||!R.test(e))throw new TypeError(
 "Expected a valid hex string");e.startsWith("#")&&(e=e.slice(1));
-let r=1;e.length===8&&(r=parseInt(e.slice(6,8),16)/255,e=e.slice(
-0,6)),e.length===4&&(r=parseInt(e.slice(3,4).repeat(2),16)/255,e=
+let t=1;e.length===8&&(t=parseInt(e.slice(6,8),16)/255,e=e.slice(
+0,6)),e.length===4&&(t=parseInt(e.slice(3,4).repeat(2),16)/255,e=
 e.slice(0,3)),e.length===3&&(e=e[0].repeat(2)+e[1].repeat(2)+e[2].
 repeat(2));let n=parseInt(e,16);return["rgb",Iterator.from([n>>16&
-255,n>>8&255,n&255]),r]},"parseHEXColor");function W(e){let r=NaN;
-if(b.test(e)){let n=b.exec(e).slice(1),o=n[1],c=o==="grad",p=o===
-"rad",a=o==="turn";r=T(parseFloat(n[0])*(c?180/200:p?180/Math.PI:
-a?360:1)),Math.abs(r)>360&&(r=T(r%360)),r<0&&(r+=360)}return r}t(
-W,"parseCSSAngleValue");function d(e,r=1){if(e==="none")return NaN;
-let n=parseFloat(e);return e.endsWith("%")&&(n=T(n*r/100)),n}t(d,
-"parseCSSColorComponent");export{q as assert,Te as createTuple,B as deepFreeze,y as isBoolean,
-se as isCAM,L as isCSSColor,Re as isCSSIdent,pe as isColorChannel,
-A as isColorChannelKey,ie as isColorSpace,$ as isHEXColor,w as isIterableObject,
-g as isNumber,i as isObject,ae as isSpaceDimension,N as isSpaceDimensionID,
-P as isSpaceID,l as isString,oe as isTruthy,ke as parseCSSColor,Q as parseHEXColor,
-M as round,Te as toEnrichTriplet,Se as toKebabCase,xe as toPascalCase};
+255,n>>8&255,n&255]),t]},"parseHEXColor");function v(e){let t=NaN;
+if(d.test(e)){let n=d.exec(e).slice(1),i=n[1],a=i==="grad",o=i===
+"rad",s=i==="turn";t=u(parseFloat(n[0])*(a?180/200:o?180/Math.PI:
+s?360:1)),Math.abs(t)>360&&(t=u(t%360)),t<0&&(t+=360)}return t}r(
+v,"parseCSSAngleValue");function f(e,t=1){if(e==="none")return NaN;
+let n=parseFloat(e);return e.endsWith("%")&&(n=u(n*t/100)),n}r(f,
+"parseCSSColorComponent");export{L as assert,ie as createTuple,z as deepFreeze,h as isBoolean,
+J as isCAM,Q as isCSSColor,Se as isCSSIdent,re as isColorChannel,
+k as isColorChannelKey,Z as isColorSpace,w as isHEXColor,S as isIterableObject,
+m as isNumber,p as isObject,ee as isSpaceDimension,E as isSpaceDimensionID,
+x as isSpaceID,l as isString,q as isTruthy,xe as parseCSSColor,H as parseHEXColor,
+D as round,ie as toEnrichTriplet,ue as toKebabCase,fe as toPascalCase};

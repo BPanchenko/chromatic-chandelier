@@ -1,15 +1,16 @@
-import { IPair, ITriplet } from "./types";
+import { TRichTuple } from "./toolkit";
+import { IPair, Pair, Quad, Triplet } from "./types";
 
 /**
  * @param AdjustableWeights interpolation amount, in the range [0-1], along the direction
  */
-type InterpolationFunction<T = IPair | ITriplet> = (
+type InterpolationFunction<T extends Pair | Triplet | Quad = Triplet> = (
 	Direction: [Base: T, Terminal: T],
-	ControlPoints: IPair<Iterable<number>>,
+	ControlPoints: [T, T],
 	AdjustableWeights: Iterable<number>
-) => Iterable<Iterable<number>>;
+) => IteratorObject<TRichTuple>;
 
-type EasingFunction = (TSeries: Iterable<number>) => ReturnType<InterpolationFunction>;
+type EasingFunction = (TSeries: Iterable<number>) => ReturnType<InterpolationFunction<Pair>>;
 
 export enum XCorrID {
 	Ease = 'ease',
@@ -40,7 +41,25 @@ export enum XCorrID {
 	OutSine = 'ease-out-sine',
 }
 
+export const derive: (cp1: number, cp2: number, ratio: number) => number;
+
+/**
+ * **Интерполяция кривой Безье:**\
+ * Метод построения плавной кривой, проходящей через или вблизи заданных точек,\
+ * используя математические уравнения, основанные на контрольных точках.
+ * 
+ * @see https://en.wikipedia.org/wiki/B%C3%A9zier_curve
+ */
 export const performBezierInterpolation: InterpolationFunction;
+
+/**
+ * **Интерполяция Эрмита:**\
+ * Метод полиномиальной интерполяции, который находит полином, соответствующий значениям функции\
+ * и её производных в заданных точках.
+ * 
+ * @see https://en.wikipedia.org/wiki/Cubic_Hermite_spline
+ */
 export const performHermiteInterpolation: InterpolationFunction;
+
 export const XCorrCTR: Map<XCorrID, IPair<IPair>>;
 export const XEaseFN: Map<XCorrID, EasingFunction>;
