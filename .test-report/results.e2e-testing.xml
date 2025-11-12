@@ -1,6 +1,14 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.1741909999999995">
-<testsuite name="protosite-palette.test.js" timestamp="2025-11-04T13:02:12.046Z" hostname="firefox" tests="1" failures="0" skipped="0" time="3.347" errors="0">
-<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="3.347">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="8.162270999999999">
+<testsuite name="protosite-palette.test.js" timestamp="2025-11-12T20:49:42.225Z" hostname="firefox" tests="1" failures="0" skipped="0" time="2.658" errors="0">
+<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="2.658">
+<system-out>
+<![CDATA[W:\chromatic-chandelier\__tests__\__screenshots__\protosite-palette-chart-visual-comparisons\protosite-palette-chart-visual-comparisons-1.png is re-generated, writing actual.
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="protosite-palette.test.js" timestamp="2025-11-12T20:49:42.225Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.632" errors="0">
+<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="1.632">
 <system-out>
 <![CDATA[W:\chromatic-chandelier\__tests__\__screenshots__\protosite-palette-chart-visual-comparisons\protosite-palette-chart-visual-comparisons-1.png is re-generated, writing actual.
 ]]>

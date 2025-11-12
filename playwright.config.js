@@ -24,6 +24,10 @@ export default defineConfig({
       name: "firefox",
       use: { ...devices["Desktop Firefox HiDPI"] },
     },
+    {
+      name: "Google Chrome",
+      use: { ...devices["Desktop Chrome"], channel: "chrome" },
+    },
   ],
   reporter: [
     ["dot"],
