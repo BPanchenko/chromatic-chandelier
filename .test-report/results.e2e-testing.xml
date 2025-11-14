@@ -1,14 +1,14 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="8.162270999999999">
-<testsuite name="protosite-palette.test.js" timestamp="2025-11-12T20:49:42.225Z" hostname="firefox" tests="1" failures="0" skipped="0" time="2.658" errors="0">
-<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="2.658">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="8.475056">
+<testsuite name="protosite-palette.test.js" timestamp="2025-11-14T15:34:22.563Z" hostname="firefox" tests="1" failures="0" skipped="0" time="3.079" errors="0">
+<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="3.079">
 <system-out>
 <![CDATA[W:\chromatic-chandelier\__tests__\__screenshots__\protosite-palette-chart-visual-comparisons\protosite-palette-chart-visual-comparisons-1.png is re-generated, writing actual.
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="protosite-palette.test.js" timestamp="2025-11-12T20:49:42.225Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.632" errors="0">
-<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="1.632">
+<testsuite name="protosite-palette.test.js" timestamp="2025-11-14T15:34:22.563Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.688" errors="0">
+<testcase name="protosite palette chart › visual comparisons" classname="protosite-palette.test.js" time="1.688">
 <system-out>
 <![CDATA[W:\chromatic-chandelier\__tests__\__screenshots__\protosite-palette-chart-visual-comparisons\protosite-palette-chart-visual-comparisons-1.png is re-generated, writing actual.
 ]]>

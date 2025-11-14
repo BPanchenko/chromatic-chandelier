@@ -8,7 +8,9 @@
 ПО "Цветная Люстра" разрабатывается через автоматизированное тестирование в три этапа: тестирование спецификаций, модульное тестирование известных образцов цвета и сквозное тестирование (E2E) с интеграцией ПО.\
 Смотри [отчёт о покрытии кода тестами](http://protosite.xyz/test-reports/chromatic-chandelier/coverage/) и [результаты прогона автотестов](http://protosite.xyz/test-reports/chromatic-chandelier/results.spec-testing.html).
 
-![Визуализация палитры протосайта](http://palette.protosite.xyz/assets/chart.protosite-palette.svg)
+![Визуализация палитры протосайта](__tests__/__screenshots__/protosite-palette-chart-visual-comparisons/protosite-palette-chart-visual-comparisons-1.png)
+
+> Визуализация палитры протосайта: http://palette.protosite.xyz/assets/chart.protosite-palette.svg
 
 ## В NPM-пакете опубликован программный справочник цветовых пространст вместе с набором необходимых для работы с цветом классов и утилит.
 
