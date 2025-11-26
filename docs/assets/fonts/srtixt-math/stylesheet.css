@@ -1,0 +1,5 @@
+@font-face {
+	font-family: srtixt-math;
+	font-weight: 400;
+	src: url('regular.otf') format('opentype'), url('regular.woff2') format('woff2');
+}

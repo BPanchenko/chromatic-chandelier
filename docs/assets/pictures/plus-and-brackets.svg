@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  viewBox="0 0 88 56"
+  xmlns="http://www.w3.org/2000/svg">
+	<g id="container">
+		<path transform-origin="50% 50%" d="M41.5,38h5v-7.5H54v-5h-7.5V18h-5v7.5H34v5h7.5V38z">
+		<animateTransform
+			attributeName="transform"
+			attributeType="XML"
+			type="scale"
+			from="1 1"
+			to="2 2"
+			begin="container.mouseenter"
+			end="container.mouseleave"
+			dur="1s"
+			repeatCount="indefinite" />
+	</path>
+	<polygon points="32,50.1 5.3,50.1 5.3,5.9 32,5.9 32,0.7 0,0.7 0,55.3 32,55.3 "/>
+	<polygon points="56,0.7 56,5.9 82.7,5.9 82.7,50.1 56,50.1 56,55.3 88,55.3 88,0.7 "/>
+	</g>
+</svg>
+

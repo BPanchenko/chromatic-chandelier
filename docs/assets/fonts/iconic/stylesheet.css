@@ -1,0 +1,37 @@
+
+@font-face {
+	font-family: 'Iconic';
+
+	src: url('iconic-sm.eot');
+	src: url('iconic-sm.eot?#iconic-sm') format('embedded-opentype'),
+         url('iconic-sm.ttf') format('truetype'),
+         url('iconic-sm.otf') format('opentype'),
+         url('iconic-sm.svg#iconic-sm') format('svg');
+
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Iconic';
+
+	src: url('iconic-md.eot');
+	src: url('iconic-md.eot?#iconic-md') format('embedded-opentype'),
+         url('iconic-md.ttf') format('truetype'),
+         url('iconic-md.otf') format('opentype'),
+         url('iconic-md.svg#iconic-md') format('svg');
+
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Iconic';
+    
+	src: url('iconic-lg.eot');
+	src: url('iconic-lg.eot?#iconic-lg') format('embedded-opentype'),
+         url('iconic-lg.ttf') format('truetype'),
+         url('iconic-lg.otf') format('opentype'),
+         url('iconic-lg.svg#iconic-lg') format('svg');
+	
+    font-weight: 800;
+	font-style: normal;
+}

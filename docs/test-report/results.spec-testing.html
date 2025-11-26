@@ -1,0 +1,2883 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Тестирование спецификаций (требований). Отчет о прогоне тестов</title>
+    <style type="text/css">
+        :root {
+            --text-primary: #111;
+            --text-secondary: #4f4f4f;
+            --success: #006633;
+            --success-bright: #80ffbf;
+            --danger: #cc071e;
+            --danger-bright: #fbdfe0;
+            --warning: #995c00;
+            --warning-bright: #ffeea8;
+            --panel: #eee;
+            --border: #949494;
+            --disabled: #6b6b6b;
+        }
+
+        html,
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            color: var(--text-primary);
+        }
+
+        body {
+            padding: 2rem 1rem;
+        }
+
+        .jesthtml-content {
+            margin: 0 auto;
+            max-width: 70rem;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        #title {
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        #logo {
+            height: 4rem;
+        }
+
+        #timestamp {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        #metadata-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .additional-information-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        /** SUMMARY */
+        #summary {
+            color: var(--text-primary);
+            display: flex;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        #summary>div {
+            margin-right: 0.5rem;
+            background: var(--panel);
+            padding: 1rem;
+            min-width: 15rem;
+        }
+
+        #summary>div:last-child {
+            margin-right: 0;
+        }
+
+        @media only screen and (max-width: 720px) {
+            #summary {
+                flex-direction: column;
+            }
+
+            #summary>div {
+                margin-right: 0;
+                margin-top: 1rem;
+            }
+
+            #summary>div:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .summary-total {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-passed {
+            color: var(--success);
+            border-left: 0.4rem solid var(--success);
+            padding-left: 0.5rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .summary-failed,
+        .summary-obsolete-snapshots {
+            color: var(--danger);
+            border-left: 0.4rem solid var(--danger);
+            padding-left: 0.5rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .summary-pending {
+            color: var(--warning);
+            border-left: 0.4rem solid var(--warning);
+            padding-left: 0.5rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .summary-empty {
+            color: var(--disabled);
+            border-left: 0.4rem solid var(--disabled);
+            margin-bottom: 0.15rem;
+        }
+
+        .test-result {
+            padding: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .test-result:last-child {
+            border: 0;
+        }
+
+        .test-result.passed {
+            background-color: var(--success-bright);
+            color: var(--success);
+        }
+
+        .test-result.failed {
+            background-color: var(--danger-bright);
+            color: var(--danger);
+        }
+
+        .test-result.pending {
+            background-color: var(--warning-bright);
+            color: var(--warning);
+        }
+
+        .test-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .test-suitename {
+            width: 20%;
+            text-align: left;
+            font-weight: bold;
+            word-break: break-word;
+        }
+
+        .test-title {
+            width: 40%;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .test-status {
+            width: 20%;
+            text-align: right;
+        }
+
+        .test-duration {
+            width: 10%;
+            text-align: right;
+            font-size: 0.85rem;
+        }
+
+        .failureMessages {
+            padding: 0 1rem;
+            margin-top: 1rem;
+            border-top: 1px dashed var(--danger);
+        }
+
+        .failureMessages.suiteFailure {
+            border-top: none;
+        }
+
+        .failureMsg {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .suite-container {
+            margin-bottom: 1rem;
+        }
+
+        .suite-info {
+            padding: 1rem;
+            background-color: var(--panel);
+            color: var(--text-secondary);
+            border: 0.15rem solid;
+            border-color: var(--panel);
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.25rem;
+        }
+
+        .suite-info:hover {
+            border-color: var(--border);
+            cursor: pointer;
+        }
+
+        .suite-info .suite-path {
+            word-break: break-all;
+            flex-grow: 1;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        .suite-info .suite-time {
+            margin-left: 1rem;
+            padding: 0.2rem 0.3rem;
+            font-size: 0.85rem;
+        }
+
+        .suite-info .suite-time.warn {
+            background-color: var(--danger);
+            color: #fff;
+        }
+
+        .suite-info:before {
+            content: "\2303";
+            display: inline-block;
+            margin-right: 1rem;
+            transform: rotate(180deg) translateY(0.15rem);
+        }
+
+        .suite-container[open] .suite-info:before {
+            transform: rotate(0deg) translateY(0.15rem);
+        }
+
+        /* CONSOLE LOGS */
+        .suite-consolelog {
+            margin-bottom: 0.25rem;
+            padding: 1rem;
+            background-color: var(--panel);
+        }
+
+        .suite-consolelog-header {
+            font-weight: bold;
+        }
+
+        .suite-consolelog-item {
+            padding: 0.5rem;
+        }
+
+        .suite-consolelog-item pre {
+            margin: 0.5rem 0;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .suite-consolelog-item-origin {
+            color: var(--text-secondary);
+            font-weight: bold;
+        }
+
+        .suite-consolelog-item-message {
+            color: var(--text-primary);
+            font-size: 1rem;
+            padding: 0 0.5rem;
+        }
+
+        /* OBSOLETE SNAPSHOTS */
+        .suite-obsolete-snapshots {
+            margin-bottom: 0.25rem;
+            padding: 1rem;
+            background-color: var(--danger-bright);
+            color: var(--danger);
+        }
+
+        .suite-obsolete-snapshots-header {
+            font-weight: bold;
+        }
+
+        .suite-obsolete-snapshots-item {
+            padding: 0.5rem;
+        }
+
+        .suite-obsolete-snapshots-item pre {
+            margin: 0.5rem 0;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .suite-obsolete-snapshots-item-message {
+            color: var(--text-primary);
+            font-size: 1rem;
+            padding: 0 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="jesthtml-content">
+        <header>
+            <h1 id="title">Тестирование спецификаций (требований). Отчет о прогоне тестов</h1>
+        </header>
+        <section id="metadata-container">
+            <div id="timestamp">Started: 2025-10-11 09:32:10</div>
+            <div id="summary">
+                <div id="suite-summary">
+                    <div class="summary-total">Suites (24)</div>
+                    <div class="summary-passed ">24 passed</div>
+                    <div class="summary-failed  summary-empty">0 failed</div>
+                    <div class="summary-pending  summary-empty">0 pending</div>
+                </div>
+                <div id="test-summary">
+                    <div class="summary-total">Tests (284)</div>
+                    <div class="summary-passed ">284 passed</div>
+                    <div class="summary-failed  summary-empty">0 failed</div>
+                    <div class="summary-pending  summary-empty">0 pending</div>
+                </div>
+            </div>
+        </section>
+        <details id="suite-1" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.display-p3.test.ts</div>
+                <div class="suite-time">3.158s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.024s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.019s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.004s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.006s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Display P3 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-2" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.xyz-d50.test.ts</div>
+                <div class="suite-time">3.242s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.008s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.018s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D50 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-3" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.prophoto-rgb.test.ts</div>
+                <div class="suite-time">3.191s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.012s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.028s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">ProPhoto RGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-4" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.rec2020.test.ts</div>
+                <div class="suite-time">0.453s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.01s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Rec BT.2020 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-5" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.oklch.test.ts</div>
+                <div class="suite-time">0.564s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.004s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.009s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.015s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLCH Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-6" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.a98-rgb.test.ts</div>
+                <div class="suite-time">0.858s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the Adobe RGB (1998) color space. Testing a point
+                            reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-7" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.xyz-d65.test.ts</div>
+                <div class="suite-time">0.184s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">XYZ D65 Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-8" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.oklab.test.ts</div>
+                <div class="suite-time">0.35s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.01s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">okLAB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-9" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.lab.test.ts</div>
+                <div class="suite-time">0.381s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*a*b* color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-10" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.lch.test.ts</div>
+                <div class="suite-time">0.365s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Reflector of the L*C*h color space. Testing a point reflected from
+                            ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-11" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.hsl.test.ts</div>
+                <div class="suite-time">0.489s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.004s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HSL Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-12" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.srgb-linear.test.ts</div>
+                <div class="suite-time">0.214s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-13" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.srgb.test.ts</div>
+                <div class="suite-time">0.168s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.017s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HWB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">sRGB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-14" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/reflector.hwb.test.ts</div>
+                <div class="suite-time">0.445s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">HSL</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">L*a*b*</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">LCh</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLAB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">okLCH</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">RGB Model</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">A98 RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Display P3</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">ProPhoto RGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Rec BT.2020</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">sRGB (IEC 61966-2-1 Default RGB Colour Space)</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">Linear sRGB</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D65</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">HWB Reflector. Testing a point reflected from ...</div>
+                        <div class="test-title">XYZ D50</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-15" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/css-color.test.ts</div>
+                <div class="suite-time">0.296s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;color-function&gt; for
+                            the color appearance models</div>
+                        <div class="test-title">returns true for the value "lab(50 -20 0)"</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;color-function&gt; for
+                            the color appearance models</div>
+                        <div class="test-title">returns true for the value "lab(50 0 -20)"</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;color-function&gt; for
+                            the color appearance models</div>
+                        <div class="test-title">returns true for the value "lab(100 0 10 / 50%)"</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;color-function&gt; for
+                            the color appearance models</div>
+                        <div class="test-title">returns true for the value "hwb(222.6 8.8365% 89.748%)"</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;color-function&gt; for
+                            the color appearance models</div>
+                        <div class="test-title">returns true for the value "oklch(53.85% 0.1725 320.67 / 70%)"</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;color-function&gt; for
+                            the RGB color spaces</div>
+                        <div class="test-title">returns true for the value "color(a98-rgb 0.25 1 0.5)"</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;hex-color&gt; can be
+                            specified using the three-, four-, six-, and eight-value hex notations</div>
+                        <div class="test-title">"#f09" is valid</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;hex-color&gt; can be
+                            specified using the three-, four-, six-, and eight-value hex notations</div>
+                        <div class="test-title">"#f09a" is valid</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.005s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;hex-color&gt; can be
+                            specified using the three-, four-, six-, and eight-value hex notations</div>
+                        <div class="test-title">"#ff0099" is valid</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; CHECKING &gt; &lt;hex-color&gt; can be
+                            specified using the three-, four-, six-, and eight-value hex notations</div>
+                        <div class="test-title">"#ff0099aa" is valid</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; PARSING</div>
+                        <div class="test-title">`lab(50% -20 0)` converts to `["lab", [Array], 1]`</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; PARSING</div>
+                        <div class="test-title">`lab(50 0 -20)` converts to `["lab", [Array], 1]`</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; PARSING</div>
+                        <div class="test-title">`lab(100% none 10 / 50%)` converts to `["lab", [Array], 1]`</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; PARSING</div>
+                        <div class="test-title">`hwb(222.6 8.8365% 89.748%)` converts to `["hwb", [Array], 1]`</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; PARSING</div>
+                        <div class="test-title">`color(a98-rgb 0.25 1 0.5)` converts to `["a98-rgb", [Array], 1]`</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; PARSING</div>
+                        <div class="test-title">`#f09a` converts to `["srgb", [Array], 0.6666666666666666]`</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; PARSING</div>
+                        <div class="test-title">`rgb(221 52 32 / 1)` converts to `["rgb", [Array], 1]`</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">CSS Color Processing &gt; PARSING</div>
+                        <div class="test-title">`oklch(53.85% 17.25% 320.67 / 70%)` converts to `["oklch", [Array], 1]`
+                        </div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-16" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/vector.spec.ts</div>
+                <div class="suite-time">0.202s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL Specification. Vector ...</div>
+                        <div class="test-title">is initialized by coordinates;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL Specification. Vector ...</div>
+                        <div class="test-title">is initialized by predefined the point in space;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL Specification. Vector ...</div>
+                        <div class="test-title">is an object that has both magnitude and direction;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL Specification. Vector ...</div>
+                        <div class="test-title">can be normilized;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL Specification. Vector ...</div>
+                        <div class="test-title">can be zeroed;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.006s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL Specification. Vector ...</div>
+                        <div class="test-title">can get a random direction and be normalized at the same time;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL Specification. Vector ...</div>
+                        <div class="test-title">is specified by a point, updating the vector changes the coordinates of
+                            that point synchronously.</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-17" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/point-in-space.spec.ts</div>
+                <div class="suite-time">0.148s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Point in Space (PinS). Test Specification:</div>
+                        <div class="test-title">PinS can be initialized by passed a color space and parameters.</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Point in Space (PinS). Test Specification:</div>
+                        <div class="test-title">Color parameters defined by numeric properties.</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Point in Space (PinS). Test Specification:</div>
+                        <div class="test-title">Space coordinates are determined using destructuring of a point
+                            position.</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Point in Space (PinS). Test Specification:</div>
+                        <div class="test-title">Location can be determined by coordinates adapted to a cylindrical or
+                            cubic space.</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Point in Space (PinS). Test Specification:</div>
+                        <div class="test-title">Instance has a custom string representation.</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Point in Space (PinS). Test Specification:</div>
+                        <div class="test-title">PinS updates by calling method `PinS.set(&lt;parameters&gt;).`</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-18" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/point-in-space.test.ts</div>
+                <div class="suite-time">0.174s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;hsl&gt; at &lt;[324.41, 29.95, 61.37]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.005s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;hwb&gt; at &lt;[324.41, 49.8, 27.06]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;lab&gt; at &lt;[60.19, 27.44, -9.05]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;lch&gt; at &lt;[60.19, 28.9, 341.8]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;oklab&gt; at &lt;[66.7, 0.0825879392, -0.0247496514]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;oklch&gt; at &lt;[66.7, 0.0862166628, 343.3]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;rgb&gt; at &lt;[186, 127, 162]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;a98-rgb&gt; at &lt;[66.79, 49.42, 62.46]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;display-p3&gt; at &lt;[69.54, 57.96, 62.84]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;prophoto-rgb&gt; at &lt;[58.48, 45.65, 55.45]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;rec2020&gt; at &lt;[62.33, 47.16, 58.64]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;srgb&gt; at &lt;[72.94, 49.8, 63.53]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;srgb-linear&gt; at &lt;[49.1, 21.22, 36.13]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;xyz-d65&gt; at &lt;[0.3435918084, 0.2822745487,
+                            0.3782223444]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the &lt;bouquet&gt; pins:</div>
+                        <div class="test-title">into &lt;xyz-d50&gt; at &lt;[0.3475535734, 0.2832966109,
+                            0.2854495178]&gt;</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-19" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/vector.test.ts</div>
+                <div class="suite-time">0.124s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Squared Euclidian Distance between {} and {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Squared Euclidian Distance between {} and {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Squared Euclidian Distance between {} and {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Normalization of {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Normalization of {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Normalization of {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Normalization of {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Normalization of {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Normalization of {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Vector</div>
+                        <div class="test-title">Normalization of {}</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-20" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/converter.rgb-to-hue.test.ts</div>
+                <div class="suite-time">0.097s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Calculating the hue using the RGB converter</div>
+                        <div class="test-title">Hue of Black is NaN</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Calculating the hue using the RGB converter</div>
+                        <div class="test-title">Hue of White is NaN</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Calculating the hue using the RGB converter</div>
+                        <div class="test-title">Hue of Blue is 4.1887902047863905</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Calculating the hue using the RGB converter</div>
+                        <div class="test-title">Hue of Green is 2.0943951023931953</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Calculating the hue using the RGB converter</div>
+                        <div class="test-title">Hue of Orange is 0.6806784082777885</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Calculating the hue using the RGB converter</div>
+                        <div class="test-title">Hue of Purple is 5.235987755982988</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Calculating the hue using the RGB converter</div>
+                        <div class="test-title">Hue of Red is 0</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Calculating the hue using the RGB converter</div>
+                        <div class="test-title">Hue of Yellow is 1.0471975511965976</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-21" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/color-channel.spec.ts</div>
+                <div class="suite-time">0.15s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Color Channel</div>
+                        <div class="test-title">is iterable object that has a `null` prototype</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Color Channel</div>
+                        <div class="test-title">can be stringified to specified representation</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-22" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/math-gl.range.test.ts</div>
+                <div class="suite-time">0.095s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL.Range:</div>
+                        <div class="test-title">[0 .. 360]</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL.Range:</div>
+                        <div class="test-title">[-3.141592653589793 .. 3.141592653589793]</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL.Range:</div>
+                        <div class="test-title">[0 .. 100]</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL.Range:</div>
+                        <div class="test-title">[125 .. 125]</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL.Range:</div>
+                        <div class="test-title">[0 .. 255]</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL.Range:</div>
+                        <div class="test-title">[0 .. 65535]</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL.Range:</div>
+                        <div class="test-title">[0 .. 1]</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">MathGL.Range:</div>
+                        <div class="test-title">[-1 .. 1]</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-23" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/color.spec.ts</div>
+                <div class="suite-time">0.946s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">snapshot of a color sample</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.005s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">serializing to the CSS functional notation</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">method 'color.in(&lt;colorspace&gt;)' returns a point reflected in the
+                            passed space</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.003s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">method 'color.to(&lt;colorspace&gt;)' changes the space of color
+                            instance</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">method 'color.to(&lt;colorspace&gt;)' changes the space of color
+                            instance</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">method 'color.to(&lt;colorspace&gt;)' changes the space of color
+                            instance</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">getter 'color.chroma' returns ...</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">getter 'color.hue' returns a numeric object that describes additional
+                            properties of the angular position on the color wheel</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">getter 'color.lightness' returns value of the lightness attribute</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">getter 'color.luminance' returns the relative luminance of the color
+                            instance</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">getter 'color.rgb' returns extened array of coordinates</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">getter 'color.xyz' that returns a triplet of coordinates in the XYZ
+                            color space</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">getter 'color.yuv' that returns a triplet of coordinates in the XYZ
+                            color space</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">the color instance</div>
+                        <div class="test-title">getter 'color.uv' that returns a pair of coordinates in the XYZ color
+                            space</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <details id="suite-24" class="suite-container" open="">
+            <summary class="suite-info">
+                <div class="suite-path">~/__specs__/light-diffuser.spec.ts</div>
+                <div class="suite-time">0.554s</div>
+            </summary>
+            <div class="suite-tests">
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Light Diffuser Functionality &gt; the palette</div>
+                        <div class="test-title">has correctly Black Color</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.002s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Light Diffuser Functionality &gt; the palette</div>
+                        <div class="test-title">has correctly White Color</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration"> </div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Light Diffuser Functionality &gt; the palette</div>
+                        <div class="test-title">has correctly Gray Color</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.001s</div>
+                    </div>
+                </div>
+                <div class="test-result passed">
+                    <div class="test-info">
+                        <div class="test-suitename">Light Diffuser Functionality &gt; the palette</div>
+                        <div class="test-title">generates grayscale based on the predefined black and white colors</div>
+                        <div class="test-status">passed</div>
+                        <div class="test-duration">0.007s</div>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </main>
+</body>
+
+</html>

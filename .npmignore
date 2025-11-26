@@ -2,6 +2,7 @@ __tests__/
 .config/
 .test-report/
 .test-temp/
+docs/
 node_scripts/
 
 main.*

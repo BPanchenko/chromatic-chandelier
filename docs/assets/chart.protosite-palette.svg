@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg preserveAspectRatio="xMinYMin meet" version="1.1" viewBox="0 0 1546 808" xmlns="http://www.w3.org/2000/svg"><defs><filter id="fe-rounded-corners"><feGaussianBlur stdDeviation="16" edgeMode="none" result="fe-37n4"></feGaussianBlur><feColorMatrix in="fe-37n4" type="matrix" values="1  0  0  0  0
+								0  1  0  0  0
+								0  0  1  0  0
+								0  0  0  60 -30"></feColorMatrix></filter><pattern width="16" height="16" viewBox="0 0 16 16" patternUnits="userSpaceOnUse" id="ptrn-transparency"><rect x="0" y="0" width="8" height="8" fill="var(--transparency-color-1)"></rect><rect x="8" y="0" width="8" height="8" fill="var(--transparency-color-2)"></rect><rect x="0" y="8" width="8" height="8" fill="var(--transparency-color-2)"></rect><rect x="8" y="8" width="8" height="8" fill="var(--transparency-color-1)"></rect></pattern></defs><g><rect width="100%" height="100%" fill="url(#ptrn-transparency)" stroke="none"></rect><rect width="100%" height="800" fill="var(--backdrop, #d1d1d1)" stroke="none"></rect></g><g transform="translate(219 636)"><g><g transform="translate(0 0)"><text dx="0">1.674244</text><text dx="96">1.41645</text><text dx="192">0.9516</text><text dx="288">0.54915</text><text dx="384">0.2028</text><text dx="480">-0.09375</text><text dx="576">-0.3468</text><text dx="672">-0.56265</text><text dx="768">-0.7476</text><text dx="864">-0.90795</text></g><g transform="translate(0 28)"><text dx="0">0.998</text><text dx="96">0.995</text><text dx="192">0.956</text><text dx="288">0.88</text><text dx="384">0.772</text><text dx="480">0.641</text><text dx="576">0.49</text><text dx="672">0.329</text><text dx="768">0.17</text><text dx="864">0.052</text></g><g transform="translate(0 56)"><text dx="0">1.716326</text><text dx="96">1.698246</text><text dx="192">1.583822</text><text dx="288">1.388564</text><text dx="384">1.140746</text><text dx="480">0.868715</text><text dx="576">0.600918</text><text dx="672">0.365923</text><text dx="768">0.191731</text><text dx="864">0.099031</text></g></g><g transform="translate(960 -12)"><text dominant-baseline="hanging" dy="0"><tspan fill="gray">ⓓ</tspan><tspan dx="8" font-style="italic" font-size="12" fill="gray">ускорение модификаторов</tspan></text><text dominant-baseline="hanging" dy="28"><tspan fill="gray">Ⓛ</tspan><tspan dx="8" font-style="italic" font-size="12" fill="gray">светлота тональности</tspan></text><text dominant-baseline="hanging" dy="56"><tspan fill="gray">Ⓜ</tspan><tspan dx="8" font-style="italic" font-size="12" fill="gray">длина радиус-вектора</tspan></text></g><text class="icon-din" x="24" dy="-64" font-size="28" rotate="90" fill="gray"></text></g><g class="s-larger" transform="translate(526 90)"><text><tspan>⚪⟽</tspan><tspan dx="8">𝕐̳ 0.7337</tspan></text><text text-anchor="middle" x="464" dx="-48"><title>The contrast ratio between the brightest white and the darkest black.</title><tspan>⭈ </tspan><tspan> ⦍ </tspan><tspan>◑ 14.8</tspan><tspan> </tspan><tspan>⦭ 24.2°</tspan><tspan> ⦎ </tspan><tspan> ⭊</tspan></text><text text-anchor="end" x="928"><tspan>𝕐̳ 0.0029</tspan><tspan dx="8">⟾⚫</tspan></text></g><g transform="translate(96 120)"><line x1="8" y1="8" x2="200" y2="8" stroke-width="2"></line><text alignment-baseline="hanging" class="e-heading" dy="16">Облакотный</text><g transform="translate(246 0)"><g class="e-color-swatch" transform="translate(0 0)"><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" width="129.44" height="80" rx="8" ry="8" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" filter="url(#fe-rounded-corners)" width="129.44" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(176 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.9479" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(272 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.8296" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(368 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.671" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(464 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.5099" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(560 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.3595" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(656 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.2275" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="0.8275" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(752 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.1203" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="0.7202999999999999" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(848 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.0437" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="0.6436999999999999" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(944 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.0046" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="0.6046" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(1040 0)"><rect fill="url(#ptrn-transparency)" width="80" height="80" rx="12" ry="12" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" fill-opacity="0.0016" width="80" height="80" rx="12" ry="12" stroke="color(prophoto-rgb 0.96818 0.98987 0.99254)" stroke-width="1" stroke-opacity="0.6016" vector-effect="non-scaling-stroke"></rect></g></g></g><g transform="translate(96 212)"><text alignment-baseline="baseline" class="e-heading" dx="200" dy="64" text-anchor="end">Карамазый</text><line x1="8" y1="74" x2="200" y2="74" stroke-width="2"></line><g transform="translate(246 0)"><g class="e-color-swatch" transform="translate(0 0)"><rect fill="color(prophoto-rgb 0.96818 0.98987 0.99254)" width="129.44" height="80" rx="8" ry="8" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" filter="url(#fe-rounded-corners)" width="129.44" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><g class="e-color-swatch" transform="translate(176 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.9479" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><text x="176" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˩</tspan><tspan dx="4" font-size="14">0.9479</tspan></text><g class="e-color-swatch" transform="translate(272 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.8296" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><text x="272" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˨</tspan><tspan dx="4" font-size="14">0.8296</tspan></text><g class="e-color-swatch" transform="translate(368 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.671" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><text x="368" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˨</tspan><tspan dx="4" font-size="14">0.671</tspan></text><g class="e-color-swatch" transform="translate(464 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.5099" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><text x="464" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˧</tspan><tspan dx="4" font-size="14">0.5099</tspan></text><g class="e-color-swatch" transform="translate(560 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.3595" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect></g><text x="560" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˦</tspan><tspan dx="4" font-size="14">0.3595</tspan></text><g class="e-color-swatch" transform="translate(656 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.2275" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="0.8275" vector-effect="non-scaling-stroke"></rect></g><text x="656" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˦</tspan><tspan dx="4" font-size="14">0.2275</tspan></text><g class="e-color-swatch" transform="translate(752 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.1203" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="0.7202999999999999" vector-effect="non-scaling-stroke"></rect></g><text x="752" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˥</tspan><tspan dx="4" font-size="14">0.1203</tspan></text><g class="e-color-swatch" transform="translate(848 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.0437" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="0.6436999999999999" vector-effect="non-scaling-stroke"></rect></g><text x="848" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˥</tspan><tspan dx="4" font-size="14">0.0437</tspan></text><g class="e-color-swatch" transform="translate(944 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.0046" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="0.6046" vector-effect="non-scaling-stroke"></rect></g><text x="944" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˥</tspan><tspan dx="4" font-size="14">0.0046</tspan></text><g class="e-color-swatch" transform="translate(1040 0)"><rect fill="url(#ptrn-transparency)" width="80" height="49.44375772558714" rx="6" ry="6" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.08772 0.02674 0.05587)" fill-opacity="0.0016" width="80" height="49.44375772558714" rx="6" ry="6" stroke="color(prophoto-rgb 0.08772 0.02674 0.05587)" stroke-width="1" stroke-opacity="0.6016" vector-effect="non-scaling-stroke"></rect></g><text x="1040" y="80"><title>The opacity of the paint server (color, gradient, pattern, etc.) applied to a shape.</title><tspan font-size="20" font-weight="600">˥</tspan><tspan dx="4" font-size="14">0.0016</tspan></text></g></g><g transform="translate(96 384)"><line x1="8" y1="8" x2="200" y2="8" stroke-width="2"></line><text alignment-baseline="hanging" class="e-heading" dy="16">Суровый</text><text alignment-baseline="baseline" class="s-demi-xs" dx="200" dy="72" text-anchor="end">Контраст по светлоте ≈</text><g transform="translate(246 0)"><g class="e-color-swatch s-inversed" transform="translate(0 0)"><rect fill="color(prophoto-rgb 1 1 1)" width="129.44" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.439904 0.411992 0.430538)" filter="url(#fe-rounded-corners)" width="129.44" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="64.72" dy="-16" text-anchor="middle" x="0" y="80"><tspan>3.85</tspan></text></g><text class="icon-din" x="200" y="80" dx="16" dy="16" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)" dominant-baseline="hanging" text-anchor="end" font-size="40"></text><g class="e-color-swatch" transform="translate(176 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">50</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.983290203242 1.003439961494 0.98591299375)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>1.02</tspan></text></g><g class="e-color-swatch" transform="translate(272 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">100</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.98066063221 0.998538909831 0.96190585)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>1.01</tspan></text></g><g class="e-color-swatch" transform="translate(368 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">200</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.929858985033 0.9413060943 0.8705164)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>1.09</tspan></text></g><g class="e-color-swatch" transform="translate(464 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">300</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.831128693887 0.834136207931 0.73590215)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>1.33</tspan></text></g><g class="e-color-swatch" transform="translate(560 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">400</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.699823394194 0.69299390525 0.5755936)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>1.79</tspan></text></g><g class="e-color-swatch s-inversed" transform="translate(656 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">500</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.551296721371 0.533843840781 0.40712125)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>2.68</tspan></text></g><g class="e-color-swatch s-inversed" transform="translate(752 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">600</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.400902310839 0.37265066905 0.2480156)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>4.41</tspan></text></g><g class="e-color-swatch s-inversed" transform="translate(848 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">700</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.263993798016 0.225379044581 0.11580715)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>7.64</tspan></text></g><g class="e-color-swatch s-inversed" transform="translate(944 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">800</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.155924818322 0.1079936219 0.0280264)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>12.05</tspan></text></g><g class="e-color-swatch s-inversed" transform="translate(1040 0)"><text class="e-label" x="0" y="0" dx="4" dy="-8" text-anchor="start"><title>The access key to the shade of gray.</title><tspan class="icon s-smaller" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)"></tspan><tspan dx="6" dy="-2" fill="color(prophoto-rgb 0.439904 0.411992 0.430538)">900</tspan></text><rect fill="color(prophoto-rgb 1 1 1)" width="80" height="80" rx="8" ry="8" stroke="var(--gray-90)" stroke-width="1"></rect><rect fill="color(prophoto-rgb 0.092049007177 0.036459055531 0.00220385)" filter="url(#fe-rounded-corners)" width="80" height="80" rx="0" ry="0" stroke-opacity="1" vector-effect="non-scaling-stroke"></rect><text class="e-contrast" dominant-baseline="central" dx="40" dy="-16" text-anchor="middle" x="0" y="80"><tspan>14.67</tspan></text></g></g></g><style>
+text {
+	font-family: stix-math;
+}
+
+:is(text, tspan):not([fill]) {
+	fill: var(--forefront, #2A3439);
+}
+
+:is(text, tspan).icon {
+	font-family: iconic;
+	font-weight: 500;
+}
+
+:is(text, tspan).icon-din {
+	font-family: 'DIN 2014';
+}
+
+line:not([stroke]) {
+	stroke: var(--forefront, #2A3439);
+}
+
+.e-color-swatch text {
+	font-family: 'DIN 2014';
+}
+
+.e-heading {
+	font-family: 'DIN 2014';
+	font-weight: 600;
+	font-style: italic;
+	font-size: 1.8em;
+}
+
+.e-label {
+	font-family: 'DIN 2014';
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.s-larger :is(text, tspan) {
+	font-size: large;
+}
+
+.s-demi-xs {
+	font-family: 'DIN 2014';
+	font-weight: 600;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.s-thin {
+	font-weight: 300;
+}
+
+.s-smaller {
+	font-size: smaller;
+}
+
+.s-inversed :is(text, tspan):not([fill]) {
+	fill: var(--backdrop, #d1d1d1);
+}
+
+@media (prefers-color-scheme: dark) {
+	.e-color-swatch .e-contrast tspan {
+		fill: var(--backdrop);
+	}
+	.e-color-swatch.s-inversed .e-contrast tspan {
+		fill: var(--forefront);
+	}
+}
+
+
+
+@property --gray-90 {
+  syntax: &quot;&lt;color>&quot;;
+  inherits: false;
+  initial-value: rgb(229 229 229);
+}
+
+@property --gray-94 {
+  syntax: &quot;&lt;color>&quot;;
+  inherits: false;
+  initial-value: rgb(240 240 240);
+}
+
+@media (prefers-color-scheme: light) {
+  /* https://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors#Standard_colors */
+  @property --backdrop {
+    syntax: &quot;&lt;color>&quot;;
+    inherits: false;
+    initial-value: rgb(240 240 240);
+  }
+
+  /* https://en.wikipedia.org/wiki/Shades_of_black#Charleston_green */
+  @property --forefront {
+    syntax: &quot;&lt;color>&quot;;
+    inherits: false;
+    initial-value: #232B2B;
+  }
+
+  /* https://en.wikipedia.org/wiki/Shades_of_black#Charleston_green */
+  @property --mutted {
+    syntax: &quot;&lt;color>&quot;;
+    inherits: false;
+    initial-value: #696969;
+  }
+
+  @property --transparency-color-1 {
+    syntax: &quot;&lt;color>&quot;;
+    inherits: false;
+    initial-value: #CCC;
+  }
+
+  @property --transparency-color-2 {
+    syntax: &quot;&lt;color>&quot;;
+    inherits: false;
+    initial-value: #FFF;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* https://en.wikipedia.org/wiki/Shades_of_black#Onyx */
+  @property --backdrop {
+    syntax: &quot;&lt;color>&quot;;
+    inherits: false;
+    initial-value: #353839;
+  }
+
+  /* https://en.wikipedia.org/wiki/Shades_of_white#Linen */
+  @property --forefront {
+    syntax: &quot;&lt;color>&quot;;
+    inherits: false;
+    initial-value: #FAF0E6;
+  }
+
+  /* https://en.wikipedia.org/wiki/Shades_of_white#Bone_white */
+  @property --mutted {
+    syntax: &quot;&lt;color>&quot;;
+    inherits: false;
+    initial-value: #EDE6D6; /* #E3DAC9 */
+  }
+
+	@property --transparency-color-1 {
+		syntax: &quot;&lt;color>&quot;;
+		inherits: false;
+		initial-value: #666;
+	}
+
+	@property --transparency-color-2 {
+		syntax: &quot;&lt;color>&quot;;
+		inherits: false;
+		initial-value: #999;
+	}
+}
+
+
+@font-face {
+	font-family: stix-math;
+	src: url('./fonts/srtixt-math/regular.otf') format('opentype'),
+		 url('./fonts/srtixt-math/regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: iconic;
+	font-weight: 400;
+	src: url('./fonts/iconic/iconic-sm.otf') format('opentype'),
+         url('./fonts/iconic/iconic-sm.woff') format('woff');
+	unicode-range: U+E000-E26F;
+}
+
+@font-face {
+	font-family: iconic;
+
+	src: url('./fonts/iconic/iconic-md.otf') format('opentype'),
+         url('./fonts/iconic/iconic-md.woff') format('woff');
+
+	font-weight: 500;
+	unicode-range: U+E000-E26F;
+}
+
+@font-face {
+	font-family: iconic;
+    
+	src: url('./fonts/iconic/iconic-lg.otf') format('opentype'),
+         url('./fonts/iconic/iconic-lg.woff') format('woff');
+	
+    font-weight: 800;
+	unicode-range: U+E000-E26F;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+	src: url('./fonts/din-2014/light.woff2') format('woff2'), url('./fonts/din-2014/light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+	src: url('./fonts/din-2014/regular.woff2') format('woff2'), url('./fonts/din-2014/regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;, &quot;ss02&quot;;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+	src: url('./fonts/din-2014/demi.woff2') format('woff2'), url('./fonts/din-2014/demi.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;, &quot;ss02&quot;;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+	src: url('./fonts/din-2014/demi-italic.woff2') format('woff2'), url('./fonts/din-2014/demi-italic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;, &quot;ss02&quot;;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+    src: url('./fonts/din-2014/narrow-extra-bold.woff2') format('woff2'), url('./fonts/din-2014/narrow-extra-bold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;, &quot;ss02&quot;;
+}
+</style></svg>

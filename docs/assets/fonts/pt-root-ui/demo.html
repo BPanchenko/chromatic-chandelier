@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Demonstration PT Root UI</title>
+        <meta charset="utf-8">
+        <meta name="copyright" content="Boris Panchenko, 2021">
+        
+        <link rel="preload" href="medium.woff" as="font" type="font/woff">
+        <link rel="preload" href="medium.woff2" as="font" type="font/woff2">
+        
+        <link href="../demo-design.css" rel="stylesheet" type="text/css">
+        <link href="./stylesheet.css" rel="stylesheet" type="text/css">
+
+        <style>
+            :root {
+                --font: 'PT Root UI';
+                --paragraph-width: 70ex;
+            }
+
+            .s-vf {
+                font-family: 'PT Root UI Variable';
+            }
+        </style>
+
+    </head>
+    <body>
+        <main class="container">
+            <header class="header">
+                <h1>
+                    PT Root UI [light:300,regular:400,medium:500,bold:700]
+                </h1>
+            </header>
+            <section class="paragraph-container">
+                <p class="s-regular">
+					<h1>Друг мой эльф! Яшке б свёз птиц южных чащ!</h1>
+					<h2>Любя, съешь щипцы, — вздохнёт мэр, — кайф жгуч.</h2>
+					<h3>Безмозглый широковещательный цифровой передатчик сужающихся экспонент.</h3>
+					<h4>Подъехал шофёр на рефрижераторе грузить яйца для обучающихся элитных медиков.</h4>
+					<h5>Бегом марш! У месторождения кварцующихся фей без слёз хочется электрическую пыль.</h5>
+					<h6>Подъём с затонувшего эсминца легко бьющейся древнегреческой амфоры сопряжён с техническими трудностями.</h6>
+				</p>
+				<p class="s-light">
+					Восприятие представляет собой контраст. Интеллект последовательно понимает ролевой комплекс. Однако, исследователи постоянно сталкиваются с тем, что апперцепция понимает бихевиоризм. Комплекс дает когнитивный код, хотя Уотсон это отрицал.
+				</p>
+                <p class="s-regular">
+					PT Root UI — самостоятельная линейка гарнитуры PT Root, содержащая четыре начертания нормальных пропорций, от Light до Bold, предназначенных для чтения с экрана, использования в интерфейсах, на веб-сайтах, а также пригодных для навигации и ориентирования. PT Root UI — современный закрытый гротеск с фиксированной шириной знаков в различных начертаниях (Uniwidth). Эта особенность позволяет переключаться между начертаниями без изменения длины строки, что особенно удобно для заголовков, строки меню и элементов интерфейса. Шрифт поддерживает множество языков, использующих латиницу и кириллицу (включая азиатскую) и содержит варианты цифр и валют, дроби и индексы, а также целый ряд навигационных элементов и альтернативных форм знаков. PT Root UI разработан Виталием Кузьминым и выпущен компанией Паратайп в 2018 году.
+				</p>
+				<p class="s-medium">
+					Ригидность осознаёт девиантный контраст. Конформность, в представлении Морено, притягивает конформизм. Архетип просветляет психоанализ.</p>
+				<p class="s-bold">
+					Компульсивность притягивает аутизм, о чем и писал А.Маслоу в своей работе "Мотивация и личность". Эриксоновский гипноз неравномерен. Субъект представляет собой контраст. Ретардация, например, притягивает архетип. В связи с этим нужно подчеркнуть, что когнитивная составляющая вероятна.
+				</p>
+                <hr>
+                <h5>Настройки вариативного шрифта</h5>
+                <form class="js-vf-controls">
+                    <label for="controls__slider">
+                        <span>Weight:</span>
+                        <input type="range" name="wght" value="400" min="300" max="700"> 
+                    </label>
+                    <label for="controls__slider">
+                        <span>Slant:</span>
+                        <input type="range" name="slnt" value="0" min="0" max="12"> 
+                    </label>
+                    <label for="controls__slider">
+                        <span>Italic:</span>
+                        <input type="range" name="ital" value="0" min="0" max="1"> 
+                    </label>
+                    <label for="controls__slider">
+                        <span>Optical Sizing:</span>
+                        <input type="range" name="opsz" value="8" min="8" max="144"> 
+                    </label>
+                    <label for="controls__slider">
+                        <span>Grade:</span>
+                        <input type="range" name="GRAD" value="88" min="88" max="150"> 
+                    </label>
+                </form>
+				<p class="s-vf js-vf-target">
+					Вариативные шрифты OpenType (англ. OpenType variable fonts) — расширение спецификации OpenType, появившееся в OpenType 1.8. 14 сентября 2016 года Adobe, Apple, Google и Microsoft анонсировали технологию, которая позволяет использовать один шрифтовой файл для бесконечного множества начертаний. Дизайнер может выставлять различные параметры текста — ширину, наклон, жирность, форму засечек — и типографский движок нарисует текст с такими параметрами.
+					<br>
+					Вариативные шрифты OpenType являются адаптацией для OpenType вариативных шрифтов TrueType GX от Apple, с интеграцией основных аспектов формата OpenType: OpenType Layout tables, а также TrueType и CFF форматы контуров глифов.
+				</p>
+            </section>
+            <section class="letter s-extrabold js-character-display">
+                Аа
+            </section>
+            <section class="characters js-vf-target">
+                <div class="digits">
+                    <a href="javascript:void(0)" class="character js-character">0</a>
+                    <a href="javascript:void(0)" class="character js-character">1</a>
+                    <a href="javascript:void(0)" class="character js-character">2</a>
+                    <a href="javascript:void(0)" class="character js-character">3</a>
+                    <a href="javascript:void(0)" class="character js-character">4</a>
+                    <a href="javascript:void(0)" class="character js-character">5</a>
+                    <a href="javascript:void(0)" class="character js-character">6</a>
+                    <a href="javascript:void(0)" class="character js-character">7</a>
+                    <a href="javascript:void(0)" class="character js-character">8</a>
+                    <a href="javascript:void(0)" class="character js-character">9</a>
+                </div>
+                <div class="alphabet">
+                    <a href="javascript:void(0)" class="character js-character">Аа</a>
+                    <a href="javascript:void(0)" class="character js-character">Бб</a>
+                    <a href="javascript:void(0)" class="character js-character">Вв</a>
+                    <a href="javascript:void(0)" class="character js-character">Гг</a>
+                    <a href="javascript:void(0)" class="character js-character">Дд</a>
+                    <a href="javascript:void(0)" class="character js-character">Ее</a>
+                    <a href="javascript:void(0)" class="character js-character">Ёё</a>
+                    <a href="javascript:void(0)" class="character js-character">Жж</a>
+                    <a href="javascript:void(0)" class="character js-character">Зз</a>
+                    <br>
+                    <a href="javascript:void(0)" class="character js-character">Ии</a>
+                    <a href="javascript:void(0)" class="character js-character">Йй</a>
+                    <a href="javascript:void(0)" class="character js-character">Кк</a>
+                    <a href="javascript:void(0)" class="character js-character">Лл</a>
+                    <a href="javascript:void(0)" class="character js-character">Мм</a>
+                    <a href="javascript:void(0)" class="character js-character">Нн</a>
+                    <a href="javascript:void(0)" class="character js-character">Оо</a>
+                    <a href="javascript:void(0)" class="character js-character">Пп</a>
+                    <a href="javascript:void(0)" class="character js-character">Рр</a>
+                    <br>
+                    <a href="javascript:void(0)" class="character js-character">Сс</a>
+                    <a href="javascript:void(0)" class="character js-character">Тт</a>
+                    <a href="javascript:void(0)" class="character js-character">Уу</a>
+                    <a href="javascript:void(0)" class="character js-character">Фф</a>
+                    <a href="javascript:void(0)" class="character js-character">Хх</a>
+                    <a href="javascript:void(0)" class="character js-character">Цц</a>
+                    <a href="javascript:void(0)" class="character js-character">Чч</a>
+                    <a href="javascript:void(0)" class="character js-character">Шш</a>
+                    <a href="javascript:void(0)" class="character js-character">Щщ</a>
+                    <br>
+                    <a href="javascript:void(0)" class="character js-character">Ъъ</a>
+                    <a href="javascript:void(0)" class="character js-character">Ыы</a>
+                    <a href="javascript:void(0)" class="character js-character">Ьь</a>
+                    <a href="javascript:void(0)" class="character js-character">Ээ</a>
+                    <a href="javascript:void(0)" class="character js-character">Юю</a>
+                    <a href="javascript:void(0)" class="character js-character">Яя</a>
+                </div>
+                <div class="symbols">
+                    <a href="javascript:void(0)" class="character js-character">&sect;</a>
+                    <a href="javascript:void(0)" class="character js-character">&copy;</a>
+                    <a href="javascript:void(0)" class="character js-character">&reg;</a>
+                    <a href="javascript:void(0)" class="character js-character">@</a>
+                    <a href="javascript:void(0)" class="character js-character">№</a>
+                    <a href="javascript:void(0)" class="character js-character">#</a>
+                    <a href="javascript:void(0)" class="character js-character">$</a>
+                    <a href="javascript:void(0)" class="character js-character">%</a>
+                    <a href="javascript:void(0)" class="character js-character">&</a>
+                    <a href="javascript:void(0)" class="character js-character">!</a>
+                    <a href="javascript:void(0)" class="character js-character">?</a>
+                    <br>
+                    <a href="javascript:void(0)" class="character js-character">/</a>
+                    <a href="javascript:void(0)" class="character js-character">(</a>
+                    <a href="javascript:void(0)" class="character js-character">)</a>
+                    <a href="javascript:void(0)" class="character js-character">{</a>
+                    <a href="javascript:void(0)" class="character js-character">}</a>
+                    <a href="javascript:void(0)" class="character js-character">[</a>
+                    <a href="javascript:void(0)" class="character js-character">]</a>
+                    <a href="javascript:void(0)" class="character js-character"><</a>
+                    <a href="javascript:void(0)" class="character js-character">></a>
+                    <br>
+                    <a href="javascript:void(0)" class="character js-character">~</a>
+                    <a href="javascript:void(0)" class="character js-character">_</a>
+                    <a href="javascript:void(0)" class="character js-character">+</a>
+                    <a href="javascript:void(0)" class="character js-character">-</a>
+                    <a href="javascript:void(0)" class="character js-character">–</a>
+                    <a href="javascript:void(0)" class="character js-character">&mdash;</a>
+                    <a href="javascript:void(0)" class="character js-character">―</a>
+                    <a href="javascript:void(0)" class="character js-character">.</a>
+                    <a href="javascript:void(0)" class="character js-character">,</a>
+                    <a href="javascript:void(0)" class="character js-character">;</a>
+                    <br>
+                    <a href="javascript:void(0)" class="character js-character">`</a>
+                    <a href="javascript:void(0)" class="character js-character">"</a>
+                    <a href="javascript:void(0)" class="character js-character">"</a>
+                    <a href="javascript:void(0)" class="character js-character">'</a>
+                    <a href="javascript:void(0)" class="character js-character">'</a>
+                    <a href="javascript:void(0)" class="character js-character">&laquo;</a>
+                    <a href="javascript:void(0)" class="character js-character">&raquo;</a>
+                    <a href="javascript:void(0)" class="character js-character">&lsquo;</a>
+                    <a href="javascript:void(0)" class="character js-character">&rsquo;</a>
+                    <a href="javascript:void(0)" class="character js-character">&ldquo;</a>
+                    <a href="javascript:void(0)" class="character js-character">&rdquo;</a>
+                    <a href="javascript:void(0)" class="character js-character">^</a>
+                    <a href="javascript:void(0)" class="character js-character">*</a>
+                </div>
+                <script type="text/javascript">
+                    {
+                        // Character Display
+
+                        const elCharacterDisplay = document.querySelector('.js-character-display')
+                        document.querySelectorAll('.js-character').forEach(
+                            elem => elem.addEventListener(
+                                'click',
+                                event => elCharacterDisplay.innerHTML = event.currentTarget.innerHTML
+                            )
+                        )
+                    }
+                    {
+                        // Variable Font Settings
+                        const form = document.querySelector('.js-vf-controls')
+                        const targets = document.querySelector('.js-vf-target')
+
+                        const applyFromValues = () => {
+                            const values = Array.from(form).map(input => `"${input.name}" ${input.value}`)
+                            Array.from(targets).forEach(
+                                target => target.style = `font-variation-settings: ${values.join(', ')};`
+                            )
+                        }
+
+                        applyFromValues()
+                        form.addEventListener('input', applyFromValues, false)
+                    }
+                </script>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+User-Agent: *
+Host: https://palette.protosite.xyz/
+Sitemap: https://palette.protosite.xyz/sitemap.xml

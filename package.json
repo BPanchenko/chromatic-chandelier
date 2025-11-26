@@ -1,8 +1,8 @@
 {
   "name": "chromatic-chandelier",
-  "version": "0.21.67",
-  "homepage": "http://palette.protosite.xyz",
-  "author": "Boris Panchenko <boris.v.panchenko@mail.ru> (http://bp-studio.ru)",
+  "version": "0.21.68",
+  "homepage": "https://bpanchenko.github.io/chromatic-chandelier",
+  "author": "Boris Panchenko <boris.v.panchenko@mail.ru>",
   "license": "LGPL-3.0-only",
   "keywords": [
     "Color Picker",

@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Clincher Code';
+	
+	src: url('clincher_code-alt.woff2') format('woff2'),
+		 url('clincher_code-alt.woff') format('woff');
+		
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Clincher Code';
+    
+    src: url('clincher_code-alt-italic.woff2') format('woff2'),
+	     url('clincher_code-alt-italic.woff') format('woff');
+        
+	font-weight: normal; /* bold */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Clincher Code';
+    
+    src: url('clincher_code-alt-bold.woff2') format('woff2'),
+	     url('clincher_code-alt-bold.woff') format('woff');
+        
+	font-weight: 700; /* bold */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Clincher Code';
+    
+    src: url('clincher_code-alt-bold-italic.woff2') format('woff2'),
+	     url('clincher_code-alt-bold-italic.woff') format('woff');
+        
+	font-weight: 700; /* bold */
+	font-style: italic;
+}
