@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'Clincher Code';
 	
-	src: url('clincher_code-alt.woff2') format('woff2'),
-		 url('clincher_code-alt.woff') format('woff');
+	src: url('./clincher_code-alt.woff2') format('woff2'),
+		 url('./clincher_code-alt.woff') format('woff');
 		
 	font-weight: normal;
 	font-style: normal;
