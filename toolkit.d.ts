@@ -30,19 +30,19 @@ export const toPascalCase: (sentence: string, sep?: string, capitalize?: boolean
 interface IRichTriplet<T extends TTupleCP = number> extends ITriplet<T>, TTripletProps { }
 
 type HueAttr = number & {
-	family: 'red' | 'yellow-red' | 'yellow' | 'green-yellow' | 'green' | 'cyan-green' | 'cyan' | 'blue-cyan' | 'blue' | 'purple-blue' | 'purple' | 'red-purple';
-	pigment: 'vermilion' | 'orange' | 'yellow' | 'chartreuse' | 'green' | 'aquamarine' | 'cyan' | 'azure' | 'blue' | 'ultramarine' | 'violet' | 'magenta';
-	in: {
+	angle: {
+		signed: number;
+		unsigned: number;
+		unit: AngleUnit;
+	};
+	as: {
 		deg: number;
 		grad: number;
 		rad: number;
 		turn: number;
 	};
-	value: {
-		signed: number;
-		unsigned: number;
-		unit: AngleUnit;
-	};
+	deviation: number;
+	family: 'red' | 'yellow-red' | 'yellow' | 'green-yellow' | 'green' | 'cyan-green' | 'cyan' | 'blue-cyan' | 'blue' | 'purple-blue' | 'purple' | 'red-purple';
 };
 
 type Primitive =

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -15,54 +14,55 @@
         }
     </style>
 </head>
-    
+
 <body>
-<div class='wrapper'>
-    <div class='pad1'>
-        <h1><a href="javascript:history.back()">Back</a></h1>
-        <div class='clearfix'>
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">90.24% </span>
-                <span class="quiet">Statements</span>
-                <span class='fraction'>37/41</span>
+    <div class='wrapper'>
+        <div class='pad1'>
+            <h1><a href="javascript:history.back()">Back</a></h1>
+            <div class='clearfix'>
+
+                <div class='fl pad1y space-right2'>
+                    <span class="strong">90.24% </span>
+                    <span class="quiet">Statements</span>
+                    <span class='fraction'>37/41</span>
+                </div>
+
+
+                <div class='fl pad1y space-right2'>
+                    <span class="strong">75% </span>
+                    <span class="quiet">Branches</span>
+                    <span class='fraction'>12/16</span>
+                </div>
+
+
+                <div class='fl pad1y space-right2'>
+                    <span class="strong">100% </span>
+                    <span class="quiet">Functions</span>
+                    <span class='fraction'>6/6</span>
+                </div>
+
+
+                <div class='fl pad1y space-right2'>
+                    <span class="strong">89.18% </span>
+                    <span class="quiet">Lines</span>
+                    <span class='fraction'>33/37</span>
+                </div>
+
+
             </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>12/16</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">89.18% </span>
-                <span class="quiet">Lines</span>
-                <span class='fraction'>33/37</span>
-            </div>
-        
-            
+            <p class="quiet">
+                Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em>
+                for the previous block.
+            </p>
+            <template id="filterTemplate">
+                <div class="quiet">
+                    Filter:
+                    <input type="search" id="fileSearch">
+                </div>
+            </template>
         </div>
-        <p class="quiet">
-            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
-        </p>
-        <template id="filterTemplate">
-            <div class="quiet">
-                Filter:
-                <input type="search" id="fileSearch">
-            </div>
-        </template>
-    </div>
-    <div class='status-line high'></div>
-    <pre><table class="coverage">
+        <div class='status-line high'></div>
+        <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
 <a name='L3'></a><a href='#L3'>3</a>
@@ -230,7 +230,7 @@ const trans_xyz_d65_to_srgb_linear = Float64Array.of(
 &nbsp;
 /** @type {PointReflector} */
 export const xyz_d65_into_srgb = source =&gt; {
-	if (isPointInSpace(source) &amp;&amp; source.colorspace === 'xyz-d65') {
+	if (isPointInSpace(source) &amp;&amp; source.space.ident === 'xyz-d65') {
 		let [x, y, z] = source.position;
 		let [r, g, b] = createVector(x, y, z)
 			.multiply(trans_xyz_d65_to_srgb_linear)
@@ -241,7 +241,7 @@ export const xyz_d65_into_srgb = source =&gt; {
 &nbsp;
 /** @type {PointReflector} */
 export const xyz_d65_into_srgb_linear = source =&gt; {
-	if (isPointInSpace(source) &amp;&amp; source.colorspace === 'xyz-d65') {
+	if (isPointInSpace(source) &amp;&amp; source.space.ident === 'xyz-d65') {
 		let [x, y, z] = source.position;
 		let [r, g, b] = createVector(x, y, z).multiply(trans_xyz_d65_to_srgb_linear);
 		return initPointInSpace(sRGBLinearSpace, [r, g, b]);
@@ -250,7 +250,7 @@ export const xyz_d65_into_srgb_linear = source =&gt; {
 &nbsp;
 /** @type {PointReflector} */
 export const xyz_d50_into_srgb = source =&gt; {
-	if (isPointInSpace(source) &amp;&amp; source.colorspace === 'xyz-d50') {
+	if (isPointInSpace(source) &amp;&amp; source.space.ident === 'xyz-d50') {
 		let [x, y, z] = source.position;
 		let [r, g, b] = createVector(x, y, z)
 			.multiply(WB.d50.d65)
@@ -262,7 +262,7 @@ export const xyz_d50_into_srgb = source =&gt; {
 &nbsp;
 /** @type {PointReflector} */
 export const xyz_d50_into_srgb_linear = source =&gt; {
-	if (isPointInSpace(source) &amp;&amp; source.colorspace === 'xyz-d50') {
+	if (isPointInSpace(source) &amp;&amp; source.space.ident === 'xyz-d50') {
 		let [x, y, z] = source.position;
 		let [r, g, b] = createVector(x, y, z).multiply(WB.d50.d65).multiply(trans_xyz_d65_to_srgb_linear);
 		return initPointInSpace(sRGBLinearSpace, [r, g, b]);
@@ -276,23 +276,27 @@ export {
 	xyz_d65_into_srgb as xyz_into_srgb,
 	xyz_d65_into_srgb_linear as xyz_into_srgb_linear,
 };
-&nbsp;</pre></td></tr></table></pre>
+&nbsp;</pre>
+        </td>
+        </tr>
+        </table>
+        </pre>
 
-                <div class='push'></div><!-- for sticky footer -->
-            </div><!-- /wrapper -->
-            <div class='footer quiet pad2 space-top1 center small'>
-                Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-11T06:31:33.612Z
-            </div>
-        <script src="../../../prettify.js"></script>
-        <script>
-            window.onload = function () {
-                prettyPrint();
-            };
-        </script>
-        <script src="../../../sorter.js"></script>
-        <script src="../../../block-navigation.js"></script>
-    </body>
+        <div class='push'></div><!-- for sticky footer -->
+    </div><!-- /wrapper -->
+    <div class='footer quiet pad2 space-top1 center small'>
+        Code coverage generated by
+        <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+        at 2025-10-11T06:31:33.612Z
+    </div>
+    <script src="../../../prettify.js"></script>
+    <script>
+        window.onload = function () {
+            prettyPrint();
+        };
+    </script>
+    <script src="../../../sorter.js"></script>
+    <script src="../../../block-navigation.js"></script>
+</body>
+
 </html>
-    
