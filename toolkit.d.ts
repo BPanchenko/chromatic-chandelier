@@ -1,5 +1,5 @@
 import { SpaceID } from "./manual";
-import { IPair, IQuad, ITriplet, TTupleCP } from "./types";
+import { AngleUnit, IPair, IQuad, ITriplet, TTupleCP } from "./types";
 
 export const assert: TAssertionFunction;
 export const createTuple: TExtendedTupleCreation;
@@ -15,6 +15,8 @@ export const isObject: (val: unknown) => val is object;
 export const isString: (val: unknown) => val is string;
 export const isTruthy: (value: unknown) => value is boolean;
 
+export const makeHueAttribute: (angle: number) => HueAttr;
+
 export const parseCSSColor: (color: string) => TCSSParsingResult | never;
 export const parseHEXColor: (hex: string) => TCSSParsingResult;
 
@@ -26,6 +28,22 @@ export const toKebabCase: (sentence: string) => string;
 export const toPascalCase: (sentence: string, sep?: string, capitalize?: boolean) => string;
 
 interface IRichTriplet<T extends TTupleCP = number> extends ITriplet<T>, TTripletProps { }
+
+type HueAttr = number & {
+	family: 'red' | 'yellow-red' | 'yellow' | 'green-yellow' | 'green' | 'cyan-green' | 'cyan' | 'blue-cyan' | 'blue' | 'purple-blue' | 'purple' | 'red-purple';
+	pigment: 'vermilion' | 'orange' | 'yellow' | 'chartreuse' | 'green' | 'aquamarine' | 'cyan' | 'azure' | 'blue' | 'ultramarine' | 'violet' | 'magenta';
+	in: {
+		deg: number;
+		grad: number;
+		rad: number;
+		turn: number;
+	};
+	value: {
+		signed: number;
+		unsigned: number;
+		unit: AngleUnit;
+	};
+};
 
 type Primitive =
 	| null
