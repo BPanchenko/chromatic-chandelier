@@ -7,7 +7,7 @@ test.describe("protosite palette chart", () => {
       height: 808,
     });
     await page.goto(
-      "http://palette.protosite.xyz/assets/chart.protosite-palette.svg"
+      "https://bpanchenko.github.io/chromatic-chandelier/assets/chart.protosite-palette.svg"
     );
     await expect(page).toHaveScreenshot();
   });
