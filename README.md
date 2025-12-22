@@ -10,7 +10,7 @@
 
 ![Визуализация палитры протосайта](__tests__/__screenshots__/protosite-palette-chart-visual-comparisons/protosite-palette-chart-visual-comparisons-1.png)
 
-> Визуализация палитры протосайта: https://bpanchenko.github.io/chromatic-chandelier/assets/chart.protosite-palette.svg . Результат работы ПО - это таблица сгенерированных оттенков, для проверки алгоритмов применяется рендеринг векторного изображения в формате SVG.
+> Визуализация палитры протосайта: https://bpanchenko.github.io/chromatic-chandelier/assets/pictures/svg/widget.protosite-palette.svg . Результат работы ПО - это таблица сгенерированных оттенков, для проверки алгоритмов применяется рендеринг векторного изображения в формате SVG.
 
 ## В NPM-пакете опубликован программный справочник цветовых пространст вместе с набором необходимых для работы с цветом классов и утилит.
 
