@@ -23,8 +23,8 @@
             "rad": 1.029744259,
             "turn": 0.163888889
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.506145483402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 125.48043,
@@ -77,8 +77,8 @@
             "rad": 0.785398163,
             "turn": 0.125
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.261799387402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 119.26948,
@@ -131,8 +131,8 @@
             "rad": 0.698131701,
             "turn": 0.111111111
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.174532925402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 114.58525,
@@ -185,8 +185,8 @@
             "rad": 0.872664626,
             "turn": 0.138888889
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.349065850402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 130.87105,
@@ -239,8 +239,8 @@
             "rad": 0.767944871,
             "turn": 0.122222222
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.244346095402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 114.27925,
@@ -293,8 +293,8 @@
             "rad": 0.802851456,
             "turn": 0.127777778
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.279252680402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 92.01721,
@@ -347,8 +347,8 @@
             "rad": 0.715584993,
             "turn": 0.113888889
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.191986217402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 116.06772,
@@ -401,8 +401,8 @@
             "rad": 0.750491578,
             "turn": 0.119444444
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.226892802402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 113.22672,
@@ -455,8 +455,8 @@
             "rad": 0.523598776,
             "turn": 0.083333333
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 4.02e-10,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 73.10307,
@@ -509,8 +509,8 @@
             "rad": 0.890117919,
             "turn": 0.141666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.366519143402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 121.52401,
@@ -563,8 +563,8 @@
             "rad": 0.925024504,
             "turn": 0.147222222
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.401425728402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 153.79607,
@@ -617,8 +617,8 @@
             "rad": 0.890117919,
             "turn": 0.141666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.366519143402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 137.64671,
@@ -671,8 +671,8 @@
             "rad": 0.855211333,
             "turn": 0.136111111
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.331612557402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 144.14812,
@@ -725,8 +725,8 @@
             "rad": 1.134464014,
             "turn": 0.180555556
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.087266462803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 165.65421,
@@ -779,8 +779,8 @@
             "rad": 0.855211333,
             "turn": 0.136111111
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.331612557402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 142.50449,
@@ -833,8 +833,8 @@
             "rad": 1.029744259,
             "turn": 0.163888889
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.506145483402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 160.83844,
@@ -887,8 +887,8 @@
             "rad": 0.925024504,
             "turn": 0.147222222
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.401425728402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 101.08553,
@@ -941,8 +941,8 @@
             "rad": 1.047197551,
             "turn": 0.166666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.523598775402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 101.20266,
@@ -995,8 +995,8 @@
             "rad": 0.942477796,
             "turn": 0.15
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.418879020402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 147.15947,
@@ -1049,8 +1049,8 @@
             "rad": 0.872664626,
             "turn": 0.138888889
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.349065850402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 144.16334,
@@ -1103,8 +1103,8 @@
             "rad": 0.907571211,
             "turn": 0.144444444
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.383972435402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 107.70689,
@@ -1157,8 +1157,8 @@
             "rad": 1.047197551,
             "turn": 0.166666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.523598775402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 167.98482,
@@ -1211,8 +1211,8 @@
             "rad": 0.959931089,
             "turn": 0.152777778
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.436332313402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 97.20196,
@@ -1265,8 +1265,8 @@
             "rad": 0.733038286,
             "turn": 0.116666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.209439510402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 123.14144,
@@ -1319,8 +1319,8 @@
             "rad": 0.855211333,
             "turn": 0.136111111
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.331612557402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 120.52548,
@@ -1373,8 +1373,8 @@
             "rad": 0.698131701,
             "turn": 0.111111111
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.174532925402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 121.07954,
@@ -1427,8 +1427,8 @@
             "rad": 0.610865238,
             "turn": 0.097222222
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.087266462402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 122.55234,
@@ -1481,8 +1481,8 @@
             "rad": 0.575958653,
             "turn": 0.091666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.052359877402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 63.73178,
@@ -1535,8 +1535,8 @@
             "rad": 0.541052068,
             "turn": 0.086111111
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.017453292402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 59.428,
@@ -1589,8 +1589,8 @@
             "rad": 0.645771823,
             "turn": 0.102777778
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.122173047402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 118.31134,
@@ -1643,8 +1643,8 @@
             "rad": 0.488692191,
             "turn": 0.077777778
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.488692191,
+          "family": "red"
         },
         "luminance": {
           "absolute": 99.10545,
@@ -1697,8 +1697,8 @@
             "rad": 0.174532925,
             "turn": 0.027777778
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.174532925,
+          "family": "red"
         },
         "luminance": {
           "absolute": 69.75418,
@@ -1751,8 +1751,8 @@
             "rad": 0.034906585,
             "turn": 0.005555556
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.034906585,
+          "family": "red"
         },
         "luminance": {
           "absolute": 65.18887,
@@ -1805,8 +1805,8 @@
             "rad": 0.436332313,
             "turn": 0.069444444
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.436332313,
+          "family": "red"
         },
         "luminance": {
           "absolute": 102.64163,
@@ -1859,8 +1859,8 @@
             "rad": 0.244346095,
             "turn": 0.038888889
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.244346095,
+          "family": "red"
         },
         "luminance": {
           "absolute": 83.75394,
@@ -1913,8 +1913,8 @@
             "rad": 0.13962634,
             "turn": 0.022222222
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.13962634,
+          "family": "red"
         },
         "luminance": {
           "absolute": 78.96461,
@@ -1967,8 +1967,8 @@
             "rad": 0.628318531,
             "turn": 0.1
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.104719755402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 122.85819,
@@ -2021,8 +2021,8 @@
             "rad": 0.27925268,
             "turn": 0.044444444
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.27925268,
+          "family": "red"
         },
         "luminance": {
           "absolute": 92.2858,
@@ -2075,8 +2075,8 @@
             "rad": 0.157079633,
             "turn": 0.025
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.157079633,
+          "family": "red"
         },
         "luminance": {
           "absolute": 82.41239,
@@ -2129,8 +2129,8 @@
             "rad": 0.244346095,
             "turn": 0.038888889
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.244346095,
+          "family": "red"
         },
         "luminance": {
           "absolute": 78.24705,
@@ -2183,8 +2183,8 @@
             "rad": 0.453785606,
             "turn": 0.072222222
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.453785606,
+          "family": "red"
         },
         "luminance": {
           "absolute": 101.46988,
@@ -2237,8 +2237,8 @@
             "rad": 0.157079633,
             "turn": 0.025
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.157079633,
+          "family": "red"
         },
         "luminance": {
           "absolute": 83.5961,
@@ -2291,8 +2291,8 @@
             "rad": 0.27925268,
             "turn": 0.044444444
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.27925268,
+          "family": "red"
         },
         "luminance": {
           "absolute": 78.09621,
@@ -2345,8 +2345,8 @@
             "rad": 0.087266463,
             "turn": 0.013888889
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.087266463,
+          "family": "red"
         },
         "luminance": {
           "absolute": 58.19545,
@@ -2399,8 +2399,8 @@
             "rad": 0.052359878,
             "turn": 0.008333333
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.052359878,
+          "family": "red"
         },
         "luminance": {
           "absolute": 52.86685,
@@ -2453,8 +2453,8 @@
             "rad": 0.052359878,
             "turn": 0.008333333
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.052359878,
+          "family": "red"
         },
         "luminance": {
           "absolute": 52.71875,
@@ -2507,8 +2507,8 @@
             "rad": 6.178465552,
             "turn": 0.983333333
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.418879020419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 47.53037,
@@ -2561,8 +2561,8 @@
             "rad": 6.178465552,
             "turn": 0.983333333
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.418879020419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 37.24865,
@@ -2615,8 +2615,8 @@
             "rad": 6.143558967,
             "turn": 0.977777778
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.383972435419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 34.45329,
@@ -2669,8 +2669,8 @@
             "rad": 6.108652382,
             "turn": 0.972222222
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.349065850419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 28.21007,
@@ -2723,8 +2723,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 36.8431,
@@ -2777,8 +2777,8 @@
             "rad": 0.06981317,
             "turn": 0.011111111
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.06981317,
+          "family": "red"
         },
         "luminance": {
           "absolute": 40.33147,
@@ -2831,8 +2831,8 @@
             "rad": 0.34906585,
             "turn": 0.055555555
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.34906585,
+          "family": "red"
         },
         "luminance": {
           "absolute": 98.78593,
@@ -2885,8 +2885,8 @@
             "rad": 0.122173048,
             "turn": 0.019444445
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.122173048,
+          "family": "red"
         },
         "luminance": {
           "absolute": 52.38006,
@@ -2939,8 +2939,8 @@
             "rad": 6.265732015,
             "turn": 0.997222222
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.506145483419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 91.17307,
@@ -2993,8 +2993,8 @@
             "rad": 6.091199089,
             "turn": 0.969444444
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.331612557419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 108.03087,
@@ -3047,8 +3047,8 @@
             "rad": 0.052359878,
             "turn": 0.008333333
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.052359878,
+          "family": "red"
         },
         "luminance": {
           "absolute": 58.56586,
@@ -3101,8 +3101,8 @@
             "rad": 6.178465552,
             "turn": 0.983333333
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.418879020419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 75.172,
@@ -3155,8 +3155,8 @@
             "rad": 6.265732015,
             "turn": 0.997222222
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.506145483419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 69.87425,
@@ -3209,8 +3209,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 61.10026,
@@ -3263,8 +3263,8 @@
             "rad": 0.191986218,
             "turn": 0.030555556
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.191986218,
+          "family": "red"
         },
         "luminance": {
           "absolute": 80.28068,
@@ -3317,8 +3317,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 74.152,
@@ -3371,8 +3371,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 75.946,
@@ -3425,8 +3425,8 @@
             "rad": 6.143558967,
             "turn": 0.977777778
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.383972435419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 61.59941,
@@ -3479,8 +3479,8 @@
             "rad": 6.265732015,
             "turn": 0.997222222
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.506145483419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 67.68079,
@@ -3533,8 +3533,8 @@
             "rad": 6.248278722,
             "turn": 0.994444444
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.488692190419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 57.7222,
@@ -3587,8 +3587,8 @@
             "rad": 6.126105675,
             "turn": 0.975
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.366519143419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 36.25888,
@@ -3641,8 +3641,8 @@
             "rad": 0.087266463,
             "turn": 0.013888889
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.087266463,
+          "family": "red"
         },
         "luminance": {
           "absolute": 70.32185,
@@ -3695,8 +3695,8 @@
             "rad": 5.637413484,
             "turn": 0.897222222
           },
-          "family": "purple",
-          "pigment": "violet"
+          "deviation": 0.401425728017,
+          "family": "purple"
         },
         "luminance": {
           "absolute": 50.37249,
@@ -3749,8 +3749,8 @@
             "rad": 6.091199089,
             "turn": 0.969444444
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.331612557419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 50.91892,
@@ -3803,8 +3803,8 @@
             "rad": 5.846852994,
             "turn": 0.930555556
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.087266462419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 81.5093,
@@ -3857,8 +3857,8 @@
             "rad": 5.934119457,
             "turn": 0.944444444
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.174532925419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 34.63081,
@@ -3911,8 +3911,8 @@
             "rad": 5.044001538,
             "turn": 0.802777778
           },
-          "family": "purple-blue",
-          "pigment": "ultramarine"
+          "deviation": 0.331612557615,
+          "family": "purple-blue"
         },
         "luminance": {
           "absolute": 53.93574,
@@ -3965,8 +3965,8 @@
             "rad": 5.689773362,
             "turn": 0.905555556
           },
-          "family": "purple",
-          "pigment": "violet"
+          "deviation": 0.453785606017,
+          "family": "purple"
         },
         "luminance": {
           "absolute": 58.21749,
@@ -4019,8 +4019,8 @@
             "rad": 5.881759579,
             "turn": 0.936111111
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.122173047419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 27.01991,
@@ -4073,8 +4073,8 @@
             "rad": 5.567600314,
             "turn": 0.886111111
           },
-          "family": "purple",
-          "pigment": "violet"
+          "deviation": 0.331612558017,
+          "family": "purple"
         },
         "luminance": {
           "absolute": 64.84668,
@@ -4127,8 +4127,8 @@
             "rad": 5.724679947,
             "turn": 0.911111111
           },
-          "family": "purple",
-          "pigment": "violet"
+          "deviation": 0.488692191017,
+          "family": "purple"
         },
         "luminance": {
           "absolute": 93.25829,
@@ -4181,8 +4181,8 @@
             "rad": 5.829399702,
             "turn": 0.927777778
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.069813170419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 70.30942,
@@ -4235,8 +4235,8 @@
             "rad": 4.625122518,
             "turn": 0.736111111
           },
-          "family": "blue",
-          "pigment": "blue"
+          "deviation": 0.436332313214,
+          "family": "blue"
         },
         "luminance": {
           "absolute": 80.61686,
@@ -4289,8 +4289,8 @@
             "rad": 4.537856055,
             "turn": 0.722222222
           },
-          "family": "blue",
-          "pigment": "blue"
+          "deviation": 0.349065850214,
+          "family": "blue"
         },
         "luminance": {
           "absolute": 70.31718,
@@ -4343,8 +4343,8 @@
             "rad": 3.787364477,
             "turn": 0.602777778
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.122173047812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 49.65832,
@@ -4397,8 +4397,8 @@
             "rad": 3.316125579,
             "turn": 0.527777778
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.17453292541,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 32.53282,
@@ -4451,8 +4451,8 @@
             "rad": 4.171336912,
             "turn": 0.663888889
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.506145482812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 23.40706,
@@ -4505,8 +4505,8 @@
             "rad": 4.136430327,
             "turn": 0.658333333
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.471238897812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 20.47195,
@@ -4559,8 +4559,8 @@
             "rad": 4.398229715,
             "turn": 0.7
           },
-          "family": "blue",
-          "pigment": "blue"
+          "deviation": 0.209439510214,
+          "family": "blue"
         },
         "luminance": {
           "absolute": 15.61925,
@@ -4613,8 +4613,8 @@
             "rad": 4.101523742,
             "turn": 0.652777778
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.436332312812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 25.43213,
@@ -4667,8 +4667,8 @@
             "rad": 3.735004599,
             "turn": 0.594444444
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.069813169812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 60.83493,
@@ -4721,8 +4721,8 @@
             "rad": 4.328416545,
             "turn": 0.688888889
           },
-          "family": "blue",
-          "pigment": "blue"
+          "deviation": 0.139626340214,
+          "family": "blue"
         },
         "luminance": {
           "absolute": 25.0425,
@@ -4775,8 +4775,8 @@
             "rad": 3.333578871,
             "turn": 0.530555556
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.19198621741,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 51.88517,
@@ -4829,8 +4829,8 @@
             "rad": 3.717551307,
             "turn": 0.591666667
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.052359877812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 25.88138,
@@ -4883,8 +4883,8 @@
             "rad": 5.131268001,
             "turn": 0.816666667
           },
-          "family": "purple-blue",
-          "pigment": "ultramarine"
+          "deviation": 0.418879020615,
+          "family": "purple-blue"
         },
         "luminance": {
           "absolute": 18.95489,
@@ -4937,8 +4937,8 @@
             "rad": 3.612831552,
             "turn": 0.575
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.47123889841,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 81.78376,
@@ -4991,8 +4991,8 @@
             "rad": 4.08407045,
             "turn": 0.65
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.418879020812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 22.45116,
@@ -5045,8 +5045,8 @@
             "rad": 3.857177647,
             "turn": 0.613888889
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.191986217812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 72.44257,
@@ -5099,8 +5099,8 @@
             "rad": 3.612831552,
             "turn": 0.575
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.47123889841,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 70.13953,
@@ -5153,8 +5153,8 @@
             "rad": 3.682644722,
             "turn": 0.586111111
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.017453292812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 35.89804,
@@ -5207,8 +5207,8 @@
             "rad": 3.228859116,
             "turn": 0.513888889
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.08726646241,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 83.62856,
@@ -5261,8 +5261,8 @@
             "rad": 3.612831552,
             "turn": 0.575
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.47123889841,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 52.70397,
@@ -5315,8 +5315,8 @@
             "rad": 3.682644722,
             "turn": 0.586111111
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.017453292812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 32.28895,
@@ -5369,8 +5369,8 @@
             "rad": 3.316125579,
             "turn": 0.527777778
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.17453292541,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 66.42914,
@@ -5423,8 +5423,8 @@
             "rad": 4.118977035,
             "turn": 0.655555556
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.453785605812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 27.51136,
@@ -5477,8 +5477,8 @@
             "rad": 3.735004599,
             "turn": 0.594444444
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.069813169812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 66.25952,
@@ -5531,8 +5531,8 @@
             "rad": 3.141592654,
             "turn": 0.5
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 4.1e-10,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 96.76636,
@@ -5585,8 +5585,8 @@
             "rad": 3.403392041,
             "turn": 0.541666667
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.26179938741,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 61.56733,
@@ -5639,8 +5639,8 @@
             "rad": 3.752457892,
             "turn": 0.597222222
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.087266462812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 27.9584,
@@ -5693,8 +5693,8 @@
             "rad": 2.705260341,
             "turn": 0.430555556
           },
-          "family": "cyan-green",
-          "pigment": "aquamarine"
+          "deviation": 0.087266463009,
+          "family": "cyan-green"
         },
         "luminance": {
           "absolute": 62.31149,
@@ -5747,8 +5747,8 @@
             "rad": 2.251474735,
             "turn": 0.358333333
           },
-          "family": "green",
-          "pigment": "green"
+          "deviation": 0.157079632607,
+          "family": "green"
         },
         "luminance": {
           "absolute": 68.22656,
@@ -5801,8 +5801,8 @@
             "rad": 2.07694181,
             "turn": 0.330555556
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.506145483205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 53.04941,
@@ -5855,8 +5855,8 @@
             "rad": 1.256637061,
             "turn": 0.2
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.209439509803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 45.9381,
@@ -5909,8 +5909,8 @@
             "rad": 3.246312409,
             "turn": 0.516666667
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.10471975541,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 35.96391,
@@ -5963,8 +5963,8 @@
             "rad": 2.530727415,
             "turn": 0.402777778
           },
-          "family": "green",
-          "pigment": "green"
+          "deviation": 0.436332312607,
+          "family": "green"
         },
         "luminance": {
           "absolute": 43.34438,
@@ -6017,8 +6017,8 @@
             "rad": 0.785398163,
             "turn": 0.125
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.261799387402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 39.69373,
@@ -6071,8 +6071,8 @@
             "rad": 1.448623279,
             "turn": 0.230555556
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.401425727803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 38.24959,
@@ -6125,8 +6125,8 @@
             "rad": 0.767944871,
             "turn": 0.122222222
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.244346095402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 35.79502,
@@ -6179,8 +6179,8 @@
             "rad": 1.570796327,
             "turn": 0.25
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 2.05e-10,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 35.7911,
@@ -6233,8 +6233,8 @@
             "rad": 1.954768762,
             "turn": 0.311111111
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.383972435205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 63.27956,
@@ -6287,8 +6287,8 @@
             "rad": 1.658062789,
             "turn": 0.263888889
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.087266462205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 72.34653,
@@ -6341,8 +6341,8 @@
             "rad": 3.316125579,
             "turn": 0.527777778
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.17453292541,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 40.24295,
@@ -6395,8 +6395,8 @@
             "rad": 1.239183769,
             "turn": 0.197222222
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.191986217803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 74.4224,
@@ -6449,8 +6449,8 @@
             "rad": 0.750491578,
             "turn": 0.119444444
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.226892802402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 43.46866,
@@ -6503,8 +6503,8 @@
             "rad": 1.221730476,
             "turn": 0.194444444
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.174532924803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 39.86916,
@@ -6557,8 +6557,8 @@
             "rad": 2.792526803,
             "turn": 0.444444444
           },
-          "family": "cyan-green",
-          "pigment": "aquamarine"
+          "deviation": 0.174532925009,
+          "family": "cyan-green"
         },
         "luminance": {
           "absolute": 53.58793,
@@ -6611,8 +6611,8 @@
             "rad": 1.954768762,
             "turn": 0.311111111
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.383972435205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 88.4073,
@@ -6665,8 +6665,8 @@
             "rad": 1.79768913,
             "turn": 0.286111111
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.226892803205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 101.06356,
@@ -6719,8 +6719,8 @@
             "rad": 1.954768762,
             "turn": 0.311111111
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.383972435205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 151.04664,
@@ -6773,8 +6773,8 @@
             "rad": 1.588249619,
             "turn": 0.252777778
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.017453292205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 36.93539,
@@ -6827,8 +6827,8 @@
             "rad": 1.727875959,
             "turn": 0.275
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.157079632205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 109.78458,
@@ -6881,8 +6881,8 @@
             "rad": 0.733038286,
             "turn": 0.116666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.209439510402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 23.02576,
@@ -6935,8 +6935,8 @@
             "rad": 2.373647783,
             "turn": 0.377777778
           },
-          "family": "green",
-          "pigment": "green"
+          "deviation": 0.279252680607,
+          "family": "green"
         },
         "luminance": {
           "absolute": 79.20499,
@@ -6989,8 +6989,8 @@
             "rad": 1.79768913,
             "turn": 0.286111111
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.226892803205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 61.68199,
@@ -7043,8 +7043,8 @@
             "rad": 3.019419606,
             "turn": 0.480555556
           },
-          "family": "cyan-green",
-          "pigment": "aquamarine"
+          "deviation": 0.401425728009,
+          "family": "cyan-green"
         },
         "luminance": {
           "absolute": 55.38639,
@@ -7097,8 +7097,8 @@
             "rad": 3.054326191,
             "turn": 0.486111111
           },
-          "family": "cyan-green",
-          "pigment": "aquamarine"
+          "deviation": 0.436332313009,
+          "family": "cyan-green"
         },
         "luminance": {
           "absolute": 123.00047,
@@ -7151,8 +7151,8 @@
             "rad": 2.740166926,
             "turn": 0.436111111
           },
-          "family": "cyan-green",
-          "pigment": "aquamarine"
+          "deviation": 0.122173048009,
+          "family": "cyan-green"
         },
         "luminance": {
           "absolute": 52.19641,
@@ -7205,8 +7205,8 @@
             "rad": 2.565634,
             "turn": 0.408333333
           },
-          "family": "green",
-          "pigment": "green"
+          "deviation": 0.471238897607,
+          "family": "green"
         },
         "luminance": {
           "absolute": 57.57997,
@@ -7259,8 +7259,8 @@
             "rad": 2.338741198,
             "turn": 0.372222222
           },
-          "family": "green",
-          "pigment": "green"
+          "deviation": 0.244346095607,
+          "family": "green"
         },
         "luminance": {
           "absolute": 76.358,
@@ -7313,8 +7313,8 @@
             "rad": 2.984513021,
             "turn": 0.475
           },
-          "family": "cyan-green",
-          "pigment": "aquamarine"
+          "deviation": 0.366519143009,
+          "family": "cyan-green"
         },
         "luminance": {
           "absolute": 78.27996,
@@ -7367,8 +7367,8 @@
             "rad": 3.141592654,
             "turn": 0.5
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 4.1e-10,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 114.7002,
@@ -7421,8 +7421,8 @@
             "rad": 2.408554368,
             "turn": 0.383333333
           },
-          "family": "green",
-          "pigment": "green"
+          "deviation": 0.314159265607,
+          "family": "green"
         },
         "luminance": {
           "absolute": 50.2761,
@@ -7475,8 +7475,8 @@
             "rad": 3.141592654,
             "turn": 0.5
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 4.1e-10,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 33.72699,
@@ -7529,8 +7529,8 @@
             "rad": 2.513274123,
             "turn": 0.4
           },
-          "family": "green",
-          "pigment": "green"
+          "deviation": 0.418879020607,
+          "family": "green"
         },
         "luminance": {
           "absolute": 84.19213,
@@ -7583,8 +7583,8 @@
             "rad": 2.338741198,
             "turn": 0.372222222
           },
-          "family": "green",
-          "pigment": "green"
+          "deviation": 0.244346095607,
+          "family": "green"
         },
         "luminance": {
           "absolute": 109.88881,
@@ -7637,8 +7637,8 @@
             "rad": 3.473205211,
             "turn": 0.552777778
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.33161255741,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 87.3702,
@@ -7691,8 +7691,8 @@
             "rad": 3.298672286,
             "turn": 0.525
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.15707963241,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 98.22755,
@@ -7745,8 +7745,8 @@
             "rad": 0.977384381,
             "turn": 0.155555556
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.453785605402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 81.97377,
@@ -7799,8 +7799,8 @@
             "rad": 1.221730476,
             "turn": 0.194444444
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.174532924803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 73.94585,
@@ -7853,8 +7853,8 @@
             "rad": 1.500983157,
             "turn": 0.238888889
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.453785605803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 101.75736,
@@ -7907,8 +7907,8 @@
             "rad": 1.972222055,
             "turn": 0.313888889
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.401425728205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 70.47237,
@@ -7961,8 +7961,8 @@
             "rad": 0.733038286,
             "turn": 0.116666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.209439510402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 68.29719,
@@ -8015,8 +8015,8 @@
             "rad": 0.837758041,
             "turn": 0.133333333
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.314159265402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 64.38516,
@@ -8069,8 +8069,8 @@
             "rad": 1.605702912,
             "turn": 0.255555556
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.034906585205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 56.03896,
@@ -8123,8 +8123,8 @@
             "rad": 1.79768913,
             "turn": 0.286111111
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.226892803205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 53.36912,
@@ -8177,8 +8177,8 @@
             "rad": 3.351032164,
             "turn": 0.533333333
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.20943951041,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 49.15867,
@@ -8231,8 +8231,8 @@
             "rad": 2.792526803,
             "turn": 0.444444444
           },
-          "family": "cyan-green",
-          "pigment": "aquamarine"
+          "deviation": 0.174532925009,
+          "family": "cyan-green"
         },
         "luminance": {
           "absolute": 56.95312,
@@ -8285,8 +8285,8 @@
             "rad": 0.994837674,
             "turn": 0.158333333
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.471238898402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 45.93214,
@@ -8339,8 +8339,8 @@
             "rad": 3.874630939,
             "turn": 0.616666667
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.209439509812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 47.13245,
@@ -8393,8 +8393,8 @@
             "rad": 3.351032164,
             "turn": 0.533333333
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.20943951041,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 31.80245,
@@ -8447,8 +8447,8 @@
             "rad": 3.543018382,
             "turn": 0.563888889
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.40142572841,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 26.16976,
@@ -8501,8 +8501,8 @@
             "rad": 0.453785606,
             "turn": 0.072222222
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.453785606,
+          "family": "red"
         },
         "luminance": {
           "absolute": 31.91935,
@@ -8555,8 +8555,8 @@
             "rad": 1.343903524,
             "turn": 0.213888889
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.296705972803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 71.42021,
@@ -8609,8 +8609,8 @@
             "rad": 3.874630939,
             "turn": 0.616666667
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.209439509812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 49.22192,
@@ -8663,8 +8663,8 @@
             "rad": 3.665191429,
             "turn": 0.583333333
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.52359877541,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 34.79397,
@@ -8717,8 +8717,8 @@
             "rad": 1.099557429,
             "turn": 0.175
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.052359877803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 93.13593,
@@ -8771,8 +8771,8 @@
             "rad": 3.595378259,
             "turn": 0.572222222
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.45378560541,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 49.67835,
@@ -8825,8 +8825,8 @@
             "rad": 1.012290966,
             "turn": 0.161111111
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.488692190402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 121.94365,
@@ -8879,8 +8879,8 @@
             "rad": 1.431169987,
             "turn": 0.227777778
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.383972435803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 86.98624,
@@ -8933,8 +8933,8 @@
             "rad": 0.942477796,
             "turn": 0.15
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.418879020402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 92.8482,
@@ -8987,8 +8987,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 143.73936,
@@ -9041,8 +9041,8 @@
             "rad": 5.934119457,
             "turn": 0.944444444
           },
-          "family": "red-purple",
-          "pigment": "magenta"
+          "deviation": 0.174532925419,
+          "family": "red-purple"
         },
         "luminance": {
           "absolute": 80.18729,
@@ -9095,8 +9095,8 @@
             "rad": 2.094395102,
             "turn": 0.333333333
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.523598775205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 84.60205,
@@ -9149,8 +9149,8 @@
             "rad": 1.500983157,
             "turn": 0.238888889
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.453785605803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 122.48161,
@@ -9203,8 +9203,8 @@
             "rad": 0.785398163,
             "turn": 0.125
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.261799387402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 70.43733,
@@ -9257,8 +9257,8 @@
             "rad": 3.874630939,
             "turn": 0.616666667
           },
-          "family": "blue-cyan",
-          "pigment": "azure"
+          "deviation": 0.209439509812,
+          "family": "blue-cyan"
         },
         "luminance": {
           "absolute": 107.28841,
@@ -9311,8 +9311,8 @@
             "rad": 2.094395102,
             "turn": 0.333333333
           },
-          "family": "green-yellow",
-          "pigment": "chartreuse"
+          "deviation": 0.523598775205,
+          "family": "green-yellow"
         },
         "luminance": {
           "absolute": 97.89379,
@@ -9365,8 +9365,8 @@
             "rad": 2.792526803,
             "turn": 0.444444444
           },
-          "family": "cyan-green",
-          "pigment": "aquamarine"
+          "deviation": 0.174532925009,
+          "family": "cyan-green"
         },
         "luminance": {
           "absolute": 55.34058,
@@ -9419,8 +9419,8 @@
             "rad": 0.802851456,
             "turn": 0.127777778
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.279252680402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 131.48173,
@@ -9473,8 +9473,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 96.27194,
@@ -9527,8 +9527,8 @@
             "rad": 3.630284844,
             "turn": 0.577777778
           },
-          "family": "cyan",
-          "pigment": "cyan"
+          "deviation": 0.48869219041,
+          "family": "cyan"
         },
         "luminance": {
           "absolute": 90.79564,
@@ -9581,8 +9581,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 139.05947,
@@ -9635,8 +9635,8 @@
             "rad": 0.610865238,
             "turn": 0.097222222
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.087266462402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 87.13723,
@@ -9689,8 +9689,8 @@
             "rad": 0.750491578,
             "turn": 0.119444444
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.226892802402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 74.5994,
@@ -9743,8 +9743,8 @@
             "rad": 0.558505361,
             "turn": 0.088888889
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.034906585402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 71.46912,
@@ -9797,8 +9797,8 @@
             "rad": 0.261799388,
             "turn": 0.041666667
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.261799388,
+          "family": "red"
         },
         "luminance": {
           "absolute": 47.59352,
@@ -9851,8 +9851,8 @@
             "rad": 0.41887902,
             "turn": 0.066666667
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.41887902,
+          "family": "red"
         },
         "luminance": {
           "absolute": 51.94511,
@@ -9905,8 +9905,8 @@
             "rad": 0.226892803,
             "turn": 0.036111111
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.226892803,
+          "family": "red"
         },
         "luminance": {
           "absolute": 56.8943,
@@ -9959,8 +9959,8 @@
             "rad": 0.401425728,
             "turn": 0.063888889
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.401425728,
+          "family": "red"
         },
         "luminance": {
           "absolute": 41.09171,
@@ -10013,8 +10013,8 @@
             "rad": 0.575958653,
             "turn": 0.091666667
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.052359877402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 57.20803,
@@ -10067,8 +10067,8 @@
             "rad": 0.34906585,
             "turn": 0.055555555
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.34906585,
+          "family": "red"
         },
         "luminance": {
           "absolute": 43.83271,
@@ -10121,8 +10121,8 @@
             "rad": 0.034906585,
             "turn": 0.005555556
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.034906585,
+          "family": "red"
         },
         "luminance": {
           "absolute": 33.82891,
@@ -10175,8 +10175,8 @@
             "rad": 0.558505361,
             "turn": 0.088888889
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.034906585402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 30.97004,
@@ -10229,8 +10229,8 @@
             "rad": 0.13962634,
             "turn": 0.022222222
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.13962634,
+          "family": "red"
         },
         "luminance": {
           "absolute": 45.50264,
@@ -10283,8 +10283,8 @@
             "rad": 0.226892803,
             "turn": 0.036111111
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.226892803,
+          "family": "red"
         },
         "luminance": {
           "absolute": 36.01805,
@@ -10337,8 +10337,8 @@
             "rad": 0.174532925,
             "turn": 0.027777778
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.174532925,
+          "family": "red"
         },
         "luminance": {
           "absolute": 36.25686,
@@ -10391,8 +10391,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 39.61105,
@@ -10445,8 +10445,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 22.06232,
@@ -10499,8 +10499,8 @@
             "rad": 0.41887902,
             "turn": 0.066666667
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.41887902,
+          "family": "red"
         },
         "luminance": {
           "absolute": 74.40192,
@@ -10553,8 +10553,8 @@
             "rad": 0.41887902,
             "turn": 0.066666667
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.41887902,
+          "family": "red"
         },
         "luminance": {
           "absolute": 62.02249,
@@ -10607,8 +10607,8 @@
             "rad": 0.471238898,
             "turn": 0.075
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.471238898,
+          "family": "red"
         },
         "luminance": {
           "absolute": 64.86612,
@@ -10661,8 +10661,8 @@
             "rad": 0.366519143,
             "turn": 0.058333333
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.366519143,
+          "family": "red"
         },
         "luminance": {
           "absolute": 42.12557,
@@ -10715,8 +10715,8 @@
             "rad": 0.261799388,
             "turn": 0.041666667
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0.261799388,
+          "family": "red"
         },
         "luminance": {
           "absolute": 50.06058,
@@ -10769,8 +10769,8 @@
             "rad": 0.680678408,
             "turn": 0.108333333
           },
-          "family": "yellow-red",
-          "pigment": "orange"
+          "deviation": 0.157079632402,
+          "family": "yellow-red"
         },
         "luminance": {
           "absolute": 164.0317,
@@ -10823,8 +10823,8 @@
             "rad": 1.291543646,
             "turn": 0.205555555
           },
-          "family": "yellow",
-          "pigment": "yellow"
+          "deviation": 0.244346094803,
+          "family": "yellow"
         },
         "luminance": {
           "absolute": 156.25931,
@@ -10877,8 +10877,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 163.12746,
@@ -10931,8 +10931,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 26.74221,
@@ -10985,8 +10985,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 6.68555,
@@ -11039,8 +11039,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 110.3116,
@@ -11093,8 +11093,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 95.60339,
@@ -11147,8 +11147,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 170.48157,
@@ -11201,8 +11201,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 18.71954,
@@ -11255,8 +11255,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 164.46457,
@@ -11309,8 +11309,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 20.05665,
@@ -11363,8 +11363,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 143.73936,
@@ -11417,8 +11417,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 104.2946,
@@ -11471,8 +11471,8 @@
             "rad": 0,
             "turn": 0
           },
-          "family": "red",
-          "pigment": "vermilion"
+          "deviation": 0,
+          "family": "red"
         },
         "luminance": {
           "absolute": 86.91217,
