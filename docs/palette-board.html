@@ -19,7 +19,7 @@
 	<link rel="canonical" href="https://bpanchenko.github.io/chromatic-chandelier/palette-board.html">
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="./assets/setup.web-page.css?v=1.18.37" type="text/css">
+	<link rel="stylesheet" href="./assets/setup.web-page.css?v=1.20.38" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/clincher-code/stylesheet.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/din-2014/@font-face.din-2014.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/din-2014-rounded-vf/stylesheet.css" type="text/css">
@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="./assets/fonts/pt-root-vf/stylesheet.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/tesoro/stylesheet.css" type="text/css">
 
-	<link rel="stylesheet" href="./assets/layout.adaptive-design.css?v=1.18.37" type="text/css">
+	<link rel="stylesheet" href="./assets/layout.adaptive-design.css?v=1.20.38" type="text/css">
 	<link rel="stylesheet" href="./assets/uikit.css" type="text/css">
 	
 	<style>
@@ -59,7 +59,7 @@
 		}
 	</style>
 
-	<script src="./assets/setup.web-page.js?v=1.18.37" async></script>
+	<script src="./assets/setup.web-page.js?v=1.20.38" async></script>
 
 			<link href="./assets/palette-board.css?v=" rel="stylesheet" type="text/css">
 		<script src="./assets/palette-board.js?v=" type="module"></script>
@@ -67,34 +67,36 @@
 
 <body>
 	<div class="o-page-headline" role="banner">
-					<h1>
-				<span>Цветовая палитра</span>
-				<span>Протосайта</span>
-			</h1>
-			<div role="toolbar">
-				<c-select aria-label="Копировать" autofocus class="js-field" name="clr-copy-format" tabindex="2">
-					<div aria-label="в формате HEX" role="option" value="js-value">цвет в формате HEX</div>
-					<div aria-label="RGB-компоненты" role="option" value="rgb">RGB-компоненты цвета</div>
-					<div aria-label="функцию rgb(var(...) / 1)" role="option" value="rgb-function">
-						<span>функциональную нотацию</span>
-						<code>rgb()</code>
-						<span>для CSS</span>
-					</div>
-					<div aria-label="переменную CSS" aria-selected="true" role="option" value="css-variable">
-						<code>переменную CSS</code>
-						<span>из модуля <q>palette.css</q></span>
-					</div>
-					<div aria-label="константу JavaScript" role="option" value="js-variable">
-						<code>константу JS</code>
-						<span>из ES6-модуля <q>palette.js</q></span>
-					</div>
-				</c-select>
-				<a class="c-button u-margin-sm-left" download href="./protosite-palette@3.4.8.zip" tabindex="1">
-					<span class="c-button__icon" data-glyph="cloud-transfer-download"></span>
-					<span class="c-button__text">
-						Скачать
-					</span>
-				</a>
+					<div class="u-container">
+				<h1>
+					<span>Палитра</span>
+					<span>Протосайта</span>
+				</h1>
+				<div role="toolbar">
+					<c-select aria-label="Копировать" autofocus class="js-field" name="clr-copy-format" tabindex="2">
+						<div aria-label="в формате HEX" role="option" value="js-value">цвет в формате HEX</div>
+						<div aria-label="RGB-компоненты" role="option" value="rgb">RGB-компоненты цвета</div>
+						<div aria-label="функцию rgb(var(...) / 1)" role="option" value="rgb-function">
+							<span>функциональную нотацию</span>
+							<code>rgb()</code>
+							<span>для CSS</span>
+						</div>
+						<div aria-label="переменную CSS" aria-selected="true" role="option" value="css-variable">
+							<code>переменную CSS</code>
+							<span>из модуля <q>palette.css</q></span>
+						</div>
+						<div aria-label="константу JavaScript" role="option" value="js-variable">
+							<code>константу JS</code>
+							<span>из ES6-модуля <q>palette.js</q></span>
+						</div>
+					</c-select>
+					<a class="c-button u-margin-sm-left" download href="./protosite-palette@3.4.8.zip" tabindex="1">
+						<span class="c-button__icon" data-glyph="cloud-transfer-download"></span>
+						<span class="c-button__text">
+							Скачать
+						</span>
+					</a>
+				</div>
 			</div>
 	</div>
 
@@ -122,16 +124,14 @@
 			</li>
 		</ul>
 		<hr class="c-divider">
-		<ul class="c-nav-list">
+		<ul class="c-nav-list u-margin-sm-top">
+			<li class="c-nav-item c-made-in-krasnogorsk">
+				<a href="http://izostart.ru/" target="_blank" title="Детская художественная школа">&plusmn; Сделано в Красногорске</a>
+			</li>
 			<li class="c-nav-item">
 				<a href="./legal-information.html" title="Борис Васильевич Панченко (контактные данные)">
 					<img src="./assets/pictures/plus-and-brackets.svg" width="36" width="22">
 				</a>
-			</li>
-			<li class="c-nav-item c-made-in-krasnogorsk u-text-right">
-				&copy;
-				<a href="http://izostart.ru/" target="_blank" title="Детская художественная школа">Сделано в Красногорске</a>
-				<span class="e-current-year">2025</span>
 			</li>
 		</ul>
 	</footer>

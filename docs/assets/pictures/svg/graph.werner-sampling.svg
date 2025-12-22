@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 320 320" preserveAspectRatio="xMidYMid meet"><defs><marker id="axes-arrow" viewBox="0 0 56 56" refX="28" refY="28" markerUnits="strokeWidth" markerWidth="12" markerHeight="12" orient="auto"><path d="M7.6,36.6L0.2,55.2c-0.1,0.4-0.1,0.7,0,0.8c0.1,0.1,0.5,0,0.9-0.3l54.5-27.4c0.6,0,0.6-0.5,0-0.8
+	C37.4,18.4,19.3,9.3,1.1,0.1C0.6-0.2,0,0.2,0.2,0.7l7.5,18.8L7.6,36.6z" fill="crimson"></path></marker></defs><g transform="translate(160 160)"><g class="o-csys"><ellipse rx="152" ry="152" cx="0" cy="0"><title>График распределения образцов цвета в пространстве LAB</title></ellipse><path d="M 0 -51 A 53 35 0 0 1 0 51 z" class="e-maximum-line"></path><path d="M 0 -25.5 A 26.5 17.5 0 0 0 0 25.5 z" class="e-mean-line"></path><path d="M 0 -28.067773989641267 A 4.097448941797097 12.067773989641267 0 0 0 0 28.067773989641267 z" class="e-median-line"></path><line x1="-156" y1="0" x2="156" y2="0" marker-end="url(#axes-arrow)" class="e-axis-line"></line><line x1="0" y1="156" x2="0" y2="-156" marker-end="url(#axes-arrow)" class="e-axis-line"></line></g><g class="o-attributes"></g><g class="o-coverage" transform="translate(2 0)"><circle class="e-point" cx="10" cy="11" fill="oklab(93.3% -0.00254 0.03779)"></circle><circle class="e-point" cx="10" cy="9" fill="oklab(93.04% 0.00218 0.03384)"></circle><circle class="e-point" cx="8" cy="9" fill="oklab(89.54% -0.00374 0.03095)"></circle><circle class="e-point" cx="11" cy="12" fill="oklab(93.78% -0.00436 0.03989)"></circle><circle class="e-point" cx="12" cy="12" fill="oklab(93.39% -0.00162 0.0421)"></circle><circle class="e-point" cx="9" cy="10" fill="oklab(90.73% -0.00412 0.03211)"></circle><circle class="e-point" cx="6" cy="7" fill="oklab(83.05% -0.00354 0.02316)"></circle><circle class="e-point" cx="4" cy="5" fill="oklab(79.84% -0.00438 0.01456)"></circle><circle class="e-point" cx="3" cy="4" fill="oklab(77.21% -0.00144 0.01269)"></circle><circle class="e-point" cx="12" cy="13" fill="oklab(75.95% -0.00327 0.04492)"></circle><circle class="e-point" cx="1" cy="2" fill="oklab(69.43% -0.00233 0.00379)"></circle><circle class="e-point" cx="3" cy="5" fill="oklab(63.82% -0.00718 0.01157)"></circle><circle class="e-point" cx="2" cy="-2" fill="oklab(47.56% 0.00099 -0.00801)"></circle><circle class="e-point" cx="2" cy="0" fill="oklab(43.91% 0.00547 0.00002)"></circle><circle class="e-point" cx="3" cy="-2" fill="oklab(37.15% 0.00494 -0.00732)"></circle><circle class="e-point" cx="1" cy="0" fill="oklab(38.8% 0.00175 -0.0012)"></circle><circle class="e-point" cx="5" cy="1" fill="oklab(35.33% 0.01112 0.0071)"></circle><circle class="e-point" cx="7" cy="2" fill="oklab(34.66% 0.0172 0.00739)"></circle><circle class="e-point" cx="4" cy="-1" fill="oklab(79.48% 0.00772 -0.00636)"></circle><circle class="e-point" cx="3" cy="0" fill="oklab(24.54% 0.00786 0.00056)"></circle><circle class="e-point" cx="20" cy="-13" fill="oklab(26.68% 0.02491 -0.05325)"></circle><circle class="e-point" cx="27" cy="-22" fill="oklab(24.95% 0.01636 -0.08484)"></circle><circle class="e-point" cx="19" cy="-21" fill="oklab(50.14% -0.00698 -0.0714)"></circle><circle class="e-point" cx="25" cy="-20" fill="oklab(36.48% 0.01619 -0.07816)"></circle><circle class="e-point" cx="16" cy="-17" fill="oklab(52.98% -0.00327 -0.05971)"></circle><circle class="e-point" cx="29" cy="-29" fill="oklab(59.09% -0.00094 -0.10291)"></circle><circle class="e-point" cx="17" cy="-20" fill="oklab(62.22% -0.01242 -0.0648)"></circle><circle class="e-point" cx="14" cy="-19" fill="oklab(65.79% -0.01633 -0.05583)"></circle><circle class="e-point" cx="0" cy="-29" fill="oklab(72.29% -0.07362 -0.00128)"></circle><circle class="e-point" cx="5" cy="-18" fill="oklab(66.14% -0.04096 -0.02258)"></circle><circle class="e-point" cx="3" cy="-10" fill="oklab(69.29% -0.02267 -0.01432)"></circle><circle class="e-point" cx="0" cy="2" fill="oklab(86.86% -0.00599 0.00101)"></circle><circle class="e-point" cx="13" cy="-13" fill="oklab(65.51% -0.00059 -0.04658)"></circle><circle class="e-point" cx="21" cy="-13" fill="oklab(33.39% 0.02836 -0.05462)"></circle><circle class="e-point" cx="14" cy="-9" fill="oklab(33.74% 0.01784 -0.03636)"></circle><circle class="e-point" cx="19" cy="-15" fill="oklab(54.91% 0.01367 -0.05887)"></circle><circle class="e-point" cx="24" cy="-15" fill="oklab(44.69% 0.03114 -0.06311)"></circle><circle class="e-point" cx="23" cy="-7" fill="oklab(37.58% 0.05257 -0.03302)"></circle><circle class="e-point" cx="21" cy="-11" fill="oklab(36.8% 0.03338 -0.04972)"></circle><circle class="e-point" cx="6" cy="-4" fill="oklab(56.53% 0.0081 -0.01504)"></circle><circle class="e-point" cx="11" cy="-8" fill="oklab(40.92% 0.01272 -0.03259)"></circle><circle class="e-point" cx="4" cy="8" fill="oklab(79.46% -0.01388 0.01889)"></circle><circle class="e-point" cx="9" cy="13" fill="oklab(76.31% -0.01473 0.03594)"></circle><circle class="e-point" cx="7" cy="12" fill="oklab(68.19% -0.01567 0.03091)"></circle><circle class="e-point" cx="0" cy="-2" fill="oklab(48.91% -0.00481 -0.00147)"></circle><circle class="e-point" cx="6" cy="36" fill="oklab(68.49% -0.08918 0.03176)"></circle><circle class="e-point" cx="3" cy="11" fill="oklab(75.8% -0.02523 0.0144)"></circle><circle class="e-point" cx="9" cy="17" fill="oklab(76.96% -0.02788 0.04046)"></circle><circle class="e-point" cx="15" cy="34" fill="oklab(73.71% -0.06435 0.07019)"></circle><circle class="e-point" cx="16" cy="27" fill="oklab(61.42% -0.04103 0.06774)"></circle><circle class="e-point" cx="11" cy="22" fill="oklab(35.89% -0.0385 0.04854)"></circle><circle class="e-point" cx="23" cy="36" fill="oklab(59.45% -0.04576 0.09548)"></circle><circle class="e-point" cx="22" cy="35" fill="oklab(65.41% -0.04458 0.09426)"></circle><circle class="e-point" cx="16" cy="21" fill="oklab(79.95% -0.01896 0.06274)"></circle><circle class="e-point" cx="7" cy="16" fill="oklab(54.56% -0.02944 0.03335)"></circle><circle class="e-point" cx="27" cy="27" fill="oklab(66.76% -0.00049 0.09549)"></circle><circle class="e-point" cx="26" cy="36" fill="oklab(81.15% -0.03441 0.10552)"></circle><circle class="e-point" cx="33" cy="42" fill="oklab(79.63% -0.03038 0.12938)"></circle><circle class="e-point" cx="23" cy="27" fill="oklab(89.32% -0.01216 0.08716)"></circle><circle class="e-point" cx="27" cy="29" fill="oklab(67.58% -0.00754 0.1001)"></circle><circle class="e-point" cx="32" cy="35" fill="oklab(81.83% -0.01122 0.11802)"></circle><circle class="e-point" cx="37" cy="43" fill="oklab(85.35% -0.02184 0.13888)"></circle><circle class="e-point" cx="35" cy="41" fill="oklab(87.07% -0.02203 0.1331)"></circle><circle class="e-point" cx="41" cy="35" fill="oklab(72.18% 0.02091 0.13368)"></circle><circle class="e-point" cx="37" cy="22" fill="oklab(56.59% 0.0508 0.09592)"></circle><circle class="e-point" cx="32" cy="26" fill="oklab(61.71% 0.0211 0.1006)"></circle><circle class="e-point" cx="25" cy="24" fill="oklab(88.3% 0.00245 0.0865)"></circle><circle class="e-point" cx="23" cy="24" fill="oklab(82.17% -0.00482 0.08406)"></circle><circle class="e-point" cx="28" cy="26" fill="oklab(87.43% 0.00566 0.0947)"></circle><circle class="e-point" cx="29" cy="27" fill="oklab(85.92% 0.00904 0.09929)"></circle><circle class="e-point" cx="21" cy="19" fill="oklab(89.68% 0.00647 0.07124)"></circle><circle class="e-point" cx="42" cy="36" fill="oklab(76.41% 0.02117 0.13768)"></circle><circle class="e-point" cx="33" cy="27" fill="oklab(82.14% 0.02227 0.1054)"></circle><circle class="e-point" cx="46" cy="24" fill="oklab(66.72% 0.07651 0.10506)"></circle><circle class="e-point" cx="40" cy="14" fill="oklab(48.61% 0.0863 0.06636)"></circle><circle class="e-point" cx="40" cy="18" fill="oklab(62.65% 0.07415 0.08293)"></circle><circle class="e-point" cx="47" cy="18" fill="oklab(59.01% 0.09545 0.0847)"></circle><circle class="e-point" cx="47" cy="17" fill="oklab(62.67% 0.09633 0.08137)"></circle><circle class="e-point" cx="43" cy="16" fill="oklab(54.28% 0.08836 0.07647)"></circle><circle class="e-point" cx="60" cy="15" fill="oklab(53.34% 0.13918 0.07238)"></circle><circle class="e-point" cx="54" cy="15" fill="oklab(54.65% 0.12406 0.07245)"></circle><circle class="e-point" cx="47" cy="15" fill="oklab(64.02% 0.10477 0.07071)"></circle><circle class="e-point" cx="48" cy="11" fill="oklab(36.05% 0.11417 0.05277)"></circle><circle class="e-point" cx="22" cy="15" fill="oklab(84.27% 0.02478 0.06195)"></circle><circle class="e-point" cx="12" cy="9" fill="oklab(89.86% 0.01221 0.03585)"></circle><circle class="e-point" cx="15" cy="7" fill="oklab(87.63% 0.02703 0.03111)"></circle><circle class="e-point" cx="61" cy="6" fill="oklab(60.82% 0.15364 0.03011)"></circle><circle class="e-point" cx="57" cy="1" fill="oklab(56.33% 0.14559 0.00297)"></circle><circle class="e-point" cx="32" cy="4" fill="oklab(63.39% 0.08147 0.01851)"></circle><circle class="e-point" cx="35" cy="-2" fill="oklab(36.41% 0.08941 -0.00872)"></circle><circle class="e-point" cx="26" cy="5" fill="oklab(46.03% 0.06454 0.02355)"></circle><circle class="e-point" cx="9" cy="0" fill="oklab(32.71% 0.02225 0.00194)"></circle><circle class="e-point" cx="12" cy="4" fill="oklab(58.13% 0.02776 0.01685)"></circle><circle class="e-point" cx="13" cy="3" fill="oklab(38.58% 0.03073 0.01555)"></circle><circle class="e-point" cx="28" cy="8" fill="oklab(41.35% 0.06295 0.03952)"></circle><circle class="e-point" cx="34" cy="12" fill="oklab(47.1% 0.07278 0.05446)"></circle><circle class="e-point" cx="22" cy="5" fill="oklab(39.22% 0.05234 0.02401)"></circle><circle class="e-point" cx="26" cy="10" fill="oklab(46.27% 0.05295 0.04539)"></circle><circle class="e-point" cx="26" cy="16" fill="oklab(55.66% 0.03632 0.06747)"></circle><circle class="e-point" cx="25" cy="19" fill="oklab(72.17% 0.02187 0.07551)"></circle><circle class="e-point" cx="12" cy="6" fill="oklab(38.09% 0.01963 0.02676)"></circle><circle class="e-point" cx="15" cy="13" fill="oklab(58.23% 0.00902 0.0495)"></circle><circle class="e-point" cx="15" cy="11" fill="oklab(63% 0.01455 0.04348)"></circle><circle class="e-point" cx="13" cy="7" fill="oklab(50.66% 0.02053 0.03047)"></circle><circle class="e-point" cx="7" cy="4" fill="oklab(35.99% 0.00899 0.01851)"></circle></g></g><style>
+:is(ellipse, path, rect, circle){
+	stroke-linecap: round;
+	stroke-linejoin: round;
+
+	&amp;:not([fill]) {
+		fill: none;
+	}
+}
+
+.e-point {
+	backdrop-filter: blur(10px);
+    r: 1.375px;
+}
+
+.o-csys {
+	:is(ellipse, path) {
+		stroke-dasharray: 4 2 2;
+		stroke-width: 0.2px;
+		stroke: slategray;
+
+		&amp;:not([fill]) {
+			fill: transparent;
+		}
+	}
+
+	.e-axis-line {
+		stroke-width: 0.3px;
+		stroke: slategray;
+	}
+}
+
+
+@font-face {
+	font-family: stix-math;
+	src: url('../fonts/srtixt-math/regular.otf') format('opentype'),
+		 url('../fonts/srtixt-math/regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: iconic;
+	font-weight: 400;
+	src: url('../fonts/iconic/iconic-sm.otf') format('opentype'),
+         url('../fonts/iconic/iconic-sm.woff') format('woff');
+	unicode-range: U+E000-E26F;
+}
+
+@font-face {
+	font-family: iconic;
+
+	src: url('../fonts/iconic/iconic-md.otf') format('opentype'),
+         url('../fonts/iconic/iconic-md.woff') format('woff');
+
+	font-weight: 500;
+	unicode-range: U+E000-E26F;
+}
+
+@font-face {
+	font-family: iconic;
+    
+	src: url('../fonts/iconic/iconic-lg.otf') format('opentype'),
+         url('../fonts/iconic/iconic-lg.woff') format('woff');
+	
+    font-weight: 800;
+	unicode-range: U+E000-E26F;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+	src: url('../fonts/din-2014/light.woff2') format('woff2'),
+		 url('../fonts/din-2014/light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+	src: url('../fonts/din-2014/regular.woff2') format('woff2'),
+		 url('../fonts/din-2014/regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;, &quot;ss02&quot;;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+	src: url('../fonts/din-2014/demi.woff2') format('woff2'),
+		 url('../fonts/din-2014/demi.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;, &quot;ss02&quot;;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+	src: url('../fonts/din-2014/demi-italic.woff2') format('woff2'),
+		 url('../fonts/din-2014/demi-italic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;, &quot;ss02&quot;;
+}
+
+@font-face {
+	font-family: 'DIN 2014';
+    src: url('../fonts/din-2014/narrow-extra-bold.woff2') format('woff2'),
+		 url('../fonts/din-2014/narrow-extra-bold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-feature-settings: &quot;zero&quot;, &quot;ss01&quot;, &quot;ss02&quot;;
+}
+</style></svg>

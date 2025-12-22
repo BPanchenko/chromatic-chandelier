@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title itemprop="headline">Цвет «undefined»: образец и основные сведения</title>
+	<title itemprop="headline">Цвет «Veinous Blood Red»: образец и основные сведения</title>
 
 	<meta name="author" content="Boris Panchenko, boris.v.panchenko@mail.ru">
 	<meta name="description" content="Палитра цветов или цветовая схема в форматах ACO, CSS, JS, HEX, RGB"
@@ -19,7 +19,7 @@
 	<link rel="canonical" href="https://bpanchenko.github.io/chromatic-chandelier/color/veinous-blood-red.html">
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="./assets/setup.web-page.css?v=1.18.37" type="text/css">
+	<link rel="stylesheet" href="./assets/setup.web-page.css?v=1.20.38" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/clincher-code/stylesheet.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/din-2014/@font-face.din-2014.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/din-2014-rounded-vf/stylesheet.css" type="text/css">
@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="./assets/fonts/pt-root-vf/stylesheet.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/tesoro/stylesheet.css" type="text/css">
 
-	<link rel="stylesheet" href="./assets/layout.adaptive-design.css?v=1.18.37" type="text/css">
+	<link rel="stylesheet" href="./assets/layout.adaptive-design.css?v=1.20.38" type="text/css">
 	<link rel="stylesheet" href="./assets/uikit.css" type="text/css">
 	
 	<style>
@@ -59,7 +59,7 @@
 		}
 	</style>
 
-	<script src="./assets/setup.web-page.js?v=1.18.37" async></script>
+	<script src="./assets/setup.web-page.js?v=1.20.38" async></script>
 
 		<style>
 		@property --contrast-color {
@@ -69,7 +69,7 @@
 		}
 		@property --color {
 			syntax: "<color>";
-			initial-value: ;
+			initial-value: color(srgb 0.247059 0.188235 0.2);
 			inherits: false;
 		}
 	</style>
@@ -78,42 +78,42 @@
 
 <body>
 	<div class="o-page-headline" role="banner">
-			<nav class="o-navchain">
-		<a href="./sampling-directory.html" class="c-item" data-glyph="list-rich"></a>
-		<a href="./samples-compilation/ral-classic.html" class="c-item" data-glyph="spreadsheet"></a>
-		<h1 class="c-item">
-			<span>Цветовой образец</span>
-			<var itemprop="ident" title="идентификатор образца">veinous-blood-red</var>
-		</h1>
-	</nav>
+			<div class="u-container">
+		<nav class="o-navchain">
+			<a href="./palette-board.html" class="c-item" data-glyph="palette" title="Палитра Протосайта"></a>
+			<a href="./sampling-directory.html" class="c-item" data-glyph="server" title="Каталог справочников"></a>
+			<a href="./samples-compilation/werner-guidebook.html" class="c-item" data-glyph="book" title="Werner’s Nomenclature of Colours"></a>
+			<h1 class="c-item">
+				<span>Образец</span>
+				<var itemprop="ident" title="идентификатор образца">&puncsp;veinous-blood-red&numsp;</var>
+			</h1>
+		</nav>
+	</div>
 	</div>
 
 	
-<header class="page-color" role="banner">
-	<h1 lang="ru" itemprop="name" title="название цвета"></h1>
-	<svg width="100%" height="310" fill="var(--color)">
-		<use width="310" href="./assets/pictures/pattern-leaf-seamless.svg#root"></use>
+<div class="page-color-banner">
+	<svg width="100%" height="360" fill="var(--color)">
+		<use width="360" height="360" href="./assets/pictures/pattern-leaf-seamless.svg#root"></use>
 		<rect></rect>
-		
-		
-		
-		
-		
-		
 	</svg>
-</header>
+</div>
 <div class="c-background"></div>
+
+<header class="page-color" role="banner">
+	<h1 lang="ru" itemprop="label" title="наименование цвета по справочнику">Veinous Blood Red</h1>
+</header>
 
 <main class="page-color-specification" itemscope itemtype="https://schema.org/Intangible">
 	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="hsl(348deg 13.5% 21.8%)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-hsl-model"
-    aria-level="3"
-    role="heading"
-    title="Hue, Saturation, Lightness"
-  >HSL</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-hsl-model"
+      title="Hue, Saturation, Lightness"
+    >HSL</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -127,7 +127,7 @@
     задаётся в цилиндрической системе координат путём преобразования
     хроматического состава RGB.
   </a>
-  <ul class="c-channel" itemprop="hsl">
+  <ul class="o-color-data" itemprop="hsl">
     <li class="c-property">
       <code
         aria-labelledby="label-hsl-hue"
@@ -135,7 +135,7 @@
         data-prefix="H"
         itemprop="hue"
       >
-        
+        348.00
       </code>
       <em class="c-label" id="label-hsl-hue">Тональность</em>
     </li>
@@ -146,7 +146,7 @@
         data-prefix="S"
         itemprop="saturation"
       >
-        
+        ˙13.51
       </code>
       <em class="c-label" id="label-hsl-saturation">Насыщенность</em>
     </li>
@@ -157,28 +157,28 @@
         data-prefix="L"
         itemprop="lightness"
       >
-        
+        ˙21.76
       </code>
       <em class="c-label" id="label-hsl-lightness">Светлота</em>
     </li>
+    <li class="c-property">
+      <code
+        aria-labelledby="label-css-hsl"
+        class="c-value"
+        itemprop="css"
+      >hsl(348deg 13.5% 21.8%)</code>
+      <em class="c-label" id="label-css-hsl">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      aria-labelledby="label-css-hsl"
-      class="c-value"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-hsl">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="hwb(348deg 18.8% 75.3%)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-hwb-model"
-    aria-level="3"
-    role="heading"
-    title="Hue, Whiteness, Blackness"
-  >HWB</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-hwb-model"
+      title="Hue, Whiteness, Blackness"
+    >HWB</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -192,7 +192,7 @@
     HWB, чтобы получить нужный цвет, мы как бы смешиваем основной оттенок с
     белым и/или черным.
   </a>
-  <ul class="c-channel" itemprop="hwb">
+  <ul class="o-color-data" itemprop="hwb">
     <li class="c-property">
       <code
         aria-labelledby="label-hwb-hue"
@@ -200,7 +200,7 @@
         data-prefix="H"
         itemprop="hue"
       >
-        
+        348.00
       </code>
       <em class="c-label" id="label-hwb-hue">Тональность</em>
     </li>
@@ -211,7 +211,7 @@
         data-prefix="S"
         itemprop="whiteness"
       >
-        
+        ˙18.82
       </code>
       <em class="c-label" id="label-hwb-whiteness">Белизна</em>
     </li>
@@ -222,28 +222,28 @@
         data-prefix="L"
         itemprop="blackness"
       >
-        
+        ˙75.29
       </code>
       <em class="c-label" id="label-hwb-blackness">Чернота</em>
     </li>
+    <li class="c-property">
+      <code
+        aria-labelledby="label-css-hwb"
+        class="c-value"
+        itemprop="css"
+      >hwb(348deg 18.8% 75.3%)</code>
+      <em class="c-label" id="label-css-hwb">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      aria-labelledby="label-css-hwb"
-      class="c-value"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-hwb">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="lab(21.7% 7.5 0.8)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-lab-space"
-    aria-level="3"
-    role="heading"
-    title="CIE 1976 L*a*b*"
-  >LAB</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-lab-space"
+      title="CIE 1976 L*a*b*"
+    >LAB</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -259,7 +259,7 @@
     кубические корни, LAB представляет собой сильно нелинейную систему. Это
     затрудняет применение векторной алгебры в этом пространстве цвета.
   </a>
-  <ul class="c-channel" itemprop="lab">
+  <ul class="o-color-data" itemprop="lab">
     <li class="c-property">
       <code
         class="c-value"
@@ -267,7 +267,7 @@
         data-prefix="L"
         itemprop="lightness"
       >
-        
+        ˙˙21.7
       </code>
       <em class="c-label" id="label-lab-light">Светлота</em>
     </li>
@@ -278,7 +278,7 @@
         data-prefix="A"
         itemprop="a"
       >
-        
+        ˙˙˙7.5
       </code>
       <em class="c-label" id="label-lab-a">Интенсивность Зелёного и Красного</em>
     </li>
@@ -289,28 +289,28 @@
         data-prefix="B"
         itemprop="b"
       >
-        
+        ˙˙˙0.8
       </code>
       <em class="c-label" id="label-lab-b">Интенсивность Синего и Желтого</em>
     </li>
+    <li class="c-property">
+      <code
+        aria-labelledby="label-css-lab"
+        class="c-value"
+        itemprop="css"
+      >lab(21.7% 7.5 0.8)</code>
+      <em class="c-label" id="label-css-lab">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      aria-labelledby="label-css-lab"
-      class="c-value"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-lab">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="lch(21.7% 7.5 6.3deg)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-lch-space"
-    aria-level="3"
-    role="heading"
-    title="CIE L*C*h Color Space"
-  >LCH</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-lch-space"
+      title="CIE L*C*h Color Space"
+    >LCH</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -326,7 +326,7 @@
     свойство цветового пространства называют «однородностью восприятия»
     («perceptual uniformity»).
   </a>
-  <ul class="c-channel" itemprop="lch">
+  <ul class="o-color-data" itemprop="lch">
     <li class="c-property">
       <code
         class="c-value"
@@ -334,7 +334,7 @@
         data-prefix="L"
         itemprop="lightness"
       >
-        
+        ˙21.67
       </code>
       <em class="c-label" id="label-lch-light">Светлота</em>
     </li>
@@ -345,7 +345,7 @@
         data-prefix="C"
         itemprop="chroma"
       >
-        
+        ˙˙7.50
       </code>
       <em class="c-label" id="label-lch-chroma">Чистота или интенсивность цвета</em>
     </li>
@@ -356,28 +356,28 @@
         data-prefix="H"
         itemprop="hue"
       >
-        
+        ˙˙6.31
       </code>
       <em class="c-label" id="label-lch-hue">Тональность</em>
     </li>
+    <li class="c-property">
+      <code
+        aria-labelledby="label-css-lch"
+        class="c-value"
+        itemprop="css"
+      >lch(21.7% 7.5 6.3deg)</code>
+      <em class="c-label" id="label-css-lch">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      aria-labelledby="label-css-lch"
-      class="c-value"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-lch">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="oklab(32.7% 0.022254 0.001942)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-oklab-space"
-    aria-level="3"
-    role="heading"
-    title="CIE 1976 L*a*b*"
-  >OKLAB</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-oklab-space"
+      title="CIE 1976 L*a*b*"
+    >OKLAB</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -392,7 +392,7 @@
     адаптацию к диффузному белому, Oklab предполагает адаптацию к определяемому
     цвету, что должно сделать его масштабно-инвариантным.
   </a>
-  <ul class="c-channel" itemprop="oklab">
+  <ul class="o-color-data" itemprop="oklab">
     <li class="c-property">
       <code
         class="c-value"
@@ -400,7 +400,7 @@
         data-prefix="L"
         itemprop="lightness"
       >
-        
+        ˙32.71
       </code>
       <em class="c-label" id="label-oklab-light">Светлота</em>
     </li>
@@ -411,7 +411,7 @@
         data-prefix="A"
         itemprop="a"
       >
-        
+        0.022254066360249847˙
       </code>
       <em class="c-label" id="label-oklab-a">Интенсивность Зелёного и Красного</em>
     </li>
@@ -422,28 +422,28 @@
         data-prefix="B"
         itemprop="b"
       >
-        
+        0.0019416297022571416
       </code>
       <em class="c-label" id="label-oklab-b">Интенсивность Синего и Желтого</em>
     </li>
+    <li class="c-property">
+      <code
+        aria-labelledby="label-css-oklab"
+        class="c-value"
+        itemprop="css"
+      >oklab(32.7% 0.022254 0.001942)</code>
+      <em class="c-label" id="label-css-oklab">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      aria-labelledby="label-css-oklab"
-      class="c-value"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-oklab">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="oklch(32.7% 0.022339 5deg)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-oklch-space"
-    aria-level="3"
-    role="heading"
-    title="CIE L*C*h Color Space"
-  >OKLCH</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-oklch-space"
+      title="CIE L*C*h Color Space"
+    >OKLCH</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -457,7 +457,7 @@
     удобным для работы с градиентами и другими операциями, требующими плавных
     переходов.
   </a>
-  <ul class="c-channel" itemprop="oklch">
+  <ul class="o-color-data" itemprop="oklch">
     <li class="c-property">
       <code
         class="c-value"
@@ -465,7 +465,7 @@
         data-prefix="L"
         itemprop="lightness"
       >
-        
+        ˙32.71
       </code>
       <em class="c-label" id="label-oklch-light">Светлота</em>
     </li>
@@ -476,7 +476,7 @@
         data-prefix="C"
         itemprop="chroma"
       >
-        
+        0.02233860773340834
       </code>
       <em class="c-label" id="label-oklch-chroma">Чистота или интенсивность
         цвета</em>
@@ -488,28 +488,28 @@
         data-prefix="H"
         itemprop="hue"
       >
-        
+        ˙˙4.99
       </code>
       <em class="c-label" id="label-oklch-hue">Тональность</em>
     </li>
+    <li class="c-property">
+      <code
+        aria-labelledby="label-css-oklch"
+        class="c-value"
+        itemprop="css"
+      >oklch(32.7% 0.022339 5deg)</code>
+      <em class="c-label" id="label-css-oklch">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      aria-labelledby="label-css-oklch"
-      class="c-value"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-oklch">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="rgb(63 48 51)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-rgb-model"
-    aria-level="3"
-    role="heading"
-    title="Red, Green, Blue"
-  >RGB</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-rgb-model"
+      title="Red, Green, Blue"
+    >RGB</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -528,7 +528,7 @@
     число без знака (один октет). Стандарт кодирования цвета для программного
     обеспечения.
   </a>
-  <ul class="c-channel" itemprop="rgb">
+  <ul class="o-color-data" itemprop="rgb">
     <li class="c-property">
       <code
         class="c-value"
@@ -536,7 +536,7 @@
         data-prefix="R"
         itemprop="red"
       >
-        
+        ˙˙˙˙63
       </code>
       <em class="c-label" id="label-rgb-red">Интенсивность Красного</em>
     </li>
@@ -547,7 +547,7 @@
         data-prefix="G"
         itemprop="green"
       >
-        
+        ˙˙˙˙48
       </code>
       <em class="c-label" id="label-rgb-green">Интенсивность Зелёного</em>
     </li>
@@ -558,38 +558,36 @@
         data-prefix="B"
         itemprop="blue"
       >
-        
+        ˙˙˙˙51
       </code>
       <em class="c-label" id="label-rgb-blue">Интенсивность Синего</em>
     </li>
-  </ul>
-  <div class="c-colspan">
-    <div class="c-property">
+    <li class="c-property">
       <code
         class="c-value"
         aria-labelledby="label-css-rgb"
         itemprop="css"
-      ></code>
+      >rgb(63 48 51)</code>
       <em class="c-label" id="label-css-rgb">Значение CSS-нотации</em>
-    </div>
-    <div class="c-property">
+    </li>
+    <li class="c-property">
       <code
         class="c-value"
         aria-labelledby="label-hex"
         itemprop="hex"
-      ></code>
-      <em class="c-label" id="label-hex">В шестнадцатеричном виде</em>
-    </div>
-  </div>
+      >#3f3033</code>
+      <em class="c-label" id="label-hex">Шестнадцатеричный код цвета</em>
+    </li>
+  </ul>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="color(a98-rgb 24.16% 20.16% 21.19%)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-a98_rgb-space"
-    aria-level="3"
-    role="heading"
-    title="The Adobe® RGB (1998) color space"
-  >A98 RGB</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-a98_rgb-space"
+      title="The Adobe® RGB (1998) color space"
+    >A98 RGB</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -604,7 +602,7 @@
     ярких цветов (~75%), достигая более богатых оттенков голубого и зелёного.
     Изображение в пространстве связи профилей (ICC PCS) кодируется в 24-битной
     кодировке цветного изображения Adobe RGB (1998).</a>
-  <ul class="c-channel" itemprop="a98_rgb">
+  <ul class="o-color-data" itemprop="a98-rgb">
     <li class="c-property">
       <code
         class="c-value"
@@ -612,7 +610,7 @@
         data-prefix="R"
         itemprop="red"
       >
-        
+        0.24155594187327042
       </code>
       <em class="c-label" id="label-a98_rgb-red">Интенсивность Красного</em>
     </li>
@@ -623,7 +621,7 @@
         data-prefix="G"
         itemprop="green"
       >
-        
+        0.20164966335131726
       </code>
       <em class="c-label" id="label-a98_rgb-green">Интенсивность Зелёного</em>
     </li>
@@ -634,28 +632,28 @@
         data-prefix="B"
         itemprop="blue"
       >
-        
+        0.21189018544879837
       </code>
       <em class="c-label" id="label-a98_rgb-blue">Интенсивность Синего</em>
     </li>
+    <li class="c-property">
+      <code
+        class="c-value"
+        aria-labelledby="label-css-a98_rgb"
+        itemprop="css"
+      >color(a98-rgb 24.16% 20.16% 21.19%)</code>
+      <em class="c-label" id="label-css-a98_rgb">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      class="c-value"
-      aria-labelledby="label-css-a98_rgb"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-a98_rgb">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="color(display-p3 23.78% 19.05% 20.01%)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-display_p3-space"
-    aria-level="3"
-    role="heading"
-    title="Display P3 Color Encoding"
-  >Display P3</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-display_p3-space"
+      title="Display P3 Color Encoding"
+    >Display P3</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -669,7 +667,7 @@
     широкий охват, чем sRGB, что позволяет отображать более насыщенные и
     реалистичные цвета, особенно в красном и зеленом спектрах.
   </a>
-  <ul class="c-channel" itemprop="display_p3">
+  <ul class="o-color-data" itemprop="display-p3">
     <li class="c-property">
       <code
         class="c-value"
@@ -677,7 +675,7 @@
         data-prefix="R"
         itemprop="red"
       >
-        
+        0.237803184721
       </code>
       <em class="c-label" id="label-display_p3-red">Интенсивность Красного</em>
     </li>
@@ -688,7 +686,7 @@
         data-prefix="G"
         itemprop="green"
       >
-        
+        0.190513751743
       </code>
       <em class="c-label" id="label-display_p3-green">Интенсивность Зелёного</em>
     </li>
@@ -699,28 +697,28 @@
         data-prefix="B"
         itemprop="blue"
       >
-        
+        0.200085781048
       </code>
       <em class="c-label" id="label-display_p3-blue">Интенсивность Синего</em>
     </li>
+    <li class="c-property">
+      <code
+        class="c-value"
+        aria-labelledby="label-css-display_p3"
+        itemprop="css"
+      >color(display-p3 23.78% 19.05% 20.01%)</code>
+      <em class="c-label" id="label-css-display_p3">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      class="c-value"
-      aria-labelledby="label-css-display_p3"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-display_p3">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="color(prophoto-rgb 16.89% 14.68% 15.02%)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-prophoto_rgb-space"
-    aria-level="3"
-    role="heading"
-    title="... also known as ROMM RGB (Reference Output Medium Metric)"
-  >ProPhoto RGB</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-prophoto_rgb-space"
+      title="... also known as ROMM RGB (Reference Output Medium Metric)"
+    >ProPhoto RGB</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -729,10 +727,9 @@
     target="_blank"
     title="Читать подробно на Википедии"
   >
-    Цветовое пространство ProPhoto RGB характерно более широкой гаммой, чем sRGB
-    и Adobe RGB. Стандарт разработан компанией Kodak.
+    Цветовое пространство ProPhoto RGB характерно наиболее широкой гаммой.
   </a>
-  <ul class="c-channel" itemprop="prophoto_rgb">
+  <ul class="o-color-data" itemprop="prophoto-rgb">
     <li class="c-property">
       <code
         class="c-value"
@@ -740,7 +737,7 @@
         data-prefix="R"
         itemprop="red"
       >
-        
+        0.16891685784694119
       </code>
       <em class="c-label" id="label-prophoto_rgb-red">Интенсивность Красного</em>
     </li>
@@ -751,7 +748,7 @@
         data-prefix="G"
         itemprop="green"
       >
-        
+        0.14682122173049567
       </code>
       <em class="c-label" id="label-prophoto_rgb-green">Интенсивность Зелёного</em>
     </li>
@@ -762,28 +759,28 @@
         data-prefix="B"
         itemprop="blue"
       >
-        
+        0.15021532751954642
       </code>
       <em class="c-label" id="label-prophoto_rgb-blue">Интенсивность Синего</em>
     </li>
+    <li class="c-property">
+      <code
+        class="c-value"
+        aria-labelledby="label-css-prophoto_rgb"
+        itemprop="css"
+      >color(prophoto-rgb 16.89% 14.68% 15.02%)</code>
+      <em class="c-label" id="label-css-prophoto_rgb">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      class="c-value"
-      aria-labelledby="label-css-prophoto_rgb"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-prophoto_rgb">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="color(rec2020 16.57% 13.09% 13.77%)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-rec2020-space"
-    aria-level="3"
-    role="heading"
-    title="Recommendation ITU-R BT.2020"
-  >Rec. 2020</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-rec2020-space"
+      title="Recommendation ITU-R BT.2020"
+    >Rec. 2020</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -798,7 +795,7 @@
     Благодаря охвату 75,8% спектра CIE 1931 и поддержке 10/12-битной глубины
     цвета, пространство Rec. 2020 обеспечивает поддержку HDR-контента.
   </a>
-  <ul class="c-channel" itemprop="rec2020">
+  <ul class="o-color-data" itemprop="rec2020">
     <li class="c-property">
       <code
         class="c-value"
@@ -806,7 +803,7 @@
         data-prefix="R"
         itemprop="red"
       >
-        
+        0.16568165797172035
       </code>
       <em class="c-label" id="label-rec2020-red">Интенсивность Красного</em>
     </li>
@@ -817,7 +814,7 @@
         data-prefix="G"
         itemprop="green"
       >
-        
+        0.13093273481767298
       </code>
       <em class="c-label" id="label-rec2020-green">Интенсивность Зелёного</em>
     </li>
@@ -828,28 +825,28 @@
         data-prefix="B"
         itemprop="blue"
       >
-        
+        0.13774695708197696
       </code>
       <em class="c-label" id="label-rec2020-blue">Интенсивность Синего</em>
     </li>
+    <li class="c-property">
+      <code
+        class="c-value"
+        aria-labelledby="label-css-rec2020"
+        itemprop="css"
+      >color(rec2020 16.57% 13.09% 13.77%)</code>
+      <em class="c-label" id="label-css-rec2020">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      class="c-value"
-      aria-labelledby="label-css-rec2020"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-rec2020">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="color(srgb 0.247059 0.188235 0.2)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-srgb-space"
-    aria-level="3"
-    role="heading"
-    title="Standard RGB"
-  >sRGB</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-srgb-space"
+      title="Standard RGB"
+    >sRGB</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -862,7 +859,7 @@
     являясь стандартом представления цветового спектра с использованием модели
     RGB.
   </a>
-  <ul class="c-channel" itemprop="srgb">
+  <ul class="o-color-data" itemprop="srgb">
     <li class="c-property">
       <code
         class="c-value"
@@ -870,7 +867,7 @@
         data-prefix="R"
         itemprop="red"
       >
-        
+        0.247058787439
       </code>
       <em class="c-label" id="label-srgb-red">Интенсивность Красного</em>
     </li>
@@ -881,7 +878,7 @@
         data-prefix="G"
         itemprop="green"
       >
-        
+        0.188235263118
       </code>
       <em class="c-label" id="label-srgb-green">Интенсивность Зелёного</em>
     </li>
@@ -892,28 +889,28 @@
         data-prefix="B"
         itemprop="blue"
       >
-        
+        0.199999975879
       </code>
       <em class="c-label" id="label-srgb-blue">Интенсивность Синего</em>
     </li>
+    <li class="c-property">
+      <code
+        class="c-value"
+        aria-labelledby="label-css-srgb"
+        itemprop="css"
+      >color(srgb 0.247059 0.188235 0.2)</code>
+      <em class="c-label" id="label-css-srgb">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      class="c-value"
-      aria-labelledby="label-css-srgb"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-srgb">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="color(srgb-linear 0.004862 0.00051 0.03856)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-srgb_linear-space"
-    aria-level="3"
-    role="heading"
-    title="Standard RGB"
-  >Linear sRGB</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-srgb_linear-space"
+      title="Standard RGB"
+    >Linear sRGB</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -929,7 +926,7 @@
     передаточную функцию, что означает, что значения цветов соответствуют
     линейным значениям яркости.
   </a>
-  <ul class="c-channel" itemprop="srgb_linear">
+  <ul class="o-color-data" itemprop="srgb_linear">
     <li class="c-property">
       <code
         class="c-value"
@@ -937,7 +934,7 @@
         data-prefix="R"
         itemprop="red"
       >
-        
+        0.0048623151629999996
       </code>
       <em class="c-label" id="label-srgb_linear-red">Интенсивность Красного</em>
     </li>
@@ -948,7 +945,7 @@
         data-prefix="G"
         itemprop="green"
       >
-        
+        0.0005103777089783282
       </code>
       <em class="c-label" id="label-srgb_linear-green">Интенсивность Зелёного</em>
     </li>
@@ -959,28 +956,28 @@
         data-prefix="B"
         itemprop="blue"
       >
-        
+        0.0385596884150000013
       </code>
       <em class="c-label" id="label-srgb_linear-blue">Интенсивность Синего</em>
     </li>
+    <li class="c-property">
+      <code
+        class="c-value"
+        aria-labelledby="label-css-srgb_linear"
+        itemprop="css"
+      >color(srgb-linear 0.004862 0.00051 0.03856)</code>
+      <em class="c-label" id="label-css-srgb_linear">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      class="c-value"
-      aria-labelledby="label-css-srgb_linear"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-srgb_linear">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="color(xyz-d65 0.037042 0.034098 0.035951)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-xyz-space"
-    aria-level="3"
-    role="heading"
-    title="CIE 1931 Color Space"
-  >XYZ</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-xyz-space"
+      title="CIE 1931 Color Space"
+    >XYZ D65</abbr>
+  </div>
 
   <a
     class="c-description"
@@ -995,14 +992,14 @@
     систему линейных координат. Однако, основные цвета XYZ не являются физически
     реализуемыми и поэтому не описываются как красный, зеленый и синий.
   </a>
-  <ul class="c-channel" itemprop="xyz">
+  <ul class="o-color-data" itemprop="xyz-d65">
     <li class="c-property">
       <code
         class="c-value"
         aria-labelledby="label-xyz-abscissa"
         data-prefix="X"
         itemprop="abscissa"
-      ></code>
+      >0.037042355495007388</code>
       <em class="c-label" id="label-xyz-abscissa">Абсцисса</em>
     </li>
     <li class="c-property">
@@ -1011,7 +1008,7 @@
         aria-labelledby="label-xyz-ordinate"
         data-prefix="Y"
         itemprop="ordinate"
-      ></code>
+      >0.034097576718814422</code>
       <em class="c-label" id="label-xyz-ordinate">Ордината</em>
     </li>
     <li class="c-property">
@@ -1020,36 +1017,36 @@
         aria-labelledby="label-xyz-applicate"
         data-prefix="Z"
         itemprop="applicate"
-      ></code>
+      >0.035951025509869956</code>
       <em class="c-label" id="label-xyz-applicate">Аппликата</em>
     </li>
+    <li class="c-property">
+      <code
+        class="c-value"
+        aria-labelledby="label-css-xyz"
+        itemprop="css"
+      >color(xyz-d65 0.037042 0.034098 0.035951)</code>
+      <em class="c-label" id="label-css-xyz">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      class="c-value"
-      aria-labelledby="label-css-xyz"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-xyz">Значение CSS-нотации</em>
-  </div>
 </section>	<section class="o-color-representation" role="grid">
-  <e-color-swatch data-value=""></e-color-swatch>
+  <e-color-swatch data-value="color(xyz-d50 0.037796 0.034255 0.027202)"></e-color-swatch>
 
-  <abbr
-    aria-describedby="description-xyz-space"
-    aria-level="3"
-    role="heading"
-    title="CIE 1931 Color Space"
-  >XYZ D50</abbr>
+  <div aria-level="3" role="heading">
+    <abbr
+      aria-describedby="description-xyz-space"
+      title="CIE 1931 Color Space"
+    >XYZ D50</abbr>
+  </div>
 
-  <ul class="c-channel" itemprop="xyz-d50">
+  <ul class="o-color-data" itemprop="xyz-d50">
     <li class="c-property">
       <code
         class="c-value"
         aria-labelledby="label-xyz-abscissa"
         data-prefix="X"
         itemprop="abscissa"
-      ></code>
+      >0.03779575714429481</code>
       <em class="c-label" id="label-xyz-abscissa">Абсцисса</em>
     </li>
     <li class="c-property">
@@ -1058,7 +1055,7 @@
         aria-labelledby="label-xyz-ordinate"
         data-prefix="Y"
         itemprop="ordinate"
-      ></code>
+      >0.03425507709051454</code>
       <em class="c-label" id="label-xyz-ordinate">Ордината</em>
     </li>
     <li class="c-property">
@@ -1067,24 +1064,24 @@
         aria-labelledby="label-xyz-applicate"
         data-prefix="Z"
         itemprop="applicate"
-      ></code>
+      >0.02720161302122347</code>
       <em class="c-label" id="label-xyz-applicate">Аппликата</em>
     </li>
+    <li class="c-property">
+      <code
+        class="c-value"
+        aria-labelledby="label-css-xyz"
+        itemprop="css"
+      >color(xyz-d50 0.037796 0.034255 0.027202)</code>
+      <em class="c-label" id="label-css-xyz">Значение CSS-нотации</em>
+    </li>
   </ul>
-  <div class="c-colspan c-property">
-    <code
-      class="c-value"
-      aria-labelledby="label-css-xyz"
-      itemprop="css"
-    ></code>
-    <em class="c-label" id="label-css-xyz">Значение CSS-нотации</em>
-  </div>
 </section>
 <div class="c-example-list">
 <pre aria-label="/** Определение типизированного свойства CSS **/">
 @property --clr-veinous-blood-red {
 	syntax: "&lt;color&gt;";
-	initial-value: ;
+	initial-value: color(srgb 0.247059 0.188235 0.2);
 	inherits: false;
 }
 </pre>
@@ -1093,7 +1090,7 @@ window.CSS.registerProperty({
 	name: "--clr-veinous-blood-red",
 	syntax: "&lt;color&gt;",
 	inherits: false,
-	initialValue: "",
+	initialValue: "color(srgb 0.247059 0.188235 0.2)",
 });
 </pre>
 	</div>
@@ -1119,16 +1116,14 @@ window.CSS.registerProperty({
 			</li>
 		</ul>
 		<hr class="c-divider">
-		<ul class="c-nav-list">
+		<ul class="c-nav-list u-margin-sm-top">
+			<li class="c-nav-item c-made-in-krasnogorsk">
+				<a href="http://izostart.ru/" target="_blank" title="Детская художественная школа">&plusmn; Сделано в Красногорске</a>
+			</li>
 			<li class="c-nav-item">
 				<a href="./legal-information.html" title="Борис Васильевич Панченко (контактные данные)">
 					<img src="./assets/pictures/plus-and-brackets.svg" width="36" width="22">
 				</a>
-			</li>
-			<li class="c-nav-item c-made-in-krasnogorsk u-text-right">
-				&copy;
-				<a href="http://izostart.ru/" target="_blank" title="Детская художественная школа">Сделано в Красногорске</a>
-				<span class="e-current-year">2025</span>
 			</li>
 		</ul>
 	</footer>
