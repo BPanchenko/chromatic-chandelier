@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -14,55 +15,54 @@
         }
     </style>
 </head>
-
+    
 <body>
-    <div class='wrapper'>
-        <div class='pad1'>
-            <h1><a href="javascript:history.back()">Back</a></h1>
-            <div class='clearfix'>
-
-                <div class='fl pad1y space-right2'>
-                    <span class="strong">95.23% </span>
-                    <span class="quiet">Statements</span>
-                    <span class='fraction'>20/21</span>
-                </div>
-
-
-                <div class='fl pad1y space-right2'>
-                    <span class="strong">66.66% </span>
-                    <span class="quiet">Branches</span>
-                    <span class='fraction'>4/6</span>
-                </div>
-
-
-                <div class='fl pad1y space-right2'>
-                    <span class="strong">100% </span>
-                    <span class="quiet">Functions</span>
-                    <span class='fraction'>4/4</span>
-                </div>
-
-
-                <div class='fl pad1y space-right2'>
-                    <span class="strong">94.44% </span>
-                    <span class="quiet">Lines</span>
-                    <span class='fraction'>17/18</span>
-                </div>
-
-
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="javascript:history.back()">Back</a></h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">95.23% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>20/21</span>
             </div>
-            <p class="quiet">
-                Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em>
-                for the previous block.
-            </p>
-            <template id="filterTemplate">
-                <div class="quiet">
-                    Filter:
-                    <input type="search" id="fileSearch">
-                </div>
-            </template>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">83.33% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>5/6</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">94.44% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>17/18</span>
+            </div>
+        
+            
         </div>
-        <div class='status-line high'></div>
-        <pre><table class="coverage">
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
 <a name='L3'></a><a href='#L3'>3</a>
@@ -110,26 +110,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">39x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">93x</span>
-<span class="cline-any cline-yes">93x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">117x</span>
+<span class="cline-any cline-yes">117x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">39x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">39x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
  * @module lab.reflector/xyz
- * @import { PointReflector } from 'library'
+ * @import { PointReflector } from 'lib.colorspace'
  */
 &nbsp;
 import { D50 } from '../../illuminant.js';
@@ -148,7 +148,7 @@ export const xyz_d50_into_lab = source =&gt; {
 &nbsp;
 		let [fx, fy, fz] = source.position
 			.map((c, i) =&gt; c / D50[i])
-			.map(c =&gt; (c &gt; ε ? Math.cbrt(c) : <span class="branch-1 cbranch-no" title="branch not covered" >(κ * c + 16) / 116)</span>);
+			.map(c =&gt; (c &gt; ε ? Math.cbrt(c) : (κ * c + 16) / 116));
 &nbsp;
 		let L = 116 * fy - 16;
 		let a = 500 * (fx - fy);
@@ -159,27 +159,23 @@ export const xyz_d50_into_lab = source =&gt; {
 };
 &nbsp;
 export { xyz_d65_into_lab as xyz_into_lab };
-&nbsp;</pre>
-        </td>
-        </tr>
-        </table>
-        </pre>
+&nbsp;</pre></td></tr></table></pre>
 
-        <div class='push'></div><!-- for sticky footer -->
-    </div><!-- /wrapper -->
-    <div class='footer quiet pad2 space-top1 center small'>
-        Code coverage generated by
-        <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-        at 2025-10-11T06:31:33.612Z
-    </div>
-    <script src="../../../prettify.js"></script>
-    <script>
-        window.onload = function () {
-            prettyPrint();
-        };
-    </script>
-    <script src="../../../sorter.js"></script>
-    <script src="../../../block-navigation.js"></script>
-</body>
-
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-12-26T17:24:59.565Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
 </html>
+    
