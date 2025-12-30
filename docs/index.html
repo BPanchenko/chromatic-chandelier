@@ -1,12 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
-<head>
-	<title itemprop="headline">Палитра Протосайта</title>
-	<link rel="canonical" href="https://palette.protosite.xyz/">
-	<meta http-equiv="refresh" content="0; url = ./palette-board.html">
-</head>
+<head itemscope itemtype="http://schema.org/WPHeader">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 
-<body></body>
+	<title itemprop="headline">Палитра Протосайта - Protosite Color Palette</title>
+
+	<meta name="author" content="Boris Panchenko, boris.v.panchenko@mail.ru">
+	<meta name="description" content="Палитра цветов или цветовая схема в форматах ACO, CSS, JS, HEX, RGB"
+		itemprop="description">
+	<meta name="keywords"
+		content="палитра css, цвета сайта css, палитра aco, css js цвета сайта, палитра цветов, color scheme, adobe color file, aco file, css colors, js colors"
+		itemprop="keywords">
+
+	<base href="https://bpanchenko.github.io/chromatic-chandelier/">
+
+	<link rel="canonical" href="https://bpanchenko.github.io/chromatic-chandelier/index.html">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="./assets/setup.web-page.css?v=1.20.38" type="text/css">
+	<link rel="stylesheet" href="./assets/fonts/clincher-code/stylesheet.css" type="text/css">
+	<link rel="stylesheet" href="./assets/fonts/din-2014/@font-face.din-2014.css" type="text/css">
+	<link rel="stylesheet" href="./assets/fonts/din-2014-rounded-vf/stylesheet.css" type="text/css">
+	<link rel="stylesheet" href="./assets/fonts/iconic/stylesheet.css" type="text/css">
+	<link rel="stylesheet" href="./assets/fonts/pt-root-ui/stylesheet.css" type="text/css">
+	<link rel="stylesheet" href="./assets/fonts/pt-root-vf/stylesheet.css" type="text/css">
+	<link rel="stylesheet" href="./assets/fonts/tesoro/stylesheet.css" type="text/css">
+
+	<link rel="stylesheet" href="./assets/layout.adaptive-design.css?v=1.20.38" type="text/css">
+	<link rel="stylesheet" href="./assets/uikit.css" type="text/css">
+	
+	<style>
+		@media (prefers-color-scheme: light) {
+			@property --back-color {
+				syntax: "<color>";
+				initial-value: white;
+				inherits: false;
+			}
+			@property --fore-color {
+				syntax: "<color>";
+				initial-value: black;
+				inherits: false;
+			}
+		}
+
+		@media (prefers-color-scheme: dark) {
+			@property --back-color {
+				syntax: "<color>";
+				initial-value: black;
+				inherits: false;
+			}
+			@property --fore-color {
+				syntax: "<color>";
+				initial-value: white;
+				inherits: false;
+			}
+		}
+	</style>
+
+	<script src="./assets/setup.web-page.js?v=1.20.38" async></script>
+
+	</head>
+
+<body>
+	<div class="o-page-headline" role="banner">
+			</div>
+
+			<article class="u-text-center">
+			<img class="u-align-center" src="./assets/pictures/svg/pic.bees-and-combs.svg" width="420">
+			<ul class="u-grouping u-align-center">
+				<li class="c-banner s-highlighted">
+					<i data-glyph="box"></i>
+<h4>
+  <a class="s-floating" href="./sampling-directory.html">Образцы цвета</a>
+</h4>
+<p>
+  Атласы образцов составлены на основе известных цветовых справочников. Образцы
+  полезны специалистам косметического оформления для поиска наилучшего сочетания
+  основных цветов цветового решения.
+</p>				</li>
+				<li class="c-banner s-highlighted">
+					<i data-glyph="palette"></i>
+<h4>
+  <a class="s-floating" href="./palette-board.html">Палитра Протосайта</a>
+</h4>
+<p>
+  Интерактивная визуализация коллекции цветов Протосайта. Виджет обеспечивает
+  доступ к цветам и оттенкам палитры сформированой предопределёнными параметрами
+  конфигурации.
+</p>				</li>
+			</ul>
+			<ul class="u-grouping u-align-center">
+				<li class="c-banner s-highlighted">
+					<i data-glyph="open-source"></i>
+<h4>
+  <a
+    class="s-floating"
+    href="https://www.npmjs.com/package/chromatic-chandelier"
+    title="NPM-пакет"
+  >
+    NPM-пакет "Цветная Люстра"
+  </a>
+</h4>
+<p>
+  В открытом доступе сгрупированны вспомогательные функции и справочники для:
+  преобразования цветов, анализа и разбора CSS-кода, решения математических
+  задач.
+</p>				</li>
+				<li class="c-banner s-highlighted">
+					<i data-glyph="open-source"></i>
+<h4>
+  <a
+    class="s-floating"
+    href="https://www.npmjs.com/package/@bpanchenko/palette"
+    title="NPM-пакет"
+  >
+    NPM-пакет "Палитра Протосайта"
+  </a>
+</h4>
+<p>
+  Адаптер цифровой палитры реализован в виде комплекта модулей, которые
+  выполняют иницализацию коллекции цветов и оттенков. Публичный NPM-пакет
+  составлен из модулей Палитры Протосайта, а в репозитории исходного кода
+  доступен генератор подключаемых модулей адаптера.
+</p>				</li>
+			</ul>
+		</article>
+
+	<footer class="o-page-footer" role="contentinfo">
+				<ul class="c-nav-list u-margin-top">
+			<li class="c-nav-item">
+				<a class="s-made-in-krasnogorsk" href="http://izostart.ru/" target="_blank" title="Детская художественная школа">
+					Сделано в Красногорске
+				</a>
+			</li>
+			<li class="c-nav-item">
+				<a href="./legal-information.html" title="Борис Васильевич Панченко (контактные данные)">
+					<svg
+						style="enable-background:new 0 0 128 128;"
+						viewBox="0 0 88 56"
+						width="36" width="22"
+						xmlns="http://www.w3.org/2000/svg">
+							<g id="container">
+								<path transform-origin="50% 50%" d="M41.5,38h5v-7.5H54v-5h-7.5V18h-5v7.5H34v5h7.5V38z">
+								<animateTransform
+									attributeName="transform"
+									attributeType="XML"
+									type="scale"
+									from="1 1"
+									to="2 2"
+									begin="container.mouseenter"
+									end="container.mouseleave"
+									dur="1s"
+									repeatCount="indefinite" />
+							</path>
+							<polygon points="32,50.1 5.3,50.1 5.3,5.9 32,5.9 32,0.7 0,0.7 0,55.3 32,55.3 "/>
+							<polygon points="56,0.7 56,5.9 82.7,5.9 82.7,50.1 56,50.1 56,55.3 88,55.3 88,0.7 "/>
+							</g>
+						</svg>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+	</body>
 
 </html>

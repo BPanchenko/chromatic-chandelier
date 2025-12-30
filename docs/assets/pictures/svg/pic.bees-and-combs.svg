@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 320 160" width="320" height="160">
+	<script>
+		console.log(this)
+	</script>
+	<defs>
+		<symbol id="sym-hexagon" width="46" height="40" viewBox="0 0 46 40">
+			<path d="M 0,20 A 11.5,11.5 0,0,0 11.6,0 z" />
+			<path d="M 11.6,0 A 11.5,11.5 0,0,0 34.6,0 z" />
+			<path d="M 34.6,0 A 11.5,11.5 0,0,0 46,20 z" />
+			<path d="M 46,20 A 11.5,11.5 0,0,0 34.6,40 z" />
+			<path d="M 34.6,40 A 11.5,11.5 0,0,0 11.6,40 z" />
+			<path d="M 11.6,40 A 11.5,11.5 0,0,0 0,20 z" />
+		</symbol>
+		<symbol id="sym-hexagon-1" width="46" height="40" viewBox="0 0 46 40">
+			<path d="M 11.6,0 A 11.5,11.5 0,0,0 34.6,0 z" />
+			<path d="M 34.6,0 A 11.5,11.5 0,0,0 46,20 z" />
+			<path d="M 46,20 A 11.5,11.5 0,0,0 34.6,40 z" />
+			<path d="M 34.6,40 A 11.5,11.5 0,0,0 11.6,40 z" />
+			<path d="M 11.6,40 A 11.5,11.5 0,0,0 0,20 z" />
+		</symbol>
+		<symbol id="sym-hexagon-2" width="46" height="40" viewBox="0 0 46 40">
+			<path d="M 11.6,0 A 11.5,11.5 0,0,0 34.6,0 z" />
+			<path d="M 34.6,0 A 11.5,11.5 0,0,0 46,20 z" />
+			<path d="M 46,20 A 11.5,11.5 0,0,0 34.6,40 z" />
+			<path d="M 34.6,40 A 11.5,11.5 0,0,0 11.6,40 z" />
+		</symbol>
+		<symbol id="sym-hexagon-4" width="46" height="40" viewBox="0 0 46 40">
+			<path d="M 46,20 A 11.5,11.5 0,0,0 34.6,40 z" />
+			<path d="M 34.6,40 A 11.5,11.5 0,0,0 11.6,40 z" />
+		</symbol>
+		<symbol id="sym-bee" width="36" height="36" viewBox="0 0 36 36">
+			<path d="M 0,36 A 12,12 0,0,1 24,36 z" />
+			<path d="M 24,36 A 12,12 0,0,1 36,14 z" />
+			<path d="M 24,36 A 12,12 0,0,1 17.5,25.5 A 12,12 0,0,1 24,36 z" fill="black" opacity="1" />
+		</symbol>
+	</defs>
+	<g transform="translate(-24 0)">
+		<use href="#sym-hexagon" x="196" y="40" />
+		<use href="#sym-hexagon" x="160" y="61" />
+		<use href="#sym-hexagon" x="196" y="82" />
+		<use href="#sym-hexagon-1" x="160" y="19" />
+		<use href="#sym-hexagon-4" x="124" y="-1" />
+		<use href="#sym-hexagon-2" x="124" y="40" />
+		<use href="#sym-hexagon-1" x="124" y="81" />
+		<use href="#sym-hexagon-1" x="160" y="102" />
+	</g>
+	<g transform="translate(-24 0)">
+		<use href="#sym-bee" transform="rotate(15) translate(94 46)" />
+		<use href="#sym-bee" transform="rotate(15) translate(108 -12) scale(0.86 0.86)" />
+		<use href="#sym-bee" transform="rotate(15) translate(120 -36) scale(0.72 0.72)" />
+		<use href="#sym-bee" transform="rotate(-50) translate(0 116)" />
+		<use href="#sym-bee" transform="rotate(-40) translate(4 80) scale(0.9 0.9)" />
+		<use href="#sym-bee" transform="rotate(-48) translate(-24 58) scale(0.72 0.72)" />
+		<use href="#sym-bee" transform="rotate(-15) translate(-24 58) scale(0.72 0.72)" />
+	</g>
+	<script>
+		let shapes = document.querySelectorAll('defs symbol[id^=sym-hexagon] path');
+		for (let [idx, shape] of shapes.entries()) shape.setAttribute('style', `filter: hue-rotate(${(new Date).getMilliseconds() - (0.45 / idx)}turn);`)
+	</script>
+	<style>
+		symbol {
+			path:not([opacity]) {
+				opacity: 0.8;
+			}
+
+			path:nth-child(even):not([fill]) {
+				fill: oklch(0.64 0.29 28.5);
+			}
+
+			path:nth-child(odd):not([fill]) {
+				fill: oklch(0.76 0.21 52.2);
+			}
+		}
+
+		#sym-bee {
+			path:nth-child(even):not([fill]) {
+				fill: oklch(0.72 0.17 73.4);
+			}
+
+			path:nth-child(odd):not([fill]) {
+				fill: oklch(0.83 0.19 102.14);
+			}
+		}
+	</style>
+</svg>
