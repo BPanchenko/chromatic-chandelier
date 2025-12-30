@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 320 160" width="420" height="210" id="root">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 320 160" width="320" height="160" id="root">
+	<script>
+		console.log(this)
+	</script>
 	<defs>
 		<symbol id="sym-hexagon" width="46" height="40" viewBox="0 0 46 40">
 			<path d="M 0,20 A 11.5,11.5 0,0,0 11.6,0 z" />
@@ -53,9 +56,7 @@
 	</g>
 	<script>
 		let shapes = document.querySelectorAll('defs symbol[id^=sym-hexagon] path');
-						for (let [idx, shape] of shapes.entries()) {
-							shape.setAttribute('style', `filter: hue-rotate(${(((new Date).getDate() / 7) * (idx % 18 / 18)) / 12}turn);`);
-						}
+		for (let [idx, shape] of shapes.entries()) shape.setAttribute('style', `filter: hue-rotate(${ (((new Date).getDate() / 7) / idx)}turn);`)
 	</script>
 	<style>
 		symbol {
@@ -82,5 +83,4 @@
 			}
 		}
 	</style>
-	<use width="360" height="360" href="./assets/pictures/svg/pic.bees-and-combs.svg#root"></use>
 </svg>
