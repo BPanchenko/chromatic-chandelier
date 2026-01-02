@@ -19,7 +19,7 @@
 	<link rel="canonical" href="https://bpanchenko.github.io/chromatic-chandelier/index.html">
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="./assets/setup.web-page.css?v=1.20.38" type="text/css">
+	<link rel="stylesheet" href="./assets/setup.web-page.css?v=1.20.39" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/clincher-code/stylesheet.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/din-2014/@font-face.din-2014.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/din-2014-rounded-vf/stylesheet.css" type="text/css">
@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="./assets/fonts/pt-root-vf/stylesheet.css" type="text/css">
 	<link rel="stylesheet" href="./assets/fonts/tesoro/stylesheet.css" type="text/css">
 
-	<link rel="stylesheet" href="./assets/layout.adaptive-design.css?v=1.20.38" type="text/css">
+	<link rel="stylesheet" href="./assets/layout.adaptive-design.css?v=1.20.39" type="text/css">
 	<link rel="stylesheet" href="./assets/uikit.css" type="text/css">
 	
 	<style>
@@ -59,7 +59,7 @@
 		}
 	</style>
 
-	<script src="./assets/setup.web-page.js?v=1.20.38" async></script>
+	<script src="./assets/setup.web-page.js?v=1.20.39" async></script>
 
 	</head>
 
@@ -68,9 +68,139 @@
 			</div>
 
 			<article class="u-text-center">
-			<img class="u-align-center" src="./assets/pictures/svg/pic.bees-and-combs.svg" width="420">
+			<h1 class="s-cursive">ПО "Цветная Люстра"</h1>
+			<svg class="u-margin" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 320 160" width="520" height="260" id="pic-main-banner">
+				<style>
+					symbol {
+						path {
+							filter: hue-rotate(0);
+							transition-property: filter;
+							transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+							transition-duration: 2320ms;
+						}
+						path:not([opacity]) {
+							opacity: 0.8;
+						}
+
+						path:nth-child(even):not([fill]) {
+							fill: oklch(0.64 0.29 28.5);
+						}
+
+						path:nth-child(odd):not([fill]) {
+							fill: oklch(0.76 0.21 52.2);
+						}
+					}
+
+					#sym-bee {
+						path:nth-child(even):not([fill]) {
+							fill: oklch(0.72 0.17 73.4);
+						}
+
+						path:nth-child(odd):not([fill]) {
+							fill: oklch(0.83 0.19 102.14);
+						}
+					}
+				</style>
+				<defs>
+					<symbol id="sym-hexagon" width="46" height="40" viewBox="0 0 46 40">
+						<path d="M 0,20 A 11.5,11.5 0,0,0 11.6,0 z" />
+						<path d="M 11.6,0 A 11.5,11.5 0,0,0 34.6,0 z" />
+						<path d="M 34.6,0 A 11.5,11.5 0,0,0 46,20 z" />
+						<path d="M 46,20 A 11.5,11.5 0,0,0 34.6,40 z" />
+						<path d="M 34.6,40 A 11.5,11.5 0,0,0 11.6,40 z" />
+						<path d="M 11.6,40 A 11.5,11.5 0,0,0 0,20 z" />
+					</symbol>
+					<symbol id="sym-hexagon-1" width="46" height="40" viewBox="0 0 46 40">
+						<path d="M 11.6,0 A 11.5,11.5 0,0,0 34.6,0 z" />
+						<path d="M 34.6,0 A 11.5,11.5 0,0,0 46,20 z" />
+						<path d="M 46,20 A 11.5,11.5 0,0,0 34.6,40 z" />
+						<path d="M 34.6,40 A 11.5,11.5 0,0,0 11.6,40 z" />
+						<path d="M 11.6,40 A 11.5,11.5 0,0,0 0,20 z" />
+					</symbol>
+					<symbol id="sym-hexagon-2" width="46" height="40" viewBox="0 0 46 40">
+						<path d="M 11.6,0 A 11.5,11.5 0,0,0 34.6,0 z" />
+						<path d="M 34.6,0 A 11.5,11.5 0,0,0 46,20 z" />
+						<path d="M 46,20 A 11.5,11.5 0,0,0 34.6,40 z" />
+						<path d="M 34.6,40 A 11.5,11.5 0,0,0 11.6,40 z" />
+					</symbol>
+					<symbol id="sym-hexagon-4" width="46" height="40" viewBox="0 0 46 40">
+						<path d="M 46,20 A 11.5,11.5 0,0,0 34.6,40 z" />
+						<path d="M 34.6,40 A 11.5,11.5 0,0,0 11.6,40 z" />
+					</symbol>
+					<symbol id="sym-bee" width="36" height="36" viewBox="0 0 36 36">
+						<path d="M 0,36 A 12,12 0,0,1 24,36 z">
+							<animate
+								attributeName="d"
+								from="M 0,36 A 12,12 0,0,1 24,36 z"
+								to="M 0,36 A 12,12 2,2,1 24,36 z"
+								dur="10s"
+								repeatCount="indefinite" />
+							<animateTransform
+								attributeName="d"
+								type="scale"
+								from="M 0,36 A 12,12 0,0,1 24,36 z"
+								to="M 0,36 A 12,12 2,2,1 24,36 z"
+								begin="container.mouseenter"
+								end="container.mouseleave"
+								dur="1s"
+								repeatCount="indefinite" />
+						</path>
+						<path d="M 24,36 A 12,12 0,0,1 36,14 z" />
+						<path d="M 24,36 A 12,12 0,0,1 17.5,25.5 A 12,12 0,0,1 24,36 z"
+							fill="black"
+							opacity="1" />
+					</symbol>
+				</defs>
+				<g transform="translate(-24 0)">
+					<use href="#sym-hexagon" x="196" y="40" />
+					<use href="#sym-hexagon" x="160" y="61" />
+					<use href="#sym-hexagon" x="196" y="82" />
+					<use href="#sym-hexagon-1" x="160" y="19" />
+					<use href="#sym-hexagon-4" x="124" y="-1" />
+					<use href="#sym-hexagon-2" x="124" y="40" />
+					<use href="#sym-hexagon-1" x="124" y="81" />
+					<use href="#sym-hexagon-1" x="160" y="102" />
+				</g>
+				<g transform="translate(-24 0)">
+					<use href="#sym-bee" transform="rotate(15) translate(94 46)">
+						<animate
+								attributeName="d"
+								from="M 0,36 A 12,12 0,0,1 24,36 z"
+								to="M 0,36 A 12,12 2,2,1 24,36 z"
+								dur="10s"
+								repeatCount="indefinite" />
+							<animateTransform
+								attributeName="d"
+								type="scale"
+								from="M 0,36 A 12,12 0,0,1 24,36 z"
+								to="M 0,36 A 12,12 2,2,1 24,36 z"
+								begin="container.mouseenter"
+								end="container.mouseleave"
+								dur="1s"
+								repeatCount="indefinite" />
+					</use>
+					<use href="#sym-bee" transform="rotate(15) translate(108 -12) scale(0.86 0.86)" />
+					<use href="#sym-bee" transform="rotate(15) translate(120 -36) scale(0.72 0.72)" />
+					<use href="#sym-bee" transform="rotate(-50) translate(0 116)" />
+					<use href="#sym-bee" transform="rotate(-40) translate(4 80) scale(0.9 0.9)" />
+					<use href="#sym-bee" transform="rotate(-48) translate(-24 58) scale(0.72 0.72)" />
+					<use href="#sym-bee" transform="rotate(-15) translate(-24 58) scale(0.72 0.72)" />
+					<use href="#sym-bee" transform="rotate(-15) translate(65 20) scale(0.46 0.46)" />
+				</g>
+				<script>
+					const $host = document.getElementById('pic-main-banner')
+					const $defs = $host.getElementsByTagName('defs').item(0)
+					const $$shapes = $defs.querySelectorAll('symbol[id^=sym-hexagon] path');
+					setTimeout(() => {
+						for (let [idx, $shape] of $$shapes.entries()) {
+							let weekday = (new Date).getDay()
+							$shape.setAttribute('style', `filter: hue-rotate(${(weekday / 7) + ((2 / 7) * (idx % 18 / 18))}turn);`);
+						}
+					}, 160)
+				</script>
+			</svg>
 			<ul class="u-grouping u-align-center">
-				<li class="c-banner s-highlighted">
+				<li class="c-banner">
 					<i data-glyph="box"></i>
 <h4>
   <a class="s-floating" href="./sampling-directory.html">Образцы цвета</a>
@@ -80,7 +210,7 @@
   полезны специалистам косметического оформления для поиска наилучшего сочетания
   основных цветов цветового решения.
 </p>				</li>
-				<li class="c-banner s-highlighted">
+				<li class="c-banner">
 					<i data-glyph="palette"></i>
 <h4>
   <a class="s-floating" href="./palette-board.html">Палитра Протосайта</a>
@@ -90,9 +220,7 @@
   доступ к цветам и оттенкам палитры сформированой предопределёнными параметрами
   конфигурации.
 </p>				</li>
-			</ul>
-			<ul class="u-grouping u-align-center">
-				<li class="c-banner s-highlighted">
+				<li class="c-banner">
 					<i data-glyph="open-source"></i>
 <h4>
   <a
@@ -108,7 +236,7 @@
   преобразования цветов, анализа и разбора CSS-кода, решения математических
   задач.
 </p>				</li>
-				<li class="c-banner s-highlighted">
+				<li class="c-banner">
 					<i data-glyph="open-source"></i>
 <h4>
   <a

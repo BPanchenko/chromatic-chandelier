@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 320 160" width="320" height="160">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 320 160" width="320" height="160" id="root">
 	<script>
 		console.log(this)
 	</script>
@@ -56,7 +56,7 @@
 	</g>
 	<script>
 		let shapes = document.querySelectorAll('defs symbol[id^=sym-hexagon] path');
-		for (let [idx, shape] of shapes.entries()) shape.setAttribute('style', `filter: hue-rotate(${(new Date).getMilliseconds() - (0.45 / idx)}turn);`)
+		for (let [idx, shape] of shapes.entries()) shape.setAttribute('style', `filter: hue-rotate(${ (((new Date).getDate() / 7) / idx)}turn);`)
 	</script>
 	<style>
 		symbol {
