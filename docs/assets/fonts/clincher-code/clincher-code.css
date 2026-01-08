@@ -1,0 +1,27 @@
+@font-face {
+	font-family: "Clincher Code";
+	font-style: normal;
+	font-weight: 1 500;
+	src: url("regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Clincher Code";
+	font-style: italic;
+	font-weight: 1 500;
+	src: url("italic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Clincher Code";
+	font-style: normal;
+	font-weight: 501 1000;
+	src: url("bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Clincher Code";
+	font-style: italic;
+	font-weight: 501 1000;
+	src: url("bold-italic.woff2") format("woff2");
+}

@@ -6,12 +6,12 @@
     <meta charset="utf-8">
 
     <link href="../demo.css" rel="stylesheet" type="text/css">
-    <link href="./clincher-code.css" rel="stylesheet" type="text/css">
+    <link href="./pt-root-ui-variable.css" rel="stylesheet" type="text/css">
 
     <style>
         button,
         main {
-            font-family: 'Clincher Code';
+            font-family: 'PT Root UI VF';
         }
     </style>
 
@@ -21,7 +21,7 @@
         // 0) initializing
 
         const codeset = new Set();
-        const fontlist = await initTTFFont('clincher-code.ttc');
+        const font = await initTTFFont('pt-root-ui-variable.woff2');
         const otfstate = new Map();
 
         // 1) references to DOM
@@ -67,25 +67,23 @@
         // 3) initial run-time code
 
         {
-            fontlist.fonts.forEach(font => {
-                for (let feat of font.availableFeatures)
-                    if (false === otfstate.has(feat))
-                        otfstate.set(feat, {
-                            $elem: renderOTFeatureButton(feat),
-                            selected: false
-                        });
-                for (let code of font.characterSet) codeset.add(code);
+            for (let feat of font.availableFeatures)
+                if (false === otfstate.has(feat))
+                    otfstate.set(feat, {
+                        $elem: renderOTFeatureButton(feat),
+                        selected: false
+                    });
+            for (let code of font.characterSet) codeset.add(code);
 
-                let featset = new Set(font.availableFeatures);
-                let charmap = makeCharacterMap(font);
+            let featset = new Set(font.availableFeatures);
+            let charmap = makeCharacterMap(font);
 
-                console.groupCollapsed(font.postscriptName);
-                console.log({
-                    charmap,
-                    featset,
-                })
-                console.groupEnd();
-            });
+            console.groupCollapsed(font.postscriptName);
+            console.log({
+                charmap,
+                featset,
+            })
+            console.groupEnd();
 
             for (let codepoint of codeset.values()) renderCharacterButton(codepoint)
         }
@@ -113,11 +111,9 @@
 
 <body>
     <marquee bgcolor="mediumaquamarine" behavior="scroll" direction="left" scrollamount="2">
-        <strong>Clincher Code</strong>
-        <sup><a href="./EULA 24021670.pdf">&#9798;</a></sup>
-        <em>regular</em>
-        <em>bold</em>
-        <em>italic</em>
+        <strong>PT Root UI VF</strong>
+        <em>no-italic</em>
+        <em>variable</em>
     </marquee>
     <main class="js-root-container">
         <div role="listbox" class="w-featset js-featset-container"></div>
