@@ -1,5 +1,5 @@
 import { SpaceID } from "./manual";
-import { AngleUnit, IPair, IQuad, ITriplet, TTupleCP } from "./types";
+import { AngleUnit, IPair, IQuad, ITriplet, Triplet, TTupleCP } from "./types";
 
 export const assert: TAssertionFunction;
 export const createTuple: TExtendedTupleCreation;
@@ -17,6 +17,7 @@ export const isTruthy: (value: unknown) => value is boolean;
 
 export const makeHueAttribute: (angle: number) => HueAttr;
 
+export const makeCSSColor: (colorspace: SpaceID, components?: Triplet<number>, opacity?: number) => string;
 export const parseCSSColor: (color: string) => TCSSParsingResult | never;
 export const parseHEXColor: (hex: string) => TCSSParsingResult;
 

@@ -1,6 +1,6 @@
 {
   "name": "chromatic-chandelier",
-  "version": "0.2026",
+  "version": "0.22.71",
   "homepage": "https://bpanchenko.github.io/chromatic-chandelier",
   "author": "Boris Panchenko <boris.v.panchenko@mail.ru>",
   "license": "LGPL-3.0-only",
@@ -24,8 +24,8 @@
     "debug": "npx playwright test --debug --update-snapshots --ui"
   },
   "devDependencies": {
-    "@playwright/test": "1.56.1",
-    "@types/node": "24.9.1",
+    "@playwright/test": "1.58.2",
+    "@types/node": "25.5.0",
     "node-color-log": "13.0.3"
   },
   "repository": {
