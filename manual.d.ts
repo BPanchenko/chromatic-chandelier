@@ -124,6 +124,14 @@ export const XYZD65Space: Space;
  */
 export const XYZD50Space: Space;
 
+
+/**
+ * **Словарь цветовых пространств.**\
+ * Ключом объектного представления ключевых особенностей пространства\
+ * служит идентификатор модели представления цвета.
+ */
+export const SpaceDict: Map<SpaceID, Space>;
+
 /**
  * Определяет местоположения новой точки путём выполнения афинных преобразований над компонентами аддитивной модели
  * исходного пространства **Adobe® 1998 RGB**; с последующим приведением хроматической составляющей к представлению
@@ -478,7 +486,7 @@ declare interface PointInSpace extends PointPosition {
 	readonly buffer: ArrayBuffer;
 	readonly space: Space;
 	readonly wcs: EuclideanCoordinateSystem;
-	
+
 	get 0(): number;
 	set 0(value: number);
 	get 1(): number;
