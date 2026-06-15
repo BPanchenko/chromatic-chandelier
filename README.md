@@ -30,14 +30,16 @@ npm install chromatic-chandelier -D
 
 Датасеты публичных образцов цвета, для которых были применены преобразования из модуля `chromatic-chandelier/manual`:
 
-1. https://bpanchenko.github.io/chromatic-chandelier/atlas.ral.json
 1. https://bpanchenko.github.io/chromatic-chandelier/atlas.ral-classic.json
-1. https://bpanchenko.github.io/chromatic-chandelier/atlas.x11.json
+1. https://bpanchenko.github.io/chromatic-chandelier/atlas.ral-library.json
+1. https://bpanchenko.github.io/chromatic-chandelier/atlas.wada-sanzo.json
+1. https://bpanchenko.github.io/chromatic-chandelier/atlas.werner.json
 1. https://bpanchenko.github.io/chromatic-chandelier/atlas.yandex-wizard.json
 
 Атласы образцов:
 
 1. [Die Farbtöne aller drei RAL Farbpaletten](https://bpanchenko.github.io/chromatic-chandelier/samples-compilation/all-ral-colours.html)
 1. [RAL Classic Farbsammlung](https://bpanchenko.github.io/chromatic-chandelier/samples-compilation/ral-classic.html)
-1. [Цветовая схема X11](https://bpanchenko.github.io/chromatic-chandelier/samples-compilation/x11.html)
+1. [«Словарь цветовых комбинаций» Сандзо Вада (Sаnzо Wadа)](https://bpanchenko.github.io/chromatic-chandelier/samples-compilation/wada-sanzo-dictionary.html)
+1. [Werner’s Nomenclature of Colours](https://bpanchenko.github.io/chromatic-chandelier/samples-compilation/werner-guidebook.html)
 1. [Справочник колдунщика цветов от поисковой системы Яндекс](https://bpanchenko.github.io/chromatic-chandelier/samples-compilation/yandex-color-wizard.html)
