@@ -24,9 +24,10 @@
     "debug": "npx playwright test --debug --update-snapshots --ui"
   },
   "devDependencies": {
-    "@playwright/test": "1.58.2",
-    "@types/node": "25.5.0",
-    "node-color-log": "13.0.3"
+    "@playwright/test": "1.61.1",
+    "@types/node": "26.1.1",
+    "node-color-log": "14.0.0",
+    "typescript": "7.0.2"
   },
   "repository": {
     "type": "git",
